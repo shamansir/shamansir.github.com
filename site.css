@@ -1,0 +1,189 @@
+body {
+    background: #fefefe;
+    font-family: Lekton, Consolas, Inconsolata,'Lucida Grande', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    /* text-align: center; */
+    margin: 40px 185px;
+    /* margin: 40px 185px 140px 115px; */
+    font-size: 14px;
+    color: #333;               
+}
+
+a {
+    color: #003;
+}
+
+#avatar {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #000;
+}
+
+h1 {
+    font-size: 3.8em;
+    font-family: Lekton, Inconsolata, 'Droid Sans', 'Trebuchet MS', Helvetica, sans-serif;
+    border-bottom: 2px solid #666;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    clear: both;
+    color: #000;
+    margin-top: 50px;
+}
+
+h3#sub-title {
+    color: #000;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+h3#sub-title #aka {
+    color: #666;
+}
+
+#update-info {
+    font-size: 1em;
+    margin: 8px 22px 30px;               
+    color: #666;
+}
+
+#copyright {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    font-size: 0.7em;
+    font-family: Corbel, 'DejaVu Sans', Garamond, 'Lucida Grande', Consolas, Helvetica, sans-serif;               
+    color: #666;
+}
+
+#copyright a {
+    color: #000;
+    border: 1px dashed #999;
+    padding: 2px;
+    text-decoration: none;
+}
+
+#copyright a:hover {
+    background-color: #ccc;
+}
+
+img#vcard-img {
+    padding: 4px;
+    border: 2px solid #000;
+}
+
+#who-am-i p {
+    font-family: Inconsolata, 'Droid Sans', Corbel, 'DejaVu Sans', Garamond, 'Lucida Grande', Consolas, Helvetica, sans-serif;
+    color: #000;
+    margin-left: 15px;
+}
+
+.tech-name {
+    color: #003;
+}
+
+dl dt {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+dl dd {
+    margin-top: 2px;
+}
+
+dl dd pre {
+    margin: 0;
+}
+
+ul.ico-list {
+    list-style-type: none;
+    padding: 0 20px;
+    margin: 0;
+}
+
+ul.icon-list {
+    overflow: hidden;
+}
+
+ul.ico-list > li {           
+    float: left;
+    width: 100px;
+    margin: 0 5px 50px;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+ul.ico-list > li dl {
+    margin: 0;
+}
+
+ul.ico-list > li:hover {
+    background-color: #eee;
+    overflow: visible;
+    width: auto;
+}
+
+ul.ico-list > li:hover dl dd {
+    color: #000;
+}
+
+ul.ico-list > li dl dd .cropped {
+    display: none;
+}
+
+ul.ico-list > li:hover dl dd .cropped {
+    display: inline;
+}
+
+ul.ico-list > li:hover dl dt {
+    color: #666;
+}
+
+ul.ico-list li dl dd a {
+    text-decoration: none;
+}
+
+ul.ico-list li dl dd img {
+    border: none;
+    display: block;           
+    width: 64px;
+    height: 64px;
+}
+
+ul.ico-list > li:hover dl dd img {
+    padding-right: 6px;
+    background-color: #ccc;
+    border-right: 30px solid #aaa;
+}
+
+.ico-list dl dt {
+    width: 100px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.ico-list dl dd {
+    margin: 0;
+}
+
+/* ul.ico-list > li dl {
+    background: url('./overflow.png') repeat-y scroll top right transparent;
+    z-index: 10;
+}
+
+ul.ico-list > li dl * {
+    z-index: 0;
+}
+
+ul.ico-list > li:hover dl {
+    background-image: none;
+    z-index: 0;
+} */        
+
+/* ul.ico-list li dl dd > span {
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+} */
+ 

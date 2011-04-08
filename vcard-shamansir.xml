@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE vCard SYSTEM "xml-vcard.dtd">
+<vCard>
+    <VERSION>2.1</VERSION>
+    <FN>Ulric Wilfred</FN>
+    <N>
+      <FAMILY>Wilfred</FAMILY>
+      <GIVEN>Ulric</GIVEN>      
+      <MIDDLE/>
+    </N>
+    <NICKNAME>shaman.sir</NICKNAME>
+    <URL>http://shamansir.madfire.ru</URL>
+    <URL>http://shamansir.tumblr.com</URL>
+    <URL>skype:shaman.sir?userinfo</URL>
+    <BDAY>1984-03-04</BDAY>
+    <EMAIL><INTERNET/><PREF/><USERID>shaman.sir@gmail.com</USERID></EMAIL>
+    <JABBERID>ulric.wilfred@jabber.org</JABBERID>
+    <ORG>
+      <ORGNAME>iPark ventures</ORGNAME>
+      <ORGUNIT/>
+    </ORG>
+    <TITLE>Java EE / GWT developer</TITLE>    
+    <ADR>
+      <HOME/>
+      <EXTADD/>
+      <STREET/>
+      <LOCALITY>Odesa</LOCALITY>
+      <REGION/>
+      <PCODE/>
+      <CTRY>Ukraine</CTRY>
+    </ADR>
+</vCard>

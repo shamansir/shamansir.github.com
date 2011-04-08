@@ -1,0 +1,71 @@
+Anthony Kotenko
+
+Phone: +7 (921) 188-58-13
+E-mail: anthony.kotenko@gmail.com
+
+--------------------------------------------------------------------------------
+
+Objective
+
+Experienced Web Developer with creative mind is inteding to be a Python
+developer, because of many advantages of this language, discovered in work:
+all-in-one — code beauty & readability, development speed and useful
+toolkit. Also — the candidate is the developer who aims to develop such
+products that will be useful, friendly and, as far as possible, accessible
+for the every man who needs them. Python is the most appropriate language
+for achievement of this aim.
+
+Skills
+
+Programming Languages: Java, Python, PHP, C++/Visual C++
+Operating Systems:     Ubuntu Linux, Alt Linux Master, Windows XP
+Databases:             MySQL, PostreSQL, Firebird
+Web-technologies and W3C standards: Web-standard CSS/XHTML,
+                                    JavaScript(+AJAX)/DOM, XSLT, XML/XSD
+IDE:                   IBM Eclipse (WTP, Pydev...), Wing IDE, MS Visual
+                       Studio 2005, Borland Delphi & C++ Bulder
+Extreme Programming:   Test-Driven Development, Pair Programming
+Version-Control/Bugtracking Systems: Subversion/Tortoise SVN + Trac
+Cross-platform GUI Libraries: WxWidgets, Tcl/Tk
+Other:                 UML, Design Patterns
+
+
+Professional Experience
+
+Fabrika Koda LTD (11/2006 - Present)
+        [Web-Developer]
+        Active participation in PHP5 project development: CMS
+        Test-Driven Development is used in development
+        Planning and Modelling experience
+        Some UNIX administration experience — installing & configuring the
+                                            SVN/Trac server
+        CMS project design
+        Several small PHP5+AJAX projects
+
+EmDev LLC (03/2005 - 11/2006)
+        [Web & Software Developer]
+        Active participation in J2EE projects development: Social Network
+                                              and BPM-Oriented Project
+        Extreme Programming (TDD, Pair Programming) experience
+        Several Python tasks for internal projects
+        Linux experience
+        JavaScript/AJAX & Web Standards experience
+        Graphic BPM Component (Object Pascal/VCL) development
+
+VNIIOkeangeologia (04/2004 - 03/2005)
+        [Software Developer]
+        Multiple scientific applications
+        Flash animation for conferences
+
+Hobbies
+
+Python Development
+Web Design, based on Web Standards & WAI/Section 508
+Web Development
+Open-source
+Art & Digital Art
+
+Languages
+
+Russian
+English, Upper Intermediate

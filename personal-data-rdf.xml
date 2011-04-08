@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" >
+  <rdf:Description rdf:about="http://shaman-sir.by.ru">
+    <vCard:FN>Ulric Wilfred</vCard:FN>
+    <vCard:N rdf:parseType="Resource">
+      <vCard:Family>Wilfred</vCard:Family>
+      <vCard:Given>Ulric</vCard:Given>
+    </vCard:N>
+    <vCard:NICKNAME>shaman.sir</vCard:NICKNAME>
+    <vCard:BDAY>1984-03-04</vCard:BDAY>
+    <vCard:EMAIL rdf:parseType="Resource">
+      <rdf:alt>
+        <rdf:li>shaman.sir@gmail.com</rdf:li>
+        <rdf:li>ulric.wilfred@yahoo.com</rdf:li>
+      </rdf:alt>
+    </vCard:EMAIL>
+    <vCard:ORG rdf:parseType="Resource">
+      <vCard:Orgname>indIvid Pro.</vCard:Orgname>
+    </vCard:ORG>
+    <vCard:TITLE>Master and Servant</vCard:TITLE>
+    <vCard:ROLE>Executor</vCard:ROLE>
+    <vCard:ADR rdf:parseType="Resource">
+      <vCard:Locality>Saint-Petersburg</vCard:Locality>
+      <vCard:Country>Russia</vCard:Country>
+    </vCard:ADR>    
+    <vCard:URL vCard:TYPE="http://www.w3.org/2001/vcard-rdf/3.0#internet" rdf:resource="http://shaman-sir.wikidot.com"/> 
+  </rdf:Description>
+</rdf:RDF>
+
