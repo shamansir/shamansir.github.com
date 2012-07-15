@@ -42,6 +42,11 @@ h3#sub-title #aka {
     color: #666;
 }
 
+h3#sub-title #real-life {
+    font-size: 0.7em;
+    color: #999;
+}
+
 #update-info {
     font-size: 1em;
     margin: 8px 22px 30px;               
@@ -168,6 +173,12 @@ ul.ico-list > li:hover dl dd img {
     margin: 0;
 }
 
+.badge {
+    display: block;
+    margin: 0 0 20px;
+    clear: left;
+}
+
 /* ul.ico-list > li dl {
     background: url('./overflow.png') repeat-y scroll top right transparent;
     z-index: 10;
@@ -186,4 +197,25 @@ ul.ico-list > li:hover dl {
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
 } */
+
+@media screen and (max-width: 1020px) {
+    body {
+        margin: 40px 20%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        margin: 40px 10%;
+    }    
+}
  
+@media screen and (max-width: 500px) {
+    body {
+        margin: 40px 20px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}

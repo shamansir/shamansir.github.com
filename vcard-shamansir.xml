@@ -2,24 +2,24 @@
 <!DOCTYPE vCard SYSTEM "xml-vcard.dtd">
 <vCard>
     <VERSION>2.1</VERSION>
-    <FN>Ulric Wilfred</FN>
+    <FN>Anton Kotenko</FN>
     <N>
-      <FAMILY>Wilfred</FAMILY>
-      <GIVEN>Ulric</GIVEN>      
+      <FAMILY>Kotenko</FAMILY>
+      <GIVEN>Anton</GIVEN>      
       <MIDDLE/>
     </N>
     <NICKNAME>shaman.sir</NICKNAME>
-    <URL>http://shamansir.madfire.ru</URL>
-    <URL>http://shamansir.tumblr.com</URL>
+    <URL>http://shamansir.github.com</URL>
+    <URL>http://shamansir.github.com/blog</URL>
     <URL>skype:shaman.sir?userinfo</URL>
     <BDAY>1984-03-04</BDAY>
     <EMAIL><INTERNET/><PREF/><USERID>shaman.sir@gmail.com</USERID></EMAIL>
     <JABBERID>ulric.wilfred@jabber.org</JABBERID>
     <ORG>
-      <ORGNAME>iPark ventures</ORGNAME>
+      <ORGNAME>JetBrains</ORGNAME>
       <ORGUNIT/>
     </ORG>
-    <TITLE>Java EE / GWT developer</TITLE>    
+    <TITLE>GWT / JavaScript developer</TITLE>    
     <ADR>
       <HOME/>
       <EXTADD/>

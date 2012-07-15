@@ -1,13 +1,13 @@
 BEGIN:VCARD
 VERSION:2.1
 NICKNAME:shaman.sir
-FN:Ulric Wilfred
+FN:Anton Kotenko
 BDAY:19840304
-N:Wilfred;Ulric
-TITLE:Java EE Developer
-ORG:iPark ventures
+N:Kotenko;Anton
+TITLE:Javascript Developer
+ORG:JetBrains
 ADR;WORK:;;;Odesa;;;Ukraine
 TEL;CELL:+38(099)355-87-63
-EMAIL:shaman.sir@gmail.com
-URL:http://shamansir.madfire.net
+EMAIL:shaman-sir@gmail.com
+URL:http://shamansir.github.com
 END:VCARD
