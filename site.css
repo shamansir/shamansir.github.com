@@ -1,0 +1,51 @@
+html, body * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #fafaf9;
+    color: #333;
+}
+
+img#avatar {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #333;
+}
+
+#card {
+    width: 50%;
+    height: 500px;
+    margin: 8% 25%;
+}
+
+header {
+    border-bottom: 15px solid #333;
+}
+
+nav {
+    display: block;
+}
+
+nav > ul {
+    border-top: 7px solid #666;
+    list-style-type: none;
+}
+
+nav > ul > li {
+    float: left;
+    background-color: #aaa;
+    padding: 5px;
+}
+
+nav > ul > li.active {
+    float: left;
+    background-color: #666;
+}
+
+content {
+    clear: both;
+    display: block;
+}
