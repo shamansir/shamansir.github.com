@@ -1,51 +1,132 @@
-html, body * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
+body {
+    background-color: #f9f9f9;
+    color: #191919;
+    /*font-family: Baskerville, Didot, Georgia, Palatino;*/
+    font-family: Gill Sans, Optima, 'Trebuchet MS', 'Lucia Grande', Futura;
+    font-size: 22px;
 }
 
 body {
-    background-color: #fafaf9;
-    color: #333;
+    position: relative;
+    top: 180px;
+    margin: 0 25% 0 25%;
 }
 
-img#avatar {
-    width: 120px;
-    height: 120px;
-    border: 1px solid #333;
-}
-
-#card {
-    width: 50%;
-    height: 500px;
-    margin: 8% 25%;
+body * {
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    border-bottom: 15px solid #333;
+    cursor: pointer;
+    border-bottom: 2px solid #191919;
+}
+
+header:hover {
+    background-color: #f6f6f6;
+}
+
+header #info {
+    margin: 16px 0 11px 1px;
+}
+
+header #description {
+    font-size: 0.6em;
+    margin-top: 4px;
+    color: #999;
+    /* text-align: right; */
+    margin-right: 120px;
 }
 
 nav {
     display: block;
+    clear: both;
+    width: 100%;
 }
 
 nav > ul {
-    border-top: 7px solid #666;
     list-style-type: none;
 }
 
 nav > ul > li {
     float: left;
-    background-color: #aaa;
-    padding: 5px;
+    text-align: center;
 }
 
-nav > ul > li.active {
-    float: left;
-    background-color: #666;
+nav > ul>  li:hover {
+}
+
+nav > ul > li:last-child {
+    right: 0;
+}
+
+nav > ul > li > a {
+    color: #666;
+    padding: 5px 9px;
+    background-color: #eee;
+    font-size: .8em;
+    position: relative;
+    top: 1px;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+    color: #fff;
+    background-color: #191919;
+    text-decoration: auto;
+}
+
+#avatar {
+    /* border: 1px solid #000; */
+    width: 55px;
+    height: 55px;
+    /*float: left;*/
+    position: absolute;
+    /*top: 150px;
+    left: -70px;*/
+    top: 3px;
+    right: 3px;
+    opacity: 0.05;
+    cursor: pointer;
+}
+
+#avatar:hover {
+    opacity: 1;
+}
+
+.litera {
+    color: #ff0066;
+    /*font-size: 1.1em;*/
+    position: relative;
+}
+
+header:hover .litera,
+header:hover .nickname {
+    color: #191919;
+}
+
+.nickname {
+    color: #666;
+    font-size: 1.2em;
+    /*letter-spacing: 1.1em;*/
 }
 
 content {
+    margin: 5px 0;
+    font-size: 1.3em;
+    font-family: Menlo;
+}
+
+content section {
     clear: both;
-    display: block;
+    padding: 5px;
+    margin: 40px 0 0 0;
+}
+
+content section > ul {
+    list-style-type: none;
+}
+
+content section.list {
+    text-align: center;
 }
