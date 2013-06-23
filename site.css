@@ -7,14 +7,23 @@ body {
 }
 
 body {
-    position: relative;
-    top: 50px;
-    margin: 0 30% 0 30%;
+    /*position: relative;*/
+    margin: 10% 27% 10% 27%;
 }
 
 body * {
     margin: 0;
     padding: 0;
+}
+
+/* #card {
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle;
+}*/
+
+main {
+
 }
 
 header {
@@ -45,7 +54,6 @@ nav, content {
 }
 
 nav {
-    margin: 5px 0;
     font-size: .5em;
     /*width: 50%;*/
     background-color: #fff;
@@ -54,22 +62,25 @@ nav {
 nav > ul {
     list-style-type: none;
     overflow: hidden;
+    text-align: right;
 }
 
 nav > ul > li {
     display: inline;
     font-size: 1.5em;
+    margin: 5px 0;
 }
 
 nav > ul > li a {
-    color: #ccc;
+    color: #bbb;
     text-decoration: none;
     font-weight: bold;
     padding: 5px;
+    line-height: 1.6em;
 }
 
 nav > ul > li.active a {
-    color: #999;
+    color: #777;
     background-color: #f9f9f9;
 }
 
@@ -111,13 +122,12 @@ header:hover .nickname {
 
 content {
     margin: 5px 0;
-    font-size: 1.3em;
 }
 
 content section {
     clear: both;
     padding: 5px;
-    margin: 3em 0 0 0;
+    margin: 1.5em 0;
 }
 
 content section > ul {
@@ -128,4 +138,20 @@ content section.list {
     color: #474747;
     text-align: center;
     line-height: 1.8em;
+    font-size: 1.2em;
+    margin: 2.5em 0;
+}
+
+content section.list a {
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    color: inherit;
+}
+
+content section.list a:hover {
+    background-color: #eee;
+}
+
+content section.list .hilite {
+    color: #ff0066;
 }
