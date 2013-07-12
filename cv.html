@@ -10,8 +10,9 @@
             font-family: 'Avenir Next', Avenir, Arial, Helvetica, sans-serif;
             letter-spacing: 0;
             color: #333;
-            width: 50%;
+            width: 60%;
             margin: 75px 80px;
+            /* font-size: 16px; */
         }
 
         h1 {
@@ -33,6 +34,7 @@
             height: 0;
             border-width: 1px;
             border-style: solid;
+            color: #aaa;
         }
 
         dl dt {
@@ -40,6 +42,7 @@
             margin-bottom: 5px;
             font-size: 0.9em;
             font-style: italic;
+            color: #666;
         }
 
         dl#experience > dt, dl#education > dt {
@@ -84,6 +87,92 @@
             font-style: italic;
         }
 
+        @media screen and (max-width: 840px), print {
+
+            body {
+                width: 80%;
+                margin: 40px;
+                font-size: 14px;
+            }
+
+            ul, dl {
+                margin: 0;
+            }
+
+            dl#experience > dd, dl#education > dd,
+            ul#recommendations {
+                margin-left: 10px;
+                padding-left: 15px;
+                border-left: none;
+                margin-bottom: 10px;
+            }
+
+            dl#experience > dt, dl#education > dt {
+                margin-top: 10px;
+                margin-bottom: 4px;
+            }
+
+            dl {
+                clear: both;
+            }
+
+            dl dt {
+                margin: 0 2px;
+                float: left;
+                clear: left;
+                overflow: hidden;
+            }
+
+            dl dd {
+                margin: 2px 2px 2px 30%;
+            }
+
+            #skills dd {
+                margin-left: 45%;
+            }
+
+            h4 {
+                clear: left;
+                margin-top: 41px;
+                margin-bottom: 6px;
+            }
+
+        }
+
+        @media screen and (max-width: 640px) {
+
+            body {
+                font-size: 12px;
+            }
+
+        }
+
+        @media screen and (max-width: 560px) {
+
+            body {
+                font-size: 10px;
+            }
+
+        }
+
+        @media screen and (min-width: 1110px) {
+
+            body {
+                width: 50%;
+            }
+
+        }
+
+        @media print {
+
+            body {
+                width: 85%;
+                margin: 20px 10px;
+                font-size: 12px;
+            }
+
+        }
+
       </style>
   </head>
   <body>
@@ -99,19 +188,19 @@
         <dt>E-mail</dt><dd><a href="mailto:shaman.sir@gmail.com">shaman.sir@gmail.com<a></dd>
         <dt>Location</dt><dd>Munich, Germany</dd>
         <dt>Web-page</dt><dd><a href="http://shamansir.github.com">http://shamansir.github.com</a>
-        <dt>Alternative CV<dt><dd><a href="http://www.linkedin.com/in/shamansir">http://www.linkedin.com/in/shamansir</a>&nbsp;(LinkedIn), <a href="http://careers.stackoverflow.com/shamansir">http://careers.stackoverflow.com/shamansir</a>&nbsp;(Carreers@SO)</dd>
+        <dt>Alternative CV</dt><dd><a href="http://www.linkedin.com/in/shamansir">http://www.linkedin.com/in/shamansir</a>&nbsp;(LinkedIn), <a href="http://careers.stackoverflow.com/shamansir">http://careers.stackoverflow.com/shamansir</a>&nbsp;(Carreers@SO)</dd>
         <dt>Examples of code</dt><dd><a href="http://github.com/shamansir">http://github.com/shamansir</a></dd>
-        <dt>Blog</dt><dd><a href="http://shamansir.github.com/blog/">http://shamansir.github.com/blog/</a>&nbsp;(In English), <a href="http://shamansir.github.com/blog/ru/">http://shamansir.github.com/blog/ru/</a>&nbsp;(In Russian)</dd>
+        <dt>Blog</dt><dd><a href="http://shamansir.github.com/blog/">http://shamansir.github.com/blog/</a>&nbsp;(In&nbsp;English), <a href="http://shamansir.github.com/blog/ru/">http://shamansir.github.com/blog/ru/</a>&nbsp;(In&nbsp;Russian)</dd>
         <dt>Skype</dt><dd><a href="skype:shaman.sir?chat">shaman.sir</a></dd>
       </dl>
 
       <h4>Objective</h4>
 
-      <p>Life made me an experienced nerd, seeking for perfection both in source code and in user delight. That's why I like to participate in a projects where visual part (and user) matters on the same level as the good code. Also, I like projects which are open to users and other developers to improve. I like sharing the product.</p>
+      <p>Life made me an experienced nerd — the one seeking for perfection both in source code and in user delight. That's why I like to participate in a projects where visual part (and user) matters on the same level as the good code. Also, I like projects which are open to users and other developers to improve. I like the idea of sharing the product.</p>
 
       <p>Of course, as a result, I like to develop everything related to User Interfaces or Computer Graphics. I love to code and to solve things in a beautiful ways. And I like start-ups, the fastest way to get new experience.</p>
 
-      <p>What I am looking for? A challenges.</p>
+      <p>What am I looking for? Challenges.</p>
 
       <p>Things I don't like? Absence of innovation.</p>
 
@@ -125,9 +214,10 @@
         <dt>Version-Control/Bugtracking Systems</dt><dd>Git, Mercurial, Bazaar; Trac, YouTrack, Pivotal Tracker, Workflowy/Checkvist</dd>
         <dt>Web-technologies and W3C standards</dt><dd>HTML5, HTML5 Canvas, Web-standard CSS/XHTML, JavaScript(+AJAX)/DOM, XML</dd>
         <dt>Operating Systems</dt><dd>Mac OS, Ubuntu</dd>
-        <dt>Other</dt><dd>Android Development, Design Patterns, UML, Architecting applications</dd>
+        <dt>Mobile development</dt><dd>Development for Android</dd>
+        <dt>Programming techniques</dt><dd>Not So Overused Design Patterns, UML, Architecting applications and UI</dd>
         <dt>Things I forgot since time passed by</dt><dd>Apache Wicket, C++, Delphi, Lisp, Subversion, Spring, PostgreSQL, XSD, XSLT, MS Windows</dd>
-        <dt>Things I'd like to try to use</dt><dd>WebGL, Mozilla Rust, Adruino/RaspPi</dd>
+        <dt>Things I'd like to try to use</dt><dd>WebGL, Mozilla Rust, Adruino/RaspeberryPi</dd>
       </dl>
 
       <h4><label for="experience">Professional Experience</label></h4>
@@ -295,7 +385,7 @@
         <dt>Lived</dt><dd>Odessa, Ukraine (2.5 years)</dd>
       </dl>
 
-      <h4><label for="favorite-books">Books I'm inspiring with</label></h4>
+      <h4><label for="favorite-books">Books, I'm inspired with</label></h4>
       <ul id="favorite-books">
         <li>Dune, by <span class="author">Frank Herbert</span></li>
         <li>All Tomorrow's Parties, by <span class="author">William Gibson</span></li>
