@@ -28,17 +28,25 @@ main {
 
 header {
     cursor: pointer;
+    padding-bottom: 20px;
     /*border-bottom: 2px solid #27231a;*/
-    border-bottom: 2px solid #eee;
+    /*border-bottom: 2px solid #eee;*/
+    -webkit-transform: rotate(-10deg);
+    /*background: gold;  width: 30em;
+
+ -webkit-transform: matrix(1, -0.1, 0, 1, 0, 0);
+      -o-transform: matrix(1, -0.1, 0, 1, 0, 0);
+         transform: matrix(1, -0.1, 0, 1, 0, 0);*/
 }
 
 header:hover {
     background-color: #f6f6f6;
-    border-bottom: 2px solid #999;
+    /*border-bottom: 2px solid #999;*/
 }
 
 header #info {
     margin: 16px 0 11px 3px;
+    //-webkit-clip-path: polygon(0% 0%, 3% 100%, 100% 0%);
 }
 
 header #description {
@@ -57,6 +65,11 @@ nav {
     font-size: .5em;
     /*width: 50%;*/
     background-color: #fff;
+    -webkit-transform: rotate(-10deg);
+    width: 100%;
+    border-top: 2px solid #eee;
+    position: fixed;
+    left: 0;
 }
 
 nav > ul {
