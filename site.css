@@ -1,9 +1,12 @@
+html {
+    font-size: 22px;
+}
+
 body {
-    background-color: #fff;
+    background-color: #fdfdfd;
     color: #27231a;
     /*font-family: Baskerville, Didot, Georgia, Palatino;*/
     font-family: 'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif;
-    font-size: 22px;
 }
 
 body {
@@ -16,6 +19,10 @@ body * {
     padding: 0;
 }
 
+.accent {
+    color: #ff0066;
+}
+
 /* #card {
     min-height: 10em;
     display: table-cell;
@@ -26,11 +33,30 @@ main {
 
 }
 
+body:before {
+    display: inline-block;
+    width: 380px;
+    height: 350px;
+    content: '';
+    background-image: url('./tsso_bw_inverted.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 90px 73px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: .03;
+    overflow: hidden;
+}
+
 header {
-    cursor: pointer;
-    padding-bottom: 20px;
-    /*border-bottom: 2px solid #27231a;*/
-    /*border-bottom: 2px solid #eee;*/
+    -webkit-transform: rotate(-10deg);
+    padding-bottom: 10px;
+    position: relative;
+    left: -80px;
+    top: 14px;
+    /*border-bottom: 2px solid #27231a;
+    border-bottom: 2px solid #eee;*/
     -webkit-transform: rotate(-10deg);
     /*background: gold;  width: 30em;
 
@@ -40,13 +66,19 @@ header {
 }
 
 header:hover {
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
     /*border-bottom: 2px solid #999;*/
 }
 
 header #info {
     margin: 16px 0 11px 3px;
-    //-webkit-clip-path: polygon(0% 0%, 3% 100%, 100% 0%);
+    /*-webkit-clip-path: polygon(0% 0%, 3% 100%, 100% 0%);*/
+    background: url('./tsso_bw_inverted.svg');
+    padding-left: 85px;
+    background-size: 92px;
+    background-repeat: no-repeat;
+    background-position: 0px -6px;
+
 }
 
 header #description {
@@ -64,15 +96,16 @@ nav, content {
 nav {
     font-size: .5em;
     /*width: 50%;*/
-    background-color: #fff;
     -webkit-transform: rotate(-10deg);
     width: 100%;
-    border-top: 2px solid #eee;
+    /*border-top: 4px solid #eee;*/
     position: fixed;
     left: 0;
 }
 
 nav > ul {
+    /* border-top: 10px solid #eee;*/
+    border-top: 10px solid #f6f6f6;
     list-style-type: none;
     overflow: hidden;
     text-align: right;
@@ -117,9 +150,8 @@ nav > ul > li a:hover {
 } */
 
 .litera {
-    color: #ff0066;
-    /*font-size: 1.1em;*/
     position: relative;
+    /*font-size: 1.1em;*/
 }
 
 header:hover .litera,
@@ -135,6 +167,9 @@ header:hover .nickname {
 
 content {
     margin: 5px 0;
+    position: relative;
+    left: 20px;
+    top: -15px;
 }
 
 content section {
@@ -173,5 +208,5 @@ content section.list a:hover {
 }
 
 content section.list .hilite {
-    color: #ff0066;
+    /* color: #ff0066; */
 }
