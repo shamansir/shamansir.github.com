@@ -1,5 +1,5 @@
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
@@ -22,7 +22,7 @@ body * {
 /* STRUCTURE */
 
 header, content section {
-    width: 25%;
+    width: 27%;
 }
 
 /* GENERAL STYLE */
@@ -30,7 +30,7 @@ header, content section {
 a {
     color: #27231a;
     text-decoration: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #c66;
 }
 
 /* HEADER */
@@ -41,7 +41,7 @@ a {
 } */
 
 header {
-    padding: 7px;
+    padding: 0.4em;
     text-align: center;
     /* border: 3px solid #27231a; */
     /* border: 3px solid #ccc; */
@@ -62,8 +62,9 @@ header h1 > span:first-letter {
 } */
 
 header p:nth-of-type(1) { /* nickname */
+    padding: 2px;
     font-size: 1em;
-    margin-bottom: 8px;
+    margin-bottom: 0.8em;
 }
 
 header p:nth-of-type(1) span {
@@ -71,12 +72,13 @@ header p:nth-of-type(1) span {
 }
 
 header p:nth-of-type(2) { /* qrcode */
-    margin-bottom: 3px;
+    margin-bottom: -0.1em;
 }
 
 header p:nth-of-type(3) { /* issue info */
-    font-size: 0.8em;
-    margin-bottom: 10px;
+    font-size: 0.65em;
+    margin-bottom: 2.5em;
+    color: #999;
 }
 
 header p:nth-of-type(4) { /* motto */
