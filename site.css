@@ -42,7 +42,7 @@ header, section {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 520px) {
     header, content section {
         width: 97%;
     }
@@ -99,18 +99,23 @@ header h1 > span:first-letter {
     color: #ff0066;
 } */
 
+header img {
+    width: 10em;
+    height: 10em;
+}
+
 header p:nth-of-type(1) { /* nickname */
     padding: 2px;
     font-size: 1em;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.2em;
 }
 
 header p:nth-of-type(1) span {
     color: #666;
 }
 
-header p:nth-of-type(2) { /* qrcode */
-    margin-bottom: -0.1em;
+header p:nth-of-type(2) { /* logo */
+    margin-bottom: 0.2em;
 }
 
 header p:nth-of-type(3) { /* issue info */
@@ -131,11 +136,31 @@ header p:nth-of-type(4) { /* motto */
 /* CONTACTS */
 
 section#contacts {
-    border: 1px dashed #27231a;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0.4em;
-    margin-right: 0.4em;
+    /* border: 1px dashed #27231a; */
+    border-top: 1px solid #27231a;
+    border-bottom: 1px solid #27231a;
+    border-left: 3px solid #27231a;
+    border-right: 3px solid #27231a;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    text-align: center;
+    /* background-color: #eee; */
+}
+
+section#contacts > p {
+    margin: 0;
+}
+
+section#contacts > p > img {
+    width: 40%;
+    height: 40%;
+    border: 1px solid #27231a;
+    margin: 0.4em;
+    padding: 0;
+    /*text-align: center;*/
 }
 
 section#contacts ul {
@@ -145,7 +170,7 @@ section#contacts ul {
 }
 
 section#contacts ul li {
-    text-align: center;
+    /*text-align: center;*/
     padding: 0.2em;
 }
 
@@ -155,6 +180,28 @@ section#contacts ul li img {
     position: relative;
     margin-left: -1.5em;
     top: 0.3em;
+}
+
+/* CV */
+
+section#cv p {
+    border-top: 1px solid #c66;
+}
+
+section#cv p span {
+    display: block;
+    float: left;
+    width: 40%;
+    padding: 0 .5em;
+    text-transform: uppercase;
+    /*-webkit-transform: rotate(90deg);*/
+}
+
+section#cv p span:first-letter {
+    font-size: 9em;
+    font-weight: bold;
+    float: left;
+    text-transform: uppercase;
 }
 
 /* FOOTER */
