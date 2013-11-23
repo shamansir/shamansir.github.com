@@ -11,7 +11,7 @@ body {
 }
 
 body {
-    margin: 5px;
+    margin: 1em;
 }
 
 body * {
@@ -22,15 +22,53 @@ body * {
 /* STRUCTURE */
 
 header, content section {
-    width: 27%;
+    width: 31%;
+    float: left;
 }
 
-/* GENERAL STYLE */
+header, section {
+    padding: 0.4em;
+}
+
+@media screen and (max-width: 960px) {
+    header, content section {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    header, content section {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header, content section {
+        width: 97%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header, content section {
+        width: 23%;
+    }
+}
+
+/* GENERAL STYLES */
 
 a {
     color: #27231a;
     text-decoration: none;
     border-bottom: 1px solid #c66;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: Baskerville, Cochin, Georgia, serif;
+    /* font-family: Futura, sans-serif; */
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    text-decoration: overline;
 }
 
 /* HEADER */
@@ -41,8 +79,8 @@ a {
 } */
 
 header {
-    padding: 0.4em;
     text-align: center;
+    margin-bottom: 1.5em;
     /* border: 3px solid #27231a; */
     /* border: 3px solid #ccc; */
 }
@@ -90,8 +128,33 @@ header p:nth-of-type(4) { /* motto */
 
 /* CONTENT */
 
-content {
-    font-family: Menlo, sans-serif;
+/* CONTACTS */
+
+section#contacts {
+    border: 1px dashed #27231a;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+}
+
+section#contacts ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    list-style: none;
+}
+
+section#contacts ul li {
+    text-align: center;
+    padding: 0.2em;
+}
+
+section#contacts ul li img {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    margin-left: -1.5em;
+    top: 0.3em;
 }
 
 /* FOOTER */
