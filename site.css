@@ -22,7 +22,6 @@ body * {
 /* STRUCTURE */
 
 header, content section {
-    width: 31%;
     float: left;
 }
 
@@ -30,27 +29,13 @@ header, section {
     padding: 0.4em;
 }
 
-@media screen and (max-width: 960px) {
-    header, content section {
-        width: 35%;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    header, content section {
-        width: 45%;
-    }
+header {
+    max-width: 45%;
 }
 
 @media screen and (max-width: 520px) {
-    header, content section {
-        width: 97%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    header, content section {
-        width: 23%;
+    header {
+        max-width: 100%;
     }
 }
 
@@ -59,16 +44,21 @@ header, section {
 a {
     color: #27231a;
     text-decoration: none;
-    border-bottom: 1px solid #c66;
+    /*border-bottom: 1px solid #c66;*/
+    /*border-bottom: 1px solid #ccc;*/
 }
+
+/* a:after {
+    content: '%';
+    font-size: 0.2em;
+    color: #ccc;
+} */
 
 h2, h3, h4, h5, h6 {
     font-family: Baskerville, Cochin, Georgia, serif;
     /* font-family: Futura, sans-serif; */
-    text-align: center;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
-    text-decoration: overline;
 }
 
 /* HEADER */
@@ -136,56 +126,31 @@ header p:nth-of-type(4) { /* motto */
 /* CONTACTS */
 
 section#contacts {
-    /* border: 1px dashed #27231a; */
-    border-top: 1px solid #27231a;
-    border-bottom: 1px solid #27231a;
-    border-left: 3px solid #27231a;
-    border-right: 3px solid #27231a;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
     margin-bottom: 0.4em;
-    text-align: center;
-    /* background-color: #eee; */
+    padding: 10px;
 }
 
-section#contacts > p {
+section#contacts > ul {
     margin: 0;
-}
-
-section#contacts > p > img {
-    width: 40%;
-    height: 40%;
-    border: 1px solid #27231a;
-    margin: 0.4em;
-    padding: 0;
-    /*text-align: center;*/
-}
-
-section#contacts ul {
-    margin-top: 1em;
-    margin-bottom: 1em;
     list-style: none;
+    padding: 0.5em;
 }
 
-section#contacts ul li {
-    /*text-align: center;*/
+section#contacts > ul li {
     padding: 0.2em;
+    line-height: 1.6em;
 }
 
-section#contacts ul li img {
+section#contacts > ul li > img {
     width: 1em;
     height: 1em;
-    position: relative;
-    margin-left: -1.5em;
-    top: 0.3em;
+    vertical-align: middle;
 }
 
 /* CV */
 
 section#cv p {
-    border-top: 1px solid #c66;
+    /*border-top: 1px solid #c66;*/
 }
 
 section#cv p span {
@@ -213,8 +178,7 @@ footer {
     margin-right: 3px;
     text-align: right;
     color: #999;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
-    width: 100%;
 }
