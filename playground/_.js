@@ -8,42 +8,50 @@ function random(from, to) {
   return from + (Math.random() * (to - from));
 }
 
-var points = [ ];
+function layout() {
 
-var segments = document.getElementsByClassName('segment'),
-    seg_count = segments.length;
+    var points = [ ];
 
-var y_offset = 80,
-    x_offset = 0,
-    y_range = 200,
-    x_range = 200;
+    var segments = document.getElementsByClassName('segment'),
+      seg_count = segments.length;
 
-points[0] = x_offset;
-points[1] = y_offset;
-for (var i = 0; i < seg_count; i++) {
-  points.push(points[i * 2] + segments[i].offsetWidth);
-  points.push((i !== 0) ? random(y_offset, y_offset + y_range)
-                        : y_offset);
-}
+    var y_offset = 80,
+        x_offset = 0,
+        y_range = 200,
+        x_range = 200;
 
-var cvs = document.getElementById('test-canvas'),
-    ctx = cvs.getContext('2d');
+    for (var i = 0; i < seg_count; i++) {
+        segments[i].style.webkitTransformOrigin = 'left top';
+        segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
+    }
 
-ctx.strokeStyle = '#f00';
-ctx.lineWidth = 2;
-ctx.moveTo(points[0], points[1]);
-for (var i = 2, il = points.length; i < il; i += 2) {
-  ctx.lineTo(points[i], points[i + 1]);
-}
-ctx.stroke();
+    points[0] = x_offset;
+    points[1] = y_offset;
+    for (var i = 0; i < seg_count; i++) {
+        points.push(points[i * 2] + segments[i].offsetWidth);
+        points.push((i !== 0) ? random(y_offset, y_offset + y_range)
+                             : y_offset);
+    }
 
-var deltaX, deltaY, angle;
-for (var i = 0; i < seg_count; i++) {
-    deltaX = points[i + i + 2] - points[i + i];
-    deltaY = points[i + i + 3] - points[i + i + 1];
-//angleInDegrees = arctan(deltaY / deltaX) * 180 / PI
-    angle = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
-    segments[i].style.top = points[i + i + 1] + 'px';
-    segments[i].style.left = points[i + i] + 'px';
-    segments[i].style.webkitTransform = 'rotateZ(' + angle + 'deg)';
+    var cvs = document.getElementById('test-canvas'),
+        ctx = cvs.getContext('2d');
+
+    ctx.strokeStyle = '#f00';
+    ctx.lineWidth = 2;
+    ctx.moveTo(points[0], points[1]);
+    for (var i = 2, il = points.length; i < il; i += 2) {
+        ctx.lineTo(points[i], points[i + 1]);
+    }
+    ctx.stroke();
+
+    var deltaX, deltaY, angle;
+    for (var i = 0; i < seg_count; i++) {
+        deltaX = points[i + i + 2] - points[i + i];
+        deltaY = points[i + i + 3] - points[i + i + 1];
+        angle = Math.atan2(deltaY, deltaX) * 180 / Math.PI;
+        segments[i].style.top = points[i + i + 1] + 'px';
+        segments[i].style.left = points[i + i] + 'px';
+        segments[i].style.webkitTransform = 'rotateZ(' + angle + 'deg)';
+    }
+
 }
