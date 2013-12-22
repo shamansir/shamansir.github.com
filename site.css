@@ -22,7 +22,8 @@ body * {
 /* STRUCTURE */
 
 header, content section {
-    float: left;
+    /* float: left; */
+    display: inline-block;
 }
 
 /* GENERAL STYLES */
@@ -59,6 +60,7 @@ header {
     /* border: 3px solid #27231a; */
     /* border: 3px solid #ccc; */
     padding: 0.4em;
+    max-width: 30%;
 }
 
 header h1 {
