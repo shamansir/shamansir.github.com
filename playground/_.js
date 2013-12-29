@@ -8,21 +8,27 @@ function random(from, to) {
   return from + (Math.random() * (to - from));
 }
 
-function layout() {
+function layout(current) {
 
     //var points = [ ];
+    var current = current || 0;
 
     var segments = document.getElementsByClassName('segment'),
-      seg_count = segments.length;
+        seg_count = segments.length;
 
-    var y_offset = 80,
-        x_offset = 0,
+    var x_offset = 0,
+        y_offset = 80,
         y_range = 200,
         x_range = 200;
 
+    var opacity_range = seg_count, // 5, seg_count
+        blur_range = 5; // TODO, seg_count
+
     for (var i = 0; i < seg_count; i++) {
+        segments[i].style.zIndex = seg_count - i;
         segments[i].style.webkitTransformOrigin = 'left top';
         segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
+        segments[i].style.opacity = (opacity_range - i) / opacity_range;
     }
 
     /* points[0] = 0;
@@ -70,19 +76,19 @@ function layout() {
         //segments[i].style.webkitPerspective = i * 50;
     } */
 
-    var angle;
-    var mat = mat4.create();
+    var angleZ, angleY;
+    var mat = mat4.create(),
+        mat_trans = mat4.create();
     mat4.translate(mat, mat, [x_offset, y_offset, 0]);
     for (var i = 0; i < seg_count; i++) {
-        angle = random(-(Math.PI / 10), Math.PI / 10);
         if (i) {
-            mat4.rotateZ(mat, mat, angle);
+            angleZ = random(-(Math.PI / 10), Math.PI / 10);
+            angleY = random(0, Math.PI / 5);
+            mat4.rotateZ(mat, mat, angleZ);
+            mat4.rotateY(mat, mat, angleY)
         }
         segments[i].style.webkitTransform = mat4_cssStr(mat);
-        var mat_trans = mat4.create();
-        mat4.translate(mat_trans, mat_trans, [ segments[i].offsetWidth,
-                                   0,
-                                   0 ]);
+        mat_trans[12] = segments[i].offsetWidth; // substitute translate-x value
         mat4.multiply(mat, mat, mat_trans);
         //segments[i].style.webkitPerspective = i * 50;
     }
@@ -145,7 +151,7 @@ var mat4 = {};
  * @returns {mat4} a new 4x4 matrix
  */
 mat4.create = function() {
-    var out = [];/*new GLMAT_ARRAY_TYPE(16)*/
+    var out = new Array(16);/*new GLMAT_ARRAY_TYPE(16)*/
     out[0] = 1;
     out[1] = 0;
     out[2] = 0;
@@ -172,7 +178,7 @@ mat4.create = function() {
  * @returns {mat4} a new 4x4 matrix
  */
 mat4.clone = function(a) {
-    var out = []; /*new GLMAT_ARRAY_TYPE(16);*/
+    var out = new Array(16); /*new GLMAT_ARRAY_TYPE(16);*/
     out[0] = a[0];
     out[1] = a[1];
     out[2] = a[2];
