@@ -8,89 +8,82 @@ function random(from, to) {
   return from + (Math.random() * (to - from));
 }
 
+var initialized = false;
+
+var segments,
+    matrices,
+    handles;
+
+var seg_count;
+
+var x_offset = 0,
+    y_offset = 80,
+    y_range = 200,
+    x_range = 200;
+
+var identity_mat,
+    identity_str;
+
 function layout(current) {
 
     //var points = [ ];
     var current = current || 0;
 
-    var segments = document.getElementsByClassName('segment'),
+    if (!initialized) {
+
+        identity_mat = mat4.create();
+        identity_str = mat4_cssStr(identity_mat);
+
+        segments = document.getElementsByClassName('segment'),
         seg_count = segments.length;
+        handles = [];
 
-    var x_offset = 0,
-        y_offset = 80,
-        y_range = 200,
-        x_range = 200;
+        var opacity_range = seg_count, // 5, seg_count
+            blur_range = 5; // TODO, seg_count
 
-    var opacity_range = seg_count, // 5, seg_count
-        blur_range = 5; // TODO, seg_count
+        for (var i = 0; i < seg_count; i++) {
+            segments[i].style.zIndex = seg_count - i;
+            segments[i].style.webkitTransformOrigin = 'left top';
+            segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
+            segments[i].style.opacity = (opacity_range - i) / opacity_range;
 
-    for (var i = 0; i < seg_count; i++) {
-        segments[i].style.zIndex = seg_count - i;
-        segments[i].style.webkitTransformOrigin = 'left top';
-        segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
-        segments[i].style.opacity = (opacity_range - i) / opacity_range;
-    }
-
-    /* points[0] = 0;
-    points[1] = 0;
-    for (var i = 0; i < seg_count; i++) {
-        points.push(points[i * 2] + segments[i].offsetWidth);
-        points.push((i !== 0) ? random(0, y_range)
-                              : 0);
-    }
-
-    var cvs = document.getElementById('test-canvas'),
-        ctx = cvs.getContext('2d');
-
-    ctx.strokeStyle = '#f00';
-    ctx.lineWidth = 2;
-    ctx.translate(x_offset, y_offset);
-    ctx.moveTo(points[0],
-               points[1]);
-    for (var i = 2, il = points.length; i < il; i += 2) {
-        ctx.lineTo(points[i], points[i + 1]);
-    }
-    ctx.stroke(); */
-
-    /* var deltaX, deltaY, angle;
-    var mat = mat4.create();
-    mat4.translate(mat, mat, [x_offset, y_offset, 0]);
-    for (var i = 0; i < seg_count; i++) {
-        //deltaX = points[i + i + 2] - points[i + i];
-        //deltaY = points[i + i + 3] - points[i + i + 1];
-        //angle = Math.atan2(deltaY, deltaX);
-        //if (i) mat4.translate(mat, mat, [ 0, random(0, y_range), 0]);
-        //mat4.rotateY(mat, mat, (Math.PI / (seg_count - 1)));
-        angle = random(-(Math.PI / 10), Math.PI / 10);
-        if (i) {
-            mat4.rotateZ(mat, mat, angle);
+            handles[i] = document.getElementById(segments[i].id + '-handle');
+            if (handles[i]) {
+                handles[i].onclick = (function(idx) { return function() { layout(idx); } })(i);
+            }
         }
-        //mat4.rotateY(base, base, i*5);
-        //segments[i].style.top = points[i + i + 1] + 'px';
-        //segments[i].style.left = points[i + i] + 'px';
-        //segments[i].style.webkitTransform = 'rotateZ(' + angle + 'deg) rotateY(' + i*5 +'deg)';
-        segments[i].style.webkitTransform = mat4_cssStr(mat);
-        mat4.translate(mat, mat, [ segments[i].offsetWidth,
-                                   0,
-                                   0 ]);
-        //segments[i].style.webkitPerspective = i * 50;
-    } */
 
-    var angleZ, angleY;
-    var mat = mat4.create(),
-        mat_trans = mat4.create();
-    mat4.translate(mat, mat, [x_offset, y_offset, 0]);
-    for (var i = 0; i < seg_count; i++) {
-        if (i) {
-            angleZ = random(-(Math.PI / 10), Math.PI / 10);
-            angleY = random(0, Math.PI / 5);
-            mat4.rotateZ(mat, mat, angleZ);
-            mat4.rotateY(mat, mat, angleY)
+        matrices = [];
+
+        var angleZ, angleY;
+        var mat = mat4.create(),
+            mat_trans = mat4.create();
+        mat4.translate(mat, mat, [x_offset, y_offset, 0]);
+        for (var i = 0; i < seg_count; i++) {
+            if (i) {
+                angleZ = random(-(Math.PI / 10), Math.PI / 10);
+                angleY = random(0, Math.PI / 5);
+                mat4.rotateZ(mat, mat, angleZ);
+                mat4.rotateY(mat, mat, angleY);
+            }
+            segments[i].style.webkitTransform = mat4_cssStr(mat);
+            mat_trans[12] = segments[i].offsetWidth; // substitute translate-x value
+            mat4.multiply(mat, mat, mat_trans);
+            matrices[i] = mat4.clone(mat);
+            //segments[i].style.webkitPerspective = i * 50;
         }
-        segments[i].style.webkitTransform = mat4_cssStr(mat);
-        mat_trans[12] = segments[i].offsetWidth; // substitute translate-x value
-        mat4.multiply(mat, mat, mat_trans);
-        //segments[i].style.webkitPerspective = i * 50;
+
+        initialized = true;
+
+    }
+
+    var body = document.body;
+    if (current == 0) {
+        body.style.webkitTransform = identity_str;
+    } else {
+        var inv = mat4.invert(matrices[current]);
+        inv.translate(inv, inv, [x_offset, y_offset, 0]);
+        body.style.webkitTransform = mat4_cssStr(inv);
     }
 
 }
