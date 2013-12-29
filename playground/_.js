@@ -25,12 +25,12 @@ function layout() {
         segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
     }
 
-    points[0] = x_offset;
-    points[1] = y_offset;
+    points[0] = 0;
+    points[1] = 0;
     for (var i = 0; i < seg_count; i++) {
         points.push(points[i * 2] + segments[i].offsetWidth);
-        points.push((i !== 0) ? random(y_offset, y_offset + y_range)
-                             : y_offset);
+        points.push((i !== 0) ? random(0, y_range)
+                              : 0);
     }
 
     var cvs = document.getElementById('test-canvas'),
@@ -38,7 +38,9 @@ function layout() {
 
     ctx.strokeStyle = '#f00';
     ctx.lineWidth = 2;
-    ctx.moveTo(points[0], points[1]);
+    ctx.translate(x_offset, y_offset);
+    ctx.moveTo(points[0],
+               points[1]);
     for (var i = 2, il = points.length; i < il; i += 2) {
         ctx.lineTo(points[i], points[i + 1]);
     }
@@ -46,11 +48,15 @@ function layout() {
 
     var deltaX, deltaY, angle, mat;
     //var mat = mat4.create();
+    //mat.translate(mat, mat, [x_offset, y_offset, 0]);
     for (var i = 0; i < seg_count; i++) {
         deltaX = points[i + i + 2] - points[i + i];
         deltaY = points[i + i + 3] - points[i + i + 1];
         angle = Math.atan2(deltaY, deltaX)/* * 180 / Math.PI*/;
         mat = mat4.create();
+        mat4.translate(mat, mat, [ x_offset,
+                                   y_offset,
+                                   0 ]);
         mat4.translate(mat, mat, [ points[i + i],
                                    points[i + i + 1],
                                    0 ]);
