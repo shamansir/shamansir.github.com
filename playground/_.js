@@ -46,28 +46,24 @@ function layout() {
     }
     ctx.stroke();
 
-    var deltaX, deltaY, angle, mat;
-    //var mat = mat4.create();
-    //mat.translate(mat, mat, [x_offset, y_offset, 0]);
+    var deltaX, deltaY, angle;
+    var mat = mat4.create();
+    mat4.translate(mat, mat, [x_offset, y_offset, 0]);
     for (var i = 0; i < seg_count; i++) {
         deltaX = points[i + i + 2] - points[i + i];
         deltaY = points[i + i + 3] - points[i + i + 1];
         angle = Math.atan2(deltaY, deltaX)/* * 180 / Math.PI*/;
-        mat = mat4.create();
-        mat4.translate(mat, mat, [ x_offset,
-                                   y_offset,
-                                   0 ]);
-        mat4.translate(mat, mat, [ points[i + i],
-                                   points[i + i + 1],
-                                   0 ]);
-        console.log(i * (Math.PI / (seg_count - 1)));
-        mat4.rotateY(mat, mat, (Math.PI / (seg_count - 1)));
+        if (i) mat4.translate(mat, mat, [ 0, random(0, y_range), 0]);
+        //mat4.rotateY(mat, mat, (Math.PI / (seg_count - 1)));
         mat4.rotateZ(mat, mat, angle);
         //mat4.rotateY(base, base, i*5);
         //segments[i].style.top = points[i + i + 1] + 'px';
         //segments[i].style.left = points[i + i] + 'px';
         //segments[i].style.webkitTransform = 'rotateZ(' + angle + 'deg) rotateY(' + i*5 +'deg)';
         segments[i].style.webkitTransform = mat4_cssStr(mat);
+        mat4.translate(mat, mat, [ segments[i].offsetWidth,
+                                   0,
+                                   0 ]);
         //segments[i].style.webkitPerspective = i * 50;
     }
 
