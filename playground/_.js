@@ -46,16 +46,19 @@ function layout() {
     }
     ctx.stroke(); */
 
-    var deltaX, deltaY, angle;
+    /* var deltaX, deltaY, angle;
     var mat = mat4.create();
     mat4.translate(mat, mat, [x_offset, y_offset, 0]);
     for (var i = 0; i < seg_count; i++) {
         //deltaX = points[i + i + 2] - points[i + i];
         //deltaY = points[i + i + 3] - points[i + i + 1];
-        //angle = Math.atan2(deltaY, deltaX)/* * 180 / Math.PI*/;
+        //angle = Math.atan2(deltaY, deltaX);
         //if (i) mat4.translate(mat, mat, [ 0, random(0, y_range), 0]);
         //mat4.rotateY(mat, mat, (Math.PI / (seg_count - 1)));
-        /*if (i)*/ mat4.rotateZ(mat, mat, random(0, Math.PI / 10));
+        angle = random(-(Math.PI / 10), Math.PI / 10);
+        if (i) {
+            mat4.rotateZ(mat, mat, angle);
+        }
         //mat4.rotateY(base, base, i*5);
         //segments[i].style.top = points[i + i + 1] + 'px';
         //segments[i].style.left = points[i + i] + 'px';
@@ -64,6 +67,23 @@ function layout() {
         mat4.translate(mat, mat, [ segments[i].offsetWidth,
                                    0,
                                    0 ]);
+        //segments[i].style.webkitPerspective = i * 50;
+    } */
+
+    var angle;
+    var mat = mat4.create();
+    mat4.translate(mat, mat, [x_offset, y_offset, 0]);
+    for (var i = 0; i < seg_count; i++) {
+        angle = random(-(Math.PI / 10), Math.PI / 10);
+        if (i) {
+            mat4.rotateZ(mat, mat, angle);
+        }
+        segments[i].style.webkitTransform = mat4_cssStr(mat);
+        var mat_trans = mat4.create();
+        mat4.translate(mat_trans, mat_trans, [ segments[i].offsetWidth,
+                                   0,
+                                   0 ]);
+        mat4.multiply(mat, mat, mat_trans);
         //segments[i].style.webkitPerspective = i * 50;
     }
 
