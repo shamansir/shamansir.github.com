@@ -11,6 +11,9 @@ canvas {
   position: absolute;
   display: block;
   border: 1px solid #0f0;
+  background-color: #f00;
+  opacity: 0.6;
   top: 0;
   left: 0;
+  min-height: 200px;
 }
