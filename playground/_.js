@@ -10,7 +10,7 @@ function random(from, to) {
 
 function layout() {
 
-    var points = [ ];
+    //var points = [ ];
 
     var segments = document.getElementsByClassName('segment'),
       seg_count = segments.length;
@@ -25,7 +25,7 @@ function layout() {
         segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
     }
 
-    points[0] = 0;
+    /* points[0] = 0;
     points[1] = 0;
     for (var i = 0; i < seg_count; i++) {
         points.push(points[i * 2] + segments[i].offsetWidth);
@@ -44,18 +44,18 @@ function layout() {
     for (var i = 2, il = points.length; i < il; i += 2) {
         ctx.lineTo(points[i], points[i + 1]);
     }
-    ctx.stroke();
+    ctx.stroke(); */
 
     var deltaX, deltaY, angle;
     var mat = mat4.create();
     mat4.translate(mat, mat, [x_offset, y_offset, 0]);
     for (var i = 0; i < seg_count; i++) {
-        deltaX = points[i + i + 2] - points[i + i];
-        deltaY = points[i + i + 3] - points[i + i + 1];
-        angle = Math.atan2(deltaY, deltaX)/* * 180 / Math.PI*/;
-        if (i) mat4.translate(mat, mat, [ 0, random(0, y_range), 0]);
+        //deltaX = points[i + i + 2] - points[i + i];
+        //deltaY = points[i + i + 3] - points[i + i + 1];
+        //angle = Math.atan2(deltaY, deltaX)/* * 180 / Math.PI*/;
+        //if (i) mat4.translate(mat, mat, [ 0, random(0, y_range), 0]);
         //mat4.rotateY(mat, mat, (Math.PI / (seg_count - 1)));
-        mat4.rotateZ(mat, mat, angle);
+        /*if (i)*/ mat4.rotateZ(mat, mat, random(0, Math.PI / 10));
         //mat4.rotateY(base, base, i*5);
         //segments[i].style.top = points[i + i + 1] + 'px';
         //segments[i].style.left = points[i + i] + 'px';
