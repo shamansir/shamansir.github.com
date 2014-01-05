@@ -17,4 +17,21 @@ canvas {
   top: 0;
   left: 0;
   min-height: 200px;
+  -webkit-backface-visibility: hidden;
+  /*-webkit-transform-style: preserve-3d;*/
+}
+
+#handles-trg {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#root {
+  -webkit-transform-style: preserve-3d;
+}
+
+body {
+  -webkit-perspective: 800px;
 }

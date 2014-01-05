@@ -16,7 +16,7 @@ var segments,
 
 var seg_count;
 
-var x_offset = 0,
+var x_offset = 80,
     y_offset = 80,
     y_range = 200,
     x_range = 200;
@@ -28,6 +28,10 @@ function layout(current) {
 
     //var points = [ ];
     var current = current || 0;
+
+    var handlesTrg = document.createElement('div');
+    handlesTrg.id = 'handles-trg';
+    document.body.appendChild(handlesTrg);
 
     if (!initialized) {
 
@@ -49,7 +53,39 @@ function layout(current) {
 
             handles[i] = document.getElementById(segments[i].id + '-handle');
             if (handles[i]) {
-                handles[i].onclick = (function(idx) { return function() { layout(idx); } })(i);
+                /*handles[i].onclick = (function(idx) {
+                    return function() {
+                        layout(idx);
+                    }
+                })(i);*/
+                handles[i].addEventListener('click', (function(idx) {
+                    return function() {
+                        console.log('click-handle', idx);
+                        layout(idx);
+                    }
+                })(i), false);
+
+                handles[i].addEventListener('mouseover', function() {
+                    this.style.cursor = 'pointer';
+                }, false);
+                handles[i].addEventListener('mouseout', function() {
+                    this.style.cursor = 'default';
+                }, false);
+
+                var handleDouble = document.createElement('div');
+                handleDouble.id = segments[i].id + '-handle-dbl';
+                handleDouble.innerText = segments[i].id;
+                handleDouble.style.zIndex = 255;
+                handleDouble.addEventListener('click', (function(idx) {
+                    return function() {
+                        console.log('click-handle-dbl', idx);
+                        layout(idx);
+                    }
+                })(i), false);
+                handleDouble.addEventListener('mouseover', function() {
+                    this.style.cursor = 'pointer';
+                }, false);
+                handlesTrg.appendChild(handleDouble);
             }
         }
 
@@ -61,15 +97,15 @@ function layout(current) {
         mat4.translate(mat, mat, [x_offset, y_offset, 0]);
         for (var i = 0; i < seg_count; i++) {
             if (i) {
-                angleZ = random(-(Math.PI / 10), Math.PI / 10);
-                angleY = random(0, Math.PI / 5);
+                angleZ = random(0, Math.PI / 15);
+                angleY = random(0, Math.PI / 15);
                 mat4.rotateZ(mat, mat, angleZ);
-                mat4.rotateY(mat, mat, angleY);
+                mat4.rotateY(mat, mat, angleY * -1);
+                matrices[i] = mat4.clone(mat);
             }
             segments[i].style.webkitTransform = mat4_cssStr(mat);
             mat_trans[12] = segments[i].offsetWidth; // substitute translate-x value
             mat4.multiply(mat, mat, mat_trans);
-            matrices[i] = mat4.clone(mat);
             //segments[i].style.webkitPerspective = i * 50;
         }
 
@@ -77,13 +113,17 @@ function layout(current) {
 
     }
 
-    var body = document.body;
+    var root = document.getElementById('root');
     if (current == 0) {
-        body.style.webkitTransform = identity_str;
+        root.style.webkitTransformOrigin = 'left top';
+        root.style.webkitTransform = identity_str;
     } else {
-        var inv = mat4.invert(matrices[current]);
-        inv.translate(inv, inv, [x_offset, y_offset, 0]);
-        body.style.webkitTransform = mat4_cssStr(inv);
+        var inv = mat4.clone(matrices[current]);
+        //mat4.translate(inv, inv, [-x_offset, -y_offset, 0]);
+        mat4.invert(inv, inv);
+        mat4.translate(inv, inv, [x_offset, y_offset, 0]);
+        root.style.webkitTransformOrigin = 'left top';
+        root.style.webkitTransform = mat4_cssStr(inv);
     }
 
 }
