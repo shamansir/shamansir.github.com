@@ -3,7 +3,7 @@ html * {
 }
 
 body.has-3d {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .has-3d #segments-root {

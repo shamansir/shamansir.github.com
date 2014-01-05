@@ -21,10 +21,14 @@ var seg_count;
 var idx_to_id,
     id_to_idx;
 
-var x_offset = 80,
-    y_offset = 80,
+var x_offset,
+    y_offset,
+    x_offset_ratio = .3,
+    y_offset_ratio = .2,
     y_range = 200,
     x_range = 200;
+
+var seg_max_height_ratio = .55;
 
 var z_rot_start = -(Math.PI / 15),
     z_rot_end = Math.PI / 15,
@@ -35,7 +39,6 @@ var identity_mat,
     identity_str;
 
 var root;
-
 
 function layout(current) {
 
@@ -74,6 +77,13 @@ function initializeOrSkip(current) {
     idx_to_id = [];
     id_to_idx = [];
 
+    var html = document.body.parentNode,
+        width = html.clientWidth,
+        height = html.clientHeight;
+
+    x_offset = width * x_offset_ratio,
+    y_offset = height * y_offset_ratio;
+
     var opacity_range = seg_count, // 5, seg_count
         blur_range = 5; // TODO, seg_count
 
@@ -84,6 +94,7 @@ function initializeOrSkip(current) {
         segment.style.zIndex = seg_count - i;
         segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
         segment.style.opacity = (opacity_range - i) / opacity_range;
+        segment.style.maxHeight = (height * seg_max_height_ratio) + 'px';
 
         segment_id = segment.id;
 
