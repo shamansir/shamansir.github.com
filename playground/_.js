@@ -24,7 +24,7 @@ var idx_to_id,
 var x_offset,
     y_offset,
     x_offset_ratio = .3,
-    y_offset_ratio = .2,
+    y_offset_ratio = .18,
     y_range = 200,
     x_range = 200;
 
@@ -65,6 +65,8 @@ function layout(current) {
 function initializeOrSkip(current) {
     if (initialized) return;
 
+    // TODO: call on resize
+
     identity_mat = mat4.create();
     identity_str = mat4_cssStr(identity_mat);
 
@@ -87,14 +89,16 @@ function initializeOrSkip(current) {
     var opacity_range = seg_count, // 5, seg_count
         blur_range = 5; // TODO, seg_count
 
-    var segment, segment_id;
+    var segment, segment_id, segment_content;
     for (var i = 0; i < seg_count; i++) {
         segment = segments[i];
 
         segment.style.zIndex = seg_count - i;
         segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
         segment.style.opacity = (opacity_range - i) / opacity_range;
-        segment.style.maxHeight = (height * seg_max_height_ratio) + 'px';
+
+        segment_content = segment.getElementsByClassName('segment-inner')[0];
+        if (segment_content) segment_content.style.maxHeight = (height * seg_max_height_ratio) + 'px';
 
         segment_id = segment.id;
 

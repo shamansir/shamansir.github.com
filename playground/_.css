@@ -30,17 +30,28 @@ body.has-3d {
   display: block;
   border: 1px solid #0f0;
   border-top-color: #000;
+  border-top-width: 3px;
   background-color: #f00;
   opacity: 0.6;
-  top: 0;
   left: 0;
   min-height: 200px;
   /*max-height: 80%;*/ /* use html.clientHeight to calc */
-  overflow-y: scroll;
   -webkit-transition: -webkit-transform .5s;
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: left top;
   /*-webkit-transform-style: preserve-3d;*/
+}
+
+.has-3d .segment .handle {
+    position: fixed;
+    top: -31px;
+}
+
+/* .has-3d .segment > div,
+.has-3d .segment > ul */
+.has-3d .segment-inner {
+    /*position: fixed;*/
+    overflow-y: scroll;
 }
 
 .has-3d footer {
