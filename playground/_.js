@@ -41,13 +41,15 @@ function layout(current) {
 
     //var points = [ ];
 
+    var current = current || (location.hash ? location.hash.slice(1) : '') || '';
+
     initializeOrSkip(current);
 
     var current_idx = current ? id_to_idx[current] : 0;
 
-    if (current_idx == 0) {
+    if (current_idx === 0) {
         root.style.webkitTransform = identity_str;
-    } else {
+    } else if (current_idx) {
         var inv = mat4.clone(matrices[current_idx]);
         //mat4.translate(inv, inv, [-x_offset, -y_offset, 0]);
         mat4.invert(inv, inv);
@@ -95,10 +97,25 @@ function initializeOrSkip(current) {
             handles[i].addEventListener('click', (function(segment_id) {
                return function() {
                    console.log('click-handle', segment_id);
+                   location.hash = '#' + segment_id;
                    layout(segment_id);
                }
             })(segment_id), false);
         }
+    }
+
+    var nav_list = document.getElementsByTagName('nav')
+    var nav_links = nav_list[0].getElementsByClassName('seg-href');
+    for (var i = 0, il = nav_links.length, par_id, seg_id; i < il; i++) {
+        par_id = nav_links[i].parentNode.id;
+        seg_id = par_id.slice(0, par_id.length - '-href'.length);
+        nav_links[i].addEventListener('click', (function(segment_id) {
+           return function() {
+               console.log('nav-click-handle', segment_id);
+               location.hash = '#' + segment_id;
+               layout(segment_id);
+           }
+        })(seg_id), false);
     }
 
     matrices = [];
