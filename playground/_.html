@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="./_.css" />
-        <script src="./_.js" type="text/javascript"></script>
-    </head>
-<body onload="layout();">
-    <canvas id="test-canvas" width="8000px" height="1000px"></canvas>
+<head>
+    <link rel="stylesheet" href="./_.css" />
+    <script src="./_.js" type="text/javascript"></script>
+</head>
+<body onload="layout();" class="has-3d">
+    <nav>
+        <ul>
+            <li id="about-href" class="active"><a href="#about">About</a></li>
+            <li id="contacts-href"><a href="#contacts">Contacts</a></li>
+            <li id="links-href"><a href="#links">Links</a></li>
+            <li id="vcard-href"><a href="#vcard">VCard</a></li>
+            <li id="cv-href"><a href="#cv">CV</a></li>
+            <li id="skills-href"><a href="#skills">Skills</a></li>
+            <li id="story-href"><a href="#story">Story</a></li>
+            <li id="social-href"><a href="#social">Social</a></li>
+            <!-- <li id="geek-href"><a href="#geek">Code</a></li> -->
+            <!-- <li id="current-href"><a href="#social">Current</a></li> --> <!-- male, age, location, position, ... -->
+            <!-- <li id="created-href"><a href="#created">Created</a></li> --> <!-- vimeoid, ... -->
+            <!-- <li id="participated-href"><a href="#participated">Participated</a></li> --> <!-- mypicturetown, animatron -->
+            <!-- <li id="latest-posts-href"><a href="#latest-posts">Latest Posts</a></li> -->
+            <!-- <li id="latest-music-href"><a href="#latest-music">Latest Music</a></li> -->
+            <!-- <li id="files-href"><a href="#files">Files</a></li> --> <!-- travel map, japanese reference, python doc transl., stuff like that -->
+        </ul>
+    </nav>
     <div id="perspective">
         <div id="segments-root">
-            <header id="header" class="segment">
-                <h1 id="header-handle"><span>Ulric</span> <span>Wilfred</span></h1>
+            <!-- ::::: #ABOUT ::::: -->
+            <header id="about" class="segment">
+                <h1 id="about-handle" class="handle"><span>Ulric</span> <span>Wilfred</span></h1>
                 <p>a.k.a. <span>shaman.sir</span></p>
                 <p><img src="" width="150" height="150"></p>
                 <p>Version&nbsp;9. Updated @ 22&nbsp;November&nbsp;2013, Friday.</p>
                 <p>Geek-minded JavaScript/Java&nbsp;developer, in&nbsp;love&nbsp;with&nbsp;CG. Located&nbsp;at Munich,&nbsp;Germany.</p>
             </header>
-                <!-- <nav>
-                    <ul>
-                        <li class="active nav0"><a href="#contacts">Contacts</a></li>
-                        <li class="nav1"><a href="#about">About</a></li>
-                        <li><a href="#nicks">Nicknames</a></li>
-                        <li class="nav2"><a href="#blog">Blog</a></li>
-                        <li class="nav3"><a href="#projects">Projects</a></li>
-                        <li class="nav4"><a href="#social">Social</a></li>
-                        <li class="nav5"><a href="#files">Files</a></li>
-                        <li class="nav6"><a href="#cv">CV</a></li>
-                        <li><a href="#travel">Travel Map</a></li>
-                    </ul>
-                </nav> -->
             <main>
                 <content>
+                    <!-- ::::: #CONTACTS ::::: -->
                     <section id="contacts" class="segment">
-                        <h2 id="contacts-handle">Contacts</h2>
+                        <h2 id="contacts-handle" class="handle">Contacts</h2>
                         <ul>
                             <li>
                                 <img src="" width="48" height="48">
@@ -65,24 +72,9 @@
                             </li>
                         </ul>
                     </section>
-
-                    <section id="cv" class="segment">
-                        <p id="cv-handle"><a href=""><span>Curriculum</span> <span>Vitae</span></a></p>
-                    </section>
-                    <section id="qrcode" class="segment">
-                        <p id="qrcode-handle"><img src="./vcard.svg" width="150" height="150"/></p>
-                    </section>
-                    <section id="skills" class="segment">
-                        <!-- .... -->
-                    </section>
-                    <section id="vcard" class="segment">
-                        <!-- .... -->
-                    </section>
-                    <section id="geek-code" class="segment">
-                        <!-- .... -->
-                    </section>
-                    <section id="professional" class="segment">
-                        <h2 id="professional-handle">Professional Links</h2>
+                    <!-- ::::: #LINKS ::::: -->
+                    <section id="links" class="segment">
+                        <h2 id="links-handle" class="handle">Professional Links</h2>
                         <ul>
                             <li>
                                 <img src="" width="48" height="48">
@@ -141,24 +133,27 @@
                                     <dd><a href="">vimeo/channels/lecture</a></dd>
                                 </dl>
                             </li>
+                            <!-- soundcloud -->
+                            <!-- instagram -->
                             <!-- coderwall ? -->
                             <!-- about.me ? -->
                         </ul>
                     </section>
-                    <section id="projects-partcipated" class="segment">
-                        <!-- mypicturetown, animatron -->
+                    <!-- ::::: #VCARD ::::: -->
+                    <section id="vcard" class="segment">
+                        <p id="vcard-handle" class="handle"><img src="./vcard.svg" width="150" height="150"/></p>
                     </section>
-                    <section id="projects-created" class="segment">
-                        <!-- vimeoid, ... -->
+                    <!-- ::::: #CV ::::: -->
+                    <section id="cv" class="segment">
+                        <p id="cv-handle" class="handle"><a href=""><span>Curriculum</span> <span>Vitae</span></a></p>
                     </section>
-                    <section id="latest-posts-in-blog" class="segment">
-                        <!-- latest posts in blog -->
+                    <!-- ::::: #SKILLS ::::: -->
+                    <section id="skills" class="segment">
+                        <!-- .... -->
                     </section>
-                    <section id="latest-music-written" class="segment">
-                        <!-- latest songs on soundcloud -->
-                    </section>
-                    <section id="about-me" class="segment">
-                        <h2 id="about-me-handle">Who I am</h2>
+                    <!-- ::::: #STORY ::::: -->
+                    <section id="story" class="segment">
+                        <h2 id="story-handle" class="handle">Who I am</h2>
 
                         <p>
                             <em>At work,</em> I am <abbr title="Java Platform, Enterprise Edition" class="tech-name">Java EE</abbr>/Web&nbsp;developer.
@@ -229,8 +224,9 @@
                          </p>
 
                     </section>
+                    <!-- ::::: #SOCIAL ::::: -->
                     <section id="social" class="segment">
-                        <h2 id="social-handle">Social Links</h2>
+                        <h2 id="social-handle" class="handle">Social Links</h2>
                         <ul>
                             <li>
                                 <img src="" width="48" height="48">
@@ -247,7 +243,7 @@
                             <li>
                                 <img src="" width="48" height="48">
                                 <a href="">
-                                    gplus.com/<span class="accent">shamansir</span>
+                                    instagram.com/<span class="accent">shamansir</span>
                                 </a>
                             </li>
                             <li>
@@ -262,19 +258,13 @@
                                     last.fm/<span class="accent">shamansir</span>
                                 </a>
                             </li>
+                            <li>
+                                <img src="" width="48" height="48">
+                                <a href="">
+                                    gplus.com/<span class="accent">shamansir</span>
+                                </a>
+                            </li>
                         </ul>
-                    </section>
-                    <section id="current info" class="segment">
-                        <!-- male, bday, location, position -->
-                    </section>
-                    <section id="other-stuff" class="segment">
-                        <!-- jap reference, .... -->
-                    </section>
-                    <!-- <section id="bages?">
-
-                    </section> -->
-                    <section id="last-tweets" class="segment">
-                        <!-- last tweets -->
                     </section>
                 </content>
             </main>

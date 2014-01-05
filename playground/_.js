@@ -4,6 +4,8 @@
   'M 991 605 C 1103.9777777777776 651.4222222222223 1204.4888888888888 525.7111111111112 1305 400'
 ]; */
 
+var layout = (function() {
+
 function random(from, to) {
   return from + (Math.random() * (to - from));
 }
@@ -15,6 +17,9 @@ var segments,
     handles;
 
 var seg_count;
+
+var idx_to_id,
+    id_to_idx;
 
 var x_offset = 80,
     y_offset = 80,
@@ -29,106 +34,94 @@ var z_rot_start = -(Math.PI / 15),
 var identity_mat,
     identity_str;
 
+var root;
+
+
 function layout(current) {
 
     //var points = [ ];
-    var current = current || 0;
 
-    var handlesTrg = document.createElement('div');
-    handlesTrg.id = 'handles-trg';
-    document.body.appendChild(handlesTrg);
+    initializeOrSkip(current);
 
-    var root = document.getElementById('segments-root');
+    var current_idx = current ? id_to_idx[current] : 0;
 
-    if (!initialized) {
-
-        identity_mat = mat4.create();
-        identity_str = mat4_cssStr(identity_mat);
-
-        segments = document.getElementsByClassName('segment'),
-        seg_count = segments.length;
-        handles = [];
-
-        var opacity_range = seg_count, // 5, seg_count
-            blur_range = 5; // TODO, seg_count
-
-        for (var i = 0; i < seg_count; i++) {
-            segments[i].style.zIndex = seg_count - i;
-            segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
-            segments[i].style.opacity = (opacity_range - i) / opacity_range;
-
-            handles[i] = document.getElementById(segments[i].id + '-handle');
-            if (handles[i]) {
-                /*handles[i].onclick = (function(idx) {
-                    return function() {
-                        layout(idx);
-                    }
-                })(i);*/
-                handles[i].addEventListener('click', (function(idx) {
-                    return function() {
-                        console.log('click-handle', idx);
-                        layout(idx);
-                    }
-                })(i), false);
-
-                handles[i].addEventListener('mouseover', function() {
-                    this.style.cursor = 'pointer';
-                }, false);
-                handles[i].addEventListener('mouseout', function() {
-                    this.style.cursor = 'default';
-                }, false);
-
-                var handleDouble = document.createElement('div');
-                handleDouble.id = segments[i].id + '-handle-dbl';
-                handleDouble.innerText = segments[i].id;
-                handleDouble.style.zIndex = 255;
-                handleDouble.addEventListener('click', (function(idx) {
-                    return function() {
-                        console.log('click-handle-dbl', idx);
-                        layout(idx);
-                    }
-                })(i), false);
-                handleDouble.addEventListener('mouseover', function() {
-                    this.style.cursor = 'pointer';
-                }, false);
-                handlesTrg.appendChild(handleDouble);
-            }
-        }
-
-        matrices = [];
-
-        var angleZ, angleY;
-        var mat = mat4.create(),
-            mat_trans = mat4.create();
-        mat4.translate(mat, mat, [x_offset, y_offset, 0]);
-        for (var i = 0; i < seg_count; i++) {
-            if (i) {
-                angleZ = random(z_rot_start, z_rot_end);
-                angleY = random(y_rot_start, y_rot_end);
-                mat4.rotateZ(mat, mat, angleZ);
-                mat4.rotateY(mat, mat, angleY * -1);
-                matrices[i] = mat4.clone(mat);
-            }
-            segments[i].style.webkitTransform = mat4_cssStr(mat);
-            mat_trans[12] = segments[i].offsetWidth; // substitute translate-x value
-            mat4.multiply(mat, mat, mat_trans);
-            //segments[i].style.webkitPerspective = i * 50;
-        }
-
-        initialized = true;
-
-    }
-
-    if (current == 0) {
+    if (current_idx == 0) {
         root.style.webkitTransform = identity_str;
     } else {
-        var inv = mat4.clone(matrices[current]);
+        var inv = mat4.clone(matrices[current_idx]);
         //mat4.translate(inv, inv, [-x_offset, -y_offset, 0]);
         mat4.invert(inv, inv);
         mat4.translate(inv, inv, [x_offset, y_offset, 0]);
         root.style.webkitTransform = mat4_cssStr(inv);
     }
 
+}
+
+function initializeOrSkip(current) {
+    if (initialized) return;
+
+    identity_mat = mat4.create();
+    identity_str = mat4_cssStr(identity_mat);
+
+    root = document.getElementById('segments-root');
+
+    segments = document.getElementsByClassName('segment'),
+    seg_count = segments.length;
+    handles = [];
+
+    idx_to_id = [];
+    id_to_idx = [];
+
+    var opacity_range = seg_count, // 5, seg_count
+        blur_range = 5; // TODO, seg_count
+
+    var segment, segment_id;
+    for (var i = 0; i < seg_count; i++) {
+        segment = segments[i];
+
+        segment.style.zIndex = seg_count - i;
+        segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
+        segment.style.opacity = (opacity_range - i) / opacity_range;
+
+        segment_id = segment.id;
+
+        id_to_idx[segment_id] = i;
+        idx_to_id[i] = segment_id;
+
+        segment.id = segment_id + '-' + i; // to prevent auto-scroll
+
+        handles[i] = document.getElementById(segment_id + '-handle');
+        if (handles[i]) {
+            handles[i].addEventListener('click', (function(segment_id) {
+               return function() {
+                   console.log('click-handle', segment_id);
+                   layout(segment_id);
+               }
+            })(segment_id), false);
+        }
+    }
+
+    matrices = [];
+
+    var angleZ, angleY;
+    var mat = mat4.create(),
+        mat_trans = mat4.create();
+    mat4.translate(mat, mat, [x_offset, y_offset, 0]);
+    for (var i = 0; i < seg_count; i++) {
+        if (i) {
+            angleZ = random(z_rot_start, z_rot_end);
+            angleY = random(y_rot_start, y_rot_end);
+            mat4.rotateZ(mat, mat, angleZ);
+            mat4.rotateY(mat, mat, angleY * -1);
+            matrices[i] = mat4.clone(mat);
+        }
+        segments[i].style.webkitTransform = mat4_cssStr(mat);
+        mat_trans[12] = segments[i].offsetWidth; // substitute translate-x value
+        mat4.multiply(mat, mat, mat_trans);
+        //segments[i].style.webkitPerspective = i * 50;
+    }
+
+    initialized = true;
 }
 
 function mat4_cssStr(src) {
@@ -140,7 +133,6 @@ function mat4_cssStr(src) {
     ')';
 
 }
-
 
 /* Copyright (c) 2013, Brandon Jones, Colin MacKenzie IV. All rights reserved.
 
@@ -1056,3 +1048,7 @@ mat4.str = function (a) {
 if(typeof(exports) !== 'undefined') {
     exports.mat4 = mat4;
 }
+
+return layout;
+
+})();

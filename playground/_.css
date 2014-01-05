@@ -2,12 +2,30 @@ html * {
   margin: 0;
 }
 
-canvas {
-  position: absolute;
-  background-color: rgba(255, 255, 0, 0.15);
+body.has-3d {
+  overflow-x: hidden;
 }
 
-.segment {
+.has-3d #segments-root {
+  -webkit-transition: -webkit-transform .5s;
+  -webkit-transform-origin: left top;
+  -webkit-transform-style: preserve-3d;
+}
+
+.has-3d #perspective {
+  -webkit-perspective: 800px;
+}
+
+/*.has-3d #perspective, .has-3d #segments-root,
+.has-3d header, .has-3d main, .has-3d content {
+  height: 100%;
+}*/
+
+.has-3d .handle:hover {
+  cursor: pointer;
+}
+
+.has-3d .segment {
   position: absolute;
   display: block;
   border: 1px solid #0f0;
@@ -17,23 +35,17 @@ canvas {
   top: 0;
   left: 0;
   min-height: 200px;
+  /*max-height: 80%;*/ /* use html.clientHeight to calc */
+  overflow-y: scroll;
+  -webkit-transition: -webkit-transform .5s;
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: left top;
   /*-webkit-transform-style: preserve-3d;*/
 }
 
-#handles-trg {
+.has-3d footer {
   display: block;
   position: fixed;
   bottom: 0;
   left: 0;
-}
-
-#segments-root {
-  -webkit-transform-origin: left top;
-  -webkit-transform-style: preserve-3d;
-}
-
-#perspective {
-  -webkit-perspective: 800px;
 }
