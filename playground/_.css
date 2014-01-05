@@ -18,6 +18,7 @@ canvas {
   left: 0;
   min-height: 200px;
   -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: left top;
   /*-webkit-transform-style: preserve-3d;*/
 }
 
@@ -28,10 +29,11 @@ canvas {
   left: 0;
 }
 
-#root {
+#segments-root {
+  -webkit-transform-origin: left top;
   -webkit-transform-style: preserve-3d;
 }
 
-body {
+#perspective {
   -webkit-perspective: 800px;
 }

@@ -21,6 +21,11 @@ var x_offset = 80,
     y_range = 200,
     x_range = 200;
 
+var z_rot_start = -(Math.PI / 15),
+    z_rot_end = Math.PI / 15,
+    y_rot_start = 0,
+    y_rot_end = Math.PI / 15;
+
 var identity_mat,
     identity_str;
 
@@ -32,6 +37,8 @@ function layout(current) {
     var handlesTrg = document.createElement('div');
     handlesTrg.id = 'handles-trg';
     document.body.appendChild(handlesTrg);
+
+    var root = document.getElementById('segments-root');
 
     if (!initialized) {
 
@@ -47,7 +54,6 @@ function layout(current) {
 
         for (var i = 0; i < seg_count; i++) {
             segments[i].style.zIndex = seg_count - i;
-            segments[i].style.webkitTransformOrigin = 'left top';
             segments[i].style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
             segments[i].style.opacity = (opacity_range - i) / opacity_range;
 
@@ -97,8 +103,8 @@ function layout(current) {
         mat4.translate(mat, mat, [x_offset, y_offset, 0]);
         for (var i = 0; i < seg_count; i++) {
             if (i) {
-                angleZ = random(0, Math.PI / 15);
-                angleY = random(0, Math.PI / 15);
+                angleZ = random(z_rot_start, z_rot_end);
+                angleY = random(y_rot_start, y_rot_end);
                 mat4.rotateZ(mat, mat, angleZ);
                 mat4.rotateY(mat, mat, angleY * -1);
                 matrices[i] = mat4.clone(mat);
@@ -113,16 +119,13 @@ function layout(current) {
 
     }
 
-    var root = document.getElementById('root');
     if (current == 0) {
-        root.style.webkitTransformOrigin = 'left top';
         root.style.webkitTransform = identity_str;
     } else {
         var inv = mat4.clone(matrices[current]);
         //mat4.translate(inv, inv, [-x_offset, -y_offset, 0]);
         mat4.invert(inv, inv);
         mat4.translate(inv, inv, [x_offset, y_offset, 0]);
-        root.style.webkitTransformOrigin = 'left top';
         root.style.webkitTransform = mat4_cssStr(inv);
     }
 
