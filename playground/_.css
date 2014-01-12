@@ -23,18 +23,18 @@ body.has-3d {
 
 .has-3d .handle:hover {
   cursor: pointer;
+  background-color: #eee;
 }
 
 .has-3d .segment {
   position: absolute;
   display: block;
-  border: 1px solid #0f0;
+  border-top-style: solid;
   border-top-color: #000;
   border-top-width: 3px;
-  background-color: #f00;
-  opacity: 0.6;
   left: 0;
   min-height: 200px;
+  opacity: .5;
   /*max-height: 80%;*/ /* use html.clientHeight to calc */
   -webkit-transition: -webkit-transform .5s;
   -webkit-backface-visibility: hidden;
@@ -42,8 +42,15 @@ body.has-3d {
   /*-webkit-transform-style: preserve-3d;*/
 }
 
+.has-3d .segment.current {
+    border-top-color: #006;
+    opacity: 1;
+}
+
 .has-3d .segment .handle {
     position: fixed;
+    font-size: 2em;
+    width: 100%;
     top: -31px;
 }
 
@@ -59,4 +66,20 @@ body.has-3d {
   position: fixed;
   bottom: 0;
   left: 0;
+}
+
+.has-3d nav ul {
+    list-style-type: none;
+}
+
+.has-3d nav ul li {
+    display: inline;
+}
+
+.has-3d nav ul li:before {
+    content: ">";
+}
+
+.has-3d nav ul li:last-child:after {
+    content: "<";
 }

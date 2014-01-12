@@ -18,12 +18,14 @@ var segments,
 
 var seg_count;
 
+var cur_segment;
+
 var idx_to_id,
     id_to_idx;
 
 var x_offset,
     y_offset,
-    x_offset_ratio = .3,
+    x_offset_ratio = .2,
     y_offset_ratio = .18,
     y_range = 200,
     x_range = 200;
@@ -49,6 +51,9 @@ function layout(current) {
     initializeOrSkip(current);
 
     var current_idx = current ? id_to_idx[current] : 0;
+    if (cur_segment) cur_segment.className = 'segment';
+    cur_segment = segments[current_idx];
+    cur_segment.className = 'segment current';
 
     if (current_idx === 0) {
         root.style.webkitTransform = identity_str;
@@ -93,9 +98,7 @@ function initializeOrSkip(current) {
     for (var i = 0; i < seg_count; i++) {
         segment = segments[i];
 
-        segment.style.zIndex = seg_count - i;
         segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
-        segment.style.opacity = (opacity_range - i) / opacity_range;
 
         segment_content = segment.getElementsByClassName('segment-inner')[0];
         if (segment_content) segment_content.style.maxHeight = (height * seg_max_height_ratio) + 'px';
