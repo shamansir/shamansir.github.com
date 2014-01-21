@@ -25,12 +25,12 @@ var idx_to_id,
 
 var x_offset,
     y_offset,
-    x_offset_ratio = .2,
-    y_offset_ratio = .18,
+    x_offset_ratio = .1,
+    y_offset_ratio = .10,
     y_range = 200,
-    x_range = 200;
+    x_range = 250;
 
-var seg_max_height_ratio = .55;
+var seg_height_ratio = .55;
 
 var z_rot_start = -(Math.PI / 15),
     z_rot_end = Math.PI / 15,
@@ -51,9 +51,9 @@ function layout(current) {
     initializeOrSkip(current);
 
     var current_idx = current ? id_to_idx[current] : 0;
-    if (cur_segment) cur_segment.className = 'segment';
+    if (cur_segment) cur_segment.classList.remove('current');
     cur_segment = segments[current_idx];
-    cur_segment.className = 'segment current';
+    cur_segment.classList.add('current');
 
     if (current_idx === 0) {
         root.style.webkitTransform = identity_str;
@@ -98,10 +98,21 @@ function initializeOrSkip(current) {
     for (var i = 0; i < seg_count; i++) {
         segment = segments[i];
 
-        segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
+        //segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
+        segment.style.width = x_range + 'px';
 
         segment_content = segment.getElementsByClassName('segment-inner')[0];
-        if (segment_content) segment_content.style.maxHeight = (height * seg_max_height_ratio) + 'px';
+        if (segment_content) {
+            var prev_height = segment_content.clientHeight;
+            var height_limit = Math.floor(height * seg_height_ratio);
+            segment_content.style.maxHeight = height_limit + 'px';
+            segment.style.minHeight = height_limit + 'px';
+            if (prev_height > height_limit) {
+                segment_content.classList.add('overflown');
+            } else {
+                segment_content.classList.remove('overflown');
+            }
+        }
 
         segment_id = segment.id;
 
