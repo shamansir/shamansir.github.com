@@ -26,7 +26,7 @@ var idx_to_id,
 var x_offset,
     y_offset,
     x_offset_ratio = .1,
-    y_offset_ratio = .10,
+    y_offset_ratio = .2,
     y_range = 200,
     x_range = 250;
 
