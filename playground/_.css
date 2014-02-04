@@ -7,6 +7,20 @@ html * {
 
 body.has-3d {
   overflow: hidden;
+  background-color: #123;
+}
+
+.has-3d a {
+  color: #fff8dc;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+}
+
+.has-3d a:hover {
+  color: #daa520;
+  -webkit-transition: background-color .3s ease-in;
+  background-color: rgba(238,238,238,.3);
+  border-bottom: 1px solid #000;
 }
 
 .has-3d #segments-root {
@@ -25,26 +39,42 @@ body.has-3d {
   height: 100%;
 }*/
 
+.has-3d .segment .handle {
+  position: fixed;
+  font-size: 2em;
+  width: 100%;
+  -webkit-transform: translateY(-31px);
+  /*top: -30px;*/
+}
+
+.has-3d .handle:before {
+  content: "#";
+  color: #daa520;
+}
+
 .has-3d .handle:hover {
   cursor: pointer;
-  color: #600;
+  color: #eee;
   -webkit-transition: color .3s ease-out;
 }
 
 .has-3d .segment.current .handle:hover {
-  color: #900;
+  opacity: .5;
+  -webkit-transition: opacity .3s ease-out;
 }
 
 .has-3d .segment {
   position: absolute;
   display: block;
+  color: #fff;
   border-top-style: solid;
-  border-top-color: #ccc;
-  border-top-width: 3px;
+  border-top-color: #38c;
+  border-top-width: 2px;
   left: 0;
+  opacity: .5;
   /*min-height: 200px;*/
   /*max-height: 80%;*/ /* use html.clientHeight to calc */
-  -webkit-transition: -webkit-transform .7s, border-top-color .5s;
+  -webkit-transition: -webkit-transform .7s, border-top-color .5s, color .3s, text-shadow .3s;
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: left top;
   /*-webkit-transform-style: preserve-3d;*/
@@ -52,15 +82,12 @@ body.has-3d {
 
 .has-3d .segment.current {
   opacity: 1;
-  border-top-color: #999;
+  /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;*/
+  /*text-shadow: 0 0 .1em #fff, 0 0 .2em #fff, 0 0 .3em #fff, 0 0 .4em #ff00de, 0 0 .7em #ff00de, 0 0 .8em #ff00de, 0 0 1em #ff00de, 0 0 1.5em #ff00de;*/
 }
 
-.has-3d .segment .handle {
-  position: fixed;
-  font-size: 2em;
-  width: 100%;
-  -webkit-transform: translateY(-31px);
-  /*top: -30px;*/
+.has-3d .segment.current:hover {
+  text-shadow:0 0 1em rgba(255,215,0,.2),0 0 1.5em rgba(255,215,0,.1);
 }
 
 /* .has-3d .segment > div,
@@ -71,14 +98,14 @@ body.has-3d {
 }
 
 .has-3d .segment-inner.overflown {
-  background-color: #fcfcfc;
-  /* background: -moz-linear-gradient(top, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(255,255,255,1) 100%);
-  background: -o-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(top, rgba(255,255,255,0) 40%,rgba(255,255,255,1) 100%);
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 40%,rgba(255,255,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); */
+  /*background-color: #fcfcfc;*/
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 85%, rgba(255,255,255,.3) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(85%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,.3)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#33ffffff',GradientType=0 );
 }
 
 .has-3d footer {
@@ -113,13 +140,10 @@ body.has-3d {
 .has-3d nav ul li a {
   margin: 0 5px;
   padding: 2px;
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid #ccc;
 }
 
-.has-3d nav ul li a:hover {
+/*.has-3d nav ul li a:hover {
   -webkit-transition: background-color .3s ease-in;
   background-color: #eee;
   border-bottom: 1px solid #000;
-}
+}*/
