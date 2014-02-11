@@ -1,0 +1,26 @@
+ul.segment-inner
+
+  mixin links_item(img, href, label, text)
+    - var prefix  = '<span class=\'accent\'>';
+    - var postfix = '</span>';
+    - var link_html = text.replace('[', prefix).replace(']', postfix);
+    img(src=img,
+        width=25,height=25)
+    dl
+      dt= label
+      dd: a(href=href,title=label)!= link_html
+
+  li: +links_item('', '#', 'Blog in English', 'github/blog')
+  li: +links_item('', '#', 'Blog in Russian', 'github/blog/ru')
+  li: +links_item('', '#', 'Github', 'github/[shamansir]')
+  li: +links_item('', '#', 'LinkedIn', 'linkedin/[shaman.sir]')
+  li: +links_item('', '#', 'Lanyrd', 'lanyrd/[shaman.sir]')
+  li: +links_item('', '#', 'Sliderdeck', 'sliderdeck/[shaman.sir]')
+  li: +links_item('', '#', 'StackOverflow', 'stackoverflow/[shaman.sir]')
+  li: +links_item('', '#', 'Lectures @ Vimeo', 'vimeo/channels/lecture')
+  //- li: +links_item('', '#', 'Soundcloud', 'soundcloud/[shamansir]')
+  //- li: +links_item('', '#', 'Instagram', 'instagram/[shamansir]')
+  //- li: +links_item('', '#', 'Coderwall', 'coderwall/[shamansir]')
+  //- li: +links_item('', '#', 'Google.code', 'googlecode/[shamansir]')
+  //- li: +links_item('', '#', 'About.me', 'about.me/[shamansir]')
+

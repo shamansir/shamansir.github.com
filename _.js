@@ -25,12 +25,12 @@ var idx_to_id,
 
 var x_offset,
     y_offset,
-    x_offset_ratio = .1,
-    y_offset_ratio = .2,
+    x_offset_ratio = 0.1,
+    y_offset_ratio = 0.2,
     y_range = 200,
     x_range = 250;
 
-var seg_height_ratio = .55;
+var seg_height_ratio = 0.55;
 
 var z_rot_start = -(Math.PI / 15),
     z_rot_end = Math.PI / 15,
@@ -77,7 +77,7 @@ function initializeOrSkip(current) {
 
     root = document.getElementById('segments-root');
 
-    segments = document.getElementsByClassName('segment'),
+    segments = document.getElementsByClassName('segment');
     seg_count = segments.length;
     handles = [];
 
@@ -128,7 +128,7 @@ function initializeOrSkip(current) {
                    console.log('click-handle', segment_id);
                    location.hash = '#' + segment_id;
                    layout(segment_id);
-               }
+               };
             })(segment_id), false);
         }
     }
@@ -136,14 +136,15 @@ function initializeOrSkip(current) {
     var nav_list = document.getElementsByTagName('nav')
     var nav_links = nav_list[0].getElementsByClassName('seg-href');
     for (var i = 0, il = nav_links.length, par_id, seg_id; i < il; i++) {
-        par_id = nav_links[i].parentNode.id;
+        //par_id = nav_links[i].parentNode.id;
+        par_id = nav_links[i].id;
         seg_id = par_id.slice(0, par_id.length - '-href'.length);
         nav_links[i].addEventListener('click', (function(segment_id) {
            return function() {
                console.log('nav-click-handle', segment_id);
                location.hash = '#' + segment_id;
                layout(segment_id);
-           }
+           };
         })(seg_id), false);
     }
 

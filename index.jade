@@ -1,0 +1,90 @@
+!!! html
+
+//- var css_src = "./_.css"
+//- var js_src  = "./_.js"
+
+- var css_src = ""
+- var js_src = ""
+- var layout_call = "layout()"
+
+html
+
+  head
+    link(href=css_src, rel="stylesheet")
+    script(src=js_src, type="text/javascript")
+
+  body.has-3d(onload=layout_call)
+
+    // NAVIGATION
+    nav
+      ul
+
+        mixin nav_item(id, label)
+          a.seg-href(id!=id+'-href',
+                     href!='#'+id)= label
+
+        li.active
+            +nav_item('about',    'About')
+        li: +nav_item('contacts', 'Contacts')
+        li: +nav_item('links',    'Links')
+        li: +nav_item('vcard',    'VCard')
+        li: +nav_item('cv',       'Skills')
+        li: +nav_item('story',    'Story')
+        li: +nav_item('social',   'Social')
+
+        //- geek code, data (stuff like age,occupation,location),
+        //- non-dev stuff, self-created projects,
+        //- participated project, latest-posts,
+        //- latest-music, files
+
+    #perspective
+      #segments-root
+
+        // SECTION: ABOUT
+        header#about.segment
+          h1#about-handle.handle About
+
+          include sections/about
+
+        // MAIN
+        main
+          content
+
+            // SECTION: CONTACTS
+            section#contacts.segment
+              h2#contacts-handle.handle Contacts
+
+              include sections/contacts
+
+            // SECTION: LINKS
+            section#links.segment
+              h2#links-handle.handle Links
+
+              include sections/links
+
+            // VCARD
+            section#vcard.segment
+              h2#vcard-handle.handle VCard
+
+              include sections/vcard
+
+            // CV
+            section#cv.segment
+              h2#cv-handle.handle CV
+
+              include sections/cv
+
+            // STORY
+            section#story.segment
+              h2#story-handle.handle Story
+
+              include sections/story
+
+            // SOCIAL
+            section#social.segment
+              h2#social-handle.handle Social
+
+              include sections/social
+
+    footer
+      p Designed by shaman.sir &copy; 2014

@@ -1,0 +1,15 @@
+ul.segment-inner
+
+  mixin contact_item(img, href, text)
+    - var prefix  = '<span class=\'accent\'>';
+    - var postfix = '</span>';
+    - var link_html = text.replace('[', prefix).replace(']', postfix);
+    img(src=img,
+        width=25,height=25)
+    a(href=href,title=text)!= link_html
+
+  li: +contact_item('', '#', '[shaman.sir]@gmail.com')
+  li: +contact_item('', '#', 'twitter.com/[shaman_sir]')
+  li: +contact_item('', '#', 'skype://[shaman.sir]')
+  li: +contact_item('', '#', '+49...')
+  li: +contact_item('', '#', '[shaman.sir.de]@gmail.com')
