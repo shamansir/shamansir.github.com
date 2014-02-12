@@ -1,12 +1,17 @@
 @import 'bourbon/bourbon'
 
-$text_font: 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
-$heading_font: 'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
-$links_font: $heading_font
-$footer_font: $links_font
+$text-font: 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
+$heading-font: 'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
+$links-font: $heading-font
+$footer-font: $links-font
 
-$root_gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
-$overflow_gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%)
+$root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
+$overflow-gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%)
+
+$transform-transition-opts: .7s
+$transform-transition: -webkit-transform $transform-transition-opts//, -moz-transform $transform-transition-opts
+$transform-transition-ease-out-opts: .7s ease-out
+$transform-transition-ease-out: -webkit-transform $transform-transition-ease-out-opts//, -moz-transform $transform-transition-ease-out-opts
 
 html *
   margin: 0
@@ -84,7 +89,7 @@ body.has-3d
   // ---------------------------------------------
 
   #segments-root
-    @include transition(transform .7s)
+    @include transition($transform-transition)
     @include transform-origin(left top)
     @include transform-style(preserve-3d)
     // was?
@@ -102,7 +107,7 @@ body.has-3d
       padding: 3px 3px
       /*min-height: 200px;*/
       /*max-height: 80%;*/ /* use html.clientHeight to calc */
-      @include transition(transform .7s, border-top-color .5s ease-out, color .3s ease-out) /*, text-shadow 10s ease-out*/
+      @include transition($transform-transition, border-top-color .5s ease-out, color .3s ease-out) /*, text-shadow 10s ease-out*/
       @include transform-origin(left top)
       @include backface-visibility(hidden)
       /*@include transform-style(preserve-3d)*/
@@ -112,7 +117,7 @@ body.has-3d
         font-size: 2em
         width: 100%
         @include transform(translateY(-43px))
-        @include transition(transform .7s ease-out)
+        @include transition($transform-transition-ease-out)
 
         &:before
           content: "#"
@@ -124,14 +129,14 @@ body.has-3d
           color: #fff
           background-color: rgba(238,238,238,.1)
           @include transform(translateX(-.8em) translateY(-43px))
-          @include transition(transform .7s ease-out, color .3s ease-out, background-color 10s ease-out)
+          @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
 
       .segment-inner
         overflow-y: scroll
         padding-bottom: 40px
         padding-right: 40px
 
-        .overflown
+        &.overflown
           @include background-image($overflow_gradient)
 
     .segment.current
@@ -145,7 +150,7 @@ body.has-3d
           color: #fff
           background-color: rgba(238,238,238,.1)
           @include transform(translateX(-.8em) translateY(-43px))
-          @include transition(transform .7s ease-out, color .3s ease-out, background-color 10s ease-out)
+          @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
 
   // ---------------------------------------------
 
@@ -156,4 +161,3 @@ body.has-3d
     right: 0
     font-size: .6em
     padding: 3px
-
