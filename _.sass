@@ -1,0 +1,159 @@
+@import 'bourbon/bourbon'
+
+$text_font: 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
+$heading_font: 'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
+$links_font: $heading_font
+$footer_font: $links_font
+
+$root_gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
+$overflow_gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%)
+
+html *
+  margin: 0
+  font-family: $text_font
+
+h1, h2, h3
+  font-family: $heading_font
+
+a, a *
+  font-family: $links_font
+
+footer, footer *
+  font-family: $footer_font
+
+// =============================================
+
+body.flat
+  background-color: white
+  color: black
+
+// =============================================
+
+body.has-3d
+  overflow: hidden
+  background-color: #123
+  color: #eeeee0
+
+  a
+    color: #fff8dc
+    text-decoration: none
+    border-bottom: 1px solid #38c
+
+    &:hover
+      color: #daa520
+      @include transition(background-color .3s ease-in, border-color .3s ease-in)
+      background-color: rgba(238,238,238,.1)
+      border-bottom: 1px solid #fff
+
+  .accent
+    color: #20B2AA
+
+  #perspective
+    @include perspective(800px)
+
+  // ---------------------------------------------
+
+  nav
+    ul
+      list-style-type: none
+      padding: 0
+      margin-top: 1em
+      margin-left: 1em
+      font-size: .8em
+
+      li
+        display: inline
+
+        &:before
+          content: "•"
+          color: #666
+
+        &:last-child-after
+          content: "•"
+          color: #666
+
+        a
+          margin: 0 5px
+          padding: 2px
+
+          &:before
+            content: "#"
+            padding-right: 2px
+            color: #daa520
+
+  // ---------------------------------------------
+
+  #segments-root
+    @include transition(transform .7s)
+    @include transform-origin(left top)
+    @include transform-style(preserve-3d)
+    // was?
+    @include background-image($root_gradient)
+
+    .segment
+      position: absolute
+      display: block
+      border-top-style: solid
+      border-top-color: #38c
+      border-top-width: 2px
+      left: 0
+      //@include opacity(.5)
+      opacity: .5
+      padding: 3px 3px
+      /*min-height: 200px;*/
+      /*max-height: 80%;*/ /* use html.clientHeight to calc */
+      @include transition(transform .7s, border-top-color .5s ease-out, color .3s ease-out) /*, text-shadow 10s ease-out*/
+      @include transform-origin(left top)
+      @include backface-visibility(hidden)
+      /*@include transform-style(preserve-3d)*/
+
+      .handle
+        position: fixed
+        font-size: 2em
+        width: 100%
+        @include transform(translateY(-43px))
+        @include transition(transform .7s ease-out)
+
+        &:before
+          content: "#"
+          padding: 0 3px
+          color: #daa520
+
+        &:hover
+          cursor: pointer
+          color: #fff
+          background-color: rgba(238,238,238,.1)
+          @include transform(translateX(-.8em) translateY(-43px))
+          @include transition(transform .7s ease-out, color .3s ease-out, background-color 10s ease-out)
+
+      .segment-inner
+        overflow-y: scroll
+        padding-bottom: 40px
+        padding-right: 40px
+
+        .overflown
+          @include background-image($overflow_gradient)
+
+    .segment.current
+      opacity: 1
+      @include transition(opacity .7s ease-in)
+
+      &:hover
+
+        .handle
+          cursor: pointer
+          color: #fff
+          background-color: rgba(238,238,238,.1)
+          @include transform(translateX(-.8em) translateY(-43px))
+          @include transition(transform .7s ease-out, color .3s ease-out, background-color 10s ease-out)
+
+  // ---------------------------------------------
+
+  footer
+    display: block
+    position: fixed
+    bottom: 0
+    right: 0
+    font-size: .6em
+    padding: 3px
+
