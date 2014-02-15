@@ -16,25 +16,42 @@ $transform-transition-ease-out: -webkit-transform $transform-transition-ease-out
 $background-flat: white
 $text-flat: black
 
-$background-3d: #123
-$base-3d: #eeeee0
-$secondary-3d: #38c
-$active-3d: cornsilk
-$inactive-3d: #666
-$accent-3d: lightseagreen
-$hilite-3d: goldenrod
-$hilite-secondary-3d: white
-$hilite-bg-3d: rgba(238,238,238,.1)
+//$background-3d: #123
+//$base-3d: #eeeee0
+//$secondary-3d: #38c
+//$active-3d: cornsilk
+//$inactive-3d: #666
+//$accent-3d: lightseagreen
+//$hilite-3d: goldenrod
+//$hilite-secondary-3d: white
+//$hilite-bg-3d: rgba(238,238,238,.1)
 
-$segment-bg-3d: rgba(200,200,200,.05)
-$segment-border-3d: rgba(220,220,220,.05)
-$segment-border-top-3d: #38c
+$background-3d: #fcfcfc
+$base-3d: #090909
+$secondary-3d: #393939
+$active-3d: #900
+$inactive-3d: #ccc
+$accent-3d: #600
+$hilite-3d: goldenrod
+$hilite-secondary-3d: #a00
+$hilite-bg-3d: #eee
+
+//$segment-bg-3d: rgba(200,200,200,.05)
+//$segment-border-3d: rgba(220,220,220,.05)
+//$segment-border-top-3d: #38c
+
+$segment-bg-3d: none
+$segment-border-3d: rgba(0,0,0,0)
+$segment-border-top-3d: #000
 
 //$segment-current-bg-3d: $segment-bg-3d
 //$segment-current-border-3d: $segment-border-3d
 //$segment-current-border-top-3d: $segment-border-top-3d
 
-$segment-handle-hover-bg: rgba(238,238,238,.1)
+//$segment-handle-hover-bg: rgba(238,238,238,.1)
+//$segment-handle-hover-color: white
+$segment-handle-hover-bg: #eee
+$segment-handle-hover-color: #900
 
 
 html *
@@ -53,8 +70,8 @@ footer, footer *
 // =============================================
 
 body.flat
-  background-color: white
-  color: black
+  background-color: $background-flat
+  color: $text-flat
 
 // =============================================
 
@@ -151,11 +168,11 @@ body.has-3d
         &:before
           content: "#"
           padding: 0 3px
-          color: goldenrod
+          color: $hilite-3d
 
         &:hover
           cursor: pointer
-          color: #fff
+          color: $segment-handle-hover-color
           background-color: $segment-handle-hover-bg
           @include transform(translateX(-.8em) translateY(-43px))
           @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
@@ -176,7 +193,7 @@ body.has-3d
 
         .handle
           cursor: pointer
-          color: white
+          color: $segment-handle-hover-color
           background-color: $segment-handle-hover-bg
           @include transform(translateX(-.8em) translateY(-43px))
           @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
