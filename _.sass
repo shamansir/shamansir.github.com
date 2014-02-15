@@ -13,6 +13,30 @@ $transform-transition: -webkit-transform $transform-transition-opts//, -moz-tran
 $transform-transition-ease-out-opts: .7s ease-out
 $transform-transition-ease-out: -webkit-transform $transform-transition-ease-out-opts//, -moz-transform $transform-transition-ease-out-opts
 
+$background-flat: white
+$text-flat: black
+
+$background-3d: #123
+$base-3d: #eeeee0
+$secondary-3d: #38c
+$active-3d: cornsilk
+$inactive-3d: #666
+$accent-3d: lightseagreen
+$hilite-3d: goldenrod
+$hilite-secondary-3d: white
+$hilite-bg-3d: rgba(238,238,238,.1)
+
+$segment-bg-3d: rgba(200,200,200,.05)
+$segment-border-3d: rgba(220,220,220,.05)
+$segment-border-top-3d: #38c
+
+//$segment-current-bg-3d: $segment-bg-3d
+//$segment-current-border-3d: $segment-border-3d
+//$segment-current-border-top-3d: $segment-border-top-3d
+
+$segment-handle-hover-bg: rgba(238,238,238,.1)
+
+
 html *
   margin: 0
   font-family: $text_font
@@ -36,22 +60,22 @@ body.flat
 
 body.has-3d
   overflow: hidden
-  background-color: #123
-  color: #eeeee0
+  background-color: $background-3d
+  color: $base-3d
 
   a
-    color: #fff8dc
+    color: $active-3d
     text-decoration: none
-    border-bottom: 1px solid #38c
+    border-bottom: 1px solid $secondary-3d
 
     &:hover
-      color: #daa520
+      color: $hilite-3d
       @include transition(background-color .3s ease-in, border-color .3s ease-in)
-      background-color: rgba(238,238,238,.1)
-      border-bottom: 1px solid #fff
+      background-color: $hilite-bg-3d
+      border-bottom: 1px solid $hilite-secondary-3d
 
   .accent
-    color: #20B2AA
+    color: $accent-3d
 
   #perspective
     @include perspective(800px)
@@ -71,11 +95,11 @@ body.has-3d
 
         &:before
           content: "•"
-          color: #666
+          color: $inactive-3d
 
         &:last-child-after
           content: "•"
-          color: #666
+          color: $inactive-3d
 
         a
           margin: 0 5px
@@ -84,7 +108,7 @@ body.has-3d
           &:before
             content: "#"
             padding-right: 2px
-            color: #daa520
+            color: $hilite-3d
 
   // ---------------------------------------------
 
@@ -98,13 +122,18 @@ body.has-3d
     .segment
       position: absolute
       display: block
-      border-top-style: solid
-      border-top-color: #38c
+
+      background-color: $segment-bg-3d
+      border-style: solid
+      border-width: 1px
+      border-color: $segment-border-3d
+      border-top-color: $segment-border-top-3d
       border-top-width: 2px
+
       left: 0
       //@include opacity(.5)
       opacity: .5
-      padding: 3px 3px
+      padding: 3px 10px
       /*min-height: 200px;*/
       /*max-height: 80%;*/ /* use html.clientHeight to calc */
       @include transition($transform-transition, border-top-color .5s ease-out, color .3s ease-out) /*, text-shadow 10s ease-out*/
@@ -122,12 +151,12 @@ body.has-3d
         &:before
           content: "#"
           padding: 0 3px
-          color: #daa520
+          color: goldenrod
 
         &:hover
           cursor: pointer
           color: #fff
-          background-color: rgba(238,238,238,.1)
+          background-color: $segment-handle-hover-bg
           @include transform(translateX(-.8em) translateY(-43px))
           @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
 
@@ -147,8 +176,8 @@ body.has-3d
 
         .handle
           cursor: pointer
-          color: #fff
-          background-color: rgba(238,238,238,.1)
+          color: white
+          background-color: $segment-handle-hover-bg
           @include transform(translateX(-.8em) translateY(-43px))
           @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
 
