@@ -38,19 +38,37 @@ var root;
 
 function layout(current) {
 
-    //var points = [ ];
+    // layout() calculates a matrix for every segment (a.k.a. section) using random angle
+    // of rotation by axis of Y and Z, stacks them in one (broken) line and then applies
+    // a required inverted transformation matrix to the root element, so the current segment
+    // will be positioned in center, while others will be positioned relatively to current one
+    // properly.
 
+    // Matrix calculation is done just once at the very start, then for all the next calls this
+    // code just transforms the root element using the knowledge about current segment.
+
+    // get current segment ID
     var current = current || (location.hash ? location.hash.slice(1) : '') || '';
 
+    // initialize all segments and their 3d transforms (current one is a bit different
+    // in transforms from others, so it's good to know which one is current) or skip all that,
+    // if they are already initialized
     initializeOrSkip(current);
 
+    // save an index of the current segment
     var current_idx = current ? id_to_idx[current] : 0;
+    // style up the current segment, using `current` CSS class
     if (cur_segment) cur_segment.classList.remove('current');
     cur_segment = segments[current_idx];
     cur_segment.classList.add('current');
 
+    // if current segment is the first one, no root transformations needed at all
+    // (though they should be reset to identity, if they were applied before)
     if (current_idx === 0) {
         root.style.webkitTransform = identity_str;
+    // if not, get the matrix of current segment transformations,
+    // invert it, translate to the top left corner of the segments,
+    // and then apply the result as `tranformation-matrix` via CSS
     } else if (current_idx) {
         var inv = mat4.clone(matrices[current_idx]);
         //mat4.translate(inv, inv, [-x_offset, -y_offset, 0]);
@@ -88,6 +106,7 @@ function initializeOrSkip(current) {
     var opacity_range = seg_count, // 5, seg_count
         blur_range = 5; // TODO, seg_count
 
+    // initialize segment width
     var segment, segment_id, segment_content;
     for (var i = 0; i < seg_count; i++) {
         segment = segments[i];
