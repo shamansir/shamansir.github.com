@@ -3,3 +3,5 @@ _prev/
 _src/
 _.css
 index.html
+res/*.sketch
+res/src

@@ -17,24 +17,37 @@ var cur_segment;
 var idx_to_id,
     id_to_idx;
 
-var x_offset,
-    y_offset,
-    x_offset_ratio = 0.1,
-    y_offset_ratio = 0.2,
-    y_range = 200,
-    x_range = 250;
+var seg_width = 150, // width of the segment in pixels
+    seg_height_ratio = 0.55; // height of the segment, relative to body height
 
-var seg_height_ratio = 0.55;
+var x_offset_ratio = 0.005, // x-offset of the first segment
+    y_offset_ratio = 0.2, // y-offset of the first segment
+    x_offset, // x_offset == body_width * x_offset_ratio
+    y_offset; // y_offset == body_height * y_offset_ratio
 
-var z_rot_start = -(Math.PI / 15),
-    z_rot_end = Math.PI / 15,
-    y_rot_start = 0,
-    y_rot_end = Math.PI / 15;
+// TODO: scrolling or some other action may change this values
+var x_rot = [ 0, 0 ],
+    //z_rot = [ -(Math.PI / 15), Math.PI / 15 ],
+    z_rot = [ 0, 0 ],
+    y_rot = [ 0, Math.PI / 15 ];
 
 var identity_mat,
     identity_str;
 
 var root;
+
+function segmentWidth(idx) { return seg_width; }
+
+function nextXRot() { return /* random(x_rot[0], x_rot[1]); */ 0; }
+function nextYRot() { return random(y_rot[0], y_rot[1]); /* 0; */ }
+function nextZRot() { return /* random(z_rot[0], z_rot[1]); */ 0; }
+
+function switchSegment(to_segment_id) {
+    return function() {
+        location.hash = '#' + to_segment_id;
+        layout(to_segment_id);
+    }
+}
 
 function layout(current) {
 
@@ -84,35 +97,41 @@ function initializeOrSkip(current) {
 
     // TODO: call on resize
 
+    // create the indentity matrix and its string representation
+    // for future re-usage
     identity_mat = mat4.create();
     identity_str = mat4_cssStr(identity_mat);
 
+    // find the root element containing all the segments
     root = document.getElementById('segments-root');
 
+    // collect all the segments
     segments = document.getElementsByClassName('segment');
     seg_count = segments.length;
     handles = [];
 
+    // idx is the ordinal position (index) of the segment and id is its string-type DOM id,
+    // so we keep two reflective maps to save and re-use their conformity
     idx_to_id = [];
-    id_to_idx = [];
+    id_to_idx = {};
 
     var html = document.body.parentNode,
         width = html.clientWidth,
         height = html.clientHeight;
 
+    // we get the offset to move segments using body element width/height parameters
     x_offset = width * x_offset_ratio,
     y_offset = height * y_offset_ratio;
 
-    var opacity_range = seg_count, // 5, seg_count
-        blur_range = 5; // TODO, seg_count
-
-    // initialize segment width
+    // initialize width/height for each segment and fill in id_to_idx / idx_to_id maps
+    // also, initialize segment handles, the ones that change the current segment when clicked
+    // (usually, a headers)
     var segment, segment_id, segment_content;
     for (var i = 0; i < seg_count; i++) {
         segment = segments[i];
 
         //segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
-        segment.style.width = x_range + 'px';
+        segment.style.width = segmentWidth(i) + 'px';
 
         segment_content = segment.getElementsByClassName('segment-inner')[0];
         if (segment_content) {
@@ -120,6 +139,7 @@ function initializeOrSkip(current) {
             var height_limit = Math.floor(height * seg_height_ratio);
             segment_content.style.maxHeight = height_limit + 'px';
             segment.style.minHeight = height_limit + 'px';
+            // apply overflowing style if previous height was greater than maximum height
             if (prev_height > height_limit) {
                 segment_content.classList.add('overflown');
             } else {
@@ -132,51 +152,56 @@ function initializeOrSkip(current) {
         id_to_idx[segment_id] = i;
         idx_to_id[i] = segment_id;
 
-        segment.id = segment_id + '-' + i; // to prevent auto-scroll
+        segment.id = segment_id + '-' + i; // to prevent browser auto-scroll
+                                           // when URL was changed
 
         handles[i] = document.getElementById(segment_id + '-handle');
         if (handles[i]) {
-            handles[i].addEventListener('click', (function(segment_id) {
-               return function() {
-                   //console.log('click-handle', segment_id);
-                   location.hash = '#' + segment_id;
-                   layout(segment_id);
-               };
-            })(segment_id), false);
+            handles[i].addEventListener('click', switchSegment(segment_id), false);
         }
     }
 
+    // fill navigation list links with click-handlers which change the
+    // current segment to the clicked one
     var nav_list = document.getElementsByTagName('nav')
     var nav_links = nav_list[0].getElementsByClassName('seg-href');
     for (var i = 0, il = nav_links.length, par_id, seg_id; i < il; i++) {
         //par_id = nav_links[i].parentNode.id;
         par_id = nav_links[i].id;
         seg_id = par_id.slice(0, par_id.length - '-href'.length);
-        nav_links[i].addEventListener('click', (function(segment_id) {
-           return function() {
-               //console.log('nav-click-handle', segment_id);
-               location.hash = '#' + segment_id;
-               layout(segment_id);
-           };
-        })(seg_id), false);
+        nav_links[i].addEventListener('click', switchSegment(seg_id), false);
     }
+
+    // calculate, store and apply the matrices of transformation
+    // for every segment (by its index)
 
     matrices = [];
 
-    var angleZ, angleY;
+    var angleX, angleY, angleZ;
     var mat = mat4.create(),
         mat_trans = mat4.create();
+    // move segment by offset
     mat4.translate(mat, mat, [x_offset, y_offset, 0]);
     for (var i = 0; i < seg_count; i++) {
+        // if segment is not first, it should be randomly located
         if (i) {
-            angleZ = random(z_rot_start, z_rot_end);
-            angleY = random(y_rot_start, y_rot_end);
-            mat4.rotateZ(mat, mat, angleZ);
+            angleX = nextXRot();
+            angleY = nextYRot();
+            angleZ = nextZRot();
+            mat4.rotateX(mat, mat, angleX);
             mat4.rotateY(mat, mat, angleY * -1);
+            mat4.rotateZ(mat, mat, angleZ);
+            // mat4 will be modified below and re-used for next segments,
+            // so we clone it's current state; it's also because the matrix
+            // in this concrete state will be used to transform the document body
+            // by inverting this matrix, when current segment will be changed
             matrices[i] = mat4.clone(mat);
         }
+        // apply current matrix (identity for the first segment, randomly-rotated for others)
         segments[i].style.webkitTransform = mat4_cssStr(mat);
-        mat_trans[12] = segments[i].offsetWidth; // substitute translate-x value
+        // substitute translate-x value for next segments using width of the current segment
+        // and shift the matrix using this translation matrix
+        mat_trans[12] = segments[i].offsetWidth;
         mat4.multiply(mat, mat, mat_trans);
         //segments[i].style.webkitPerspective = i * 50;
     }
@@ -421,6 +446,50 @@ mat4.translate = function (out, a, v) {
     out[14] = a32 + a33*z;
     out[15] = a33;
 
+    return out;
+};
+
+/**
+ * Rotates a matrix by the given angle around the X axis
+ *
+ * @param {mat4} out the receiving matrix
+ * @param {mat4} a the matrix to rotate
+ * @param {Number} rad the angle to rotate the matrix by
+ * @returns {mat4} out
+ */
+
+mat4.rotateX = function (out, a, rad) {
+    var s = Math.sin(rad),
+        c = Math.cos(rad),
+        a10 = a[4],
+        a11 = a[5],
+        a12 = a[6],
+        a13 = a[7],
+        a20 = a[8],
+        a21 = a[9],
+        a22 = a[10],
+        a23 = a[11];
+
+    if (a !== out) { // If the source and destination differ, copy the unchanged rows
+        out[0]  = a[0];
+        out[1]  = a[1];
+        out[2]  = a[2];
+        out[3]  = a[3];
+        out[12] = a[12];
+        out[13] = a[13];
+        out[14] = a[14];
+        out[15] = a[15];
+    }
+
+    // Perform axis-specific matrix multiplication
+    out[4] = a10 * c + a20 * s;
+    out[5] = a11 * c + a21 * s;
+    out[6] = a12 * c + a22 * s;
+    out[7] = a13 * c + a23 * s;
+    out[8] = a20 * c - a10 * s;
+    out[9] = a21 * c - a11 * s;
+    out[10] = a22 * c - a12 * s;
+    out[11] = a23 * c - a13 * s;
     return out;
 };
 
