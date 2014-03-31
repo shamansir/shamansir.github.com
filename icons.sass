@@ -1,0 +1,36 @@
+$icon-width: 32px
+$icon-height: 32px
+$sprite-rows: 6
+$sprite-cols: 6
+
+$background-width:  $sprite-cols * $icon-width
+$background-height: $sprite-rows * $icon-height
+
+.icon
+    background-image: url(./res/icons.svg)
+    background-size: $background-width $background-height
+    width: $icon-width
+    height: $icon-height
+
+=sprite-icon($col, $row)
+    background-position: (-1 * $icon-width * $col) (-1 * $icon-height * $row)
+
+// =================== ROW 0
+
+.write-icon
+    +sprite-icon(0, 0)
+
+.location-icon
+    +sprite-icon(1, 0)
+
+.number-icon
+    +sprite-icon(2, 0)
+
+.download-icon
+    +sprite-icon(3, 0)
+
+.person-icon
+    +sprite-icon(4, 0)
+
+.home-icon
+    +sprite-icon(5, 0)

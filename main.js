@@ -27,9 +27,9 @@ var x_offset_ratio = 0.005, // x-offset of the first segment
 
 // TODO: scrolling or some other action may change this values
 var x_rot = [ 0, 0 ],
+    y_rot = [ 0, Math.PI / 15 ],
     //z_rot = [ -(Math.PI / 15), Math.PI / 15 ],
-    z_rot = [ 0, 0 ],
-    y_rot = [ 0, Math.PI / 15 ];
+    z_rot = [ 0, 0 ];
 
 var identity_mat,
     identity_str;
@@ -38,9 +38,9 @@ var root;
 
 function segmentWidth(idx) { return seg_width; }
 
-function nextXRot() { return /* random(x_rot[0], x_rot[1]); */ 0; }
-function nextYRot() { return random(y_rot[0], y_rot[1]); /* 0; */ }
-function nextZRot() { return /* random(z_rot[0], z_rot[1]); */ 0; }
+function nextXRot(i) { return /* random(x_rot[0], x_rot[1]); */ 0; }
+function nextYRot(i) { return random(y_rot[0], y_rot[1]); /* 0; */ }
+function nextZRot(i) { return /* random(z_rot[0], z_rot[1]); */ 0; }
 
 function switchSegment(to_segment_id) {
     return function() {
@@ -185,9 +185,9 @@ function initializeOrSkip(current) {
     for (var i = 0; i < seg_count; i++) {
         // if segment is not first, it should be randomly located
         if (i) {
-            angleX = nextXRot();
-            angleY = nextYRot();
-            angleZ = nextZRot();
+            angleX = nextXRot(i);
+            angleY = nextYRot(i);
+            angleZ = nextZRot(i);
             mat4.rotateX(mat, mat, angleX);
             mat4.rotateY(mat, mat, angleY * -1);
             mat4.rotateZ(mat, mat, angleZ);

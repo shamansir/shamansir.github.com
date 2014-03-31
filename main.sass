@@ -87,7 +87,7 @@ body.has-3d
 
     &:hover
       color: $hilite-3d
-      @include transition(background-color .3s ease-in, border-color .3s ease-in)
+      +transition(background-color .3s ease-in, border-color .3s ease-in)
       background-color: $hilite-bg-3d
       border-bottom: 1px solid $hilite-secondary-3d
 
@@ -95,7 +95,7 @@ body.has-3d
     color: $accent-3d
 
   #perspective
-    @include perspective(800px)
+    +perspective(800px)
 
   // ---------------------------------------------
 
@@ -130,11 +130,11 @@ body.has-3d
   // ---------------------------------------------
 
   #segments-root
-    @include transition($transform-transition)
-    @include transform-origin(left top)
-    @include transform-style(preserve-3d)
+    +transition($transform-transition)
+    +transform-origin(left top)
+    +transform-style(preserve-3d)
     // was?
-    @include background-image($root_gradient)
+    +background-image($root_gradient)
 
     .segment
       position: absolute
@@ -149,21 +149,21 @@ body.has-3d
 
       left: 0
       //@include opacity(.5)
-      opacity: .5
+      //opacity: .5
       padding: 3px 10px
       /*min-height: 200px;*/
       /*max-height: 80%;*/ /* use html.clientHeight to calc */
-      @include transition($transform-transition, border-top-color .5s ease-out, color .3s ease-out) /*, text-shadow 10s ease-out*/
-      @include transform-origin(left top)
-      @include backface-visibility(hidden)
+      +transition($transform-transition, border-top-color .5s ease-out, color .3s ease-out) /*, text-shadow 10s ease-out*/
+      +transform-origin(left top)
+      +backface-visibility(hidden)
       /*@include transform-style(preserve-3d)*/
 
       .handle
         position: fixed
         font-size: 2em
         width: 100%
-        @include transform(translateY(-43px))
-        @include transition($transform-transition-ease-out)
+        +transform(translateY(-43px))
+        +transition($transform-transition-ease-out)
 
         &:before
           content: "#"
@@ -174,8 +174,8 @@ body.has-3d
           cursor: pointer
           color: $segment-handle-hover-color
           background-color: $segment-handle-hover-bg
-          @include transform(translateX(-.8em) translateY(-43px))
-          @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
+          +transform(translateX(-.8em) translateY(-43px))
+          +transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
 
       .segment-inner
         overflow-y: scroll
@@ -183,11 +183,11 @@ body.has-3d
         padding-right: 40px
 
         &.overflown
-          @include background-image($overflow_gradient)
+          +background-image($overflow_gradient)
 
     .segment.current
-      opacity: 1
-      @include transition(opacity .7s ease-in)
+      //opacity: 1
+      //+transition(opacity .7s ease-in)
 
       &:hover
 
@@ -195,8 +195,8 @@ body.has-3d
           cursor: pointer
           color: $segment-handle-hover-color
           background-color: $segment-handle-hover-bg
-          @include transform(translateX(-.8em) translateY(-43px))
-          @include transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
+          +transform(translateX(-.8em) translateY(-43px))
+          +transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
 
   // ---------------------------------------------
 

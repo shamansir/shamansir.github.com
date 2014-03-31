@@ -1,0 +1,18 @@
+ul.segment-inner
+
+  mixin links_item(img, lang, post_id, name)
+    img(src=img,
+        width=25,height=25)
+    a(href=href,title=name)!= name
+
+  ul
+    h3 In English
+
+    li: +links_item('', 'en', 'mastering-functional-javascript-slides', 'Mastering Functional JavaScript Lecture Slides')
+    li: +links_item('', 'en', 'gwt-mvp4g-slides', 'GWT + mvp4g Lecture Slides')
+
+  ul
+    h3 In Russian
+
+    li: +links_item('', 'ru', 'mastering-functional-javascript-slides', 'Mastering Functional JavaScript Lecture Slides')
+    li: +links_item('', 'ru', 'gwt-mvp4g-slides', 'GWT + mvp4g Lecture Slides')

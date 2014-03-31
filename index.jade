@@ -3,14 +3,18 @@
 //- var css_src = "./_.css"
 //- var js_src  = "./_.js"
 
-- var css_src = "./_.css"
-- var js_src = "./_.js"
+- var css_src = "./main.css"
+- var js_src = "./main.js"
+- var icons_css_src = "./icons.css"
+- var social_icons_css_src = "./social_icons.css"
 - var layout_call = "layout()"
 
 html
 
   head
     link(href=css_src, rel="stylesheet")
+    link(href=icons_css_src, rel="stylesheet")
+    link(href=social_icons_css_src, rel="stylesheet")
     script(src=js_src, type="text/javascript")
 
   body.has-3d(onload=layout_call)
@@ -25,6 +29,7 @@ html
 
         li.active
             +nav_item('about',    'About')
+        li: +nav_item('posts',    'Posts')
         li: +nav_item('contacts', 'Contacts')
         li: +nav_item('links',    'Links')
         li: +nav_item('vcard',    'VCard')
@@ -56,31 +61,37 @@ html
 
               include sections/contacts
 
+            // SECTION: POSTS
+            section#posts.segment
+              h2#posts-handle.handle Posts
+
+              include sections/posts
+
             // SECTION: LINKS
             section#links.segment
               h2#links-handle.handle Links
 
               include sections/links
 
-            // VCARD
+            // SECTION: VCARD
             section#vcard.segment
               h2#vcard-handle.handle VCard
 
               include sections/vcard
 
-            // CV
+            // SECTION: CV
             section#cv.segment
               h2#cv-handle.handle CV
 
               include sections/cv
 
-            // STORY
+            // SECTION: STORY
             section#story.segment
               h2#story-handle.handle Story
 
               include sections/story
 
-            // SOCIAL
+            // SECTION: SOCIAL
             section#social.segment
               h2#social-handle.handle Social
 
