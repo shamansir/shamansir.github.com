@@ -17,30 +17,40 @@ var cur_segment;
 var idx_to_id,
     id_to_idx;
 
-var seg_width = 150, // width of the segment in pixels
+var seg_width = 200, // width of the segment in pixels
     seg_height_ratio = 0.55; // height of the segment, relative to body height
 
-var x_offset_ratio = 0.005, // x-offset of the first segment
+var x_offset_ratio = 0.1, //0.005, // x-offset of the first segment
     y_offset_ratio = 0.2, // y-offset of the first segment
     x_offset, // x_offset == body_width * x_offset_ratio
     y_offset; // y_offset == body_height * y_offset_ratio
-
-// TODO: scrolling or some other action may change this values
-var x_rot = [ 0, 0 ],
-    y_rot = [ 0, Math.PI / 15 ],
-    //z_rot = [ -(Math.PI / 15), Math.PI / 15 ],
-    z_rot = [ 0, 0 ];
 
 var identity_mat,
     identity_str;
 
 var root;
 
-function segmentWidth(idx) { return seg_width; }
+function segmentWidth(i) { return seg_width; }
 
-function nextXRot(i) { return /* random(x_rot[0], x_rot[1]); */ 0; }
-function nextYRot(i) { return random(y_rot[0], y_rot[1]); /* 0; */ }
-function nextZRot(i) { return /* random(z_rot[0], z_rot[1]); */ 0; }
+function segmentTransform(i, mat) {
+    // first (i==0) segment should not be transformed, so return
+    if (!i) return;
+
+    // "walk-away"
+    mat4.translate(mat, mat, [20, 0, -100]);
+    mat4.rotateY(mat, mat, Math.PI / 32);
+
+    // "rope"
+    //mat4.translate(mat, mat, [20, 0, 0]);
+    //mat4.rotateX(mat, mat, Math.PI / 16);
+
+    // "steps"
+    //mat4.translate(mat, mat, [20, -40, 0]);
+
+    // "circle"
+    //mat4.rotateY(mat, mat, Math.PI / 32 * -1); //random(0, Math.PI / 15) * -1);
+    //mat4.rotateZ(mat, mat, -(Math.PI / 8));
+}
 
 function switchSegment(to_segment_id) {
     return function() {
@@ -183,20 +193,12 @@ function initializeOrSkip(current) {
     // move segment by offset
     mat4.translate(mat, mat, [x_offset, y_offset, 0]);
     for (var i = 0; i < seg_count; i++) {
-        // if segment is not first, it should be randomly located
-        if (i) {
-            angleX = nextXRot(i);
-            angleY = nextYRot(i);
-            angleZ = nextZRot(i);
-            mat4.rotateX(mat, mat, angleX);
-            mat4.rotateY(mat, mat, angleY * -1);
-            mat4.rotateZ(mat, mat, angleZ);
-            // mat4 will be modified below and re-used for next segments,
-            // so we clone it's current state; it's also because the matrix
-            // in this concrete state will be used to transform the document body
-            // by inverting this matrix, when current segment will be changed
-            matrices[i] = mat4.clone(mat);
-        }
+        segmentTransform(i, mat);
+        // mat4 will be modified below and re-used for next segments,
+        // so we clone it's current state; it's also because the matrix
+        // in this concrete state will be used to transform the document body
+        // by inverting this matrix, when current segment will be changed
+        matrices[i] = mat4.clone(mat);
         // apply current matrix (identity for the first segment, randomly-rotated for others)
         segments[i].style.webkitTransform = mat4_cssStr(mat);
         // substitute translate-x value for next segments using width of the current segment
