@@ -61,6 +61,8 @@ function switchSegment(to_segment_id) {
 
 function layout(current) {
 
+    var body = document.body;
+
     // layout() calculates a matrix for every segment (a.k.a. section) using random angle
     // of rotation by axis of Y and Z, stacks them in one (broken) line and then applies
     // a required inverted transformation matrix to the root element, so the current segment
@@ -78,12 +80,16 @@ function layout(current) {
     // if they are already initialized
     initializeOrSkip(current);
 
+    // revert effect from previous selected segment
+    if (cur_segment) cur_segment.classList.remove('current');
+    if (cur_segment) body.classList.remove('theme-'+cur_segment.__real_id);
+
     // save an index of the current segment
     var current_idx = current ? id_to_idx[current] : 0;
     // style up the current segment, using `current` CSS class
-    if (cur_segment) cur_segment.classList.remove('current');
     cur_segment = segments[current_idx];
     cur_segment.classList.add('current');
+    body.classList.add('theme-'+cur_segment.__real_id);
 
     // if current segment is the first one, no root transformations needed at all
     // (though they should be reset to identity, if they were applied before)
@@ -162,6 +168,7 @@ function initializeOrSkip(current) {
         id_to_idx[segment_id] = i;
         idx_to_id[i] = segment_id;
 
+        segment.__real_id = segment_id;
         segment.id = segment_id + '-' + i; // to prevent browser auto-scroll
                                            // when URL was changed
 
