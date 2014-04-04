@@ -6,7 +6,8 @@ $sprite-cols: 6
 $background-width:  $sprite-cols * $icon-width
 $background-height: $sprite-rows * $icon-height
 
-.icon
+.icon-s
+    display: block
     background-image: url(./res/icons_social.svg)
     background-size: $background-width $background-height
     width: $icon-width
@@ -117,20 +118,14 @@ $background-height: $sprite-rows * $icon-height
 
 // =================== ROW 5
 
-.linkedin-icon
+.picasa-icon
     +sprite-icon(0, 5)
 
-.icloud-icon
+.friendfeed-icon
     +sprite-icon(1, 5)
 
-.github-icon
+.goodreads-icon
     +sprite-icon(2, 5)
 
-.reddit-icon
+.coderwall-icon
     +sprite-icon(3, 5)
-
-.sliderdeck-icon
-    +sprite-icon(4, 5)
-
-.lastfm-icon
-    +sprite-icon(5, 5)

@@ -1,16 +1,16 @@
 ul.segment-inner
 
-  mixin social_item(img, href, text)
+  mixin social_item(icon_id, href, text)
     - var prefix  = '<span class=\'accent\'>';
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
-    img(src=img,
-        width=25,height=25)
+    - var img_class = 'icon-s ' + icon_id + '-icon';
+    span(class=img_class)
     a(href=href,title=text)!= link_html
 
-  li: +contact_item('', '#', 'facebook.com/[shaman.sir]')
-  li: +contact_item('', '#', 'twitter.com/[shaman_sir]')
-  li: +contact_item('', '#', 'instagram.com/[shamansir]')
-  li: +contact_item('', '#', 'vimeo.com/[shamansir]')
-  li: +contact_item('', '#', 'last.fm/[shamansir]')
-  li: +contact_item('', '#', 'gplus.com/[shamansir]')
+  li: +contact_item('facebook', '#', 'facebook.com/[shaman.sir]')
+  li: +contact_item('twitter', '#', 'twitter.com/[shaman_sir]')
+  li: +contact_item('instagram', '#', 'instagram.com/[shamansir]')
+  li: +contact_item('vimeo', '#', 'vimeo.com/[shamansir]')
+  li: +contact_item('lastfm', '#', 'last.fm/[shamansir]')
+  li: +contact_item('gplus', '#', 'gplus.com/[shamansir]')

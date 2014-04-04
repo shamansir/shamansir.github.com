@@ -12,7 +12,8 @@ var segments,
 
 var seg_count;
 
-var cur_segment;
+var cur_segment,
+    active_link;
 
 var idx_to_id,
     id_to_idx;
@@ -94,6 +95,11 @@ function layout(current) {
     cur_segment = segments[current_idx];
     cur_segment.classList.add('current');
     body.classList.add('theme-'+cur_segment.__real_id);
+
+    // set a link as current
+    if (active_link) active_link.classList.remove('active');
+    active_link = document.getElementById(current + '-href');
+    if (active_link) active_link.classList.add('active');
 
     // if current segment is the first one, no root transformations needed at all
     // (though they should be reset to identity, if they were applied before)

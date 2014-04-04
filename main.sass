@@ -131,7 +131,7 @@ body.has-3d
       left: 0
       //@include opacity(.5)
       //opacity: .5
-      padding: 3px 10px
+      //padding: 3px 10px
       /*min-height: 200px;*/
       /*max-height: 80%;*/ /* use html.clientHeight to calc */
       +transition($transform-transition, border-top-color .5s ease-out, color .3s ease-out) /*, text-shadow 10s ease-out*/
@@ -143,7 +143,7 @@ body.has-3d
         position: fixed
         font-size: 2em
         width: 100%
-        +transform(translateY(-43px))
+        +transform(translateX(-0.9em) translateY(-41px))
         +transition($transform-transition-ease-out)
 
         &:before
@@ -152,24 +152,39 @@ body.has-3d
 
         &:hover
           cursor: pointer
-          +transform(translateX(-.8em) translateY(-43px))
-          +transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
+          +transition(color .3s ease-out)
 
       .segment-inner
         overflow-y: scroll
         padding-bottom: 40px
-        padding-right: 40px
+        padding-right: 10px
+
+      ul
+        margin: 0
+        margin-top: 5px
+        list-style-type: none
+        padding: 2px
+
+        li
+          padding: 4px 0
+
+          .icon + a, .icon-s + a
+            float: left
+            position: relative
+            top: -26px
+            left: 36px
+            border-bottom: none
+
+            &:hover
+              border-bottom: none
 
     .segment.current
-      //opacity: 1
-      //+transition(opacity .7s ease-in)
 
       &:hover
 
         .handle
           cursor: pointer
-          +transform(translateX(-.8em) translateY(-43px))
-          +transition($transform-transition-ease-out, color .3s ease-out, background-color 10s ease-out)
+          +transition(color .3s ease-out)
 
   // ---------------------------------------------
 
@@ -188,8 +203,9 @@ body.has-3d.theme-about
   $base: #090909
   $secondary: #393939
   $active: #900
+  $current: rgba(60,60,100,1)
   $inactive: #ccc
-  $accent: #600
+  $accent: rgba(60,60,100,1)//#600 //rgba(60,60,200,1)
   $hilite: goldenrod
   $hilite-secondary: #a00
   $hilite-bg: #eee
@@ -198,7 +214,6 @@ body.has-3d.theme-about
   $segment-border: rgba(0,0,0,0) //rgba(0,0,0,.1)
   $segment-border-top: #000
 
-  $segment-handle-hover-bg: #eee
   $segment-handle-hover-color: #900
 
   $root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
@@ -218,7 +233,7 @@ body.has-3d.theme-about
       border-bottom: 1px solid $hilite-secondary
 
   .accent
-    color: $accent-3d
+    color: $accent
 
   nav
     ul
@@ -227,7 +242,11 @@ body.has-3d.theme-about
           color: $inactive
         &:after
           color: $inactive
+
         a
+          &.active
+            color: $current
+
           &:before
             color: $hilite
 
@@ -244,14 +263,11 @@ body.has-3d.theme-about
           color: $hilite
         &:hover
           color: $segment-handle-hover-color
-          background-color: $segment-handle-hover-bg
 
       .segment-inner
         &.overflown
           +background-image($overflow_gradient)
 
     .segment.current
-      &:hover
-        .handle
-          color: $segment-handle-hover-color
-          background-color: $segment-handle-hover-bg
+      .handle
+        color: $current

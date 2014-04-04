@@ -5,7 +5,7 @@ ul.segment-inner
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
     - var img_class = 'icon ' + icon_id + '-icon';
-    div(class=img_class)
+    span(class=img_class)
     dl
       dt= label
       dd: a(href=href,title=label)!= link_html
