@@ -30,7 +30,18 @@ var identity_mat,
 
 var root;
 
-function segmentWidth(i) { return seg_width; }
+function switchSegment(to_segment_id) {
+    return function() {
+        location.hash = '#' + to_segment_id;
+        layout(to_segment_id);
+    }
+}
+
+function segmentStyle(i, segment) {
+    //segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
+    segment.style.width = seg_width + 'px';
+    //segment.style.webkitFilter = 'blur(' + Math.floor(Math.abs(cur - i) * 2) + 'px)';
+}
 
 function segmentTransform(i, mat) {
     // first (i==0) segment should not be transformed, so return
@@ -50,13 +61,6 @@ function segmentTransform(i, mat) {
     // "circle"
     //mat4.rotateY(mat, mat, Math.PI / 32 * -1); //random(0, Math.PI / 15) * -1);
     //mat4.rotateZ(mat, mat, -(Math.PI / 8));
-}
-
-function switchSegment(to_segment_id) {
-    return function() {
-        location.hash = '#' + to_segment_id;
-        layout(to_segment_id);
-    }
 }
 
 function layout(current) {
@@ -146,8 +150,7 @@ function initializeOrSkip(current) {
     for (var i = 0; i < seg_count; i++) {
         segment = segments[i];
 
-        //segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
-        segment.style.width = segmentWidth(i) + 'px';
+        segmentStyle(i, segment);
 
         segment_content = segment.getElementsByClassName('segment-inner')[0];
         if (segment_content) {
