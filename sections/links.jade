@@ -1,25 +1,24 @@
-ul.segment-inner
+ul.segment-inner.icon-list
 
   mixin links_item(icon_id, href, label, text)
     - var prefix  = '<span class=\'accent\'>';
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
     - var img_class = 'icon ' + icon_id + '-icon';
-    span(class=img_class)
     dl
       dt= label
-      dd: a(href=href,title=label)!= link_html
+      dd: a(href=href,title=label)
+          span(class=img_class)
+          span!= link_html
 
-  li: +links_item('skype', '#', 'Blog in English', 'github/blog')
-  li: +links_item('', '#', 'Blog in Russian', 'github/blog/ru')
-  li: +links_item('', '#', 'Github', 'github/[shamansir]')
-  li: +links_item('', '#', 'LinkedIn', 'linkedin/[shaman.sir]')
-  li: +links_item('', '#', 'Lanyrd', 'lanyrd/[shaman.sir]')
-  li: +links_item('', '#', 'Sliderdeck', 'sliderdeck/[shaman.sir]')
-  li: +links_item('', '#', 'StackOverflow', 'stackoverflow/[shaman.sir]')
-  li: +links_item('', '#', 'Lectures @ Vimeo', 'vimeo/channels/lecture')
-  //- li: +links_item('', '#', 'Soundcloud', 'soundcloud/[shamansir]')
-  //- li: +links_item('', '#', 'Instagram', 'instagram/[shamansir]')
+  li: +links_item('write', '#', 'Blog in English', 'github/blog')
+  li: +links_item('write', '#', 'Blog in Russian', 'github/blog/ru')
+  li: +links_item('github', '#', 'Github', 'github/[shamansir]')
+  li: +links_item('linkedin', '#', 'LinkedIn', 'linkedin/[shaman.sir]')
+  li: +links_item('lanyrd', '#', 'Lanyrd', 'lanyrd/[shaman.sir]')
+  li: +links_item('sliderdeck', '#', 'Sliderdeck', 'sliderdeck/[shaman.sir]')
+  li: +links_item('stackoverflow', '#', 'StackOverflow', 'stackoverflow/[shaman.sir]')
+  li: +links_item('vimeo', '#', 'Lectures @ Vimeo', 'vimeo/channels/lecture')
   //- li: +links_item('', '#', 'Coderwall', 'coderwall/[shamansir]')
   //- li: +links_item('', '#', 'Google.code', 'googlecode/[shamansir]')
   //- li: +links_item('', '#', 'About.me', 'about.me/[shamansir]')

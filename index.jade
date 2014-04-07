@@ -12,6 +12,7 @@
 html
 
   head
+    meta(charset='utf-8')
     link(href=css_src, rel="stylesheet")
     link(href=icons_css_src, rel="stylesheet")
     link(href=social_icons_css_src, rel="stylesheet")
@@ -29,18 +30,18 @@ html
 
         li.active
             +nav_item('about',    'About')
-        li: +nav_item('posts',    'Posts')
         li: +nav_item('contacts', 'Contacts')
+        li: +nav_item('posts',    'Posts')
         li: +nav_item('links',    'Links')
         li: +nav_item('vcard',    'VCard')
-        li: +nav_item('cv',       'Skills')
+        li: +nav_item('cv',       'CV')
         li: +nav_item('story',    'Story')
         li: +nav_item('social',   'Social')
 
         //- geek code, data (stuff like age,occupation,location),
         //- non-dev stuff, self-created projects,
         //- participated project, latest-posts,
-        //- latest-music, files
+        //- latest-songs, files
 
     #perspective
       #segments-root

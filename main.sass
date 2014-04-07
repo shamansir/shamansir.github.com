@@ -1,8 +1,10 @@
 @import 'bourbon/bourbon'
 
-$text-font: 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
+$text-font: 'Charter', 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
 $heading-font: 'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
-$links-font: $heading-font
+$nav-font: $heading-font
+$links-font: $text-font
+//$lists-font: 'Avenir Next', 'Avenir', sans-serif
 $footer-font: $links-font
 
 $root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
@@ -56,16 +58,19 @@ $segment-handle-hover-color: #900
 
 html *
   margin: 0
-  font-family: $text_font
+  font-family: $text-font
 
 h1, h2, h3
-  font-family: $heading_font
+  font-family: $heading-font
 
 a, a *
-  font-family: $links_font
+  font-family: $links-font
+
+nav a, nav a *
+  font-family: $nav-font
 
 footer, footer *
-  font-family: $footer_font
+  font-family: $footer-font
 
 // =============================================
 
@@ -81,7 +86,7 @@ body.has-3d
   a
 
     &:hover
-      +transition(background-color .3s ease-in, border-color .3s ease-in)
+      +transition(background-color .3s ease-in, border-color .3s ease-in, color .3s ease-in)
 
   #perspective
     +perspective(800px)
@@ -161,22 +166,38 @@ body.has-3d
 
       ul
         margin: 0
-        margin-top: 5px
+        margin-top: 7px
         list-style-type: none
         padding: 2px
+        font-size: 1.15em
 
         li
-          padding: 4px 0
+          padding: 4px
 
-          .icon + a, .icon-s + a
-            float: left
-            position: relative
-            top: -26px
-            left: 36px
+          &:hover
+            +border-top-radius(0.5em)
+            +border-bottom-radius(0.5em)
+            +border-left-radius(0.5em)
+            +border-right-radius(0.5em)
+
+        &.icon-list
+
+          &:hover
+            +transition(background-color .3s ease-out, color .3s ease-out)
+
+          a
             border-bottom: none
+            text-decoration: none
 
             &:hover
               border-bottom: none
+              background: none
+
+            span:nth-child(2)
+              float: left
+              position: relative
+              top: -1.6em
+              left: 2.1em
 
     .segment.current
 
@@ -198,7 +219,7 @@ body.has-3d
 
 // ---------------------------------------------
 
-body.has-3d.theme-about
+body.has-3d//.theme-about
   $background: #fcfcfc
   $base: #090909
   $secondary: #393939
@@ -222,18 +243,8 @@ body.has-3d.theme-about
   background-color: $background
   color: $base
 
-  a
-    color: $active
-    text-decoration: none
-    border-bottom: 1px solid $secondary
-
-    &:hover
-      color: $hilite
-      background-color: $hilite-bg
-      border-bottom: 1px solid $hilite-secondary
-
   .accent
-    color: $accent
+    color: $active
 
   nav
     ul
@@ -244,6 +255,15 @@ body.has-3d.theme-about
           color: $inactive
 
         a
+          color: $active
+          text-decoration: none
+          border-bottom: 1px solid $secondary
+
+          &:hover
+            color: $hilite
+            background-color: $hilite-bg
+            border-bottom: 1px solid $hilite-secondary
+
           &.active
             color: $current
 
@@ -267,6 +287,15 @@ body.has-3d.theme-about
       .segment-inner
         &.overflown
           +background-image($overflow_gradient)
+
+      ul
+        li
+          &:hover
+            background-color: $hilite-bg
+
+        &.icon-list
+          a
+            color: $base
 
     .segment.current
       .handle

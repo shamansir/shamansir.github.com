@@ -40,7 +40,7 @@ function switchSegment(to_segment_id) {
 
 function segmentStyle(i, segment) {
     //segment.style.width = Math.floor(random(x_range, x_range * 1.5)) + 'px';
-    segment.style.width = seg_width + 'px';
+    segment.style.width = '16em';//seg_width + 'px';
     //segment.style.webkitFilter = 'blur(' + Math.floor(Math.abs(cur - i) * 2) + 'px)';
 }
 
