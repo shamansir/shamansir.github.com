@@ -6,3 +6,5 @@ _src/
 index.html
 res/*.sketch
 res/src
+res/icons/*.sketch
+res/icons/*@2x.svg
