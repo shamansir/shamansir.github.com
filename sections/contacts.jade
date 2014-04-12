@@ -4,18 +4,18 @@ ul.segment-inner.icon-list
     - var prefix  = '<span class=\'accent\'>';
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
-    - var img_class = 'icon-s ' + icon_id + '-icon';
+    - var img_src = './res/icons/' + icon_id + '.svg';
     a(href=href,title=text)
-      span(class=img_class)
+      img(src=img_src)
       span!= link_html
 
   li: +contact_item('mail', '#', '[shaman.sir]@gmail.com')
-  li: +contact_item('twitter', '#', 'twitter.com/[shaman_sir]')
-  li: +contact_item('skype', '#', 'skype://[shaman.sir]')
+  li: +contact_item('social/twitter', '#', 'twitter.com/[shaman_sir]')
+  li: +contact_item('social/skype', '#', 'skype://[shaman.sir]')
   li: +contact_item('phone', '#', '+49 (146) ...')
   li: +contact_item('mail', '#', '[shaman.sir.de]@gmail.com')
   li: a(href=href,title='Home Address')
-      span(class='icon icon-location')
+      img(src='./res/icons/location.svg')
       p.address
         | Simeonistraße 6, 4-OG
         | München 80637
