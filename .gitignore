@@ -8,3 +8,5 @@ res/*.sketch
 res/src
 res/icons/*.sketch
 res/icons/*@2x.svg
+res/icons/social/*.sketch
+res/icons/social/*@2x.svg
