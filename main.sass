@@ -4,6 +4,7 @@ $text-font: 'Charter', 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, 
 $heading-font: 'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
 $nav-font: $heading-font
 $links-font: $text-font
+$icon-list-font: Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
 //$lists-font: 'Avenir Next', 'Avenir', sans-serif
 $footer-font: $links-font
 
@@ -162,17 +163,16 @@ body.has-3d
       .segment-inner
         overflow-y: scroll
         padding-bottom: 40px
-        padding-right: 10px
+        padding-right: 4px
 
       ul
         margin: 0
         margin-top: 7px
         list-style-type: none
         padding: 2px
-        font-size: 1.15em
 
         li
-          padding: 4px
+          padding: 5px 3px 3px 3px
 
           &:hover
             +border-top-radius(0.5em)
@@ -181,11 +181,15 @@ body.has-3d
             +border-right-radius(0.5em)
 
         &.icon-list
+          font-size: 1.15em
 
           &:hover
             +transition(background-color .3s ease-out, color .3s ease-out)
 
-          a
+          li a, li a *
+            font-family: $icon-list-font
+
+          li a
             border-bottom: none
             text-decoration: none
 
@@ -193,9 +197,24 @@ body.has-3d
               border-bottom: none
               background: none
 
-            img
+            & > img
               width: 32px
               height: 32px
+
+            & > span
+              position: relative
+              top: -0.55em
+              margin-left: 6px
+
+            & > p
+              width: 84%
+              position: relative
+              left: 32px
+              top: -1.9em
+              margin-left: 6px
+
+          li:last-child
+            max-height: 4em
 
     .segment.current
 
