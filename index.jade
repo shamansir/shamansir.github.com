@@ -3,7 +3,7 @@
 //- var css_src = "./_.css"
 //- var js_src  = "./_.js"
 
-- var css_src = "./main.css"
+- var css_src = "./css/main.css"
 - var js_src = "./main.js"
 - var layout_call = "layout()"
 
@@ -16,7 +16,7 @@ html
     link(href=social_icons_css_src, rel="stylesheet")
     script(src=js_src, type="text/javascript")
 
-  body.has-3d(onload=layout_call)
+  body.has-3d.theme-a(onload=layout_call)
 
     // NAVIGATION
     nav

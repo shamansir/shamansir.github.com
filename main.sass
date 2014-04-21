@@ -1,12 +1,14 @@
 @import 'bourbon/bourbon'
 
-$text-font: 'Charter', 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
-$heading-font: 'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
-$nav-font: $heading-font
-$links-font: $text-font
-$icon-list-font: Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
-//$lists-font: 'Avenir Next', 'Avenir', sans-serif
-$footer-font: $links-font
+@import '_typography.sass'
+
+@import '_themes.sass'
+@import '_theme-a.scss'
+
+@import '_flat.sass'
+
+@import '_3d.sass'
+@import '_transitions.sass'
 
 $root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
 $overflow-gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%)
@@ -19,59 +21,6 @@ $transform-transition-ease-out: -webkit-transform $transform-transition-ease-out
 $background-flat: white
 $text-flat: black
 
-//$background-3d: #123
-//$base-3d: #eeeee0
-//$secondary-3d: #38c
-//$active-3d: cornsilk
-//$inactive-3d: #666
-//$accent-3d: lightseagreen
-//$hilite-3d: goldenrod
-//$hilite-secondary-3d: white
-//$hilite-bg-3d: rgba(238,238,238,.1)
-
-$background-3d: #fcfcfc
-$base-3d: #090909
-$secondary-3d: #393939
-$active-3d: #900
-$inactive-3d: #ccc
-$accent-3d: #600
-$hilite-3d: goldenrod
-$hilite-secondary-3d: #a00
-$hilite-bg-3d: #eee
-
-//$segment-bg-3d: rgba(200,200,200,.05)
-//$segment-border-3d: rgba(220,220,220,.05)
-//$segment-border-top-3d: #38c
-
-$segment-bg-3d: none
-$segment-border-3d: rgba(0,0,0,0) //rgba(0,0,0,.1)
-$segment-border-top-3d: #000
-
-//$segment-current-bg-3d: $segment-bg-3d
-//$segment-current-border-3d: $segment-border-3d
-//$segment-current-border-top-3d: $segment-border-top-3d
-
-//$segment-handle-hover-bg: rgba(238,238,238,.1)
-//$segment-handle-hover-color: white
-$segment-handle-hover-bg: #eee
-$segment-handle-hover-color: #900
-
-
-html *
-  margin: 0
-  font-family: $text-font
-
-h1, h2, h3
-  font-family: $heading-font
-
-a, a *
-  font-family: $links-font
-
-nav a, nav a *
-  font-family: $nav-font
-
-footer, footer *
-  font-family: $footer-font
 
 // =============================================
 
@@ -114,6 +63,9 @@ body.has-3d
         a
           margin: 0 5px
           padding: 2px
+          text-decoration: none
+          border-bottom-width: 1px
+          border-bottom-style: solid
 
           &:before
             content: "#"
@@ -186,9 +138,6 @@ body.has-3d
           &:hover
             +transition(background-color .3s ease-out, color .3s ease-out)
 
-          li a, li a *
-            font-family: $icon-list-font
-
           li a
             border-bottom: none
             text-decoration: none
@@ -233,87 +182,3 @@ body.has-3d
     right: 0
     font-size: .6em
     padding: 3px
-
-// colors ----------------------------------------
-
-body.has-3d//.theme-about
-  $background: #fcfcfc
-  $base: #090909
-  $secondary: #393939
-  $active: #900
-  $current: rgba(60,60,100,1)
-  $inactive: #ccc
-  $accent: rgba(60,60,100,1)//#600 //rgba(60,60,200,1)
-  $hilite: goldenrod
-  $hilite-secondary: #a00
-  $hilite-bg: #eee
-
-  $segment-bg: none
-  $segment-border: rgba(0,0,0,0) //rgba(0,0,0,.1)
-  $segment-border-top: #000
-
-  $segment-handle-hover-color: #900
-
-  $root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
-  $overflow-gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%)
-
-  background-color: $background
-  color: $base
-
-  .accent
-    color: $active
-
-  nav
-    ul
-      li
-        &:before
-          color: $inactive
-        &:after
-          color: $inactive
-
-        a
-          color: $active
-          text-decoration: none
-          border-bottom: 1px solid $secondary
-
-          &:hover
-            color: $hilite
-            background-color: $hilite-bg
-            border-bottom: 1px solid $hilite-secondary
-
-          &.active
-            color: $current
-
-          &:before
-            color: $hilite
-
-  #segments-root
-    +background-image($root_gradient)
-
-    .segment
-      background-color: $segment-bg
-      border-color: $segment-border
-      border-top-color: $segment-border-top
-
-      .handle
-        &:before
-          color: $hilite
-        &:hover
-          color: $segment-handle-hover-color
-
-      .segment-inner
-        &.overflown
-          +background-image($overflow_gradient)
-
-      ul
-        li
-          &:hover
-            background-color: $hilite-bg
-
-        &.icon-list
-          a
-            color: $base
-
-    .segment.current
-      .handle
-        color: $current

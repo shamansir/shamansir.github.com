@@ -1,0 +1,20 @@
+$theme-a: (
+  background: #fcfcfc,
+  base: #090909,
+  secondary: #393939,
+  active: #900,
+  current: rgba(60,60,100,1),
+  inactive: #ccc,
+  accent: rgba(60,60,100,1), //#600 //rgba(60,60,200,1)
+  hilite: goldenrod,
+  hilite-secondary: #a00,
+  hilite-bg: #eee,
+  segment-bg: none,
+  segment-border: rgba(0,0,0,0), //rgba(0,0,0,.1)
+  segment-border-top: #000,
+  segment-handle-hover-color: #900,
+  root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%),
+  overflow-gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%),
+);
+
+@include theme("theme-a", $theme-a)
