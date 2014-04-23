@@ -1,0 +1,15 @@
+$transform-transition-opts: .7s
+$transform-transition: -webkit-transform $transform-transition-opts//, -moz-transform $transform-transition-opts
+$transform-transition-ease-out-opts: .7s ease-out
+$transform-transition-ease-out: -webkit-transform $transform-transition-ease-out-opts//, -moz-transform $transform-transition-ease-out-opts
+
+body.spatial
+
+  #segments-root
+    +transition($transform-transition)
+
+    .segment
+      +transition($transform-transition)
+
+      .handle
+        +transition($transform-transition-ease-out)

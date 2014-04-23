@@ -1,0 +1,143 @@
+$root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%)
+$overflow-gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%)
+
+body.spatial
+  overflow: hidden
+
+  #perspective
+    +perspective(800px)
+
+  // ---------------------------------------------
+
+  nav
+    ul
+      list-style-type: none
+      padding: 0
+      margin-top: 1em
+      margin-left: 1em
+      font-size: .8em
+
+      li
+        display: inline
+
+        &:before
+          content: "•"
+
+        &:last-child-after
+          content: "•"
+
+        a
+          margin: 0 5px
+          padding: 2px
+          text-decoration: none
+          border-bottom-width: 1px
+          border-bottom-style: solid
+
+          &:before
+            content: "#"
+            padding-right: 2px
+
+  // ---------------------------------------------
+
+  #segments-root
+    +transform-origin(left top)
+    +transform-style(preserve-3d)
+
+    .segment
+      position: absolute
+      display: block
+
+      border-style: solid
+      border-width: 1px
+      border-top-width: 2px
+
+      left: 0
+      //@include opacity(.5)
+      //opacity: .5
+      //padding: 3px 10px
+      /*min-height: 200px;*/
+      /*max-height: 80%;*/ /* use html.clientHeight to calc */
+      +transform-origin(left top)
+      +backface-visibility(hidden)
+      /*@include transform-style(preserve-3d)*/
+
+      .handle
+        position: fixed
+        font-size: 2em
+        width: 100%
+        +transform(translateX(-0.9em) translateY(-41px))
+
+        &:before
+          content: "#"
+          padding: 0 3px
+
+        &:hover
+          cursor: pointer
+          +transition(color .3s ease-out)
+
+      .segment-inner
+        overflow-y: scroll
+        padding-bottom: 40px
+        padding-right: 4px
+
+      ul
+        margin: 0
+        margin-top: 7px
+        list-style-type: none
+        padding: 2px
+
+        li
+          padding: 5px 3px 3px 3px
+
+          &:hover
+            +border-top-radius(0.5em)
+            +border-bottom-radius(0.5em)
+            +border-left-radius(0.5em)
+            +border-right-radius(0.5em)
+
+        &.icon-list
+          font-size: 1.15em
+
+          li a
+            border-bottom: none
+            text-decoration: none
+
+            &:hover
+              border-bottom: none
+              background: none
+
+            & > img
+              width: 32px
+              height: 32px
+
+            & > span
+              position: relative
+              top: -0.56em
+              margin-left: 6px
+
+            & > p
+              width: 84%
+              position: relative
+              left: 32px
+              top: -1.9em
+              margin-left: 6px
+
+          li:last-child
+            max-height: 4em
+
+    .segment.current
+
+      &:hover
+
+        .handle
+          cursor: pointer
+
+  // ---------------------------------------------
+
+  footer
+    display: block
+    position: fixed
+    bottom: 0
+    right: 0
+    font-size: .6em
+    padding: 3px
