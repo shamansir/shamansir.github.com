@@ -3,10 +3,6 @@ _prev/
 _src/
 *.css
 *@2x.svg
+*.sketch
 index.html
-res/*.sketch
-res/src
-res/icons/*.sketch
-res/icons/*@2x.svg
-res/icons/social/*.sketch
-res/icons/social/*@2x.svg
+resources/src

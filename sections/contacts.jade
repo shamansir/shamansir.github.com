@@ -4,7 +4,7 @@ ul.segment-inner.icon-list
     - var prefix  = '<span class=\'accent\'>';
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
-    - var img_src = './res/icons/' + icon_id + '.svg';
+    - var img_src = './resources/icons/' + icon_id + '.svg';
     a(href=href,title=text)
       img(src=img_src)
       span!= link_html
@@ -15,7 +15,7 @@ ul.segment-inner.icon-list
   li: +contact_item('phone', '#', '+49 (146) 8418-11-88')
   li: +contact_item('mail-2', '#', '[shaman.sir.de]@gmail.com')
   li: a(href=href,title='Home Address')
-      img(src='./res/icons/location.svg')
+      img(src='./resources/icons/location.svg')
       p.address
         | Simeonistraße 6, 4-OG
         | 80637 München
