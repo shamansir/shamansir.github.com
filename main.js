@@ -180,6 +180,7 @@ function initializeOrSkip(current) {
         segment.__real_id = segment_id;
         segment.id = segment_id + '-' + i; // to prevent browser auto-scroll
                                            // when URL was changed
+        segment.classList.add('segment-' + segment_id); // to allow custom styles for segments
 
         handles[i] = document.getElementById(segment_id + '-handle');
         if (handles[i]) {
