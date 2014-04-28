@@ -62,3 +62,20 @@
         .handle
           color: map-get($colors, current)
 
+      .segment-about
+        .segment-inner
+          h1:before, h1:after
+            color: map-get($colors, secondary)
+
+          p
+            color: map-get($colors, secondary)
+
+            em
+              color: map-get($colors, base)
+
+          img~p:first-letter
+            color: map-get($colors, active)
+
+          &:after
+            color: map-get($colors, secondary)
+

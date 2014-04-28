@@ -51,6 +51,8 @@ body.spatial
       border-width: 1px
       border-top-width: 2px
 
+      min-width: 16em
+
       left: 0
       //@include opacity(.5)
       //opacity: .5
@@ -68,8 +70,10 @@ body.spatial
         +transform(translateX(-0.9em) translateY(-41px))
 
         &:before
-          content: "#"
-          padding: 0 3px
+          content: '§'
+          font-weight: normal
+          padding-right: 5px
+          padding-left: 11px
 
         &:hover
           cursor: pointer
@@ -96,7 +100,7 @@ body.spatial
             +border-right-radius(0.5em)
 
         &.icon-list
-          font-size: 1.15em
+          font-size: 1.1em
 
           li a
             border-bottom: none
@@ -131,6 +135,55 @@ body.spatial
 
         .handle
           cursor: pointer
+
+    .segment-about
+
+      .segment-inner
+        text-align: center
+        margin-top: 9px
+
+        //h1:before
+          //content: ''
+          //background-image: url(../resources/fleuron-left.svg)
+          //background-size: 0.6em 0.6em
+          //background-repeat: no-repeat
+          //background-position: -0.6em 0
+          //padding-left: 0.6em
+          //content: '\2619'
+
+        //h1:after
+          //+transform(rotate(-180deg))
+          //content: '\2767'
+
+        h1:before, h1:after
+          content: '●' // '∷' // '∴' // '⁂' // '…' // '𝄐' // '☉'
+          font-size: 0.4em
+          padding: 0 4px
+          position: relative
+          top: -5px
+
+        img
+          margin-top: 4px
+          position: relative
+          left: 2px
+
+        //img+p
+          //margin-top: -9px
+
+        p
+          font-size: 0.9em
+
+          em
+            font-size: 1.1em
+            font-style: normal
+
+        &:after
+          content: '※', // '❧' // '⚙' // '⌑' //'⊤' // '◦' // '⚚' // '⚒' // '◼' // '●' // '×' // '‡'
+          position: relative
+          top: .4em
+
+    .segment-contacts, .segment-social
+      min-width: 16.5em
 
   // ---------------------------------------------
 
