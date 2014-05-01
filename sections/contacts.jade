@@ -1,8 +1,12 @@
 ul.sources-list
-  li: a(href='#',title='Download')
-    img(src='./resources/icons/phone.svg')
-  li: a(href='#',title='Download')
-    img(src='./resources/icons/phone.svg')
+
+  mixin source_item(icon_id, href, text)
+    - var img_src = './resources/icons/' + icon_id + '.svg';
+    a(href=href,title=text)
+      img(src=img_src)
+
+  li: +source_item('vcard', '#', 'VCard')
+  li: +source_item('qrcode', '#', 'QR-Code')
 
 ul.segment-inner.icon-list
 
