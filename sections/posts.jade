@@ -10,39 +10,39 @@ ul.sources-list
 
 ul.segment-inner
 
-  mixin links_item(icon_id, lang, post_id, name, tags)
-    - var img_src = './resources/icons/dates/' + icon_id + '.svg';
-    a(href=href,title=name)
-      img(src=img_src)
-      span!= name
+  mixin links_item(date, lang, post_id, name, tags)
+    - var href = '#';
+    dt!= date
+    dd: a(href=href,title=name)!= name
 
-  ul.icon-list
-    h3 In English
+  h3 In English
+
+  dl.marker-list
+
 
     //- PegJS parser techniques
     //- Animatron player presentation
-    li: +links_item('16_feb_13', 'en', 'mastering-functional-javascript-slides', '“Mastering Functional JavaScript” Lecture Slides', [ 'javascript', 'functional', 'slides' ])
-    li: +links_item('04_may_11', 'en', 'gwt-mvp4g-slides', 'GWT + mvp4g Lecture Slides', [ 'java', 'gwt', 'mvp4g', 'slides' ])
-    //- li: +links_item('03_feb_11', 'en', '3-tiny-javascript-snippets', '3 Tiny JavaScript Snippets')
-    li: +links_item('06_dec_10', 'en', 'fluxus-solar-system', 'Modelling Solar System in Fluxus', [ 'lisp', 'fluxus', 'cg', 'functional' ])
-    //- li: +links_item('17_nov_10', 'en', 'easy-as-sandwitch-blog-engine', 'Easy as Sandwich: Blog Engine in JavaScript and XML')
-    li: +links_item('12_aug_10', 'en', 'nijiato-detection-of-fingers-motion', 'Way of the Raibow: Fingers Motion Detection Algorythm Based on Colors Differentiation', [ 'lisp', 'functional' ])
-    li: +links_item('09_jan_10', 'en', '10-useful-solutions-for-android-developer', '10 Useful Solutions for Android Developer', [ 'java', 'android', 'tricks' ])
+    +links_item('16 Feb \'13', 'en', 'mastering-functional-javascript-slides', '“Mastering Functional JavaScript” Lecture Slides', [ 'javascript', 'functional', 'slides' ])
+    +links_item('04 May \'11', 'en', 'gwt-mvp4g-slides', 'GWT + mvp4g Lecture Slides', [ 'java', 'gwt', 'mvp4g', 'slides' ])
+    //- +links_item('03 Feb \'11', 'en', '3-tiny-javascript-snippets', '3 Tiny JavaScript Snippets')
+    +links_item('06 Dec \'10', 'en', 'fluxus-solar-system', 'Modelling Solar System in Fluxus', [ 'lisp', 'fluxus', 'cg', 'functional' ])
+    //- +links_item('17 Nov \'10', 'en', 'easy-as-sandwitch-blog-engine', 'Easy as Sandwich: Blog Engine in JavaScript and XML')
+    +links_item('12 Aug \'10', 'en', 'nijiato-detection-of-fingers-motion', 'Way of the Raibow: Fingers Motion Detection Algorythm Based on Colors Differentiation', [ 'lisp', 'functional' ])
+    +links_item('09 Jan \'10', 'en', '10-useful-solutions-for-android-developer', '10 Useful Solutions for Android Developer', [ 'java', 'android', 'tricks' ])
     //- link to ARCHIVES below
-    li: a(href='#',title='No Word About Onion')
-      img(src='./resources/icons/more.svg')
-      span More...
+    dt —
+    dd: a(href='#',title='No Word About Onion') More...
 
-  ul.icon-list
-    h3 In Russian
+  h3 In Russian
 
-    li: +links_item('16_feb_13', 'ru', 'mastering-functional-javascript-slides', 'Слайды «Постигаем функциональный Javascript»', [ 'javascript', 'functional', 'slides' ])
-    li: +links_item('22_feb_13', 'ru', 'the-way-of-asynchronous-samurai', 'Путь асинхронного самурая', [ 'javascript', 'functional' ])
-    li: +links_item('21_may_11', 'ru', 'javascript-garden-translation', 'JavaScript Гарден на русском', [ 'javascript', 'translation' ])
-    li: +links_item('04_may_11', 'ru', 'gwt-mvp4g-slides', 'Слайды мастер-класса по GWT и mvp4g', [ 'java', 'gwt', 'mvp4g', 'slides' ])
-    li: +links_item('05_jan_10', 'ru', '10-useful-solutions-for-android-developer', '10 полезных решений для разработчика под андроид', [ 'java', 'android', 'tricks' ])
+  dl.marker-list
+
+    +links_item('16 Feb \'13', 'ru', 'mastering-functional-javascript-slides', 'Слайды «Постигаем функциональный Javascript»', [ 'javascript', 'functional', 'slides' ])
+    +links_item('22 Feb \'13', 'ru', 'the-way-of-asynchronous-samurai', 'Путь асинхронного самурая', [ 'javascript', 'functional' ])
+    +links_item('21 May \'11', 'ru', 'javascript-garden-translation', 'JavaScript Гарден на русском', [ 'javascript', 'translation' ])
+    +links_item('04 May \'11', 'ru', 'gwt-mvp4g-slides', 'Слайды мастер-класса по GWT и mvp4g', [ 'java', 'gwt', 'mvp4g', 'slides' ])
+    +links_item('05 Jan \'10', 'ru', '10-useful-solutions-for-android-developer', '10 полезных решений для разработчика под андроид', [ 'java', 'android', 'tricks' ])
     //- link to ARCHIVES below
     //- russian archives dates are messed up! see gwt+mvp4g, постигаем фунциональный
-    li: a(href='#',title='Ни слова о луке')
-      img(src='./resources/icons/more.svg')
-      span Ещё...
+    dt —
+    dd: a(href='#',title='Ни слова о луке') Ещё...

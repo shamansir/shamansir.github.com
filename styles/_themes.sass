@@ -49,30 +49,27 @@
           &.overflown
             +background-image(map-get($colors, overflow-gradient))
 
-        ul.segment-inner, .segment-inner ul
-          li
-            &:hover
-              background-color: map-get($colors, hilite-bg)
+        ul.icon-list, dl.marker-list
+          a
+            color: map-get($colors, base)
 
-          &.icon-list
-            a
-              color: map-get($colors, base)
+          li:hover, dd:hover
+            background-color: map-get($colors, hilite-bg)
 
-        ul.sources-list
+        dl.marker-list > dt
+          color: map-get($colors, active)
+          border-top-color: map-get($colors, inactive)
 
-          img
-            var-icon-color1: #0f0
-
-          svg
-            var-icon-color1: #0f0
-            background-color: #f00
-
-            path#vcard
-              fill: map-get($colors, source-icon)
+        dl.marker-list > dd
+          border-top-color: map-get($colors, inactive)
 
       .segment.current
         .handle
           color: map-get($colors, current)
+
+      .segment-inner
+        h3:after
+          color: map-get($colors, inactive)
 
       .segment-about
         .segment-inner
