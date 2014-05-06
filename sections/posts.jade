@@ -10,6 +10,24 @@ ul.sources-list
 
 ul.segment-inner
 
+  mixin tag_item(tag, text)
+    - var href = '#';
+    li: a(href=href,title=text)!= text
+
+  h3 Main Topics
+
+  ul.tag-list
+    +tag_item('gwt', 'GWT')
+    +tag_item('javascript', 'JavaScript')
+    +tag_item('functional', 'functionaλ')
+    +tag_item('slides', 'slides')
+    +tag_item('video', 'video')
+    +tag_item('mvp4g', 'mvp4g')
+    +tag_item('cg', 'CG')
+    +tag_item('fluxus', '(fluxus)')
+    +tag_item('lisp', 'Lisp')
+    +tag_item('android', 'Android')
+
   mixin links_item(date, lang, post_id, name, tags)
     - var href = '#';
     dt!= date
@@ -18,7 +36,6 @@ ul.segment-inner
   h3 In English
 
   dl.marker-list
-
 
     //- PegJS parser techniques
     //- Animatron player presentation

@@ -1,8 +1,8 @@
 var layout = (function() {
 
-function random(from, to) {
-  return from + (Math.random() * (to - from));
-}
+//function random(from, to) {
+//  return from + (Math.random() * (to - from));
+//}
 
 var initialized = false;
 
@@ -204,7 +204,6 @@ function initializeOrSkip(current) {
 
     matrices = [];
 
-    var angleX, angleY, angleZ;
     var mat = mat4.create(),
         mat_trans = mat4.create();
     // move segment by offset
