@@ -1,25 +1,24 @@
 ul.segment-inner.icon-list
 
-  mixin links_item(icon_id, href, label, text)
+  mixin links_item(icon_id, href, text)
     - var prefix  = '<span class=\'accent\'>';
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
-    - var img_class = 'icon ' + icon_id + '-icon';
-    dl
-      dt= label
-      dd: a(href=href,title=label)
-          span(class=img_class)
-          span!= link_html
+    - var img_src = './resources/icons/' + icon_id + '.svg';
+    a(href=href,title=text)
+      img(src=img_src)
+      span!= link_html
 
-  li: +links_item('write', '#', 'Blog in English', 'github/blog')
-  li: +links_item('write', '#', 'Blog in Russian', 'github/blog/ru')
-  li: +links_item('github', '#', 'Github', 'github/[shamansir]')
-  li: +links_item('linkedin', '#', 'LinkedIn', 'linkedin/[shaman.sir]')
-  li: +links_item('lanyrd', '#', 'Lanyrd', 'lanyrd/[shaman.sir]')
-  li: +links_item('sliderdeck', '#', 'Sliderdeck', 'sliderdeck/[shaman.sir]')
-  li: +links_item('stackoverflow', '#', 'StackOverflow', 'stackoverflow/[shaman.sir]')
-  li: +links_item('vimeo', '#', 'Lectures @ Vimeo', 'vimeo/channels/lecture')
-  //- li: +links_item('', '#', 'Coderwall', 'coderwall/[shamansir]')
+  li: +links_item('blog', '#', 'Blog in English')
+  li: +links_item('blog', '#', 'Blog in Russian')
+  li: +links_item('social/vimeo', '#', 'Lectures @ Vimeo', 'vimeo/channels/lecture')
+  li: +links_item('social/github', '#', 'github/[shamansir]')
+  li: +links_item('social/linkedin', '#', 'linkedin/[shaman.sir]')
+  li: +links_item('social/sliderdeck', '#', 'sliderdeck/[shaman.sir]')
+  li: +links_item('social/lanyrd', '#', 'lanyrd/[shaman.sir]')
+  li: +links_item('social/coderwall', '#', 'coderwall/[shamansir]')
+  li: +links_item('social/stackoverflow', '#', 'stackoverflow/[shaman.sir]')
+  //- li: +links_item('social/soundcloud', '#', 'soundcloud/[shamansir]')
   //- li: +links_item('', '#', 'Google.code', 'googlecode/[shamansir]')
   //- li: +links_item('', '#', 'About.me', 'about.me/[shamansir]')
 
