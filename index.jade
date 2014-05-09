@@ -1,20 +1,15 @@
-!!! html
+doctype html
 
-//- var css_src = "./_.css"
-//- var js_src  = "./_.js"
+- var css_src = './styles/main.css';
+- var js_src = './scripts/main.js';
+- var layout_call = 'layout()';
 
-- var css_src = "./styles/main.css"
-- var js_src = "./main.js"
-- var layout_call = "layout()"
-
-html
+html(lang='en')
 
   head
     meta(charset='utf-8')
-    link(href=css_src, rel="stylesheet")
-    link(href=icons_css_src, rel="stylesheet")
-    link(href=social_icons_css_src, rel="stylesheet")
-    script(src=js_src, type="text/javascript")
+    link(href=css_src, rel='stylesheet')
+    script(src=js_src, type='text/javascript')
 
   body.spatial.theme-a(onload=layout_call)
 

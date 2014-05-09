@@ -1,4 +1,10 @@
-a(href='') Expanded & Printable CV
+ul.sources-list
 
-:markdown
-  1013-2087 Went to **Nebraska**
+  mixin source_item(icon_id, href, text)
+    - var img_src = './resources/icons/' + icon_id + '.svg';
+    a(href=href,title=text)
+      img(src=img_src)
+
+  li: +source_item('download', '#', 'A separate file')
+
+include:md ../cv.md

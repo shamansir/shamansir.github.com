@@ -4,5 +4,6 @@ _src/
 *.css
 *@2x.svg
 *.sketch
+cv.html
 index.html
 resources/src
