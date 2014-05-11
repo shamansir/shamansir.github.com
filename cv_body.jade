@@ -1,0 +1,71 @@
+h1 Anton Kotenko
+h3 Java/JS UI Developer
+
+hr
+
+h4: label(for='contacts')
+    | Contacts
+
+dl#contacts
+
+    mixin contact(prop, val)
+      dt= prop
+      dd= val
+
+    mixin contact_link(prop, href, label)
+      - var label = label || href
+      dt= prop
+      dd: a(href=href,title=prop)= label
+
+    mixin contact_ex(prop, href1, label1, href2, label2)
+      dt= prop
+      dd #[a(href=href1,title=label1)= href1]
+         | &nbsp;!{label1},
+         #[br]
+         #[a(href=href2,title=label2)= href2]
+         | &nbsp;!{label2}
+
+    +contact(     'Phone',    '+49 (176) 84-18-1188')
+    +contact_link('E-mail',   'mailto:shaman.sir@gmail.com', 'shaman.sir@gmail.com')
+    +contact(     'Location', 'Munich, Germany')
+    +contact_link('Web-page', 'http://shamansir.github.com')
+
+    +contact_ex(  'Alternative Versions', 'http://www.linkedin.com/in/shamansir', '(LinkedIn)',
+                                          'http://careers.stackoverflow.com/shamansir', '(Carreers@SO)')
+
+    +contact_link('Code examples', 'http://github.com/shamansir')
+
+    +contact_ex(  'Blog', 'http://shamansir.github.com/blog/', '(In&nbsp;English)',
+                          'http://shamansir.github.com/blog/ru/', '(In&nbsp;Russian)')
+
+    +contact_link('Skype', 'skype:shaman.sir?chat', 'shaman.sir')
+
+h4: label(for='objective')
+    | Objective
+
+:markdown
+
+    Life made me an experienced nerd — the one seeking for perfection both in
+    source code and in user delight. That's why I like to participate in a
+    projects where visual part (and user) matters on the same level as the
+    good code. Also, I like projects which are open to users and other
+    developers to improve. I like the idea of sharing code of the product.
+
+    Of course, as a result, I like to develop everything related to User
+    Interfaces or Computer Graphics. I love to code and to solve things in a
+    beautiful ways. And I like start-ups, the fastest way to get new
+    experience.
+
+    What am I looking for? Challenges.
+
+    Things I don't like? Absence of innovation.
+
+h4: label(for='skills')
+    | Skills
+
+dl#skills
+
+  dt Programming Languages
+  dd JavaScript (and I truly love it), Java, JavaScript (again), Python (this one is also cool)
+
+
