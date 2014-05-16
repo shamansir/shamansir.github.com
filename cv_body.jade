@@ -12,6 +12,7 @@ h4: label(for='contacts')
 
 dl#contacts
 
+  //- FIXME: remove dl/dd tags from mixing, use mixin only for dd content
   mixin contact(prop, val)
     dt= prop
     dd= val
@@ -24,23 +25,25 @@ dl#contacts
   mixin contact_ex(prop, href1, label1, href2, label2)
     dt= prop
     dd #[a(href=href1,title=label1)= href1]
-       | &nbsp;!{label1},
+       = ' '
+       | (!{label1}),
        #[br]
        #[a(href=href2,title=label2)= href2]
-       | &nbsp;!{label2}
+       = ' '
+       | (!{label2})
 
   +contact(     'Phone',    '+49 (176) 84-18-1188')
   +contact_link('E-mail',   'mailto:shaman.sir@gmail.com', 'shaman.sir@gmail.com')
   +contact(     'Location', 'Munich, Germany')
   +contact_link('Web-page', 'http://shamansir.github.com')
 
-  +contact_ex(  'Alternative Versions', 'http://www.linkedin.com/in/shamansir', '(LinkedIn)',
-                                        'http://careers.stackoverflow.com/shamansir', '(Carreers@SO)')
+  +contact_ex(  'Alternative Versions', 'http://www.linkedin.com/in/shamansir', 'LinkedIn',
+                                        'http://careers.stackoverflow.com/shamansir', 'Carreers@SO')
 
   +contact_link('Code examples', 'http://github.com/shamansir')
 
-  +contact_ex(  'Blog', 'http://shamansir.github.com/blog/', '(In&nbsp;English)',
-                        'http://shamansir.github.com/blog/ru/', '(In&nbsp;Russian)')
+  +contact_ex(  'Blog', 'http://shamansir.github.com/blog/', 'In&nbsp;English',
+                        'http://shamansir.github.com/blog/ru/', 'In&nbsp;Russian')
 
   +contact_link('Skype', 'skype:shaman.sir?chat', 'shaman.sir')
 
@@ -84,6 +87,7 @@ ul#recap
   li 9 Companies
   li Longest time in one company: 35 months
   li Average time in one company: 13 months
+  li Languages: English, Russian
 
 // ============================================ SKILLS =============================================
 
@@ -147,9 +151,9 @@ dl#experience
     dt Product Website
     dd
       a(href='http://www.animatron.com/') http://www.animatron.com/,
-      | &nbsp;
+      = ' '
       a(href='http://editor.animatron.com/') http://editor.animatron.com/
-      | ;&nbsp;(We're in beta &amp; site design will evolve)
+      | ; (We're in beta &amp; site design will evolve)
 
     dt Company Specialization
     dd HTML5 Animation Tool
@@ -431,9 +435,114 @@ ul#languages
 
 // ============================================ PERFORMANCES =======================================
 
+h4: label(for='perfomances')
+    | Performances
+
+ul#performances
+
+  mixin performance(what, where, year, town, kind, language)
+    a(href=what[1],title=what[0])!= what[0]
+    | #{' '}for#{' '}
+    a(href=where[1],title=where[0])!= where[0]
+    | #{year} @ #{town}, #{kind} in #{language}
+
+  li: +performance(['GWT &amp; mvp4g Web Development', 'http://vimeo.com/26357352'],
+                   ['Application Developer Days', 'http://addconf.ru/add_2011'],
+                   '\'12', 'Saint-Petersburg', 'video', 'Russian')
+  li: +performance(['The Real JavaScript', 'http://vimeo.com/33393795'],
+                   ['Web Standards Days', 'http://webstandardsdays.ru/2011/10/22/'],
+                   '\'11', 'Kiyv', 'video', 'Russian')
+  li: +performance(['Development with Fluxus', 'http://vimeo.com/23468113'],
+                   ['Application Developer Days', 'http://addconf.ru/add_2011'],
+                   '\'11', 'Saint-Petersburg', 'video', 'Russian')
+  li: +performance(['Mastering Functional JavaScript', 'http://speakerdeck.com/shamansir/mastering-functional-javascript'],
+                   ['Animatron', 'http://animatron.com'],
+                   '\'12', 'Boston', 'slides', 'English')
+  li: +performance(['Animatron Player API in Details', 'https://speakerdeck.com/shamansir/animatron-player-api-in-details-v3'],
+                   ['Animatron', 'http://animatron.com'],
+                   '\'13', 'Boston', 'slides', 'English')
+  li: +performance(['Animatron Player API in Details', 'https://vimeo.com/79683081'],
+                   ['Ultracode Münich', 'http://lanyrd.com/2013/ultracode-meetup-4/'],
+                   '\'13', 'Munich', 'video', 'English')
+
 // ============================================ INFO ===============================================
+
+h4: label(for='personal-info')
+    | Personal Info
+
+dl#personal-info
+
+  dt Age
+  dd 29
+
+  dt Marital Status
+  dd Married
+
+  dt Children
+  dd None
+
+  dt Born
+  dd Saint-Petersburg, Russia
+
+  dt Lived in
+  dd: ul
+    li Saint-Petersburg, Russia (24 years)
+    li Odessa, Ukraine (2.5 years)
+    li Munich, Germany (1.5+ years)
 
 // ============================================ BOOKS ==============================================
 
+h4: label(for='favorite-books')
+    | Books, I'm inspired with
+
+ul#favorite-books
+
+  mixin book(title, author)
+    !{title}, by #[span.author !{author}]
+
+  // li: +book('Dune', 'Frank Herbert')
+  // li: +book('All Tomorrow\'s Parties', 'William Gibson')
+  // li: +book('Watchmen', 'Alan Moore &amp; David Gibbons')
+  li: +book('Land of Lisp', 'Conrad Barski')
+  li: +book('Designed for Use', 'Lukas Mathis')
+  // li: +book('3D Modelling and Surfacing', 'Bill Fleming')
+  li: +book('Advanced 3D Photorealism Techniques', 'Bill Fleming')
+  // +book('3D Graphis &amp; Animation', 'Mark Giambruno')
+  li: +book('Programming Pearls', 'Jon Bentley')
+  li: +book('The Nature of Code', 'Daniel Shiffman')
+  li: +book('Designing with Web Standards', 'Jeffrey Zeldman')
+  // li: book('Tricks of the 3D Game Programming Gurus', 'Andre LaMothé')
+  li: +book('Programming Perl', 'Larry Wall, Tom Christiansen, Jon Orwant')
+  li: +book('The Element of Typographic Style', 'Robert Bringhurst')
+
 // ============================================ RECOMMENDATIONS ====================================
 
+h4: label(for='recommendations')
+    | Recommendations
+
+ul#recommendations
+
+  mixin recommendation(content, author, url)
+    - var url = url || 'http://www.linkedin.com/in/shamansir'
+    blockquote(cite=url)
+      p
+        | &ldquo;
+        = content
+        | &rdquo;
+      p: cite=author
+
+  li: +recommendation('Anton is a very talented developer who developed a lot of '
+      + 'Ajax-based Web UI as well as server-side Java code for myPictureTown '
+      + 'service. His knowledge of web technologies and languages, such as '
+      + 'Javascript+Ajax, HTML, CSS are on the expert level. He is a reliable, hard-'
+      + 'working professional, and I recommend him without reservations.',
+      'Boris Berkman, Senior Software Architect, Piclinq (prior to spin-off - FotoNation)')
+
+  li: +recommendation('Anton honest, responsible, executive and skilled programmer.',
+      'Andrey Nikankin, Technical Director, Piclinq Rus (FotoNation Rus)')
+
+  li: +recommendation('I know Anton as a brilliant Javascript programmer with strong '
+      + 'understanding of the most advanced concepts of this language. His Java '
+      + 'skills are also allow him to write good Java code. It is a pleasure to '
+      + 'work with such talented professional.',
+      'Sergey Kuznetsov, Software Developer, Piclinq')
