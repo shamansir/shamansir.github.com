@@ -41,7 +41,7 @@ dl#experience, dl#education
         color: #666
 
     & > dt:after
-        content: "⇣"
+        content: '⇣'
         margin: 4px
         position: relative
         top: 4px
@@ -79,10 +79,31 @@ dl#contacts
         text-align: right
 
     & > dt:after
-        content: ":"
+        content: ':'
 
     & > dd
         margin: 2px 2px 2px 25%
+
+#footer
+
+    margin-top: 14em
+    text-align: center
+    font-size: 0.8em
+
+    hr
+        display: none
+
+    p:last-child
+        border-top: 1px solid #aaa
+        padding-top: 7px
+        margin-bottom: 5em
+        margin-right: 25%
+        margin-left: 25%
+
+    &:after
+        content: '— ※ —'
+        color: #aaa
+
 
 $width-narrower: 'screen and (max-width: 560px)'
 $width-narrow:   'screen and (max-width: 640px)'
