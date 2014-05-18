@@ -9,7 +9,38 @@ ul.sources-list
   li: +source_item('print', '#', 'Print')
 
 div.segment-inner
-    //- include:md ../cv.md
-    include ../cv_body.jade
+  //- include:md ../cv.md
+  //- include ../cv_body.jade
 
-    // TODO: Add short CV
+  h3 Recap
+
+  h3 Experience
+
+  h3 Expertise
+
+  ul.tag-list
+
+    mixin expertise_item(href, text)
+      a(href=href,title=text)!= text
+
+    li: +expertise_item('#', 'Java')
+    li: +expertise_item('#', 'JavaScript')
+    li: +expertise_item('#', 'GWT')
+    li: +expertise_item('#', 'mvp4g')
+    li: +expertise_item('#', 'HTML5')
+    li: +expertise_item('#', 'canvas')
+    li: +expertise_item('#', 'CSS')
+    li: +expertise_item('#', 'XSLT')
+
+  h3 Alternate versions
+
+  ul.icon-list
+
+    mixin cv_item(icon_id, href, text)
+      - var img_src = './resources/icons/' + icon_id + '.svg';
+      a(href=href,title=text)
+        img(src=img_src)
+        span!= text
+
+    li: +cv_item('social/stackoverflow', '#', '@ Careers.StackOverflow')
+    li: +cv_item('social/linkedin', '#', '@ LinkedIn')
