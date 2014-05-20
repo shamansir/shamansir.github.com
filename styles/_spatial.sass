@@ -85,6 +85,9 @@ body.spatial
         padding-bottom: 40px
         padding-right: 4px
 
+        //a:hover:after
+          //content: '->'
+
         h3:first-child
           margin-top: 10px
 
@@ -120,7 +123,7 @@ body.spatial
 
       ul.icon-list li > a,
       dl.marker-list dd > a,
-      ul.sources-list li > a,
+      ul.source-list li > a,
       ul.tag-list li > a
 
         border-bottom: none
@@ -154,7 +157,7 @@ body.spatial
         li:last-child
           max-height: 4em
 
-      ul.sources-list
+      ul.source-list
         list-style-type: none
         position: absolute
         right: 0
@@ -190,9 +193,6 @@ body.spatial
           margin: 4px 0
           padding: 2px 4px
 
-        & > dt:last-of-type
-          border: none
-
       ul.tag-list
 
         & > li
@@ -202,6 +202,16 @@ body.spatial
 
         & > li > a
 
+      ul.fact-list
+        //font-size: 0.9em
+        padding-left: 1.5em
+        list-style-type: circle
+
+        li
+          padding: 3px 3px 3px 0px
+
+          //.accent
+            //border-bottom: 1px dashed
 
     .segment.current
 
@@ -262,16 +272,10 @@ body.spatial
     .segment-contacts, .segment-social
       min-width: 16.5em
 
-    .segment-cv ul#recap
-      //font-size: 0.9em
-      padding-left: 1.5em
-      list-style-type: circle
+    .segment-posts
 
-      li
-        padding: 3px 3px 3px 0px
-
-        //.accent
-          //border-bottom: 1px dashed
+      dl.marker-list > dt:last-of-type
+        border: none
 
   // ---------------------------------------------
 

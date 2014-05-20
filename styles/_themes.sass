@@ -56,9 +56,16 @@
           li:hover, dd:hover
             background-color: map-get($colors, hilite-bg)
 
+        ul.fact-list
+          li:marker
+            color: map-get($colors, secondary)
+
         dl.marker-list > dt
           color: map-get($colors, active)
           border-top-color: map-get($colors, inactive)
+
+          a
+            color: map-get($colors, active)
 
         dl.marker-list > dd
           border-top-color: map-get($colors, inactive)
@@ -90,16 +97,4 @@
 
           &:after
             color: map-get($colors, secondary)
-
-      .segment-cv
-        ul#recap
-
-          li
-
-            &:marker
-              color: map-get($colors, secondary)
-
-            //.accent
-              //color: map-get($colors, base)
-              //text-decoration: underline
 

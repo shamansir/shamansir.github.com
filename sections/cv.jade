@@ -1,4 +1,4 @@
-ul.sources-list
+ul.source-list
 
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
@@ -14,7 +14,7 @@ div.segment-inner
 
   h3 Recap
 
-  ul#recap
+  ul.facts-list
     mixin recap_item(text)
       - var prefix  = '<span class=\'accent\'>';
       - var postfix = '</span>';
@@ -77,7 +77,7 @@ div.segment-inner
 
   h3 Experience
 
-  dl
+  dl#experience.marker-list
 
     mixin experience_item(company_name, company_href, title, project_name, project_href, start_date, end_date, months)
       if company_href
@@ -87,15 +87,20 @@ div.segment-inner
 
       dd
         span.xp-title= title
+        = ' '
         if project_href
           span.xp-project: a(href=project_href,title=project_name)= project_name
         else if project_name
           span.xp-project= project_name
 
+        = ' '
+
         span.xp-date
           span.xp-start= start_date
           | —
           span.xp-end= end_date
+
+        = ' '
 
         | (
         span.xp-month #{months}&nbsp;months
@@ -113,7 +118,7 @@ div.segment-inner
     +experience_item('Sea Project', 'http://seaproject.ru', 'JavaScript Developer',
                      'IETKB', '',
                      '08/2009', '09/2009', '1')
-    +experience_item('Piclinq/Fotonation', 'http://piclinq.com', 'JavaScript Developer',
+    +experience_item('Piclinq (Fotonation)', 'http://piclinq.com', 'JavaScript Developer',
                      'myPictureTown', 'http://mypicturetown.com',
                      '07/2007', '05/2009', '22')
     +experience_item('FK LTD', '', 'JavaScript Developer',
