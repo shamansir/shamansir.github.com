@@ -79,7 +79,6 @@ body.spatial
 
         &:hover
           cursor: pointer
-          +transition(color .3s ease-out)
 
       .segment-inner
         overflow-y: scroll
@@ -186,7 +185,7 @@ body.spatial
           margin: 4px 2px 0 0
 
         & > dd
-          font-size: 0.9em
+          //font-size: 0.9em
           width: 65%
           margin: 4px 0
           padding: 2px 4px
@@ -263,7 +262,16 @@ body.spatial
     .segment-contacts, .segment-social
       min-width: 16.5em
 
+    .segment-cv ul#recap
+      //font-size: 0.9em
+      padding-left: 1.5em
+      list-style-type: circle
 
+      li
+        padding: 3px 3px 3px 0px
+
+        //.accent
+          //border-bottom: 1px dashed
 
   // ---------------------------------------------
 
