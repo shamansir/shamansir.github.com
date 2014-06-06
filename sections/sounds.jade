@@ -1,3 +1,12 @@
+ul.source-list
+
+  mixin source_item(icon_id, href, text)
+    - var img_src = './resources/icons/' + icon_id + '.svg';
+    a(href=href,title=text)
+      img(src=img_src)
+
+  li: +source_item('tracks', 'http://soundcloud.com/shamansir/tracks', 'Tracks')
+
 dl.marker-list
 
   mixin album_item(alb_img, alb_name, alb_id, alb_year, songs)
