@@ -28,14 +28,14 @@ ul.segment-inner
     +tag_item('lisp', 'Lisp')
     +tag_item('android', 'Android')
 
+  mixin links_item(date, lang, post_id, name, tags)
+    - var href = '#';
+    dt!= date
+    dd: a(href=href,title=name)!= name
+
   h3 In English
 
   dl.marker-list
-
-    mixin links_item(date, lang, post_id, name, tags)
-      - var href = '#';
-      dt!= date
-      dd: a(href=href,title=name)!= name
 
     //- PegJS parser techniques
     //- Animatron player presentation
