@@ -11,7 +11,7 @@ html(lang='en')
     link(href=css_src, rel='stylesheet')
     script(src=js_src, type='text/javascript')
 
-  body.spatial.theme-a(onload=layout_call)
+  body.spatial.theme-a
 
     // NAVIGATION
     nav
@@ -100,3 +100,6 @@ html(lang='en')
 
     footer
       p Designed by shaman.sir &copy; 2014
+
+    script(type='text/javascript')
+      != layout_call
