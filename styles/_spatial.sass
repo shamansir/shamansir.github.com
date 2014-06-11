@@ -161,17 +161,27 @@ body.spatial
         list-style-type: none
         position: absolute
         right: 0
-        top: -2.1em
-        padding: 3px 0 3px 3px
-        //padding: 3px
+        top: -2em
 
         & > li
           float: left
-          padding-left: 3px
+          padding: 2px
 
-          a > img
+          &:hover
+            +border-top-radius(0.3em)
+            +border-bottom-radius(0.3em)
+            +border-left-radius(0.3em)
+            +border-right-radius(0.3em)
+            background-size: 22px 22px
+
+          a
+            display: block
             width: 22px
             height: 22px
+
+            & > img
+              width: 22px
+              height: 22px
 
       dl.marker-list
 

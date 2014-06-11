@@ -70,6 +70,10 @@
         dl.marker-list > dd
           border-top-color: map-get($colors, inactive)
 
+        ul.source-list > li
+          &:hover
+            background-color: map-get($colors, hilite-bg)
+
       .segment.current
         .handle
           color: map-get($colors, current)
