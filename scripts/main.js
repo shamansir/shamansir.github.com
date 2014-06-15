@@ -19,10 +19,10 @@ var idx_to_id,
     id_to_idx;
 
 var seg_width = 200, // width of the segment in pixels
-    seg_height_ratio = 0.55; // height of the segment, relative to body height
+    seg_height_ratio = 0.75; // height of the segment, relative to body height
 
-var x_offset_ratio = 0.1, //0.005, // x-offset of the first segment
-    y_offset_ratio = 0.2, // y-offset of the first segment
+var x_offset_ratio = 0.08, //0.005, // x-offset of the first segment
+    y_offset_ratio = 0.17, // y-offset of the first segment
     x_offset, // x_offset == body_width * x_offset_ratio
     y_offset; // y_offset == body_height * y_offset_ratio
 
@@ -49,19 +49,23 @@ function segmentTransform(i, mat) {
     if (!i) return;
 
     // "walk-away"
-    mat4.translate(mat, mat, [20, 0, -100]);
-    mat4.rotateY(mat, mat, Math.PI / 32);
+    //mat4.translate(mat, mat, [20, 0, -100]);
+    //mat4.rotateY(mat, mat, Math.PI / 32);
 
     // "rope"
-    //mat4.translate(mat, mat, [20, 0, 0]);
+    mat4.translate(mat, mat, [50, 0, 0]);
     //mat4.rotateX(mat, mat, Math.PI / 16);
 
     // "steps"
-    //mat4.translate(mat, mat, [20, -40, 0]);
+    //mat4.translate(mat, mat, [10, -40, 0 ]); // /-40]);
 
     // "circle"
     //mat4.rotateY(mat, mat, Math.PI / 32 * -1); //random(0, Math.PI / 15) * -1);
     //mat4.rotateZ(mat, mat, -(Math.PI / 8));
+
+    //mat4.scaleX(1 / i);
+    //mat4.scaleY(1 / i);
+
 }
 
 function layout(current) {
@@ -163,7 +167,6 @@ function initializeOrSkip(current) {
             var prev_height = segment_content.clientHeight;
             var height_limit = Math.floor(height * seg_height_ratio);
             segment_content.style.maxHeight = height_limit + 'px';
-            segment.style.minHeight = height_limit + 'px';
             // apply overflowing style if previous height was greater than maximum height
             if (prev_height > height_limit) {
                 segment_content.classList.add('overflown');

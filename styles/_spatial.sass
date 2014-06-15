@@ -21,13 +21,15 @@ body.spatial
         display: inline
 
         &:before
+          position: relative
+          left: -1px
           content: "•"
 
         &:last-child-after
           content: "•"
 
         a
-          margin: 0 5px
+          margin: 0 5px 0 7px
           padding: 2px
           text-decoration: none
           border-bottom-width: 1px
@@ -81,15 +83,14 @@ body.spatial
           cursor: pointer
 
       .segment-inner
-        overflow-y: scroll
-        padding-bottom: 40px
+        //padding-bottom: 40px
         padding-right: 4px
 
         //a:hover:after
           //content: '->'
 
         h3:first-child
-          margin-top: 10px
+          margin-top: 5px
 
         h3
           margin-top: 20px
@@ -102,10 +103,11 @@ body.spatial
             margin-left: 4px
             font-size: 0.6em
 
+      .segment-inner.overflown
+        overflow-y: scroll
 
       ul.segment-inner, .segment-inner ul
         margin: 0
-        margin-top: 7px
         list-style-type: none
         padding: 2px
 
@@ -135,6 +137,7 @@ body.spatial
 
       ul.icon-list
         font-size: 1.1em
+        margin-top: 2px
 
         li a
 
