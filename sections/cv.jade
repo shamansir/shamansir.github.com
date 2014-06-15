@@ -2,11 +2,10 @@ ul.source-list
 
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
-    a(href=href,title=text)
+    a(href=href,title=text,target=target)
       img(src=img_src)
 
-  li: +source_item('share', '#', 'Download/View')
-  li: +source_item('post', '#', 'Print')
+  li: +source_item('download', './cv.html', 'Download/View')
 
 div.segment-inner
   //- include:md ../cv.md

@@ -5,13 +5,15 @@ ul.source-list
     a(href=href,title=text)
       img(src=img_src)
 
-  li: +source_item('vcard', '#', 'VCard')
-  li: +source_item('qrcode', '#', 'QR-Code')
+  li: +source_item('vcard', './shamansir.vcf', 'VCard')
+  //- TODO: Open in lightbox
+  //- TODO: a link to VCard file?
+  li: +source_item('qrcode', './shamansir_vcard.png', 'QR-Code')
 
 ul.segment-inner.icon-list
 
   - var none = null;
-  // FIXME: remove none-links
+  //- TODO: remove none-links
 
   mixin contact_item(icon_id, href, text)
     - var prefix  = '<span class=\'accent\'>';
@@ -25,8 +27,8 @@ ul.segment-inner.icon-list
   li: +contact_item('mail-2', 'mailto://shaman.sir@gmail.com', '[shaman.sir]@gmail.com')
   li: +contact_item('social/skype', 'skype:shaman.sir?info', 'skype://[shaman.sir]')
   li: +contact_item('phone', 'tel:+4914684181188', '(+49) 146 84-18-11-88')
-  // li: +contact_item('phone', none, '(+49) 146 84-18-11-88')
-  // li: +contact_item('mail-2', 'mailto://shaman.sir.de@gmail.com', '[shaman.sir.de]@gmail.com')
+  //- li: +contact_item('phone', none, '(+49) 146 84-18-11-88')
+  //- li: +contact_item('mail-2', 'mailto://shaman.sir.de@gmail.com', '[shaman.sir.de]@gmail.com')
   li: +contact_item('chat', none, '[shaman.sir.de]@gmail.com')
   li: +contact_item('social/twitter', 'http://twitter.com/shaman_sir', 'twitter.com/[shaman_sir]')
   li: a(href=none,title='Home Address')
