@@ -1,0 +1,348 @@
+@charset "UTF-8";
+html * {
+  margin: 0;
+  font-family: "Charter", "Didot", Optima, "Trebuchet MS", "Lucia Grande", Futura, sans-serif; }
+
+h1, h2, h3 {
+  font-family: "Gill Sans", Optima, "Trebuchet MS", "Lucia Grande", Futura, sans-serif; }
+
+a, a * {
+  font-family: "Charter", "Didot", Optima, "Trebuchet MS", "Lucia Grande", Futura, sans-serif; }
+
+nav a, nav a * {
+  font-family: "Gill Sans", Optima, "Trebuchet MS", "Lucia Grande", Futura, sans-serif; }
+
+footer, footer * {
+  font-family: "Charter", "Didot", Optima, "Trebuchet MS", "Lucia Grande", Futura, sans-serif; }
+
+#segments-root .segment ul.icon-list li a, #segments-root .segment ul.icon-list li a * {
+  font-family: "Charter", "Didot", Optima, "Trebuchet MS", "Lucia Grande", Futura, sans-serif; }
+
+body.theme-a {
+  background-color: #fcfcfc;
+  color: #090909; }
+  body.theme-a .accent {
+    color: #990000; }
+  body.theme-a nav ul li:before {
+    color: #cccccc; }
+  body.theme-a nav ul li:after {
+    color: #cccccc; }
+  body.theme-a nav ul li a {
+    color: #990000;
+    border-bottom-color: #393939; }
+    body.theme-a nav ul li a:hover {
+      color: goldenrod;
+      background-color: #eeeeee;
+      border-bottom-color: #aa0000; }
+    body.theme-a nav ul li a.active {
+      color: #3c3c64; }
+    body.theme-a nav ul li a:before {
+      color: goldenrod; }
+  body.theme-a #segments-root {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 80%, white 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 80%, white 100%); }
+    body.theme-a #segments-root .segment {
+      background-color: none;
+      border-color: transparent;
+      border-top-color: #393939; }
+      body.theme-a #segments-root .segment .handle:before {
+        color: goldenrod; }
+      body.theme-a #segments-root .segment .handle:hover {
+        color: #990000; }
+      body.theme-a #segments-root .segment .segment-inner.overflown {
+        background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.3) 100%);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0.3) 100%); }
+      body.theme-a #segments-root .segment ul.icon-list a, body.theme-a #segments-root .segment dl.marker-list a, body.theme-a #segments-root .segment ul.tag-list a {
+        color: #090909; }
+      body.theme-a #segments-root .segment ul.icon-list li:hover, body.theme-a #segments-root .segment ul.icon-list dd:hover, body.theme-a #segments-root .segment dl.marker-list li:hover, body.theme-a #segments-root .segment dl.marker-list dd:hover, body.theme-a #segments-root .segment ul.tag-list li:hover, body.theme-a #segments-root .segment ul.tag-list dd:hover {
+        background-color: #eeeeee; }
+      body.theme-a #segments-root .segment ul.fact-list li:marker {
+        color: #393939; }
+      body.theme-a #segments-root .segment dl.marker-list > dt {
+        color: #990000;
+        border-top-color: #cccccc; }
+        body.theme-a #segments-root .segment dl.marker-list > dt a {
+          color: #990000; }
+      body.theme-a #segments-root .segment dl.marker-list > dd {
+        border-top-color: #cccccc; }
+      body.theme-a #segments-root .segment ul.source-list > li:hover {
+        background-color: #eeeeee; }
+    body.theme-a #segments-root .segment.current .handle {
+      color: #3c3c64; }
+    body.theme-a #segments-root .segment-inner h3:after {
+      color: #cccccc; }
+    body.theme-a #segments-root .segment-about .segment-inner h1:before, body.theme-a #segments-root .segment-about .segment-inner h1:after {
+      color: #393939; }
+    body.theme-a #segments-root .segment-about .segment-inner p {
+      color: #393939; }
+      body.theme-a #segments-root .segment-about .segment-inner p em {
+        color: #090909; }
+    body.theme-a #segments-root .segment-about .segment-inner img ~ p:first-letter {
+      color: #990000; }
+    body.theme-a #segments-root .segment-about .segment-inner:after {
+      color: #393939; }
+
+body a:hover {
+  -webkit-transition: background-color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in, color 0.3s ease-in; }
+body .segment {
+  -webkit-transition: border-top-color 0.5s ease-out, color 0.3s ease-out;
+  -moz-transition: border-top-color 0.5s ease-out, color 0.3s ease-out;
+  transition: border-top-color 0.5s ease-out, color 0.3s ease-out; }
+  body .segment ul.icon-list:hover {
+    -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out; }
+body .segment.current:hover .handle {
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out; }
+
+body.spatial {
+  overflow: hidden; }
+  body.spatial #perspective {
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    perspective: 800px; }
+  body.spatial nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 0.8em; }
+    body.spatial nav ul li {
+      display: inline; }
+      body.spatial nav ul li:before {
+        position: relative;
+        left: -1px;
+        content: "•"; }
+      body.spatial nav ul li:last-child-after {
+        content: "•"; }
+      body.spatial nav ul li a {
+        margin: 0 5px 0 7px;
+        padding: 2px;
+        text-decoration: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid; }
+        body.spatial nav ul li a:before {
+          content: "#";
+          padding-right: 2px; }
+  body.spatial #segments-root {
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+    body.spatial #segments-root .segment {
+      position: absolute;
+      display: block;
+      border-style: solid;
+      border-width: 1px;
+      border-top-width: 2px;
+      min-width: 16em;
+      left: 0;
+      /*min-height: 200px; */
+      /*max-height: 80%;*/ /* use html.clientHeight to calc */
+      -webkit-transform-origin: left top;
+      -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+      -o-transform-origin: left top;
+      transform-origin: left top;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      /*@include transform-style(preserve-3d) */ }
+      body.spatial #segments-root .segment .handle {
+        position: fixed;
+        font-size: 2em;
+        -webkit-transform: translateX(-0.9em) translateY(-41px);
+        -moz-transform: translateX(-0.9em) translateY(-41px);
+        -ms-transform: translateX(-0.9em) translateY(-41px);
+        -o-transform: translateX(-0.9em) translateY(-41px);
+        transform: translateX(-0.9em) translateY(-41px); }
+        body.spatial #segments-root .segment .handle:before {
+          content: "§";
+          font-weight: normal;
+          padding-right: 5px;
+          padding-left: 11px; }
+        body.spatial #segments-root .segment .handle:hover {
+          cursor: pointer; }
+      body.spatial #segments-root .segment .segment-inner {
+        padding-right: 4px; }
+        body.spatial #segments-root .segment .segment-inner h3:first-child {
+          margin-top: 5px; }
+        body.spatial #segments-root .segment .segment-inner h3 {
+          margin-top: 20px;
+          margin-bottom: 2px; }
+          body.spatial #segments-root .segment .segment-inner h3:after {
+            content: "▼";
+            position: relative;
+            top: -0.05em;
+            margin-left: 4px;
+            font-size: 0.6em; }
+      body.spatial #segments-root .segment .segment-inner.overflown {
+        overflow-y: scroll; }
+      body.spatial #segments-root .segment ul.segment-inner, body.spatial #segments-root .segment .segment-inner ul {
+        margin: 0;
+        list-style-type: none;
+        padding: 2px; }
+        body.spatial #segments-root .segment ul.segment-inner li, body.spatial #segments-root .segment .segment-inner ul li {
+          padding: 5px 3px 3px 3px; }
+      body.spatial #segments-root .segment ul.icon-list li:hover,
+      body.spatial #segments-root .segment dl.marker-list dd:hover,
+      body.spatial #segments-root .segment ul.tag-list li:hover {
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        border-top-left-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom-right-radius: 0.5em; }
+      body.spatial #segments-root .segment ul.icon-list li > a,
+      body.spatial #segments-root .segment dl.marker-list dd > a,
+      body.spatial #segments-root .segment ul.source-list li > a,
+      body.spatial #segments-root .segment ul.tag-list li > a {
+        border-bottom: none;
+        text-decoration: none; }
+        body.spatial #segments-root .segment ul.icon-list li > a:hover,
+        body.spatial #segments-root .segment dl.marker-list dd > a:hover,
+        body.spatial #segments-root .segment ul.source-list li > a:hover,
+        body.spatial #segments-root .segment ul.tag-list li > a:hover {
+          border-bottom: none;
+          background: none; }
+      body.spatial #segments-root .segment ul.icon-list {
+        font-size: 1.1em;
+        margin-top: 2px; }
+        body.spatial #segments-root .segment ul.icon-list li a > img {
+          width: 32px;
+          height: 32px; }
+        body.spatial #segments-root .segment ul.icon-list li a > span {
+          position: relative;
+          top: -0.56em;
+          margin-left: 6px; }
+        body.spatial #segments-root .segment ul.icon-list li a > p {
+          width: 84%;
+          position: relative;
+          left: 32px;
+          top: -1.9em;
+          margin-left: 6px; }
+        body.spatial #segments-root .segment ul.icon-list li:last-child {
+          max-height: 4em; }
+      body.spatial #segments-root .segment ul.source-list {
+        list-style-type: none;
+        position: absolute;
+        right: 0;
+        top: -2em; }
+        body.spatial #segments-root .segment ul.source-list > li {
+          float: left;
+          padding: 2px; }
+          body.spatial #segments-root .segment ul.source-list > li:hover {
+            border-top-left-radius: 0.3em;
+            border-top-right-radius: 0.3em;
+            border-bottom-left-radius: 0.3em;
+            border-bottom-right-radius: 0.3em;
+            border-top-left-radius: 0.3em;
+            border-bottom-left-radius: 0.3em;
+            border-top-right-radius: 0.3em;
+            border-bottom-right-radius: 0.3em;
+            background-size: 22px 22px; }
+          body.spatial #segments-root .segment ul.source-list > li a {
+            display: block;
+            width: 22px;
+            height: 22px; }
+            body.spatial #segments-root .segment ul.source-list > li a > img {
+              width: 22px;
+              height: 22px; }
+      body.spatial #segments-root .segment dl.marker-list > dt, body.spatial #segments-root .segment dl.marker-list > dd {
+        display: inline-block;
+        border-top-width: 1px;
+        border-top-style: solid; }
+      body.spatial #segments-root .segment dl.marker-list > dt {
+        font-size: 0.8em;
+        font-style: italic;
+        vertical-align: top;
+        width: 25%;
+        margin: 4px 2px 0 0;
+        overflow: hidden; }
+      body.spatial #segments-root .segment dl.marker-list > dd {
+        width: 65%;
+        margin: 4px 0;
+        padding: 2px 4px; }
+      body.spatial #segments-root .segment ul.tag-list > li {
+        display: inline;
+        margin: 2px;
+        padding: 2px; }
+      body.spatial #segments-root .segment ul.fact-list {
+        padding-left: 1.5em;
+        list-style-type: circle; }
+        body.spatial #segments-root .segment ul.fact-list li {
+          padding: 3px 3px 3px 0px; }
+    body.spatial #segments-root .segment.current:hover .handle {
+      cursor: pointer; }
+    body.spatial #segments-root .segment-about .segment-inner {
+      text-align: center;
+      margin-top: 9px; }
+      body.spatial #segments-root .segment-about .segment-inner a {
+        text-decoration: none; }
+      body.spatial #segments-root .segment-about .segment-inner h1:before, body.spatial #segments-root .segment-about .segment-inner h1:after {
+        content: "●";
+        font-size: 0.4em;
+        padding: 0 4px;
+        position: relative;
+        top: -5px; }
+      body.spatial #segments-root .segment-about .segment-inner img {
+        margin-top: 4px;
+        position: relative;
+        left: 2px; }
+      body.spatial #segments-root .segment-about .segment-inner p {
+        font-size: 0.9em; }
+        body.spatial #segments-root .segment-about .segment-inner p em {
+          font-size: 1.1em;
+          font-style: normal; }
+      body.spatial #segments-root .segment-about .segment-inner:after {
+        content: "※";
+        position: relative;
+        top: 0.4em; }
+    body.spatial #segments-root .segment-contacts, body.spatial #segments-root .segment-social {
+      min-width: 16.5em; }
+    body.spatial #segments-root .segment-posts dl.marker-list > dt:last-of-type {
+      border: none; }
+    body.spatial #segments-root .segment-sounds img.album-cover {
+      width: 60px;
+      height: 60px;
+      margin-top: 1px;
+      border: 1px solid #999999; }
+    body.spatial #segments-root .segment-sounds dl.marker-list > dt {
+      border-top-width: 0; }
+    body.spatial #segments-root .segment-sounds dl.marker-list > dd ul > li {
+      padding: 2px; }
+  body.spatial footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 0.6em;
+    padding: 3px; }
+
+body.spatial #segments-root {
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s; }
+  body.spatial #segments-root .segment {
+    -webkit-transition: -webkit-transform 0.7s;
+    -moz-transition: -webkit-transform 0.7s;
+    transition: -webkit-transform 0.7s; }
+    body.spatial #segments-root .segment .handle {
+      -webkit-transition: -webkit-transform 0.7s ease-out;
+      -moz-transition: -webkit-transform 0.7s ease-out;
+      transition: -webkit-transform 0.7s ease-out; }
+      body.spatial #segments-root .segment .handle:hover {
+        -webkit-transition: color 0.3s ease-out;
+        -moz-transition: color 0.3s ease-out;
+        transition: color 0.3s ease-out; }

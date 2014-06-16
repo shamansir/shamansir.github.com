@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>imessage</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M256,512 C397.384903,512 512,397.384903 512,256 C512,114.615097 397.384903,0 256,0 C114.615097,0 0,114.615097 0,256 C0,397.384903 114.615097,512 256,512 Z M256,121 C168.766444,121 98,175.958919 98,243.612722 C98,273.625934 111.965444,301.114101 135.086111,322.42026 L127.668889,359.608084 C121.445444,392.79937 132.918,398.554732 159.593667,382.124523 L195.705444,356.978554 C214.270444,362.969006 234.661222,366.225444 256,366.225444 C343.251111,366.225444 414,311.31006 414,243.612722 C414,175.915384 343.259889,121 256,121 Z" id="imessage" fill="#000000" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
