@@ -38,16 +38,16 @@ div.segment-inner
     mixin expertise_item(href, text)
       a(href=href,title=text)!= text
 
-    li: +expertise_item('#', 'Java')
-    li: +expertise_item('#', 'JavaScript')
-    li: +expertise_item('#', 'GWT')
-    li: +expertise_item('#', 'mvp4g')
-    li: +expertise_item('#', 'HTML5')
-    li: +expertise_item('#', 'canvas')
-    li: +expertise_item('#', 'CSS3')
-    li: +expertise_item('#', 'XSLT')
-    li: +expertise_item('#', '3D')
-    li: +expertise_item('#', 'Git')
+    li: +expertise_item('http://www.java.com/', 'Java')
+    li: +expertise_item('https://developer.mozilla.org/en-US/docs/Web/JavaScript', 'JavaScript')
+    li: +expertise_item('http://www.gwtproject.org/', 'GWT')
+    li: +expertise_item('https://code.google.com/p/mvp4g/', 'mvp4g')
+    li: +expertise_item('http://www.w3.org/html/wg/', 'HTML5')
+    li: +expertise_item('http://diveintohtml5.info/canvas.html', 'canvas')
+    li: +expertise_item('http://www.w3.org/TR/CSS/#css3', 'CSS3')
+    li: +expertise_item('http://www.w3.org/TR/xslt', 'XSLT')
+    li: +expertise_item('http://en.wikipedia.org/wiki/3D_computer_graphics', '3D')
+    li: +expertise_item('http://git-scm.com/', 'Git')
     //- li: +expertise_item('#', 'Sublime Text')
     //- li: +expertise_item('#', 'Processing')
 
@@ -140,5 +140,5 @@ div.segment-inner
         img(src=img_src)
         span!= text
 
-    li: +cv_item('social/stackoverflow', '#', '@ Careers.StackOverflow')
-    li: +cv_item('social/linkedin', '#', '@ LinkedIn')
+    li: +cv_item('social/stackoverflow', 'https://careers.stackoverflow.com/shamansir', '@ Careers.StackOverflow')
+    li: +cv_item('social/linkedin', 'http://www.linkedin.com/in/shamansir', '@ LinkedIn')

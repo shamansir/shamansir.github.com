@@ -162,7 +162,7 @@ function initializeOrSkip(current) {
 
         segmentStyle(i, segment);
 
-        segment_content = segment.getElementsByClassName('segment-inner')[0];
+        segment_content = /* segment.classList.contains('segment-inner') */segment.getElementsByClassName('segment-inner')[0];
         if (segment_content) {
             var prev_height = segment_content.clientHeight;
             var height_limit = Math.floor(height * seg_height_ratio);

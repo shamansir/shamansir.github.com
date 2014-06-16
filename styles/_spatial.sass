@@ -199,6 +199,7 @@ body.spatial
           vertical-align: top
           width: 25%
           margin: 4px 2px 0 0
+          overflow: hidden
 
         & > dd
           //font-size: 0.9em
@@ -295,7 +296,17 @@ body.spatial
       img.album-cover
         width: 60px
         height: 60px
-        margin-top: 5px
+        margin-top: 1px
+        border: 1px solid #999
+
+      dl.marker-list > dt
+        border-top-width: 0
+
+      dl.marker-list > dd
+        // font-size: 0.8em
+
+        ul > li
+          padding: 2px
 
   // ---------------------------------------------
 
