@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+<xs:schema xmlns="http://ulric-wilfred.name" elementFormDefault="qualified" targetNamespace="http://ulric-wilfred.name" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="projects" type="ProjectsList" />
+  <xs:complexType name="ProjectsList">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="project" type="ProjectInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProjectInfo">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="alternative-name" type="xs:string" />
+      <xs:element minOccurs="0" name="logo" type="ImageURL" />
+      <xs:element minOccurs="0" name="url" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="used-technologies" type="xs:string" />
+      <xs:element name="brief" type="xs:string" />
+      <xs:element minOccurs="0" name="related-files" type="ProjectsFilesList" />
+    </xs:sequence>
+    <xs:attribute name="type" type="projectType" use="required" />
+    <xs:attribute name="sub-type" type="xs:string" />
+    <xs:attribute name="status" type="projectStatus" use="required" />
+    <xs:attribute name="lang" type="xs:language" />
+    <xs:attribute name="mime-type" type="xs:string" />
+    <xs:attribute name="duration" type="projectDuration" />
+    <xs:attribute name="frequency" />
+    <xs:attribute name="license" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ProjectsFilesList">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="file" type="ProjectRelatedFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProjectRelatedFile">
+    <xs:attribute name="title" type="xs:string" use="required" />
+    <xs:attribute name="url" type="xs:anyURI" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="projectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="application" />
+      <xs:enumeration value="art" />
+      <xs:enumeration value="book" />
+      <xs:enumeration value="concept" />
+      <xs:enumeration value="design" />
+      <xs:enumeration value="movie" />
+      <xs:enumeration value="picture" />
+      <xs:enumeration value="plug-in" />
+      <xs:enumeration value="song" />
+      <xs:enumeration value="thing" />
+      <xs:enumeration value="video" />
+      <xs:enumeration value="web-application" />
+      <xs:enumeration value="web-site" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="projectStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="cancelled" />
+      <xs:enumeration value="in-progress" />
+      <xs:enumeration value="postponed" />
+      <xs:enumeration value="finished" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="projectDuration">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="short" />
+      <xs:enumeration value="long" />
+      <xs:enumeration value="very-long" />
+      <xs:enumeration value="1-month" />
+      <xs:enumeration value="2-months" />
+      <xs:enumeration value="half-of-year" />
+      <xs:enumeration value="1-year" />
+      <xs:enumeration value="2-years" />
+      <xs:enumeration value="3-years" />
+      <xs:enumeration value="infinite" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="projectFrequency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="once" />
+      <xs:enumeration value="series" />
+      <xs:enumeration value="periodical" />
+      <xs:enumeration value="monthly" />
+      <xs:enumeration value="yearly" />
+      <xs:enumeration value="every-winter" />
+      <xs:enumeration value="every-spring" />
+      <xs:enumeration value="every-summer" />
+      <xs:enumeration value="every-autumn" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ImageURL">
+    <xs:restriction base="xs:anyURI">
+      <xs:pattern value="\.(jpg|bmp|gif|png|jpeg)$" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

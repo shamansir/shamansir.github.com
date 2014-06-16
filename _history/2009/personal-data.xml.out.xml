@@ -1,0 +1,76 @@
+<div class="vcard" id="data-pane">
+	<h3>
+		<a href="http://shamansir.madfire.net" class="url fn">Ulric Wilfred</a>
+	</h3>
+	<dl>
+		<dt class="name-label">family name:</dt>
+		<dd class="family-name">Wilfred</dd>
+		<dt class="name-label">given name:</dt>
+		<dd class="given-name">Ulric</dd>
+		<dt class="nickname-label">nickname:</dt>
+		<dd class="nickname">shaman.sir</dd>
+		<dt class="bday-label">birthday:</dt>
+		<dd class="bday">1984-03-04</dd>
+	</dl>
+	<dl>
+		<dt class="url-label">url:</dt>
+		<dd>
+			<a title="http://shamansir.madfire.net" class="url"
+				href="http://shamansir.madfire.net">http://shamansir.madfire.net</a>
+		</dd>
+		<dt class="url-label">url:</dt>
+		<dd>
+			<a title="http://shamansir.wordpress.com" class="url"
+				href="http://shamansir.wordpress.com">http://shamansir.wordpress.com
+			</a>
+		</dd>
+		<dt class="url-label">url:</dt>
+		<dd>
+			<a title="http://shaman-sir.wikidot.com" class="url"
+				href="http://shaman-sir.wikidot.com">http://shaman-sir.wikidot.com</a>
+		</dd>
+		<dt class="url-label">url:</dt>
+		<dd>
+			<a title="skype:shaman.sir?userinfo" class="url"
+				href="skype:shaman.sir?userinfo">skype:shaman.sir?userinfo</a>
+		</dd>
+		<dt class="mail-label">e-mail:</dt>
+		<dd>
+			<a title="shaman.sir@gmail.com" class="email" href="mailto:shaman.sir@gmail.com">
+				<span class="value">shaman.sir@gmail.com</span>
+			</a>
+		</dd>
+		<dt class="mail-label">e-mail:</dt>
+		<dd>
+			<a title="ulric.wilfred@yahoo.com" class="email"
+				href="mailto:ulric.wilfred@yahoo.com">
+				<span class="value">ulric.wilfred@yahoo.com
+				</span>
+			</a>
+		</dd>
+		<dt class="jabber-label">jabber:</dt>
+		<dd>
+			<a title="ulric.wilfred@jabber.org" class="url"
+				href="xmpp:ulric.wilfred@jabber.org">ulric.wilfred@jabber.org</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt class="org-label">organization:</dt>
+		<dd class="org organization-name">indIvid Pro.</dd>
+		<dt class="org-label">title:</dt>
+		<dd class="title">Master and Servant</dd>
+		<dt class="org-label">role:</dt>
+		<dd class="role">Executor</dd>
+	</dl>
+	<dl>
+		<dt class="address-label">location:</dt>
+		<dd class="adr">
+			(
+			<span class="type">home</span>
+			)
+			<span class="locality">Saint-Petersburg</span>
+			,
+			<span class="country-name">Russia</span>
+		</dd>
+	</dl>
+</div>

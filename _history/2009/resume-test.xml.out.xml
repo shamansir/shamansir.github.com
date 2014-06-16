@@ -1,0 +1,269 @@
+<html>
+<head>
+<title>'s Resume</title>
+</head>
+<body>
+<div class="hresume" id="hr-resume">
+<h3>Resume</h3>
+<dl id="hr-resume-props">
+<dt>Language:</dt>
+<dd>
+<span id="hr-resume-lang">en</span>
+</dd>
+<dt>ID:</dt>
+<dd>
+<span class="hr-resume-validity">Valid  
+            from
+                <span class="hr-resume-date-time">2001-12-01T15:30:56</span>to
+                <span class="hr-resume-date-time">2002-12-31+03:00</span>
+</span>
+<span class="hr-resume-entity-owner">fooOwner Inc.</span>
+<span class="hr-resume-entity-ids hr-resume-id">
+<span class="hr-resume-entity-id">112222399</span>
+<span class="hr-resume-entity-id">
+<span class="hr-resume-entity-id-name">Secondary ID:
+	                </span>28828</span>
+</span>
+</dd>
+</dl>
+<dl id="hr-resume-distr-guidelines">
+<dt>Distribute to:</dt>
+<dd>
+<ul class="hr-resume-distr-allow">
+<li>
+<span class="hr-resume-validity">Valid  
+	        from
+	            <span class="hr-resume-date-time">2001-12-02</span>to
+	            <span class="hr-resume-date-time">2002-12-01</span>
+</span>
+<dl class="hr-resume-distr-params">
+<dt>ID:</dt>
+<dd>
+<span class="hr-resume-entity-owner">fooOwner Inc.</span>
+<span class="hr-resume-entity-ids ">
+<span class="hr-resume-entity-id">112222312</span>
+</span>
+</dd>
+<dt>Name:</dt>
+<dd>Georgio Armani</dd>
+<dt>Contacts:</dt>
+<dd>
+<dl class="hr-resume-contact-method">
+<dt>Telephone:</dt>
+<dd class="hr-resume-contact-telephone">
+<span class="hr-resume-tcom-number">01-790-123-1557</span>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li>
+<span class="hr-resume-validity">Valid  
+	        from
+	            <span class="hr-resume-date-time">2001-12-02</span>
+</span>
+<dl class="hr-resume-distr-params">
+<dt>ID:</dt>
+<dd>
+<span class="hr-resume-entity-owner">barOwner Inc.</span>
+<span class="hr-resume-entity-ids ">
+<span class="hr-resume-entity-id">112333312</span>
+</span>
+</dd>
+<dt>Name:</dt>
+<dd>Pablo Picasso</dd>
+<dt>Contacts:</dt>
+<dd>
+<dl class="hr-resume-contact-method">
+<dt>Telephone:</dt>
+<dd class="hr-resume-contact-telephone">
+<span class="hr-resume-tcom-number">01-790-123-1557</span>
+</dd>
+<dt>Website:</dt>
+<dd class="hr-resume-contact-website">http://shamansir.madfire.net</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Do not distribute to:</dt>
+<dd>
+<ul class="hr-resume-distr-nallow">
+<li>
+<span class="hr-resume-validity">Valid  
+	        from
+	            <span class="hr-resume-date-time">2001-12-02</span>to
+	            <span class="hr-resume-date-time">2002-12-01</span>
+</span>
+<dl class="hr-resume-distr-params">
+<dt>ID:</dt>
+<dd>
+<span class="hr-resume-entity-owner">fooOwner Inc.</span>
+<span class="hr-resume-entity-ids ">
+<span class="hr-resume-entity-id">474773838</span>
+</span>
+</dd>
+<dt>Name:</dt>
+<dd>Fox Mulder</dd>
+</dl>
+</li>
+<li>
+<dl class="hr-resume-distr-params">
+<dt>ID:</dt>
+<dd>
+<span class="hr-resume-entity-owner">fooOwner Inc.</span>
+<span class="hr-resume-entity-ids ">
+<span class="hr-resume-entity-id">288282</span>
+</span>
+</dd>
+<dt>Name:</dt>
+<dd>Brittany Murphy</dd>
+<dt>Contacts:</dt>
+<dd>
+<dl class="hr-resume-contact-method">
+<dt>E-mail:</dt>
+<dd class="hr-resume-contact-email">ulric.wilfred@yahoo.com</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li>
+<dl class="hr-resume-distr-params">
+<dt>Name:</dt>
+<dd>Microsoft</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl id="hr-resume-structured">
+<dt>Contact Info:</dt>
+<dd>
+<ul id="hr-resume-contact-methods">
+<li>
+<dl class="hr-resume-contact-method">
+<dt>Telephone:</dt>
+<dd class="hr-resume-contact-telephone">
+<span class="hr-resume-tcom-number">01-790-123-1557</span>
+</dd>
+<dt>E-mail:</dt>
+<dd class="hr-resume-contact-email">ulric.wilfred@yahoo.com</dd>
+<dt>Website:</dt>
+<dd class="hr-resume-contact-website">http://shamansir.madfire.net</dd>
+</dl>
+</li>
+<li>
+<dl class="hr-resume-contact-method">
+<dt>Available:</dt>
+<dd class="hr-resume-contact-availty">daytime and weekends</dd>
+<dt>Telephone:</dt>
+<dd class="hr-resume-contact-telephone">
+<span class="hr-resume-tcom-number">1557-56567-78</span>
+</dd>
+</dl>
+</li>
+<li>
+<dl class="hr-resume-contact-method">
+<dt>Use:</dt>
+<dd class="hr-resume-contact-use">balalala</dd>
+<dt>Location:</dt>
+<dd class="hr-resume-contact-loc">USA</dd>
+<dt>Available:</dt>
+<dd class="hr-resume-contact-availty">nighttime</dd>
+<dt>Telephone:</dt>
+<dd class="hr-resume-contact-telephone">
+<span class="hr-resume-phone-number">
+<span class="hr-resume-tcom-itu">14</span>
+<span class="hr-resume-tcom-national-num">300</span>
+<span class="hr-resume-tcom-acc">50</span>70-17-100<span class="hr-resume-tcom-ext">20</span>
+</span>
+</dd>
+<dt>Mobile:</dt>
+<dd class="hr-resume-contact-mobile">
+<span class="hr-resume-phone-sms"> </span>
+<span class="hr-resume-phone-number">
+<span class="hr-resume-tcom-itu">10</span>
+<span class="hr-resume-tcom-acc">50</span>70-17-101</span>
+</dd>
+<dt>TTYTDD:</dt>
+<dd class="hr-resume-contact-ttytdd">
+<span class="hr-resume-tcom-number">12-30002-120</span>
+</dd>
+<dt>Postal Address:</dt>
+<dd class="hr-resume-contact-postal">
+                California Ave. 17, USA
+            </dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Executive Summary:</dt>
+<dd>
+<p class="hr-resume-exec-summary">Summary of employment and education history, publications, speaking engagements, and other acheivements during my career.</p>
+</dd>
+<dt>Objective:</dt>
+<dd>
+<p class="hr-resume-objective">
+	   Open Source Believer; J2EE / Python / PHP Developer, JavaScript / XHTML Professional; Creative man, all in all;
+        	   
+	</p>
+</dd>
+<dt>Qualification Summary:</dt>
+<dd>
+<p class="hr-resume-qual-summary">My qualification summary</p>
+</dd>
+<dt>Competencies:</dt>
+<dd>
+<ul id="hr-resume-competencies">
+<li>
+<span class="hr-resume-stub">none</span>
+</li>
+<li>
+<span class="hr-resume-stub">none</span>
+</li>
+<li>
+<span class="hr-resume-stub">none</span>
+</li>
+</ul>
+</dd>
+<dt>Languages:</dt>
+<dd>
+<ul id="hr-resume-languages">
+<li>
+<span class="hr-resume-stub">none</span>
+</li>
+<li>
+<span class="hr-resume-stub">none</span>
+</li>
+</ul>
+</dd>
+<dt>Revision Date:</dt>
+<dd>
+<span class="hr-resume-date-time">2001-12-01T15:30:56</span>
+</dd>
+</dl>
+<dl id="hr-resume-text">
+<dd class="no-term">
+<p id="hr-resume-text">
+            Some big big text of the resume
+        </p>
+</dd>
+<dt>URL:</dt>
+<dd>
+<a id="hr-resume-link-referrer" title="Link to the Resume" href="http://www.link.to.my.resume">
+        Link to the Resume
+    </a>
+</dd>
+<dt>Comments:</dt>
+<dd>
+<p class="hr-resume-comments">Comments to the resume</p>
+</dd>
+<dt>Revision Date:</dt>
+<dd>
+<span class="hr-resume-date-time">2001-12-31T12:13:14+05:00</span>
+</dd>
+</dl>
+</div>
+</body>
+</html>

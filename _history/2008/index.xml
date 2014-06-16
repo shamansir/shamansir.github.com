@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./site-page.xsl"?>
+<!DOCTYPE vCard SYSTEM "xml-vcard.dtd">
+<vCard>
+    <VERSION>2.1</VERSION>
+    <FN>Ulric Wilfred</FN>
+    <N>
+      <FAMILY>Wilfred</FAMILY>
+      <GIVEN>Ulric</GIVEN>      
+      <!-- <MIDDLE/> -->
+    </N>
+    <NICKNAME>shaman.sir</NICKNAME>
+    <URL>http://shamansir.madfire.net</URL>
+    <URL>http://shamansir.wordpress.com</URL>
+    <URL>skype:shaman.sir?userinfo</URL>
+	<!-- <TEL><CELL/><NUMBER></NUMBER></TEL> -->
+    <BDAY>1984-03-04</BDAY>
+    <EMAIL><INTERNET/><PREF/><USERID>shaman.sir@gmail.com</USERID></EMAIL>
+    <EMAIL><INTERNET/><USERID>ulric.wilfred@yahoo.com</USERID></EMAIL>
+    <JABBERID>ulric.wilfred@jabber.org</JABBERID>
+    <ORG>
+      <ORGNAME>indIvid Pro.</ORGNAME>
+      <!-- <ORGUNIT/> -->
+    </ORG>
+    <TITLE>Master and Servant</TITLE>
+    <ROLE>Executor</ROLE>    
+    <ADR>
+      <HOME/>
+      <LOCALITY>Saint-Petersburg</LOCALITY>
+      <CTRY>Russia</CTRY>
+    </ADR>
+</vCard>
+

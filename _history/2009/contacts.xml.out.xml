@@ -1,0 +1,87 @@
+<ul id="contacts">
+	<li>
+		<span class="contact-group-name">Messengers</span>
+		<ul id="messengers">
+			<li>
+				<a id="contact-skype-sitelink" title="skype" 
+				   href="javascript:alert('skype')">
+					<img class="contact-icon" id="contact-skype-icon" 
+					     src="skype.ico" alt="skype" />
+				</a>
+				<a class="contact-link" alt="any.developer" 
+				   title="any.developer" id="contact-skype-link" 
+				   href="javascript:alert('skype:any.developer');">
+				    any.developer
+				</a>
+				<span class="contact-type">(skype)</span>
+			</li>
+			<li>
+				<a id="contact-jabber-sitelink" 
+				title="jabber" href="javascript:alert('jabber')">
+					<img class="contact-icon" id="contact-jabber-icon" src="jabber.ico"
+						alt="jabber" />
+				</a>
+				<a class="contact-link" 
+				   alt="ulric.wilfred" title="any.developer@jabber.org"
+				   id="contact-jabber-link" href="javascript:alert('jabber:any.developer@jabber.org');">
+				    ulric.wilfred
+				</a>
+				<span class="contact-type">(jabber)</span>
+			</li>
+			<li>
+				<a id="contact-gtalk-sitelink" title="gtalk" href="javascript:alert('gtalk')">
+					<img class="contact-icon" id="contact-gtalk-icon" src="gtalk.ico"
+						alt="gtalk" />
+				</a>
+				<a class="contact-link" alt="any.developer" title="any.developer"
+					id="contact-gtalk-link" href="javascript:alert('gtalk:any.developer');">any.developer</a>
+				<span class="contact-type">(gtalk)</span>
+			</li>
+			<li>
+				<a id="contact-yahoo-sitelink" title="yahoo" href="javascript:alert('yahoo')">
+					<img class="contact-icon" id="contact-yahoo-icon" src="yahoo.ico"
+						alt="yahoo" />
+				</a>
+				<a class="contact-link" alt="any.developer" title="any.developer"
+					id="contact-yahoo-link" href="javascript:alert('yahoo:any.developer');">any.developer</a>
+				<span class="contact-type">(yahoo)</span>
+			</li>
+			<li>
+				<a id="contact-icq-sitelink" title="icq" href="javascript:alert('icq')">
+					<img class="contact-icon" id="contact-icq-icon" src="icq.ico"
+						alt="icq" />
+				</a>
+				<a class="contact-link" alt="any.developer" title="7484939304033345544"
+					id="contact-icq-link" href="javascript:alert('icq:7484939304033345544');">any.developer</a>
+				<span class="contact-type">(icq)</span>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<span class="contact-group-name">E-Mail</span>
+		<ul id="email">
+			<li>
+				<a id="contact-gmail-sitelink" title="gmail" 
+				   href="javascript:alert('gmail')">
+					<img class="contact-icon" id="contact-gmail-icon" 
+					     src="gmail.ico" alt="gmail" />
+				</a>
+				<a class="contact-link" alt="any.developer" 
+				   title="any.developer" id="contact-gmail-link" 
+				   href="javascript:alert('gmail:any.developer');">
+				    any.developer</a>
+				<span class="contact-type">(gmail)</span>
+			</li>
+			<li>
+				<a id="contact-yahoo-mail-sitelink" title="yahoo-mail"
+					href="javascript:alert('yahoo-mail')">
+					<img class="contact-icon" id="contact-yahoo-mail-icon" src="yahoo-mail.ico"
+						alt="yahoo-mail" />
+				</a>
+				<a class="contact-link" alt="any.developer" title="any.developer"
+					id="contact-yahoo-mail-link" href="javascript:alert('yahoo-mail:any.developer');">any.developer</a>
+				<span class="contact-type">(yahoo-mail)</span>
+			</li>
+		</ul>
+	</li>
+</ul>

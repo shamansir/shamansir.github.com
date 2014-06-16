@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./favourites.xsl"?>
+<favourites xmlns="http://ulric-wilfred.name" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ulric-wilfred.name ./favourites.xsd">
+	<music>
+		<music-artist>Depeche Mode</music-artist>
+		<music-artist>Tricky</music-artist>
+		<music-artist>Massive Attack</music-artist>
+		<music-artist>Faithless</music-artist>
+		<music-artist>EZ3kiel</music-artist>
+		<music-artist>U.N.K.L.E.</music-artist>
+		<music-artist>Nine Inch Nails</music-artist>
+        <music-artist>Beastie Boys</music-artist>
+        <music-artist>The Chemical Brothers</music-artist>
+        <music-artist>Apollo 440</music-artist>
+        <music-artist>The Prodigy</music-artist>
+        <music-artist>Pink Floyd</music-artist>
+        <music-artist>Queen</music-artist>
+        <music-artist>Björk</music-artist>
+        <music-artist>U2</music-artist>
+        <music-artist>The Knife</music-artist>
+        <music-artist lastfm-id="Teddybears STHLM">Teddybears</music-artist>  
+        <music-artist>Дельфин</music-artist>
+        <music-artist lastfm-id="Nautilus Pompilius">Наутилус Помпилиус</music-artist>
+        <music-artist>Кино</music-artist>
+        <music-artist>Moloko</music-artist>                
+        <music-artist>Gus Gus</music-artist>
+        <music-artist>Juno Reactor</music-artist>       
+        <music-artist>Jimi Hendrix</music-artist>
+        <music-artist>Elvis Presley</music-artist>
+        <music-artist>Joe Cocker</music-artist>
+        <music-artist>Михей</music-artist>
+        <music-artist>Каста</music-artist>
+        <music-artist>Herbert Grönemeyer</music-artist>
+        <music-artist>Rotersand</music-artist>
+        <music-artist>Hardknox</music-artist>
+        <music-artist>The White Stripes</music-artist>
+        <music-artist>[T]ékël</music-artist>        
+        <music-artist>Blondie</music-artist>
+        <music-artist>Lamb</music-artist>
+        <music-artist>Madonna</music-artist>
+        <music-artist>Xploding Plastix</music-artist>                                
+        <music-artist>A-Ha</music-artist>
+        <music-artist>Air</music-artist>
+        <music-artist>Rammstein</music-artist>
+		<music-artist>Kaycee</music-artist>
+		<music-artist>Morcheeba</music-artist>
+		<music-artist>Nick Cave</music-artist>
+		<music-artist>Death In Vegas</music-artist>
+        <music-artist>Kosheen</music-artist>		
+		<music-artist>Ger Strokes</music-artist>
+		<music-artist>Peter Hammill</music-artist>
+		<music-artist>Röyksopp</music-artist>
+        <music-artist>Fatboy Slim</music-artist>        
+        <music-artist>Leftfield</music-artist>
+        <music-artist>De-Phazz</music-artist>
+        <music-artist>ВИА Гра</music-artist>		
+		<music-artist>Daughter Darling</music-artist>
+		<music-artist>Leæther Strip</music-artist>
+		<music-artist>Rome</music-artist>
+		<music-artist>Robot Like Me</music-artist>
+		<music-artist>S.P.O.R.T.</music-artist>
+		<music-artist>5'Nizza</music-artist>
+	</music>
+	<movies>
+		<movie imdb-id="0134847">Pitch Black</movie>
+		<movie imdb-id="0066921">Clockwork Orange</movie>
+		<movie imdb-id="0245712">Amores Perros</movie>
+		<movie imdb-id="0315733">21 Grams</movie>
+		<movie imdb-id="0387131">The Constant Gardener</movie>
+		<movie imdb-id="0137523">Fight Club</movie>
+		<movie imdb-id="0114369">Se7en</movie>
+		<movie imdb-id="0090888">Crossroads 1986</movie>
+		<movie imdb-id="0338013">Eternal Sunshine of the Spotless Mind</movie>
+		<movie imdb-id="0379786">Serenity</movie>
+		<movie imdb-id="0166924">Mulholland Dr.</movie>
+		<movie imdb-id="0368222">Romance &amp; Cigarettes</movie>
+		<movie imdb-id="0105665">Twin Peaks: Fire Walk With Me</movie>
+		<movie imdb-id="0119643">Meet Joe Black</movie>
+        <movie imdb-id="0209144">Memento</movie>		
+		<movie imdb-id="0120586">American History X</movie>
+		<movie imdb-id="0091341">Кин-дза-дза</movie>
+		<movie imdb-id="0337876">Birth</movie>
+		<movie imdb-id="0405296">A Scanner Darkly</movie>
+		<movie imdb-id="0087843">Once Upon a Time in America</movie>
+		<movie imdb-id="0362225">Ne le dis à personne</movie>
+		<movie imdb-id="0851578">Paprika</movie>
+		<movie imdb-id="0096126">Собачье Сердце</movie>
+		<movie imdb-id="0317248">Cidade de Deus</movie>
+		<movie imdb-id="0325805">Matchstick Men</movie>
+		<movie imdb-id="0468569">The Dark Knight</movie>
+		<movie imdb-id="0296572">The Chronicles of Riddick</movie>
+		<movie imdb-id="0314331">Love Actually</movie>
+		<movie imdb-id="0259324">Ghost Rider</movie>
+		<movie imdb-id="0275277">Cowboy Bebop</movie>
+		<movie imdb-id="0138704">π</movie>
+		<movie imdb-id="0079944">Сталкер</movie>
+		<movie imdb-id="0414993">The Fountain</movie>
+		<movie imdb-id="0120663">Eyes Wide Shut</movie>
+		<movie imdb-id="0113568">Ghost in the Shell</movie>
+		<movie imdb-id="0092494">*batteries not included</movie>
+		<movie imdb-id="0477348">No Country For Old Men</movie>
+		<movie imdb-id="0095031">Dirty Rotten Scoundrels</movie>
+        <movie imdb-id="0206634">Children of Men</movie>		
+		<movie imdb-id="0958860">Payback: Straight Up -- the Director's Cut</movie>
+		<movie imdb-id="0462200">Black Snake Moan</movie>
+		<movie imdb-id="0425112">Hot Fuzz</movie> 
+		<movie imdb-id="0796375">You Kill Me</movie>
+		<movie imdb-id="0489237">The Nanny Diaries</movie>
+		<movie imdb-id="0115798">The Cable Guy</movie>
+		<movie imdb-id="0259711">Vanilla Sky</movie>
+		<movie imdb-id="0328832">The Animatrix</movie>
+		<movie imdb-id="0220580">Intacto</movie>
+		<movie imdb-id="0099487">Edward Scissorhands</movie>
+		<movie imdb-id="0095174">Frantic</movie>
+		<movie imdb-id="0421715">The Curious Case of Benjamin Button</movie>
+		<movie imdb-id="0362225">Ne le dis à personne</movie>
+		<!-- pursuit of happyness, глянец, men in black, catch me if u can, the faculcy, american beauty, the incredibles, frida, sleepy hollow, v for vendetta -->		
+	</movies>
+	<games>
+		<game mobygames-id="windows/neverhood">The Neverhood</game>
+		<game mobygames-id="windows/psychonauts">Psychonauts</game>
+		<game mobygames-id="windows/fable-the-lost-chapters">Fable: The Lost Chapters</game>
+		<game mobygames-id="windows/indigo-prophecy">Fahrenheit/Indigo Prophecy</game>
+		<game mobygames-id="windows/chronicles-of-riddick-escape-from-butcher-bay">The Chronicles of Riddick: Escape from Butcher Bay</game>
+		<game mobygames-id="windows/aliens-versus-predator-2">Aliens vs Predator 2</game>
+		<game mobygames-id="windows/witcher">The Witcher</game>
+		<game mobygames-id="dos/gobliiins">Gobliiins</game>
+		<game mobygames-id="dos/gobliins-2-the-prince-buffoon">Gobliins 2: The Prince Buffoon</game>
+		<game mobygames-id="windows/neverwinter-nights-2">Neverwinter Nights 2</game>
+		<game mobygames-id="psp/flow">flOw</game>
+		<game mobygames-id="windows/witcher-enhanced-edition">The Witcher: Enhanced Edition</game>
+		<game mobygames-id="windows/monopoly">Monopoly</game>
+		<game mobygames-id="windows/tom-clancys-rainbow-six-vegas">Tom Clancy's Rainbox Six: Vegas</game>
+		<game mobygames-id="windows/quake-ii">Quake 2</game>
+		<game mobygames-id="windows/sniper-elite-berlin-1945">Sniper Elite: Berlin 1945</game>
+		<game mobygames-id="dos/settlers-ii-veni-vidi-vici">The Settlers II: Veni, Vidi, Vici</game>
+		<game mobygames-id="dos/duke-nukem-3d">Duke Nukem 3D</game>
+		<game mobygames-id="windows/half-life-counter-strike">Counter-Strike</game>
+		<game mobygames-id="windows/counter-strike-condition-zero">Counter-Strike: Condition Zero</game>
+		<game mobygames-id="windows/dark-messiah-of-might-magic">Dark Messiah of Might &amp; Magic</game>
+		<game mobygames-id="windows/half-life">Half-Life</game>
+		<game mobygames-id="windows/half-life-blue-shift">Half-Life: Blue Shift</game>
+		<game mobygames-id="windows/half-life-2">Half-Life 2</game>
+		<game mobygames-id="windows/starcraft">Starcraft</game>
+		<game mobygames-id="windows/starcraft-brood-war">Starcraft: Brood War</game>
+		<game mobygames-id="windows/blade-of-darkness">Severance: Blade of Darkness</game>
+		<game mobygames-id="windows/warhammer-40000-dawn-of-war">Warhammer 40,000: Dawn of War</game>
+		<game mobygames-id="windows/warhammer-40000-dawn-of-war-winter-assault">Warhammer 40,000: Dawn of War - Winter Assault</game>
+		<game mobygames-id="windows/warhammer-40000-dawn-of-war-dark-crusade">Warhammer 40,000: Dawn of War - Dark Crusade</game>
+		<game mobygames-id="windows/supreme-commander">Supreme Commander</game>
+		<game mobygames-id="windows/need-for-speed-most-wanted">Need For Speed: Most Wanted</game>
+		<game mobygames-id="psp/metal-gear-acd-2">Metal Gear: AC!D 2</game>
+		<game mobygames-id="windows/stalker-shadow-of-chernobyl">S.T.A.L.K.E.R.: Shadow of Chernobyl</game>
+		<game mobygames-id="psp/tekken-dark-resurrection">Tekken: Dark Resurrection</game>
+		<game mobygames-id="windows/knytt">Knytt</game>
+		<game mobygames-id="windows/knytt-stories">Knytt Strories</game>
+		<game mobygames-id="dos/shadow-warrior">Shadow Warrior</game>
+		<game mobygames-id="windows/swat-4-the-stetchkov-syndicate">SWAT 4: The Stetchkov Syndicate</game>
+        <!-- <game mobygames-id="psp/echochrome">Echochrome</game> -->		
+		<game mobygames-id="dos/syndicate">Syndicate</game>
+		<game mobygames-id="psp/family-guy-video-game">Family Guy</game>
+		<game mobygames-id="dos/sam-max-hit-the-road">Sam &amp; Max Hit The Road</game>
+		<game mobygames-id="windows/dungeon-siege-ii">Dungeon Siedge II</game>
+		<game mobygames-id="psp/dungeon-siege-throne-of-agony">Dungeon Siege: Throne of Agony</game>
+		<game mobygames-id="dos/circle-of-blood">Broken Sword: The Shadow of the Templars</game>
+		<game mobygames-id="windows/manipulator">The Manipulator</game>
+		<game mobygames-id="psp/god-of-war-chains-of-olympus">God of War: Chains of Olympus</game>
+		<game mobygames-id="psp/locoroco-2_">Loco Roco 2</game>
+		<game mobygames-id="psp/wipeout-pulse">Wipeout: Pulse</game>
+		<!-- <game mobygames-id="psp/wipeout-pulse" rate="89">Wipeout: Pulse</game> -->
+		<!-- Braid, Star Warce: Force Unleashed, everyday shooter, Test Drive Unlimited, NFS: Most Wanted 5-1-0 (PSP), Monster hunter freedom unite, Chili Con Carnage,
+		Silent Hill Origins, Killzone: Liberation, Ulimate Board Collection, Mind Quiz, SOCOM: Tactical Strike -->
+		<!-- To look: Wet (2009), singularity, beyond good & evil 2 -->
+	</games>
+	<series-list>
+		<series imdb-id="0141842">The Sopranos</series>
+		<series imdb-id="0149460">Futurama</series>
+		<series imdb-id="0928094">Kemonozume</series>
+		<series imdb-id="0279077">FLCL</series>
+		<series imdb-id="0086759">Miami Vice</series>
+		<series imdb-id="0094525">Agatha Christie: Poirot</series>
+		<series imdb-id="0285403">[scrubs]</series>
+		<series imdb-id="0079902">Приключения Шерлока Холмса и доктора Ватсона</series>
+		<series imdb-id="0108778">Friends</series>
+		<series imdb-id="0159206">Sex and the City</series>
+	</series-list>
+	<books>
+		<book>
+			<author>William Gibson</author>
+			<name>The Bridge Trilogy</name>
+		</book>
+		<book>
+			<author>William Gibson</author>
+			<name>Pattern Recognition</name>
+		</book>
+		<book>
+			<author>William Gibson</author>
+			<author>Bruce Sterling</author>
+			<name>The Difference Engine</name>
+		</book>
+		<book wikipedia-id="The Time Wanderers">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Волны гасят ветер</name>
+		</book>
+		<book wikipedia-id="Snail on the Slope">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Улитка на склоне</name>
+		</book>
+		<book wikipedia-id="The Ugly Swans">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Гадкие лебеди</name>
+		</book>
+		<book wikipedia-id="Prisoners of Power">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Обитаемый остров</name>
+		</book>
+		<book wikipedia-id="Dead Mountaineer's Hotel">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Отель «У Погибшего Альпиниста»</name>
+		</book>
+		<book wikipedia-id="The Second Invasion from Mars">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Второе нашествие марсиан</name>
+		</book>
+		<book wikipedia-id="The Doomed City">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Град обреченный</name>
+		</book>
+		<book wikipedia-id="Definitely Maybe">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>За миллиард лет до конца света</name>
+		</book>
+		<book wikipedia-id="Beetle in the Anthill">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Жук в муравейнике</name>
+		</book>
+		<book wikipedia-id="Limping Fate">
+			<author wikipedia-id="Arkady and Boris Strugatsky">A. и Б. Стругацкие</author>
+			<name>Хромая судьба</name>
+		</book>
+		<book wikipedia-id="Foundation series">
+			<author>Isaac Asimov</author>
+			<name>Foundation Trilogy</name>
+		</book>
+		<book>
+			<author>Robert Sheckley</author>
+			<name>The Status Civilization</name>
+		</book>
+		<book wikipedia-id="Options (book)">
+			<author>Robert Sheckley</author>
+			<name>Options</name>
+		</book>
+		<book wikipedia-id="Haruki_Murakami#.22Trilogy_of_the_Rat.22">
+			<author>Haruki Murakami</author>
+			<name>Trilogy of The Rat</name>
+		</book>
+		<book>
+			<author>Haruki Murakami</author>
+			<name>Kafka on the Shore</name>
+		</book>
+		<book>
+			<author>Haruki Murakami</author>
+			<name>Dance Dance Dance</name>
+		</book>
+		<book wikipedia-id="The Master and Margarita">
+			<author wikipedia-id="Mikhail Bulgakov">Михаил Булгаков</author>
+			<name>Мастер и Маргарита</name>
+		</book>
+		<book wikipedia-id="Chapayev and Void">
+			<author wikipedia-id="Victor Pelevin">Виктор Пелевин</author>
+			<name>Чапаев и Пустота</name>
+		</book>
+		<book>
+			<author>Stanisław Lem</author>
+			<name>Piece on Earth</name>
+		</book>
+		<book>
+			<author>Gabriel García Márquez</author>
+			<name>El amor en los tiempos del cólera</name>
+		</book>
+		<book>
+			<author>Gabriel García Márquez</author>
+			<name>Cronica de una muerte anunciada</name>
+		</book>
+		<book no-link="true"><name>Soviet-time and beginning of 90-th russian Scince-Fiction stories and novels collections (most of them are very good translations from Analog Science Fiction and Fact, Amazing Stories, Asimov's Science Fiction, Interzone magazines)</name></book>
+	</books>
+</favourites>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<favourites xmlns="http://ulric-wilfred.name" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ulric-wilfred.name ./favourites-list.xsd">
+	<favourites-group class="music">
+		Depeche Mode, Tricky, Massive Attack, Faithless, EZ3kiel, U.N.K.L.E., Gus Gus, Juno Reactor, 5'Nizza, Jimi Hendrix, Leftfield, Kaycee, Morcheeba, Nine Inch Nails, The Chemical Brothers, Nick Cave, Death In Vegas, Apollo 440, Fatboy Slim, Наутилус Помпилиус, Elvis Presley, A-Ha, Air, Rammstein, Blondie, Queen, Pink Floyd, Björk, Дельфин, Михей, Каста, De Phazz, U2, Виа Гра, Beastie Boys, Madonna, Ger Strokes, Herbert Grönemeyer, Peter Hammill, Daughter Darling, Leæther Strip, Rotersand, Hardknox, Xploding Plastix, Lamb, The White Stripes, Rome, Robot Like Me
+	</favourites-group>
+	<favourites-group class="movies">
+		Pitch Black, Clockwork Orange, Amores Perros, 21 Grammes, The Constant Gardener, Fight Club, 7even, Crossroads 1986, Eternal Sunshine of the Spotless Mind, Serenity, Mulholland Drive, Romance and Cigarettes, Children of Men, Собачье Сердце, Meet Joe Black, American History X, Cidade de Deus, Birth, Matchstick Men, The Chronicles of Riddick, A Scanner Darkly, Paprika, Love Actually, Ghost Rider, Cowboy Bebop, The Fountain, π, Eyes Wide Shut, Ghost in the Shell, Batteries Not Included, No Country For Old Men, Payback: Straight Up -- the Director's Cut, Dirty Rotten Scoundrels, You Kill Me, Black Snake Moan, Intacto, The Cable Guy, Animatrix
+	</favourites-group>
+	<favourites-group class="games">
+		The Neverhood, Psychonauts, Fable: The Lost Chapters, Fahrenheit/Indigo Prophecy, The Chronicles of Riddick: Escape from Butcher Bay, Monopoly, Alien vs Predator 2, The Witcher, Gobliiins series, Neverwinter Nights 2, flOw, Tom Clancy's Rainbox Six: Vegas, Quake 2, Sniper Elite, Duke Nukem 3D, Counter-Strike, Counter-Strike: Condition Zero, Dark Messiah of Might & Magic, Half-Life, Severance: Blade of Darkness, Warhammer 4000: Dawn of War, Supreme Commander
+	</favourites-group>
+	<favourites-group class="books">
+		William Gibson (The Bridge Trilogy, Pattern Recognition, Difference Engine w/B.Sterling), A. & B. Strugatskiye, Isaac Asimov (Foundation Trilogy), Robert Sheckley, Haruki Murakami, Victor Pelevin "Chapaev and The Emptiness", Mikhail Bulgakov, Stanisław Lem, Soviet-time and beginning of 90-th russian Scince-Fiction stories and novels collections (most of them are very good translations from Analog Science Fiction and Fact, Amazing Stories, Asimov's Science Fiction, Interzone magazines)
+	</favourites-group>
+	<favourites-group class="tv-shows">
+		The Sopranos, Futurama, Kemonozume, FLCL
+	</favourites-group>			
+</favourites>

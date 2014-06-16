@@ -1,0 +1,9 @@
+/* SECONDARY ELEMENTS STYLING & POSITIONING */
+
+a img {
+	border: 0;
+}
+
+span.cc:after {
+			content: " (cc)"; /* don't work in IE */
+}

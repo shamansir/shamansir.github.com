@@ -1,0 +1,315 @@
+/* CSS Document */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 30px;
+    margin-bottom: 40px;
+    font-size: 1.7em;
+}
+
+h1 #owner-name {
+    font-size: 1.9em;
+}
+
+#content {
+    background-color: #369;
+    color: #fff;
+    margin: 30px;
+    clear: both;
+}
+
+#data-pane {
+    width: 40%;
+}
+
+#info-pane {
+    width: 45%;
+}
+
+#data-pane.wide {
+    width: 48%;
+    overflow: hidden;
+}
+
+#data-pane {
+    float: left;
+    border-right: 1px solid #69f;    
+}
+
+#info-pane {
+    float: right;
+    padding: 50px;
+    padding-left: 30px;
+}
+
+#footer {
+    clear: both;
+}
+
+/* http://virtuelvis.com/gallery/css/rounded/ */
+
+#content:before {
+  background: transparent url('./src/top-right-white.png') scroll no-repeat top right;
+  margin-bottom: -20px;
+  height: 30px;
+  display: block;
+  border: none;
+  content: url('./src/top-left-white.png');
+  padding: 0;
+  line-height: 0.1;
+  font-size: 1px;
+}
+
+#content:after {
+  display: block;
+  line-height: 0.1;
+  font-size: 1px;
+  content:  url('./src/bottom-left-white.png');
+  margin: 0 0 -1px 0;
+  height: 30px;
+  background: white;
+  background: transparent url('./src/bottom-right-white.png') scroll no-repeat bottom right ;
+  padding: 0;
+}
+
+#content h3, #content dl {
+    margin-left: 30px;
+}
+
+#content ul {
+    margin: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-top: 30px;
+    padding-left: 30px;    
+    min-height: 200px;
+}
+
+#content ul li {
+    margin-bottom: 7px;
+}
+
+#info-pane img {
+    float: left;
+    display: block;
+    margin: 10px;
+}
+
+a {
+    color: #ccf;
+    text-decoration: none;
+}
+
+#info-pane img {
+    border: 1px solid #000;
+    text-decoration: none;
+}
+
+#info-pane img[alt=avatar] {
+    border: none;
+}
+
+/* .vcard a {
+    color: #ccf;
+} */
+
+.vcard {    
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.vcard dt {
+    font-weight: bold;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    color: #003;
+}
+
+.vcard dd {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 1em;
+    font-weight: normal;
+    /* font-style: italic; */
+    font-family: Tahoma, Helvetica, sans-serif;  
+    color: #ccc;
+}
+
+.vcard dl {
+    border-top: 1px solid #66f;
+    padding: 10px;
+    padding-left: 15px;
+    padding-top: 12px;
+    /* background: url(src/content-bg-gradient.png) repeat-x; */
+    min-height: 200px;
+} 
+
+/* .occurence-icon, .contact-icon {
+    width: 16px;
+    height: 16px;
+    content: "";
+} */
+
+ul#nav-menu {
+    margin-left: 30px;
+}
+
+/* ul#nav-menu li {
+    display: block;
+    float: left;
+    width: 150px;
+    height: 10px;
+    background: url('./src/tab-bg-two-state.png') 0 -50px;
+    padding: 20px;
+    padding-left: 30px;
+}
+
+ul#nav-menu li#active {
+    border-bottom: none;
+    background: url('./src/tab-bg-two-state.png') 0 0;
+} */
+
+ul#nav-menu li {
+    display: block;
+    float: left;
+    width: 112px;
+    height: 12px;
+    background: url('./src/tab-bg-two-state-small-transp.png') 0 -38px;
+    padding: 12px;
+    padding-left: 28px;
+}
+
+ul#nav-menu li#active {
+    border-bottom: none;
+    background: url('./src/tab-bg-two-state-small-transp.png') 0 0;
+}
+
+ul#contacts, ul#occurences, ul.favourites {
+    list-style-type: none;
+}
+
+ul#contacts, ul#occurences {
+    background: url(src/content-bg-gradient.png) repeat-x;
+}
+
+.favourites-label {
+    display: block;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+#content ul.favourites {
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 0.9em;
+    line-height: 1.7em;
+    padding: 0;
+}
+
+ul.favourites#music li,
+ul.favourites#movies li,
+ul.favourites#games li {
+    display: inline;    
+}
+
+ul.favourites#music li a:after,
+ul.favourites#movies li a:after,
+ul.favourites#games li a:after {
+    content: ",";
+}
+
+ul.favourites#music li a,
+ul.favourites#movies li a,
+ul.favourites#games li a {
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+
+span.favourites-label {
+    clear: both;
+}
+
+/* ul.favourites#series li,
+ul.favourites#books li {
+    display: block;
+}
+
+ul.favourites#series li a,
+ul.favourites#books li a {
+    display: inline;
+    float: none;
+    margin-right: 0;
+}
+
+ul.favourites#series li a:after,
+ul.favourites#books li a:after {
+    content: "";
+} */
+
+ul.favourites .book-author {
+    margin-left: 5px;
+}
+
+.contact-icon, .occurence-icon {
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin-right: 5px;
+}
+
+.contact-link, .occurence-link {
+    /* padding: 0;
+    margin: 0;
+    height: 16px;
+    vertical-align: middle; */
+    font-family: Tahoma, Helvetica, sans-serif;
+    margin-left: 3px; 
+    position: relative;
+    top: -3px;
+    font-size: 0.9em;
+}
+
+.contact-type, .occurence-type {
+    font-size: 0.6em;
+    color: #58b;
+    padding-left: 5px;
+}
+
+#footer {
+    text-align: right;
+    margin: 30px;
+}
+
+#footer img {
+    border: none;
+    margin: 5px;    
+}
+
+body {
+    background: url('src/body-bg.png') repeat-x;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    background: url('src/body-bg.png') repeat-x;
+    border: 1px solid #000;
+    border-bottom-width: 2px;
+    margin: 10px;
+    padding: 0;
+} */
+
+span#copyright {
+    display: block;
+    font-size: 0.8em;
+}
+

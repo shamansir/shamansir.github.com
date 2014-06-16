@@ -1,0 +1,264 @@
+/* BASIC STUFF STYLING */
+
+/* Elements to show only in non-css browsers */
+.alternative, span#proceed-to-top, div#skip-nav-link {
+  display: none; 
+}
+
+/* Tags */
+
+body {
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 24px;
+	letter-spacing: 0.1em;
+}
+
+h2 {
+  font-size: 20px;
+	letter-spacing: 0.02em;
+	word-spacing: 0.2em;
+	padding-bottom: 5px;
+	text-decoration: underline;
+	background: url(../images/sun.gif) center left no-repeat;
+	margin-left: -5px;
+	padding-left: 20px;
+	color: #666;		
+}
+
+h3 {
+  font-family: "Times New Roman", Garamond, Georgia, Verdana, serif;
+  font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	margin-left: -5px;
+	padding-left: 20px;
+	padding-top: 1px;
+	/* border-right: 5px solid #000; */
+	background: url(../images/expanded.gif) center left no-repeat;
+	border-top: 1px solid #000;
+	/* text-decoration: overline; */
+	color: #666;	
+}
+
+p + h3 {
+	margin-top: 30px;
+}
+
+h4 {
+  font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.03em;
+	margin-bottom: 15px;		
+}
+
+p + h4 {
+	margin-top: 40px;
+}
+	
+h5 {
+  font-size: 11px;
+	font-weight: bold;
+	font-style: normal;
+	letter-spacing: 0.03em;
+	word-spacing: 0.2em;	
+}
+
+h6 {
+  font-size: 11px;
+	font-weight: normal;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	word-spacing: 0.2em;
+	padding: 0;
+	margin-bottom: 5px;
+}
+
+p + h6 {
+  margin-top: 20px;
+}
+
+p, blockquote cite, dfn {
+  font-size: 11px;
+	text-align: justify;
+}
+
+dfn {
+  font-style: italic;
+}
+
+blockquote {
+  display: block;
+	margin: 0 15px 30px 15px;
+	padding: 0 5px;
+	width: 240px;
+	/* text-align: right; */
+	border: 1px dashed #aaa;
+  letter-spacing: 0.02em;
+	color: #666;
+	background-color: #ffd;
+	overflow: hidden;
+}
+
+blockquote .cite {
+  font-size: 10px;
+  font-style: italic;
+  text-align: right;
+}
+
+hr {
+	height: 0;
+  border-top: 1px dotted #000;
+}
+
+a {
+  color: #999;
+	text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+  border-bottom: 1px dotted #666;
+}
+
+a:visited {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #000;
+}
+
+a img {
+  border: none;
+  text-decoration: none;
+}
+
+body {
+	background-color: #003;
+}
+
+pre, code {
+  font-family: "Courier New", monospace;
+	font-size: 12px;
+	background-color: #f5f5f5;	  
+}
+
+pre {
+  color: #333;
+	padding: 5px;
+	border: 2px dashed #999; 
+}
+
+code {
+  color: #333;
+	border: 1px #000;
+	border-style: dotted none;
+}
+
+span.cc {
+  padding-left: 18px;
+	padding-bottom: 1px;
+	font-size: 12px;
+}
+
+/* Blocks */
+
+#page #page-header {
+	border: 1px solid #000;
+} 
+
+#page #footer {
+	border: 1px solid #000;	
+}
+
+#page #page-header h1 {
+  font-size: 24px;
+  color: #666;
+	letter-spacing: 0.25em;
+	text-transform: none;	
+}
+
+#page #page-header h1:before {
+  content: "/ ";
+}
+
+#basis #content {
+  font-family: Georgia, Garamond, "Times New Roman", serif;
+	padding: 20px;
+	border-color: #333 #000;
+	border-style: solid dotted;
+	border-width: 0 1px 1px 1px;	
+}
+
+#page-control #basis {
+	background-color: #000;
+}
+
+/* #basis #content a:visited {
+	background-color: #eee;
+} */
+
+#basis ul#tab-bar {
+	border: 0;
+}
+
+#page-control #page-sections-area {
+	background-color: #000;
+}
+
+#page-sections-area ul#sub-nav-menu {
+	background-color: #ffffd5;
+	border: 1px solid #000;	
+}
+
+#page-sections-area #adware-zone {
+  background-color: #c03;
+	border: 1px solid #000;
+	border-top-width: 0;
+}
+
+#page-info #description-block {
+	border: solid #000;
+	border-width: 0px 1px 3px 1px;
+	background: #ffffd5;
+}
+
+#basis ul#tab-bar li a {
+	text-transform: uppercase;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	padding: 2px 10px;
+	border: 1px solid #000;
+	color: #999;
+}
+
+#basis ul#tab-bar li a:hover {
+	color: #000;
+}
+
+#basis ul#tab-bar li a:visited {
+  text-decoration: none;
+}
+
+#basis ul#tab-bar li a#active {
+  color: #fff;
+	background: none #000;
+}
+
+#basis ul#tab-bar li a#active:hover {
+  color: #bbb;
+  text-decoration: overline;	
+}
+
+#page-info a#page-tab {
+  border: 0;
+}

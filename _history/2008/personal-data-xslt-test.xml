@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE vCard SYSTEM "xml-vcard.dtd">
+<vCard>
+    <VERSION>2.1</VERSION>
+    <FN>Ulric Wilfred</FN>
+    <N>
+      <FAMILY>Wilfred</FAMILY>
+      <GIVEN>Ulric</GIVEN>      
+      <MIDDLE>Zokotuha</MIDDLE>
+      <PREFIX>Mr.</PREFIX>
+      <SUFFIX>Jr.</SUFFIX>
+    </N>
+    <NICKNAME>shaman.sir</NICKNAME>
+    <PHOTO><EXTVAL>some-photo-extval</EXTVAL></PHOTO>
+    <PHOTO>
+       <TYPE>photo-type</TYPE>
+       <BINVAL>photo-binary-value</BINVAL>
+    </PHOTO>
+    <BDAY>1984-03-04</BDAY>
+    <ADR></ADR>
+    <LABEL><HOME/><WORK/><DOM/><PREF/><LINE>label-line</LINE><LINE>another-line</LINE></LABEL>
+    <LABEL><POSTAL/><PARCEL/><INTL/><LINE>another-label-line</LINE></LABEL>
+    <LOGO><EXTVAL>some-logo-extval</EXTVAL></LOGO>
+    <LOGO>
+       <TYPE>logo-type</TYPE>
+       <BINVAL>logo-binary-value</BINVAL>
+    </LOGO>    
+    <TEL><HOME/><WORK/><VOICE/><FAX/><BBS/><ISDN/><NUMBER>2883838</NUMBER></TEL>
+    <TEL><PAGER/><MSG/><CELL/><MODEM/><PREF/><NUMBER>38393</NUMBER></TEL>
+    <TEL><PCS/><NUMBER>383993</NUMBER></TEL>
+    <BDAY></BDAY>
+    <EMAIL><HOME/><WORK/><INTERNET/><PREF/><X400/><USERID>test@email.com</USERID></EMAIL>
+    <AGENT><EXTVAL>agent-extval</EXTVAL></AGENT>        
+    <AGENT><vCard><VERSION>2.1</VERSION><FN>Someone Someoneson</FN><N><GIVEN>Vasya</GIVEN></N></vCard></AGENT>
+    <CATEGORIES><KEYWORD>keyword-1</KEYWORD><KEYWORD>keyword-2</KEYWORD><KEYWORD>keyword-3</KEYWORD></CATEGORIES>
+    <CLASS><PUBLIC/></CLASS>
+    <CLASS><PRIVATE/></CLASS>
+    <CLASS><CONFIDENTIAL/></CLASS>    
+    <DESC>description</DESC>
+    <EMAIL><HOME/><WORK/><INTERNET/><PREF/><X400/><USERID>someone@someone.com</USERID></EMAIL>
+    <GEO><LAT>22232</LAT><LON>2332</LON></GEO>
+    <JABBERID></JABBERID>
+    <KEY><CRED>1882818</CRED></KEY>
+    <KEY><TYPE>key-type</TYPE><CRED>287272</CRED></KEY>    
+    <MAILER>mailer</MAILER>
+    <NICKNAME>nickname</NICKNAME>
+    <NOTE>note</NOTE>
+    <ORG><ORGNAME>someOrganization</ORGNAME></ORG>
+    <ORG><ORGNAME>someOrganization</ORGNAME><ORGUNIT>some org-Unit</ORGUNIT><ORGUNIT>another-org-unit</ORGUNIT></ORG>    
+    <PRODID>product id</PRODID>
+    <REV>rev</REV>
+    <ROLE>role</ROLE>
+    <SORT-STRING>sort-string</SORT-STRING>
+    <SOUND><BINVAL>ss222</BINVAL></SOUND>
+    <SOUND><EXTVAL>extavel</EXTVAL></SOUND>
+    <SOUND><PHONETIC>sound-phonetic</PHONETIC></SOUND>
+    <SOUND><BINVAL>binary-value</BINVAL></SOUND>
+    <SOUND><EXTVAL>external-value</EXTVAL></SOUND>
+    <TITLE></TITLE>
+    <TZ></TZ>
+    <UID></UID>
+    <URL></URL>
+    <URL>http://shamansir.madfire.net</URL>
+    <URL>http://shamansir.wordpress.com</URL>
+    <URL>skype:shaman.sir?userinfo</URL>
+    <EMAIL><INTERNET/><PREF/><USERID>shaman.sir@gmail.com</USERID></EMAIL>
+    <EMAIL><INTERNET/><USERID>ulric.wilfred@yahoo.com</USERID></EMAIL>
+    <JABBERID>ulric.wilfred@jabber.org</JABBERID>
+    <ORG>
+      <ORGNAME>indIvid Pro.</ORGNAME>
+      <ORGUNIT/>
+    </ORG>
+    <TITLE>Master and Servant</TITLE>
+    <ROLE>Executor</ROLE>    
+    <ADR>
+      <HOME/>
+      <EXTADD/>
+      <STREET/>
+      <LOCALITY>Saint-Petersburg</LOCALITY>
+      <REGION/>
+      <PCODE/>
+      <CTRY>Russia</CTRY>
+    </ADR>
+</vCard>
+

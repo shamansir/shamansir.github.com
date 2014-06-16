@@ -1,0 +1,228 @@
+/* STRUCTURE POSITIONING */
+
+/*
+
+Page structure:
+
+html>body 
+	.sheet
+		#page
+			#header
+				#style-selector
+			#page-area
+				ul#nav-bar
+				#page-info
+				#description-block
+				ul#tab-bar
+				ul#sub-nav-menu
+				#content
+				#adware-zone				
+			#footer
+				#logo-block
+				#copyrights-logo
+				span#main-copyright
+
+*/
+
+body {
+		 margin: 0;
+		 padding: 0;
+}
+
+body .sheet {
+		 padding: 0 15px 15px 15px;
+		 background-color: #ccc;
+}
+
+.sheet #page {
+		 border: solid #000;
+		 border-width: 0 1px 2px 1px;
+		 /* background-color: #fffff8; */
+		 background: url("../images/page-bg.gif") top repeat-x #fffff8;
+}
+
+#page #header {
+			/* background-color: #484d6a; */
+			background: url("../images/header-bg.gif") bottom left no-repeat transparent;
+			border-bottom: 1px solid #5b6782; 
+			color: #fff;
+			font-family: Impact, Arial, Helvetica, Tahoma, sans-serif;
+			height: 99px;
+			text-align: right;
+}
+
+#page #header h1 {
+			margin: 0;
+			background: url("../images/header-h1-bg.gif") bottom right no-repeat;
+			padding: 70px 5px 0 0; /* to make background merge with header bg,
+							 			but also to place the title at the lower line  */
+			font-family: "Trebuchet MS", Helvetica, Arial, Tahoma, sans-serif;
+			font-size: 24px;
+			font-style: italic;
+			font-weight: normal;
+			text-transform: capitalize;
+}
+
+#page-area {
+			background: url("../images/page-area-bg.gif") top left repeat-y #fffff8;
+}
+
+#page-area ul#nav-bar {
+			margin: 0;
+			padding: 0;
+			float: right;
+			list-style-type: none;
+}
+
+ul#nav-bar li {
+			text-align: right;
+}
+
+ul#nav-bar li a {
+      display: block;
+			margin: 1px;
+			margin-right: 22px; /* to provide space for active/hover link 
+									 			 				 			 		 to be shifted to the right */
+			padding: 1px 10px;			
+			width: 84px;
+			height: 15px;
+			color: #fff;
+			font-family: Tahoma, Arial, sans-serif;
+			font-size: 11px;			
+			text-decoration: none;
+			text-transform: capitalize;
+			/* background-color: #474c69; */
+			background: url("../images/nav-menu-item-bg.gif") top right no-repeat;
+}
+
+ul#nav-bar li a#nav-active {
+      position: relative;
+			left: 20px;	/* to make active item to be shifted to the right */
+}
+
+ul#nav-bar li a:hover {
+      position: relative;
+			left: 20px;	/* to make hover item to be shifted to the right */		
+			color: #819ab0;
+}
+
+ul#tab-bar {
+			margin: 0;
+			padding: 0;
+			position: absolute; /* to be truth, it's just an emulation of margin-top,
+								but it's made to make all current and future browsers understand 
+								position properly and to split bg-images more correctly */
+			top: 109px; /* 99px header height + 10px margin-top + 2px */
+			left: 16px; /* 15px margin + 1px border */
+			/* margin-top: 7px; */
+			padding-top: 53px; /* for images of two top buttons */			
+			float: left;
+			width: 167px;
+			height: 294px; /* height of image + padding top == 294px + 53px = 347px */ 
+			list-style-type: none;
+			/* background-color: #484d6b; */
+			background: url("../images/tab-bar-bg.gif") top left no-repeat #fcfceb;
+}
+
+ul#tab-bar li {
+			margin: 2px;
+			margin-left: 3px;
+			padding: 4px;
+			background: url("../images/tab-bar-item.gif") top left no-repeat;
+}
+
+ul#tab-bar li:first-child {
+			background: url("../images/first-tab-bar-item.gif") top left no-repeat;
+}
+
+ul#tab-bar li a {
+			text-decoration: none;
+			padding-left: 3px;
+			color: #fff;
+}
+
+ul#tab-bar li a:hover {
+		  color: #484d6b;
+}
+
+/* ul#tab-bar li a:active {
+			border-bottom: 1px dotted #484d6b;
+} */
+
+#page-area #adware-zone {
+			display: block;
+			/* float: left; */			
+			/* position: relative; */
+			/* top: -259px; */
+			padding-bottom: 90px;
+			background: url("../images/adware-zone-bg.gif") bottom left no-repeat;
+			width: 167px;
+}
+
+#adware-zone a {
+			display: block;
+			padding: 5px;
+			width: 167px;
+}
+
+/*
+#page-area #adware-zone {
+			display: block;
+			padding-bottom: 72px; /* height of bg //			
+			background: url("../images/adware-zone-bg.gif") bottom left no-repeat;
+			/* width: 167px; //
+}
+*/
+
+/*
+#adware-zone a {
+			display: block;
+			padding: 5px;
+			width: 167px;
+			background: url("../images/page-area-bg.gif") top left repeat-y;
+} */
+
+#page-area ul#sub-nav-menu {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 250px; /* header + description block */
+			left: 183px; /* tab-bar + page padding */
+			list-style-type: none;
+}
+
+#page-area #content {
+			width: 77%;
+			margin-left: 167px;
+			margin-top: 10px;
+			color: #000;
+			position: relative;
+			top: -5px;
+			background: url("../images/content-bg.gif") top right no-repeat #fcfceb;
+}
+
+#page-area #page-tab { /* logo, in our case */
+			position: absolute;
+			top: 6px;
+			left: 37px;			
+			width: 158px;
+			height: 104px;
+			background: url("../images/logo.gif") top left no-repeat;
+}
+
+#page #footer {
+			height: 33px;
+			font-family: Arial, Helvetica, Tahoma, sans-serif;
+			text-align: right;
+			background-color: #484d6b;
+}
+
+#page #footer span#main-copyright {
+			color: #fff;
+}
+
+#page #footer div#copyrights-logo {
+			display: inline;
+			padding: 2px 0 0 0;
+			float: left;			
+}

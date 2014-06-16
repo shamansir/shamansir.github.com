@@ -1,0 +1,6 @@
+/* BASIC STUFF STYLING */
+
+/* Elements to show only in non-css browsers */
+.alternative, span#proceed-to-top, div#skip-nav-link {
+  display: none; 
+}

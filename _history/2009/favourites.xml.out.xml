@@ -1,0 +1,722 @@
+<span class="favourites-label">Music:</span>
+<ul class="favourites" id="music">
+	<li>
+		<a title="Depeche Mode" href="http://www.last.fm/music/Depeche Mode">Depeche Mode</a>
+	</li>
+	<li>
+		<a title="Tricky" href="http://www.last.fm/music/Tricky">Tricky</a>
+	</li>
+	<li>
+		<a title="Massive Attack" href="http://www.last.fm/music/Massive Attack">Massive Attack</a>
+	</li>
+	<li>
+		<a title="Faithless" href="http://www.last.fm/music/Faithless">Faithless</a>
+	</li>
+	<li>
+		<a title="EZ3kiel" href="http://www.last.fm/music/EZ3kiel">EZ3kiel</a>
+	</li>
+	<li>
+		<a title="U.N.K.L.E." href="http://www.last.fm/music/U.N.K.L.E.">U.N.K.L.E.</a>
+	</li>
+	<li>
+		<a title="Nine Inch Nails" href="http://www.last.fm/music/Nine Inch Nails">Nine Inch Nails</a>
+	</li>
+	<li>
+		<a title="Gus Gus" href="http://www.last.fm/music/Gus Gus">Gus Gus</a>
+	</li>
+	<li>
+		<a title="Jimi Hendrix" href="http://www.last.fm/music/Jimi Hendrix">Jimi Hendrix</a>
+	</li>
+	<li>
+		<a title="Leftfield" href="http://www.last.fm/music/Leftfield">Leftfield</a>
+	</li>
+	<li>
+		<a title="Kaycee" href="http://www.last.fm/music/Kaycee">Kaycee</a>
+	</li>
+	<li>
+		<a title="Morcheeba" href="http://www.last.fm/music/Morcheeba">Morcheeba</a>
+	</li>
+	<li>
+		<a title="The Chemical Brothers" href="http://www.last.fm/music/The Chemical Brothers">The Chemical Brothers</a>
+	</li>
+	<li>
+		<a title="Nick Cave" href="http://www.last.fm/music/Nick Cave">Nick Cave</a>
+	</li>
+	<li>
+		<a title="Death In Vegas" href="http://www.last.fm/music/Death In Vegas">Death In Vegas</a>
+	</li>
+	<li>
+		<a title="Apollo 440" href="http://www.last.fm/music/Apollo 440">Apollo 440</a>
+	</li>
+	<li>
+		<a title="The Prodigy" href="http://www.last.fm/music/The Prodigy">The Prodigy</a>
+	</li>
+	<li>
+		<a title="Наутилус Помпилиус" href="http://www.last.fm/music/Nautilus Pompilius">Наутилус Помпилиус</a>
+	</li>
+	<li>
+		<a title="Elvis Presley" href="http://www.last.fm/music/Elvis Presley">Elvis Presley</a>
+	</li>
+	<li>
+		<a title="A-Ha" href="http://www.last.fm/music/A-Ha">A-Ha</a>
+	</li>
+	<li>
+		<a title="Air" href="http://www.last.fm/music/Air">Air</a>
+	</li>
+	<li>
+		<a title="Rammstein" href="http://www.last.fm/music/Rammstein">Rammstein</a>
+	</li>
+	<li>
+		<a title="Blondie" href="http://www.last.fm/music/Blondie">Blondie</a>
+	</li>
+	<li>
+		<a title="Pink Floyd" href="http://www.last.fm/music/Pink Floyd">Pink Floyd</a>
+	</li>
+	<li>
+		<a title="Queen" href="http://www.last.fm/music/Queen">Queen</a>
+	</li>
+	<li>
+		<a title="Björk" href="http://www.last.fm/music/Björk">Björk</a>
+	</li>
+	<li>
+		<a title="Дельфин" href="http://www.last.fm/music/Дельфин">Дельфин</a>
+	</li>
+	<li>
+		<a title="Михей" href="http://www.last.fm/music/Михей">Михей</a>
+	</li>
+	<li>
+		<a title="Beastie Boys" href="http://www.last.fm/music/Beastie Boys">Beastie Boys</a>
+	</li>
+	<li>
+		<a title="Каста" href="http://www.last.fm/music/Каста">Каста</a>
+	</li>
+	<li>
+		<a title="De-Phazz" href="http://www.last.fm/music/De-Phazz">De-Phazz</a>
+	</li>
+	<li>
+		<a title="U2" href="http://www.last.fm/music/U2">U2</a>
+	</li>
+	<li>
+		<a title="ВИА Гра" href="http://www.last.fm/music/ВИА Гра">ВИА Гра</a>
+	</li>
+	<li>
+		<a title="Ger Strokes" href="http://www.last.fm/music/Ger Strokes">Ger Strokes</a>
+	</li>
+	<li>
+		<a title="Herbert Grönemeyer" href="http://www.last.fm/music/Herbert Grönemeyer">Herbert Grönemeyer</a>
+	</li>
+	<li>
+		<a title="Peter Hammill" href="http://www.last.fm/music/Peter Hammill">Peter Hammill</a>
+	</li>
+	<li>
+		<a title="Röyksopp" href="http://www.last.fm/music/Röyksopp">Röyksopp</a>
+	</li>
+	<li>
+		<a title="Juno Reactor" href="http://www.last.fm/music/Juno Reactor">Juno Reactor</a>
+	</li>
+	<li>
+		<a title="Daughter Darling" href="http://www.last.fm/music/Daughter Darling">Daughter Darling</a>
+	</li>
+	<li>
+		<a title="Leæther Strip" href="http://www.last.fm/music/Leæther Strip">Leæther Strip</a>
+	</li>
+	<li>
+		<a title="Rotersand" href="http://www.last.fm/music/Rotersand">Rotersand</a>
+	</li>
+	<li>
+		<a title="Hardknox" href="http://www.last.fm/music/Hardknox">Hardknox</a>
+	</li>
+	<li>
+		<a title="Xploding Plastix" href="http://www.last.fm/music/Xploding Plastix">Xploding Plastix</a>
+	</li>
+	<li>
+		<a title="Lamb" href="http://www.last.fm/music/Lamb">Lamb</a>
+	</li>
+	<li>
+		<a title="The White Stripes" href="http://www.last.fm/music/The White Stripes">The White Stripes</a>
+	</li>
+	<li>
+		<a title="Rome" href="http://www.last.fm/music/Rome">Rome</a>
+	</li>
+	<li>
+		<a title="Robot Like Me" href="http://www.last.fm/music/Robot Like Me">Robot Like Me</a>
+	</li>
+	<li>
+		<a title="Fatboy Slim" href="http://www.last.fm/music/Fatboy Slim">Fatboy Slim</a>
+	</li>
+	<li>
+		<a title="5'Nizza" href="http://www.last.fm/music/5'Nizza">5'Nizza</a>
+	</li>
+</ul>
+<span class="favourites-label">Movies:</span>
+<ul class="favourites" id="movies">
+	<li>
+		<a title="Pitch Black" href="http://www.imdb.com/title/tt0134847">Pitch Black</a>
+	</li>
+	<li>
+		<a title="Clockwork Orange" href="http://www.imdb.com/title/tt0066921">Clockwork Orange</a>
+	</li>
+	<li>
+		<a title="Amores Perros" href="http://www.imdb.com/title/tt0245712">Amores Perros</a>
+	</li>
+	<li>
+		<a title="21 Grams" href="http://www.imdb.com/title/tt0315733">21 Grams</a>
+	</li>
+	<li>
+		<a title="The Constant Gardener" href="http://www.imdb.com/title/tt0387131">The Constant Gardener</a>
+	</li>
+	<li>
+		<a title="Fight Club" href="http://www.imdb.com/title/tt0137523">Fight Club</a>
+	</li>
+	<li>
+		<a title="Se7en" href="http://www.imdb.com/title/tt0114369">Se7en</a>
+	</li>
+	<li>
+		<a title="Crossroads 1986" href="http://www.imdb.com/title/tt0090888">Crossroads 1986</a>
+	</li>
+	<li>
+		<a title="Eternal Sunshine of the Spotless Mind" href="http://www.imdb.com/title/tt0338013">Eternal
+			Sunshine of the Spotless Mind</a>
+	</li>
+	<li>
+		<a title="Serenity" href="http://www.imdb.com/title/tt0379786">Serenity</a>
+	</li>
+	<li>
+		<a title="Mulholland Dr." href="http://www.imdb.com/title/tt0166924">Mulholland Dr.</a>
+	</li>
+	<li>
+		<a title="Romance &amp; Cigarettes" href="http://www.imdb.com/title/tt0368222">Romance &amp; Cigarettes</a>
+</li>
+<li>
+	<a title="Twin Peaks: Fire Walk With Me" href="http://www.imdb.com/title/tt0105665">Twin Peaks: Fire
+		Walk With Me</a>
+</li>
+	<li>
+		<a title="Meet Joe Black" href="http://www.imdb.com/title/tt0119643">Meet Joe Black</a>
+	</li>
+	<li>
+		<a title="American History X" href="http://www.imdb.com/title/tt0120586">American History X</a>
+	</li>
+	<li>
+		<a title="Birth" href="http://www.imdb.com/title/tt0337876">Birth</a>
+	</li>
+	<li>
+		<a title="A Scanner Darkly" href="http://www.imdb.com/title/tt0405296">A Scanner Darkly</a>
+	</li>
+	<li>
+		<a title="Once Upon a Time in America" href="http://www.imdb.com/title/tt0087843">Once Upon a Time in
+			America</a>
+	</li>
+	<li>
+		<a title="Paprika" href="http://www.imdb.com/title/tt0851578">Paprika</a>
+	</li>
+	<li>
+		<a title="Children of Men" href="http://www.imdb.com/title/tt0206634">Children of Men</a>
+	</li>
+	<li>
+		<a title="Собачье Сердце" href="http://www.imdb.com/title/tt0096126">Собачье Сердце</a>
+	</li>
+	<li>
+		<a title="Cidade de Deus" href="http://www.imdb.com/title/tt0317248">Cidade de Deus</a>
+	</li>
+	<li>
+		<a title="Matchstick Men" href="http://www.imdb.com/title/tt0325805">Matchstick Men</a>
+	</li>
+	<li>
+		<a title="The Dark Knight" href="http://www.imdb.com/title/tt0468569">The Dark Knight</a>
+	</li>
+	<li>
+		<a title="The Chronicles of Riddick" href="http://www.imdb.com/title/tt0296572">The Chronicles of
+			Riddick</a>
+	</li>
+	<li>
+		<a title="Love Actually" href="http://www.imdb.com/title/tt0314331">Love Actually</a>
+	</li>
+	<li>
+		<a title="Ghost Rider" href="http://www.imdb.com/title/tt0259324">Ghost Rider</a>
+	</li>
+	<li>
+		<a title="Cowboy Bebop" href="http://www.imdb.com/title/tt0275277">Cowboy Bebop</a>
+	</li>
+	<li>
+		<a title="π" href="http://www.imdb.com/title/tt0138704">π</a>
+	</li>
+	<li>
+		<a title="Сталкер" href="http://www.imdb.com/title/tt0079944">Сталкер</a>
+	</li>
+	<li>
+		<a title="The Fountain" href="http://www.imdb.com/title/tt0414993">The Fountain</a>
+	</li>
+	<li>
+		<a title="Eyes Wide Shut" href="http://www.imdb.com/title/tt0120663">Eyes Wide Shut</a>
+	</li>
+	<li>
+		<a title="Ghost in the Shell" href="http://www.imdb.com/title/tt0113568">Ghost in the Shell</a>
+	</li>
+	<li>
+		<a title="*batteries not included" href="http://www.imdb.com/title/tt0092494">*batteries not
+			included</a>
+	</li>
+	<li>
+		<a title="No Country For Old Men" href="http://www.imdb.com/title/tt0477348">No Country For Old Men</a>
+	</li>
+	<li>
+		<a title="Dirty Rotten Scoundrels" href="http://www.imdb.com/title/tt0095031">Dirty Rotten Scoundrels
+		</a>
+	</li>
+	<li>
+		<a title="Payback: Straight Up -- the Director's Cut" href="http://www.imdb.com/title/tt0958860">Payback:
+			Straight Up -- the Director's Cut</a>
+	</li>
+	<li>
+		<a title="Black Snake Moan" href="http://www.imdb.com/title/tt0462200">Black Snake Moan</a>
+	</li>
+	<li>
+		<a title="You Kill Me" href="http://www.imdb.com/title/tt0796375">You Kill Me</a>
+	</li>
+	<li>
+		<a title="The Cable Guy" href="http://www.imdb.com/title/tt0115798">The Cable Guy</a>
+	</li>
+	<li>
+		<a title="Vanilla Sky" href="http://www.imdb.com/title/tt0259711">Vanilla Sky</a>
+	</li>
+	<li>
+		<a title="The Animatrix" href="http://www.imdb.com/title/tt0328832">The Animatrix</a>
+	</li>
+	<li>
+		<a title="Intacto" href="http://www.imdb.com/title/tt0220580">Intacto</a>
+	</li>
+	<li>
+		<a title="Edward Scissorhands" href="http://www.imdb.com/title/tt0099487">Edward Scissorhands</a>
+	</li>
+</ul>
+
+<span class="favourites-label">Games:</span>
+<ul class="favourites" id="games">
+	<li>
+		<a title="The Neverhood" href="http://www.mobygames.com/game/windows/neverhood">The Neverhood</a>
+	</li>
+	<li>
+		<a title="Psychonauts" href="http://www.mobygames.com/game/windows/psychonauts">Psychonauts</a>
+	</li>
+	<li>
+		<a title="Fable: The Lost Chapters"
+			href="http://www.mobygames.com/game/windows/fable-the-lost-chapters">Fable: The Lost Chapters</a>
+	</li>
+	<li>
+		<a title="Fahrenheit/Indigo Prophecy" href="http://www.mobygames.com/game/windows/indigo-prophecy">Fahrenheit/Indigo
+			Prophecy</a>
+	</li>
+	<li>
+		<a title="The Chronicles of Riddick: Escape from Butcher Bay"
+			href="http://www.mobygames.com/game/windows/chronicles-of-riddick-escape-from-butcher-bay">The Chronicles of Riddick: Escape from Butcher Bay</a>
+	</li>
+	<li>
+		<a title="Aliens vs Predator 2"
+			href="http://www.mobygames.com/game/windows/aliens-versus-predator-2">Aliens vs Predator 2</a>
+	</li>
+	<li>
+		<a title="The Witcher" href="http://www.mobygames.com/game/windows/witcher">The Witcher</a>
+	</li>
+	<li>
+		<a title="Gobliiins" href="http://www.mobygames.com/game/dos/gobliiins">Gobliiins</a>
+	</li>
+	<li>
+		<a title="Gobliins 2: The Prince Buffoon"
+			href="http://www.mobygames.com/game/dos/gobliins-2-the-prince-buffoon">Gobliins 2: The Prince Buffoon</a>
+	</li>
+	<li>
+		<a title="Neverwinter Nights 2"
+			href="http://www.mobygames.com/game/windows/neverwinter-nights-2">Neverwinter Nights 2</a>
+	</li>
+	<li>
+		<a title="flOw" href="http://www.mobygames.com/game/windows/flow">flOw</a>
+	</li>
+	<li>
+		<a title="Monopoly" href="http://www.mobygames.com/game/windows/monopoly">Monopoly</a>
+	</li>
+	<li>
+		<a title="Tom Clancy's Rainbox Six: Vegas"
+			href="http://www.mobygames.com/game/windows/tom-clancys-rainbow-six-vegas">Tom Clancy's Rainbox Six: Vegas</a>
+	</li>
+	<li>
+		<a title="Quake 2" href="http://www.mobygames.com/game/windows/quake-ii">Quake 2</a>
+	</li>
+	<li>
+		<a title="Sniper Elite: Berlin 1945"
+			href="http://www.mobygames.com/game/windows/sniper-elite-berlin-1945">Sniper Elite: Berlin 1945</a>
+	</li>
+	<li>
+		<a title="The Settlers II: Veni, Vidi, Vici"
+			href="http://www.mobygames.com/game/dos/settlers-ii-veni-vidi-vici">The Settlers II: Veni, Vidi, Vici</a>
+	</li>
+	<li>
+		<a title="Duke Nukem 3D" href="http://www.mobygames.com/game/dos/duke-nukem-3d">Duke Nukem 3D</a>
+	</li>
+	<li>
+		<a title="Counter-Strike"
+			href="http://www.mobygames.com/game/windows/half-life-counter-strike">Counter-Strike</a>
+	</li>
+	<li>
+		<a title="Counter-Strike: Condition Zero"
+			href="http://www.mobygames.com/game/windows/counter-strike-condition-zero">Counter-Strike: Condition Zero</a>
+	</li>
+	<li>
+		<a title="Dark Messiah of Might &amp; Magic"
+			href="http://www.mobygames.com/game/windows/dark-messiah-of-might-magic">Dark Messiah of Might &amp; Magic</a>
+	</li>
+	<li>
+		<a title="Half-Life" href="http://www.mobygames.com/game/windows/half-life">Half-Life</a>
+	</li>
+	<li>
+		<a title="Half-Life: Blue Shift"
+			href="http://www.mobygames.com/game/windows/half-life-blue-shift">Half-Life: Blue Shift</a>
+	</li>
+	<li>
+		<a title="Half-Life 2" href="http://www.mobygames.com/game/windows/half-life-2">Half-Life 2</a>
+	</li>
+	<li>
+		<a title="Starcraft" href="http://www.mobygames.com/game/windows/starcraft">Starcraft</a>
+	</li>
+	<li>
+		<a title="Starcraft: Brood War" href="http://www.mobygames.com/game/windows/starcraft-brood-war">Starcraft: Brood War
+		</a>
+	</li>
+	<li>
+		<a title="Severance: Blade of Darkness" href="http://www.mobygames.com/game/windows/blade-of-darkness">Severance:
+			Blade of Darkness</a>
+	</li>
+	<li>
+		<a title="Warhammer 40,000: Dawn of War"
+			href="http://www.mobygames.com/game/windows/warhammer-40000-dawn-of-war">Warhammer 40,000: Dawn of War</a>
+	</li>
+	<li>
+		<a title="Warhammer 40,000: Dawn of War - Winter Assault"
+			href="http://www.mobygames.com/game/windows/warhammer-40000-dawn-of-war-winter-assault">Warhammer 40,000: Dawn of War - Winter Assault</a>
+	</li>
+	<li>
+		<a title="Warhammer 40,000: Dawn of War - Dark Crusade"
+			href="http://www.mobygames.com/game/windows/warhammer-40000-dawn-of-war-dark-crusade">Warhammer 40,000: Dawn of War - Dark Crusade</a>
+	</li>
+	<li>
+		<a title="Supreme Commander" href="http://www.mobygames.com/game/windows/supreme-commander">Supreme Commander</a>
+	</li>
+	<li>
+		<a title="Need For Speed: Most Wanted"
+			href="http://www.mobygames.com/game/windows/need-for-speed-most-wanted">Need For Speed: Most Wanted</a>
+	</li>
+	<li>
+		<a title="Metal Gear: AC!D 2" href="http://www.mobygames.com/game/psp/metal-gear-acd-2">Metal Gear: AC!D 2</a>
+	</li>
+	<li>
+		<a title="S.T.A.L.K.E.R.: Shadow of Chernobyl"
+			href="http://www.mobygames.com/game/windows/stalker-shadow-of-chernobyl">S.T.A.L.K.E.R.: Shadow of Chernobyl</a>
+	</li>
+	<li>
+		<a title="Tekken: Dark Resurrection"
+			href="http://www.mobygames.com/game/psp/tekken-dark-resurrection">Tekken: Dark Resurrection</a>
+	</li>
+	<li>
+		<a title="Shadow Warrior" href="http://www.mobygames.com/game/dos/shadow-warrior">Shadow Warrior</a>
+	</li>
+	<li>
+		<a title="SWAT 4: The Stetchkov Syndicate"
+			href="http://www.mobygames.com/game/windows/swat-4-the-stetchkov-syndicate">SWAT 4: The Stetchkov Syndicate</a>
+	</li>
+	<li>
+		<a title="Syndicate" href="http://www.mobygames.com/game/dos/syndicate">Syndicate</a>
+	</li>
+	<li>
+		<a title="Family Guy" href="http://www.mobygames.com/game/psp/family-guy-video-game">Family Guy</a>
+	</li>
+	<li>
+		<a title="Sam &amp; Max Hit The Road" href="http://www.mobygames.com/game/dos/sam-max-hit-the-road">Sam &amp; Max Hit The Road</a>
+	</li>
+	<li>
+		<a title="Dungeon Siedge II" href="http://www.mobygames.com/game/windows/dungeon-siege-ii">Dungeon Siedge II</a>
+	</li>
+	<li>
+		<a title="Dungeon Siege: Throne of Agony"
+			href="http://www.mobygames.com/game/psp/dungeon-siege-throne-of-agony">Dungeon Siege: Throne of Agony</a>
+	</li>
+	<li>
+		<a title="Broken Sword: The Shadow of the Templars" href="http://www.mobygames.com/game/dos/circle-of-blood">Broken
+			Sword: The Shadow of the Templars</a>
+	</li>
+</ul>
+
+<span class="favourites-label">Series:</span>
+<ul class="favourites"
+	id="series">
+	<li>
+		<a title="The Sopranos" href="http://www.imdb.com/title/tt0141842">The Sopranos</a>
+	</li>
+	<li>
+		<a title="Futurama" href="http://www.imdb.com/title/tt0149460">Futurama</a>
+	</li>
+	<li>
+		<a title="Kemonozume" href="http://www.imdb.com/title/tt0928094">Kemonozume</a>
+	</li>
+	<li>
+		<a title="FLCL" href="http://www.imdb.com/title/tt0279077">FLCL</a>
+	</li>
+</ul>
+
+<span class="favourites-label">Books:</span>
+<ul class="favourites"
+	id="books">
+	<li>
+		<a title="The Bridge Trilogy" href="http://en.wikipedia.org/wiki/The Bridge Trilogy">The Bridge Trilogy</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/William Gibson">William Gibson</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Pattern Recognition" href="http://en.wikipedia.org/wiki/Pattern Recognition">Pattern Recognition</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/William Gibson">William Gibson</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="The Difference Engine" href="http://en.wikipedia.org/wiki/The Difference Engine">The Difference Engine</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/William Gibson">William Gibson</a>
+			</span>
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Bruce Sterling">Bruce Sterling</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Волны гасят ветер" href="http://en.wikipedia.org/wiki/The Time Wanderers">Волны гасят ветер</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Улитка на склоне" href="http://en.wikipedia.org/wiki/Snail on the Slope">Улитка на склоне</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Гадкие лебеди" href="http://en.wikipedia.org/wiki/The Ugly Swans">Гадкие лебеди</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Обитаемый остров" href="http://en.wikipedia.org/wiki/Prisoners of Power">Обитаемый остров</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Отель «У Погибшего Альпиниста»" href="http://en.wikipedia.org/wiki/Dead Mountaineer's Hotel">Отель «У
+			Погибшего Альпиниста»</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Второе нашествие марсиан"
+			href="http://en.wikipedia.org/wiki/The Second Invasion from Mars">Второе нашествие марсиан</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Град обреченный" href="http://en.wikipedia.org/wiki/The Doomed City">Град обреченный</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="За миллиард лет до конца света" href="http://en.wikipedia.org/wiki/Definitely Maybe">За миллиард лет до
+			конца света</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Жук в муравейнике" href="http://en.wikipedia.org/wiki/Beetle in the Anthill">Жук в муравейнике</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Хромая судьба" href="http://en.wikipedia.org/wiki/Limping Fate">Хромая судьба</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Arkady and Boris Strugatsky">A. и Б. Стругацкие</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Foundation Trilogy" href="http://en.wikipedia.org/wiki/Foundation series">Foundation Trilogy</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Isaac Asimov">Isaac Asimov</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="The Status Civilization" href="http://en.wikipedia.org/wiki/The Status Civilization">The Status Civilization
+		</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Robert Sheckley">Robert Sheckley</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Options" href="http://en.wikipedia.org/wiki/Options (book)">Options</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Robert Sheckley">Robert Sheckley</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Trilogy of The Rat"
+			href="http://en.wikipedia.org/wiki/Haruki_Murakami#.22Trilogy_of_the_Rat.22">Trilogy of The Rat</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Haruki Murakami">Haruki Murakami</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Kafka on the Shore" href="http://en.wikipedia.org/wiki/Kafka on the Shore">Kafka on the Shore</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Haruki Murakami">Haruki Murakami</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Dance Dance Dance" href="http://en.wikipedia.org/wiki/Dance Dance Dance">Dance Dance Dance</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Haruki Murakami">Haruki Murakami</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Мастер и Маргарита" href="http://en.wikipedia.org/wiki/The Master and Margarita">Мастер и Маргарита</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Mikhail Bulgakov">Михаил Булгаков</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Чапаев и Пустота" href="http://en.wikipedia.org/wiki/Chapayev and Void">Чапаев и Пустота</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Victor Pelevin">Виктор Пелевин</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Piece on Earth" href="http://en.wikipedia.org/wiki/Piece on Earth">Piece on Earth</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Stanisław Lem">Stanisław Lem</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="El amor en los tiempos del cólera"
+			href="http://en.wikipedia.org/wiki/El amor en los tiempos del cólera">El amor en los tiempos del cólera</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Gabriel García Márquez">Gabriel García Márquez</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>
+		<a title="Cronica de una muerte anunciada"
+			href="http://en.wikipedia.org/wiki/Cronica de una muerte anunciada">Cronica de una muerte anunciada</a>
+		<span class="book-author-comment">
+			(by
+			<span class="book-author">
+				<a href="http://en.wikipedia.org/wiki/Gabriel García Márquez">Gabriel García Márquez</a>
+			</span>
+			)
+		</span>
+	</li>
+	<li>Soviet-time and beginning of 90-th russian
+		Scince-Fiction stories and novels collections (most of them are very
+		good translations from Analog Science Fiction and Fact, Amazing
+		Stories, Asimov's Science Fiction, Interzone magazines)</li>
+</ul>

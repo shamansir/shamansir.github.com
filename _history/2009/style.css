@@ -1,0 +1,369 @@
+body/*, body */ {
+	margin: 0 5%;
+	padding: 0;
+	/* height: 100%; */
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background: url(./img/body-bg.jpg);
+	/* background-color: #334; */
+}
+
+/* positioning */
+
+ul {
+	margin: 0;
+}
+
+#right-panel, #left-panel {
+    float: left;
+    margin: 0;
+}
+
+#left-panel {
+    width: 39%;
+    margin-right: 1%;
+}
+
+#right-panel {
+	width: 59%;	
+	margin-left: 1%;
+}
+
+#nav-menu, #nav-info, #personal-info,
+#content, #additional-block, #footer, h1 {
+    /* background-color: #889; */
+    background: #556 url(./img/plane-bg.jpg);
+    margin-bottom: 10px;
+    color: #eef;
+    padding: 10px;
+    border: 1px solid #000; /* #223 */
+    border-bottom-width: 2px;
+}
+
+#content h3 {
+	margin: 0;
+}
+
+#footer {
+    clear: both;
+    /* text-align: right; */
+}
+
+h1 {
+	margin-top: 50px;
+}
+
+h1, #footer {
+    padding: 5px;
+}
+
+ul#nav-menu,
+#content ul {
+	list-style-type: none;
+}
+
+/* links */
+
+ul li a img {
+	border: 0;
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    margin: 4px 4px 1px 0;
+    top: 5px;
+    position: relative;
+}
+
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:hover {
+	color: #cca;
+}
+
+#content a:visited {
+	color: #999;
+}
+
+#content a:visited:hover {
+    color: #cca;
+}
+
+#nav-menu li#nav-active a {
+	color: #eea;
+}
+
+#nav-menu a:hover span {
+    border-bottom: 1px dashed #ccc; 
+}
+
+#content a.contact-link:hover,
+#content dl a:hover {
+	border-bottom: 1px solid #ccc;
+}
+
+#nav-menu a:hover,
+ul#content li a:hover {
+	text-decoration: none; 
+}
+
+#nav-menu a:hover img {
+	border: 0;
+}
+
+#content a:hover img {
+	background-color: #667;
+}
+
+#content h3 a,
+#content h3 a:visited {
+	color: #eea;
+}
+
+/* styling */
+
+h1#site-title {
+    background: #555566 url(./img/head-logo.jpg) no-repeat;
+    font-family: 'Book Antiqua','Times New Roman',sans-serif;
+    font-size: 3em;
+    height: 80px;
+    padding-left: 120px;
+    padding-top: 13px;
+    color: #ccc;
+}
+
+h1#site-title #owner-name {
+	color: #eec;
+	font-size: 1.5em;
+}
+
+#content dl dt,
+#content ul li>span:first-child,
+#content .favourites-label {
+	color: #99e;
+	font-weight: bold;
+	padding: 10px 0 4px;
+}
+
+/* #content ul {
+	margin-bottom: 30px;
+} */
+
+ul#nav-menu {
+	padding-bottom: 20px;
+}
+
+ul#nav-menu, #content>ul {
+	padding-left: 20px;
+}
+
+#content>ul>li,
+#content #favourites-list>ul {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#content dl dd {
+	font-family: 'Times New Roman',sans-serif;
+	/* font-style: italic; */
+	font-size: 1.2em;
+	padding-left: 44px;
+}
+
+#content h5 {
+    font-family: Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 1.2em;
+    color: #cca;
+    border-top: 1px solid #aa9;
+    padding-top: 5px;
+    /* clear: both; */
+}
+
+span.project-comment {
+	color: #aa9;
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+#content dl.project-description dt {
+    padding-top: 5px;
+}
+
+#content dl.project-description dd {
+    padding-top: 0;
+}
+
+#content dl.project-description dd a {
+	margin-right: 5px;
+}
+
+span.occurence-type, 
+span.contact-type {
+	font-size: 0.8em;
+	margin-left: 3px;
+	color: #887;
+}
+
+#favourites-list ul li {
+	list-style-type: circle;
+	margin: 5px 0;
+	font-family: 'Times New Roman', serif;
+	font-size: 1.2em;
+	font-style: italic;
+}
+
+#favourites-list li .book-author {
+	margin-left: 2px;
+}
+
+#footer {
+	height: 18px;
+}
+
+#footer a img {
+	border: 2px solid #889;
+}
+
+#footer a:hover img {
+    border: 2px solid #cca;
+}
+
+#copyright {
+	float: right;
+	position: relative;
+	top: -18px;
+} 
+
+#data-pane h3 {
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#data-pane dl {
+	margin-left: 20px;
+}
+
+#datamatrix-icon {
+	margin: 12px;
+	float: right;
+}
+
+#datamatrix-icon img {
+	border: 1px solid #334;
+	border-bottom-width: 2px; 
+}
+
+#personal-info a img {
+	border: 1px solid #223;
+	padding: 0 10px 5px;
+}
+
+#personal-info a:hover img {
+    border: 1px solid #eea;
+    background-color: #667;
+}
+
+#content ul li>span.contact-group-name,
+#content ul li>span.occurence-group-name,
+#content .favourites-label {
+    background-position: 0 9px;
+    background-repeat: no-repeat;
+    padding-left: 24px;    
+}
+
+#content ul li ul {
+	margin-top: 5px;
+}
+
+#content ul li ul li,
+#favourites-list ul {
+	margin-left: 24px;
+}
+
+#favourites-list {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background-color: #fff;
+}
+
+/* icons */
+
+#contact-messengers-group,
+#occurence-messengers-group {
+	background-image: url(./icons/sections/chat_16.gif);
+}
+
+#contact-email-group,
+#occurence-email-group {
+    background-image: url(./icons/sections/mail_16.gif);
+}
+
+#occurence-blogging-group {
+	background-image: url(./icons/sections/paragraph_16.gif);
+}
+
+#occurence-microblogging-group {
+    background-image: url(./icons/sections/paste_16.gif);
+}
+
+#occurence-coblogging-group {
+    background-image: url(./icons/sections/internet_16.gif);
+}
+
+#occurence-social-group {
+    background-image: url(./icons/sections/social_network_16.gif);
+}
+
+#occurence-wiki-group {
+    background-image: url(./icons/sections/notes_16.gif);
+}
+
+#occurence-special-group {
+	background-image: url(./icons/sections/network_sans_16.gif);
+}
+
+#occurence-developing-group {
+	background-image: url(./icons/sections/sourcecode_16.gif);
+}
+
+#occurence-music-group,
+#favourites-music-group {
+    background-image: url(./icons/sections/music_16.gif);
+}
+
+#occurence-video-sharing-group,
+#favourites-movies-group {
+    background-image: url(./icons/sections/video_16.gif);
+}
+
+#occurence-online-games-group {
+    background-image: url(./icons/sections/star_16.gif);
+}
+
+#occurence-art-group {
+	background-image: url(./icons/sections/avatar_16.gif);
+}
+
+#favourites-games-group {
+	background-image: url(./icons/sections/target_16.gif);
+}
+
+#occurence-languages-group,
+#favourites-books-group {
+    background-image: url(./icons/sections/book_text_16.gif);
+}
+
+#favourites-series-group {
+	background-image: url(./icons/sections/view_16.gif);
+}
+
+#occurence-podcasting-group {
+	background-image: url(./icons/sections/speaker_louder_16.gif);
+}

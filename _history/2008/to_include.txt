@@ -1,0 +1,24 @@
+skype/gtalk/icq status
+lastfm last tracks блок
+google-earth метки где € был
+
+contacts - отображение состо€ни€, ссылки на чат
+occurences - без отображени€ состо€ни€, ссылки на юзер-инфо
+
+<iframe src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlqhqpb5sm5e9l4juhg1bghci490uloar8bp72ucd5mbd5fsg8c4n847tjju8th9vmrrqci9usfrp1pj7aipch9cpn6f787j7cpjbu8iqudqh32akf660abioca2j8eo8d86398lmjkoe6a4mt0ojvplbm2j9gt4pop&amp;w=200&amp;h=60" allowtransparency="true" frameborder="0" height="60" width="200"></iframe>
+
+<!--
+Skype 'My status' button
+http://www.skype.com/go/skypebuttons
+-->
+<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+<a href="skype:shaman.sir?userinfo"><img src="http://mystatus.skype.com/smallicon/shaman%2Esir" style="border: none;" width="16" height="16" alt="My status" /></a>
+
+<img src="http://netlab.cz/status/?jid=ulric.wilfred@jabber.org&ib=psi"/>
+
+xmpp:polaris_hm@njs.netlab.cz?message;subject=DennyHalim.com%20widget.%20replace%20this%20with%20your%20message
+
+skype:shaman.sir?chat
+
+<style type="text/css">table.lfmWidgetchart_955db8fbc5e519c92896e23a7f99f920 td {margin:0 !important;padding:0 !important;border:0 !important;}table.lfmWidgetchart_955db8fbc5e519c92896e23a7f99f920 tr.lfmHead a:hover {background:url(http://cdn.last.fm/widgets/images/en/header/chart/recenttracks_regular_blue.png) no-repeat 0 0 !important;}table.lfmWidgetchart_955db8fbc5e519c92896e23a7f99f920 tr.lfmEmbed object {float:left;}table.lfmWidgetchart_955db8fbc5e519c92896e23a7f99f920 tr.lfmFoot td.lfmConfig a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/blue.png) no-repeat 0px 0 !important;;}table.lfmWidgetchart_955db8fbc5e519c92896e23a7f99f920 tr.lfmFoot td.lfmView a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/blue.png) no-repeat -85px 0 !important;}table.lfmWidgetchart_955db8fbc5e519c92896e23a7f99f920 tr.lfmFoot td.lfmPopup a:hover {background:url(http://cdn.last.fm/widgets/images/en/footer/blue.png) no-repeat -159px 0 !important;}</style>
+<table class="lfmWidgetchart_955db8fbc5e519c92896e23a7f99f920" cellpadding="0" cellspacing="0" border="0" style="width:184px;"><tr class="lfmHead"><td><a title="shamansir: Recently Listened Tracks" href="http://www.last.fm/user/shamansir/" target="_blank" style="display:block;overflow:hidden;height:20px;width:184px;background:url(http://cdn.last.fm/widgets/images/en/header/chart/recenttracks_regular_blue.png) no-repeat 0 -20px;text-decoration:none;border:0;"></a></td></tr><tr class="lfmEmbed"><td><object type="application/x-shockwave-flash" data="http://cdn.last.fm/widgets/chart/friends_6.swf" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="184" height="199" > <param name="movie" value="http://cdn.last.fm/widgets/chart/friends_6.swf" /> <param name="flashvars" value="type=recenttracks&amp;user=shamansir&amp;theme=blue&amp;lang=en&amp;widget_id=chart_955db8fbc5e519c92896e23a7f99f920" /> <param name="bgcolor" value="6598cd" /> <param name="quality" value="high" /> <param name="allowScriptAccess" value="always" /> <param name="allowNetworking" value="all" /> </object></td></tr><tr class="lfmFoot"><td style="background:url(http://cdn.last.fm/widgets/images/footer_bg/blue.png) repeat-x 0 0;text-align:right;"><table cellspacing="0" cellpadding="0" border="0" style="width:184px;"><tr><td class="lfmConfig"><a href="http://www.last.fm/widgets/?colour=blue&amp;chartType=recenttracks&amp;user=shamansir&amp;chartFriends=1&amp;from=code&amp;widget=chart" title="Get your own widget" target="_blank" style="display:block;overflow:hidden;width:85px;height:20px;float:right;background:url(http://cdn.last.fm/widgets/images/en/footer/blue.png) no-repeat 0px -20px;text-decoration:none;border:0;"></a></td><td class="lfmView" style="width:74px;"><a href="http://www.last.fm/user/shamansir/" title="View shamansir's profile" target="_blank" style="display:block;overflow:hidden;width:74px;height:20px;background:url(http://cdn.last.fm/widgets/images/en/footer/blue.png) no-repeat -85px -20px;text-decoration:none;border:0;"></a></td><td class="lfmPopup"style="width:25px;"><a href="http://www.last.fm/widgets/popup/?colour=blue&amp;chartType=recenttracks&amp;user=shamansir&amp;chartFriends=1&amp;from=code&amp;widget=chart&amp;resize=1" title="Load this chart in a pop up" target="_blank" style="display:block;overflow:hidden;width:25px;height:20px;background:url(http://cdn.last.fm/widgets/images/en/footer/blue.png) no-repeat -159px -20px;text-decoration:none;border:0;" onclick="window.open(this.href + '&amp;resize=0','lfm_popup','height=299,width=234,resizable=yes,scrollbars=yes'); return false;"></a></td></tr></table></td></tr></table>

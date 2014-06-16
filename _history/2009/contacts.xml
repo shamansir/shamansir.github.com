@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./contacts.xsl"?>
+<contacts 
+    xmlns="http://ulric-wilfred.name" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://ulric-wilfred.name ./contacts.xsd">
+    <group shortname="messengers">
+        <name>Messengers</name>
+        <contact type="skype">
+            <id>shaman.sir</id>
+        </contact>
+        <contact type="jabber">
+            <id>ulric.wilfred@jabber.org</id>
+            <name>ulric.wilfred</name>
+        </contact>
+        <contact type="gtalk">
+            <id>shaman.sir</id>
+        </contact>
+        <contact type="yahoo">
+            <id>ulric.wilfred</id>
+        </contact>
+        <contact type="icq">
+            <id>5255496</id>
+            <name>shaman.sir</name>
+        </contact>        
+    </group>
+    <group shortname="email">
+        <name>E-Mail</name>
+        <contact type="gmail">
+            <id>shaman.sir</id>
+        </contact>
+        <contact type="yahoo-mail">
+            <id>ulric.wilfred</id>
+        </contact>         
+    </group>        
+</contacts>

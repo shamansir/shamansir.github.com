@@ -1,0 +1,276 @@
+<ul id="projects">
+<li>
+<span id="project-personal-group" class="project-group-name">Personal</span>
+<ul id="personal">
+<li>
+<h5 class="project-finished">
+<a title="The Japanese Language Reference" href="http://torrents.ru/forum/viewtopic.php?t=681498">The Japanese Language Reference</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">book</span>;
+                    <span class="project-license">GPL</span>)
+            </span>
+<p class="project-brief">A big reference for japanese language with as much hieroglyphical examples as possible, and using there as few syllable-based alphabet symbols as possible, and including much of historical, cultural and technical data.</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Finished at:</dt>
+<dd>2005</dd>
+<dt>Language:</dt>
+<dd>ru</dd>
+<dt>Used Technologies:</dt>
+<dd>different free japanese-language-related software</dd>
+</dl>
+</li>
+<li>
+<img class="project-logo" title="Saloni Ceramics site" alt="Saloni Ceramics site" src="./foo.jpg"/>
+<h5 class="project-finished">
+<a title="Saloni Ceramics site" href="http://saloni-ceramics.ru/">Saloni Ceramics site</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">web-site</span>)
+            </span>
+<p class="project-brief">A business-card-site</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Ordered by:</dt>
+<dd>
+<span class="project-company">Saloni Ceramics</span>
+</dd>
+<dt>Used Technologies:</dt>
+<dd>Javascript</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-finished">taur laonti</h5>
+<span class="project-comment">
+                (<span class="project-type">design</span>;
+                    <span class="project-license">Creative Commons</span>)
+            </span>
+<p class="project-brief">An alphabet, strange and beautiful, representing the writing system of some very different nation or creature type</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Finished at:</dt>
+<dd>2005</dd>
+<dt>Used Technologies:</dt>
+<dd>hands, paper</dd>
+<dt>Related Files:</dt>
+<dd>
+<a title="Blah" href="http://blah.com" class="project-file-link">Blah</a>
+</dd>
+<dd>
+<a title="Foo Foo" href="http://foo.com" class="project-file-link">Foo Foo</a>
+<span class="project-file-mime">
+                (image)
+            </span>
+</dd>
+<dd>
+<a title="Bar" href="http://bar.net" class="project-file-link">Bar</a>
+</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-finished">
+<a title="Black Jack" href="http://blackjack.crzcrz.net">Black Jack</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">web-application/game</span>)
+            </span>
+<p class="project-brief">A BlackJack-like game for some mythical site with own rules, where one person represents a card himself.</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Finished at:</dt>
+<dd>2008</dd>
+<dt>Source:</dt>
+<dd>
+<a class="project-source-url" title="Source" href="http://code.google.com/p/lepro-blackjack">
+                        Open</a>
+</dd>
+<dt>Used Technologies:</dt>
+<dd>PHP, Javascript, JSON</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-finished">
+<a title="Metrosorium" href="http://letro.crzcrz.net">Metrosorium</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">web-site</span>)
+            </span>
+<p class="project-brief">A dynamic web-site to show the metro-stations where users of the site live. Also it shows statistics and have some filters to choose the type of the data to show.</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Finished at:</dt>
+<dd>2008</dd>
+<dt>Used Technologies:</dt>
+<dd>Javascript, JSON</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-in-progress">
+<a title="Учебник Python 3.1, русская версия" href="http://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_Python_3.1">Учебник Python 3.1, русская версия</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">book</span>;
+                    <span class="project-license">GNU Free Documentation License</span>)
+            </span>
+<p class="project-brief">Python 3.1 tutorial in Russian</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>in-progress</dd>
+<dt>Language:</dt>
+<dd>ru</dd>
+<dt>Used Technologies:</dt>
+<dd>Wiki</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-in-progress">
+<a title="Документация Python, русская версия" href="http://ru.wikibooks.org/wiki/Python">Документация Python, русская версия</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">book</span>;
+                    <span class="project-license">GNU Free Documentation License</span>)
+            </span>
+<p class="project-brief">Python Documentation in Russian</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>in-progress</dd>
+<dt>Language:</dt>
+<dd>ru</dd>
+<dt>Used Technologies:</dt>
+<dd>Wiki</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-in-progress">
+<a title="jR-or-unnamed-Game" href="http://jr-o-un-g.wikidot.com">jR-or-unnamed-Game</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">application/game</span>;
+                    <span class="project-license">GPL</span>)
+            </span>
+<p class="project-brief">No brief still, due to secret information ;).</p>
+<dl class="project-description">
+<dt>Alternative Name:</dt>
+<dd>JReeson</dd>
+<dt>Status:</dt>
+<dd>in-progress</dd>
+<dt>Source:</dt>
+<dd>
+<a class="project-source-url" title="Source" href="https://launchpad.net/jr-o-un-g">
+                        Open</a>
+</dd>
+<dt>Used Technologies:</dt>
+<dd>Python, WxWidgets, OpenGL</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li>
+<span id="project-cooperative-group" class="project-group-name">Cooperative</span>
+<ul id="cooperative">
+<li>
+<h5 class="project-finished">
+<a title="myPictureTown" href="http://www.mypicturetown.com">myPictureTown</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">web-application</span>)
+            </span>
+<p class="project-brief">A Photo-sharing site for owners of Nikon Wi-Fi Cameras and for simple users</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Ordered by:</dt>
+<dd>
+<a class="company-link" title="Nikon" href="http://nikon.com">
+<span class="project-company">Nikon</span>
+</a>
+</dd>
+<dt>Developed by:</dt>
+<dd>
+<a class="company-link" title="Piclinq" href="http://piclinq.com">
+<span class="project-company">Piclinq</span>
+</a>
+</dd>
+<dt>Used Technologies:</dt>
+<dd>JavaScript, J2EE, Apache Wicket</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-finished">
+<a title="Unlock Austin" href="http://www.unlockaustin.com">Unlock Austin</a>
+</h5>
+<span class="project-comment">
+                (<span class="project-type">web-application</span>)
+            </span>
+<p class="project-brief">A Photo-sharing site for owners of Nikon Wi-Fi Cameras and for simple users</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Ordered by:</dt>
+<dd>
+<a class="company-link" title="Ryan Pitylak" href="http://www.ryanpitylak.com/">
+<span class="project-company">Ryan Pitylak</span>
+</a>
+</dd>
+<dt>Developed by:</dt>
+<dd>
+<a class="company-link" title="EmDev LLC" href="www.emdev.ru/">
+<span class="project-company">EmDev LLC</span>
+</a>
+<a class="company-link" title="Lucid Crew" href="http://www.lucidcrew.com/">
+<span class="project-company">Lucid Crew</span>
+</a>
+</dd>
+<dt>Used Technologies:</dt>
+<dd>JavaScript, J2EE, JSF, Hibernate</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-finished">TreeMap-based Dynamic Market Viewing Component</h5>
+<span class="project-comment">
+                (<span class="project-type">application-component</span>;
+                     <span class="project-cooperative">Cooperative</span>)
+            </span>
+<p class="project-brief">A VCL component, based on Tree Map Algorythm, dynamically showing the current market state</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Developed by:</dt>
+<dd>
+<a class="company-link" title="EmDev LLC" href="www.emdev.ru/">
+<span class="project-company">EmDev LLC</span>
+</a>
+</dd>
+<dt>Used Technologies:</dt>
+<dd>Borland Delphi, VCL</dd>
+</dl>
+</li>
+<li>
+<h5 class="project-finished">Graphs Correlating software</h5>
+<span class="project-comment">
+                (<span class="project-type">application</span>)
+            </span>
+<p class="project-brief">A small application, that takes a dots file in standartized form and
+            corellates all the dots as the output</p>
+<dl class="project-description">
+<dt>Status:</dt>
+<dd>finished</dd>
+<dt>Ordered by:</dt>
+<dd>
+<a class="company-link" title="VNIIOkeanGeologiya" href="http://www.vniio.ru">
+<span class="project-company">VNIIOkeanGeologiya</span>
+</a>
+</dd>
+<dt>Used Technologies:</dt>
+<dd>Borland Delphi</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>

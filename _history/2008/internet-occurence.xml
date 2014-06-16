@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./site-page.xsl"?>
+<occurences xmlns="http://ulric-wilfred.name" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ulric-wilfred.name ./occurence-list.xsd">
+    <occurence type="icq">
+    	<id>5255496</id>
+        <name>shaman.sir</name>
+    </occurence>     
+    <occurence type="skype">
+        <id>shaman.sir</id>
+    </occurence>
+    <occurence type="jabber">
+        <id>ulric.wilfred@jabber.org</id>
+		<name>ulric.wilfred</name>
+    </occurence>
+    <occurence type="gtalk">
+        <id>shaman.sir</id>
+    </occurence>           
+    <occurence type="gmail">
+        <id>shaman.sir</id>
+    </occurence>
+    <!--
+    <occurence type="yahoo-profile">
+        <id>ulric.wilfred</id>
+    </occurence>
+    -->
+    <occurence type="yahoo">
+        <id>ulric.wilfred</id>
+    </occurence>
+    <occurence type="openid">
+        <id>ulric.wilfred</id>
+    </occurence>        
+    <!--    
+    <occurence type="zenbe">
+        <id>ulric.wilfred</id>
+    </occurence>
+    -->        
+    <occurence type="lastfm">
+        <id>shamansir</id>
+    </occurence>
+    <occurence type="plurk">
+        <id>shamansir</id>
+    </occurence>     
+    <occurence type="twitter">
+        <id>shaman_sir</id>
+    </occurence>        
+    <occurence type="linked-in">
+        <id>shamansir</id>
+        <name>Anton K.</name>
+    </occurence>
+    <occurence type="wikidot">
+        <id>shaman-sir</id>
+    </occurence>    
+    <occurence type="wordpress">
+        <id>shamansir</id>
+        <!-- <name>Shamanskiye Bredni</name> -->
+    </occurence>
+    <occurence type="facebook">
+        <id>1110764858</id>
+        <name>Anton Shamansir</name>
+    </occurence>        
+    <occurence type="livejournal">
+        <id>tungusso</id>
+    </occurence>
+    <!--
+    <occurence type="foxmarks">
+        <id>Zokotuha-Fly</id>
+    </occurence>
+    -->
+    <occurence type="dirty">
+        <id>8666</id>
+        <name>tunguss</name>
+    </occurence>
+    <occurence type="leprosorium">
+        <id>15140</id>
+        <name>zokotuhaFly</name>
+    </occurence>    
+    <occurence type="habrahabr">
+        <id>zokotuhafly</id>
+        <name>zokotuhaFly</name>
+    </occurence>
+    <!--
+    <occurence type="autokadabra">
+        <id>tunguss</id>
+    </occurence>
+    -->
+    <occurence type="scarypeople">
+        <id>1194</id>
+		<name>zokotuhaFly-SS</name>
+    </occurence>
+    <occurence type="vkontakte">
+        <id>54426</id>
+        <name>Anton Shamansir</name>
+    </occurence>        
+    <occurence type="ag">
+        <id>shamanStillSir</id>
+    </occurence>
+    <!-- 
+   <occurence type="notabenoid">
+        <id>73</id>
+        <id>zokotuhaFly</id>
+    </occurence>
+   <occurence type="bestpersons">
+        <id>shamansir</id>
+    </occurence>          
+    <occurence type="sdf">
+        <id>shamansr</id>
+    </occurence>   
+    <occurence type="todoist">
+        <id>shamansr</id>
+    </occurence>    
+    -->       
+</occurences>

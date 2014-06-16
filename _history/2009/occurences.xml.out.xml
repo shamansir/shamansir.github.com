@@ -1,0 +1,225 @@
+<ul id="occurences">
+	<li>
+		<a id="occurence-icq-sitelink" title="icq" href="javascript:alert('icq')">
+			<img class="occurence-icon" id="occurence-icq-icon" src="./icons/icq.ico"
+				alt="icq" />
+		</a>
+		<a class="occurence-link" alt="shaman.sir" title="5255496"
+			id="occurence-icq-link" href="javascript:alert('icq:5255496');">shaman.sir</a>
+		<span class="occurence-type">(icq)</span>
+	</li>
+	<li>
+		<a id="occurence-skype-sitelink" title="skype" href="javascript:alert('skype')">
+			<img class="occurence-icon" id="occurence-skype-icon" src="./icons/skype.ico"
+				alt="skype" />
+		</a>
+		<a class="occurence-link" alt="shaman.sir" title="shaman.sir"
+			id="occurence-skype-link" href="javascript:alert('skype:shaman.sir');">shaman.sir</a>
+		<span class="occurence-type">(skype)</span>
+	</li>
+	<li>
+		<a id="occurence-jabber-sitelink" title="jabber" href="javascript:alert('jabber')">
+			<img class="occurence-icon" id="occurence-jabber-icon" src="./icons/jabber.ico"
+				alt="jabber" />
+		</a>
+		<a class="occurence-link" alt="ulric.wilfred" title="ulric.wilfred@jabber.org"
+			id="occurence-jabber-link" href="javascript:alert('jabber:ulric.wilfred@jabber.org');">ulric.wilfred</a>
+		<span class="occurence-type">(jabber)</span>
+	</li>
+	<li>
+		<a id="occurence-gtalk-sitelink" title="gtalk" href="javascript:alert('gtalk')">
+			<img class="occurence-icon" id="occurence-gtalk-icon" src="./icons/gtalk.ico"
+				alt="gtalk" />
+		</a>
+		<a class="occurence-link" alt="shaman.sir" title="shaman.sir"
+			id="occurence-gtalk-link" href="javascript:alert('gtalk:shaman.sir');">shaman.sir</a>
+		<span class="occurence-type">(gtalk)</span>
+	</li>
+	<li>
+		<a id="occurence-gmail-sitelink" title="gmail" href="javascript:alert('gmail')">
+			<img class="occurence-icon" id="occurence-gmail-icon" src="./icons/gmail.ico"
+				alt="gmail" />
+		</a>
+		<a class="occurence-link" alt="shaman.sir" title="shaman.sir"
+			id="occurence-gmail-link" href="javascript:alert('gmail:shaman.sir');">shaman.sir</a>
+		<span class="occurence-type">(gmail)</span>
+	</li>
+	<li>
+		<a id="occurence-yahoo-sitelink" title="yahoo" href="javascript:alert('yahoo')">
+			<img class="occurence-icon" id="occurence-yahoo-icon" src="./icons/yahoo.ico"
+				alt="yahoo" />
+		</a>
+		<a class="occurence-link" alt="ulric.wilfred" title="ulric.wilfred"
+			id="occurence-yahoo-link" href="javascript:alert('yahoo:ulric.wilfred');">ulric.wilfred</a>
+		<span class="occurence-type">(yahoo)</span>
+	</li>
+	<li>
+		<a id="occurence-openid-sitelink" title="openid" href="javascript:alert('openid')">
+			<img class="occurence-icon" id="occurence-openid-icon" src="./icons/openid.ico"
+				alt="openid" />
+		</a>
+		<a class="occurence-link" alt="ulric.wilfred" title="ulric.wilfred"
+			id="occurence-openid-link" href="javascript:alert('openid:ulric.wilfred');">ulric.wilfred</a>
+		<span class="occurence-type">(openid)</span>
+	</li>
+	<li>
+		<a id="occurence-lastfm-sitelink" title="lastfm" href="javascript:alert('lastfm')">
+			<img class="occurence-icon" id="occurence-lastfm-icon" src="./icons/lastfm.ico"
+				alt="lastfm" />
+		</a>
+		<a class="occurence-link" alt="shamansir" title="shamansir"
+			id="occurence-lastfm-link" href="javascript:alert('lastfm:shamansir');">shamansir</a>
+		<span class="occurence-type">(lastfm)</span>
+	</li>
+	<li>
+		<a id="occurence-plurk-sitelink" title="plurk" href="javascript:alert('plurk')">
+			<img class="occurence-icon" id="occurence-plurk-icon" src="./icons/plurk.ico"
+				alt="plurk" />
+		</a>
+		<a class="occurence-link" alt="shamansir" title="shamansir"
+			id="occurence-plurk-link" href="javascript:alert('plurk:shamansir');">shamansir</a>
+		<span class="occurence-type">(plurk)</span>
+	</li>
+	<li>
+		<a id="occurence-twitter-sitelink" title="twitter"
+			href="javascript:alert('twitter')">
+			<img class="occurence-icon" id="occurence-twitter-icon" src="./icons/twitter.ico"
+				alt="twitter" />
+		</a>
+		<a class="occurence-link" alt="shaman_sir" title="shaman_sir"
+			id="occurence-twitter-link" href="javascript:alert('twitter:shaman_sir');">shaman_sir</a>
+		<span class="occurence-type">(twitter)</span>
+	</li>
+	<li>
+		<a id="occurence-linked-in-sitelink" title="linked-in"
+			href="javascript:alert('linked-in')">
+			<img class="occurence-icon" id="occurence-linked-in-icon" src="./icons/linked-in.ico"
+				alt="linked-in" />
+		</a>
+		<a class="occurence-link" alt="Anton K." title="shamansir"
+			id="occurence-linked-in-link" href="javascript:alert('linked-in:shamansir');">Anton K.</a>
+		<span class="occurence-type">(linked-in)</span>
+	</li>
+	<li>
+		<a id="occurence-wikidot-sitelink" title="wikidot"
+			href="javascript:alert('wikidot')">
+			<img class="occurence-icon" id="occurence-wikidot-icon" src="./icons/wikidot.ico"
+				alt="wikidot" />
+		</a>
+		<a class="occurence-link" alt="shaman-sir" title="shaman-sir"
+			id="occurence-wikidot-link" href="javascript:alert('wikidot:shaman-sir');">shaman-sir</a>
+		<span class="occurence-type">(wikidot)</span>
+	</li>
+	<li>
+		<a id="occurence-wordpress-sitelink" title="wordpress"
+			href="javascript:alert('wordpress')">
+			<img class="occurence-icon" id="occurence-wordpress-icon" src="./icons/wordpress.ico"
+				alt="wordpress" />
+		</a>
+		<a class="occurence-link" alt="shamansir" title="shamansir"
+			id="occurence-wordpress-link" href="javascript:alert('wordpress:shamansir');">shamansir</a>
+		<span class="occurence-type">(wordpress)</span>
+	</li>
+	<li>
+		<a id="occurence-facebook-sitelink" title="facebook"
+			href="javascript:alert('facebook')">
+			<img class="occurence-icon" id="occurence-facebook-icon" src="./icons/facebook.ico"
+				alt="facebook" />
+		</a>
+		<a class="occurence-link" alt="Anton Shamansir" title="1110764858"
+			id="occurence-facebook-link" href="javascript:alert('facebook:1110764858');">Anton Shamansir</a>
+		<span class="occurence-type">(facebook)</span>
+	</li>
+	<li>
+		<a id="occurence-livejournal-sitelink" title="livejournal"
+			href="javascript:alert('livejournal')">
+			<img class="occurence-icon" id="occurence-livejournal-icon" src="./icons/livejournal.ico"
+				alt="livejournal" />
+		</a>
+		<a class="occurence-link" alt="tungusso" title="tungusso"
+			id="occurence-livejournal-link" href="javascript:alert('livejournal:tungusso');">tungusso</a>
+		<span class="occurence-type">(livejournal)</span>
+	</li>
+	<li>
+		<a id="occurence-dirty-sitelink" title="dirty" href="javascript:alert('dirty')">
+			<img class="occurence-icon" id="occurence-dirty-icon" src="./icons/dirty.ico"
+				alt="dirty" />
+		</a>
+		<a class="occurence-link" alt="tunguss" title="8666" id="occurence-dirty-link"
+			href="javascript:alert('dirty:8666');">tunguss</a>
+		<span class="occurence-type">(dirty)</span>
+	</li>
+	<li>
+		<a id="occurence-leprosorium-sitelink" title="leprosorium"
+			href="javascript:alert('leprosorium')">
+			<img class="occurence-icon" id="occurence-leprosorium-icon" src="./icons/leprosorium.ico"
+				alt="leprosorium" />
+		</a>
+		<a class="occurence-link" alt="zokotuhaFly" title="15140"
+			id="occurence-leprosorium-link" href="javascript:alert('leprosorium:15140');">zokotuhaFly</a>
+		<span class="occurence-type">(leprosorium)</span>
+	</li>
+	<li>
+		<a id="occurence-habrahabr-sitelink" title="habrahabr"
+			href="javascript:alert('habrahabr')">
+			<img class="occurence-icon" id="occurence-habrahabr-icon" src="./icons/habrahabr.ico"
+				alt="habrahabr" />
+		</a>
+		<a class="occurence-link" alt="zokotuhaFly" title="zokotuhafly"
+			id="occurence-habrahabr-link" href="javascript:alert('habrahabr:zokotuhafly');">zokotuhaFly</a>
+		<span class="occurence-type">(habrahabr)</span>
+	</li>
+	<li>
+		<a id="occurence-scarypeople-sitelink" title="scarypeople"
+			href="javascript:alert('scarypeople')">
+			<img class="occurence-icon" id="occurence-scarypeople-icon" src="./icons/scarypeople.ico"
+				alt="scarypeople" />
+		</a>
+		<a class="occurence-link" alt="zokotuhaFly-SS" title="1194"
+			id="occurence-scarypeople-link" href="javascript:alert('scarypeople:1194');">zokotuhaFly-SS</a>
+		<span class="occurence-type">(scarypeople)</span>
+	</li>
+	<li>
+		<a id="occurence-vkontakte-sitelink" title="vkontakte"
+			href="javascript:alert('vkontakte')">
+			<img class="occurence-icon" id="occurence-vkontakte-icon" src="./icons/vkontakte.ico"
+				alt="vkontakte" />
+		</a>
+		<a class="occurence-link" alt="Anton Shamansir" title="54426"
+			id="occurence-vkontakte-link" href="javascript:alert('vkontakte:54426');">Anton Shamansir</a>
+		<span class="occurence-type">(vkontakte)</span>
+	</li>
+	<li>
+		<a id="occurence-ag-sitelink" title="ag" href="javascript:alert('ag')">
+			<img class="occurence-icon" id="occurence-ag-icon" src="./icons/ag.ico"
+				alt="ag" />
+		</a>
+		<a class="occurence-link" alt="shamanStillSir" title="shamanStillSir"
+			id="occurence-ag-link" href="javascript:alert('ag:shamanStillSir');">shamanStillSir</a>
+		<span class="occurence-type">(ag)</span>
+	</li>
+	<li>
+		<span class="occurence-group-name">Grrrp</span>
+		<ul id="grrp">
+			<li>
+				<a id="occurence-some-sitelink" title="some" href="javascript:alert('some')">
+					<img class="occurence-icon" id="occurence-some-icon" src="./icons/some.ico"
+						alt="some" />
+				</a>
+				<a class="occurence-link" alt="ssjsjs" title="ssjsjs" id="occurence-some-link"
+					href="javascript:alert('some:ssjsjs');">ssjsjs</a>
+				<span class="occurence-type">(some)</span>
+			</li>
+			<li>
+				<a id="occurence-someother-sitelink" title="someother"
+					href="javascript:alert('someother')">
+					<img class="occurence-icon" id="occurence-someother-icon" src="./icons/someother.ico"
+						alt="someother" />
+				</a>
+				<a class="occurence-link" alt="ssklslsk" title="ssklslsk"
+					id="occurence-someother-link" href="javascript:alert('someother:ssklslsk');">ssklslsk</a>
+				<span class="occurence-type">(someother)</span>
+			</li>
+		</ul>
+	</li>
+</ul>
