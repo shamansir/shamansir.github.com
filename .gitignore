@@ -10,3 +10,4 @@ styles/.sass-cache
 resources/src
 config.codekit
 scripts/min
+scripts/*-ck.js

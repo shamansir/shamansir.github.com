@@ -109,6 +109,10 @@ function layout(current) {
     // (though they should be reset to identity, if they were applied before)
     if (current_idx === 0) {
         root.style.webkitTransform = identity_str;
+        root.style.mozTransform = identity_str;
+        root.style.msTransform = identity_str;
+        root.style.OTransform = identity_str;
+        root.style.transform = identity_str;
     // if not, get the matrix of current segment transformations,
     // invert it, translate to the top left corner of the segments,
     // and then apply the result as `tranformation-matrix` via CSS
@@ -117,7 +121,12 @@ function layout(current) {
         //mat4.translate(inv, inv, [-x_offset, -y_offset, 0]);
         mat4.invert(inv, inv);
         mat4.translate(inv, inv, [x_offset, y_offset, 0]);
-        root.style.webkitTransform = mat4_cssStr(inv);
+        var css_str = mat4_cssStr(inv);
+        root.style.webkitTransform = css_str;
+        root.style.mozTransform = css_str;
+        root.style.msTransform = css_str;
+        root.style.OTransform = css_str;
+        root.style.transform = css_str;
     }
 
 }
@@ -219,7 +228,12 @@ function initializeOrSkip(current) {
         // by inverting this matrix, when current segment will be changed
         matrices[i] = mat4.clone(mat);
         // apply current matrix (identity for the first segment, randomly-rotated for others)
-        segments[i].style.webkitTransform = mat4_cssStr(mat);
+        var css_str = mat4_cssStr(mat);
+        segments[i].style.webkitTransform = css_str;
+        segments[i].style.mozTransform = css_str;
+        segments[i].style.msTransform = css_str;
+        segments[i].style.OTransform = css_str;
+        segments[i].style.transform = css_str;
         // substitute translate-x value for next segments using width of the current segment
         // and shift the matrix using this translation matrix
         mat_trans[12] = segments[i].offsetWidth;
