@@ -2,6 +2,7 @@ doctype html
 
 - var css_src = './styles/main.css';
 - var js_src = './scripts/main.js';
+- var favicon_src = './favicon.gif';
 - var layout_call = 'layout()';
 
 html(lang='en')
@@ -9,6 +10,7 @@ html(lang='en')
   head
     meta(charset='utf-8')
     link(href=css_src, rel='stylesheet')
+    link(rel='shortcut icon', href=favicon_src, type='image/gif')
     script(src=js_src, type='text/javascript')
 
   body.spatial.theme-a
