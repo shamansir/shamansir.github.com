@@ -6,7 +6,7 @@ _src/
 *.sketch
 cv.html
 index.html
-styles/.sass-cache
+styles/**/.sass-cache
 resources/src
 config.codekit
 scripts/min

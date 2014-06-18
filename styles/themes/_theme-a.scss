@@ -1,21 +1,26 @@
+// http://colorschemedesigner.com/#3o322--E8wtvM
+$grayBase: gray;
 $theme-a: (
-  background: #fcfcfc,
-  base: #090909,
-  secondary: #393939,
-  active: #900,
-  current: rgba(60,60,100,1),
-  inactive: #ccc,
-  accent: rgba(60,60,100,1), //#600 //rgba(60,60,200,1)
-  hilite: goldenrod,
-  hilite-secondary: #a00,
-  hilite-bg: #eee,
-  source-icon: #00f,
-  segment-bg: none,
-  segment-border: rgba(0,0,0,0), //rgba(0,0,0,.1)
-  segment-border-top: #393939,
-  segment-handle-hover-color: #900,
-  root-gradient: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%),
-  overflow-gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%),
+  primary-base:    #0091ba,
+  primary-dark:    #23748b,
+  primary-darker:  #005987,
+  primary-light:   #37b8dc,
+  primary-lighter: #62c1dc,
+  secondary-a-base:    #ffc000,
+  secondary-a-dark:    #be9c30,
+  secondary-a-darker:  #a47c00,
+  secondary-a-light:   #ffd03f,
+  secondary-a-lighter: #ffdc72,
+  secondary-b-base:    #f90018,
+  secondary-b-dark:    #ba2fc3,
+  secondary-b-darker:  #a1000f,
+  secondary-b-light:   #fc3f51,
+  secondary-b-lighter: #fc717e,
+  gray-base:    $grayBase,
+  gray-dark:    darken( $grayBase, $gld7),
+  gray-darker:  darken( $grayBase, $gld9),
+  gray-light:   lighten($grayBase, $gld7),
+  gray-lighter: lighten($grayBase, $gld9),
 );
 
 @include theme("theme-a", $theme-a)

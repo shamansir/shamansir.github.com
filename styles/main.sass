@@ -1,16 +1,41 @@
 @import 'bourbon/bourbon'
 
-@import './_typography.sass'
+@import './_gld.sass'
 
 @import './_themes.sass'
 @import './themes/_theme-a.scss'
 
-@import './_flat.sass'
-@import './_flat-transitions.sass'
-
-@import './_spatial.sass'
-@import './_spatial-transitions.sass'
-
-
 // =============================================
 
+$sans:  'Gill Sans', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
+$serif: 'Charter', 'Didot', Optima, serif
+
+$text-font: $serif
+$heading-font: $sans
+$nav-font: $sans
+$links-font: $serif
+$icon-list-font: $serif // Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
+//$lists-font: 'Avenir Next', 'Avenir', sans-serif
+$footer-font: $serif
+
+html *
+  margin: 0
+  font-family: $text-font
+
+h1, h2, h3
+  font-family: $heading-font
+
+a, a *
+  font-family: $links-font
+
+nav a, nav a *
+  font-family: $nav-font
+
+footer, footer *
+  font-family: $footer-font
+
+#segments-root .segment
+  ul.icon-list
+    li a, li a *
+      font-family: $icon-list-font
+      //font-weight: lighter

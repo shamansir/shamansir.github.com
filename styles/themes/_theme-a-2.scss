@@ -1,0 +1,26 @@
+// http://colorschemedesigner.com/#3o322w0w0w0w0
+$grayBase: gray;
+$theme-a-2: (
+  primary-base:    #057d9f,
+  primary-dark:    #216477,
+  primary-darker:  #925167,
+  primary-light:   #29aecf,
+  primary-lighter: #61b7cf,
+  secondary-a-base:    #ffc000,
+  secondary-a-dark:    #bf9c30,
+  secondary-a-darker:  #a47d00,
+  secondary-a-light:   #ffd040,
+  secondary-a-lighter: #ffdd73,
+  secondary-b-base:    #f60018,
+  secondary-b-dark:    #b92e3b,
+  secondary-b-darker:  #a0000f,
+  secondary-b-light:   #fb3f51,
+  secondary-b-lighter: #fb717e,
+  gray-base:    $grayBase,
+  gray-dark:    darken( $grayBase, $gld7),
+  gray-darker:  darken( $grayBase, $gld9),
+  gray-light:   lighten($grayBase, $gld7),
+  gray-lighter: lighten($grayBase, $gld9),
+);
+
+@include theme("theme-a-2", $theme-a-2)

@@ -1,0 +1,33 @@
+// based on http://gld.chadlindemann.com/
+// https://github.com/etchedprints/Responsive-Design-with-Golden-Ratio
+
+$gld: 1.618
+$base: 100%
+
+$gld10: $base / $gld
+$gld9:  $base - $gld10
+$gld8:  $gld9 / $gld
+$gld7:  $gld9 - $gld8
+$gld6:  $gld7 / $gld
+$gld5:  $gld7 - $gld6
+$gld4:  $gld5 / $gld
+$gld3:  $gld5 - $gld4
+$gld2:  $gld3 / $gld
+$gld1:  $gld3 - $gld2
+
+$full: $base
+
+$large:  $gld10
+$xlarge: $base - ($gld7 + $gld7)
+$med:    $gld9
+$small:  $gld8
+$xsmall: $gld7
+
+$h1: $gld5 * 100
+$h2: $gld4 * 100
+$h3: $gld3 * 100
+$h4: $base
+$h5: $gld2 * (100 / 2)
+$h6: $gld1 * (100 / 2)
+
+$lineHeight: $base * $gld
