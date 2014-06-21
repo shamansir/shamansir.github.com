@@ -1,6 +1,6 @@
-div.segment-inner
+div
 
-  ul.source-list
+  ul.uw-source-list
 
     mixin source_item(icon_id, href, text)
       - var img_src = './resources/icons/' + icon_id + '.svg';
@@ -9,7 +9,7 @@ div.segment-inner
 
     li: +source_item('listen', 'http://soundcloud.com/shamansir/tracks', 'Tracks')
 
-  dl.marker-list
+  dl.uw-marker-list
 
     mixin album_item(alb_img, alb_name, alb_id, alb_year, songs)
       - var alb_href = 'http://soundcloud.com/shamansir/sets/' + alb_id;

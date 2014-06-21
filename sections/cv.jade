@@ -1,4 +1,4 @@
-ul.source-list
+ul.uw-source-list
 
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
@@ -7,13 +7,13 @@ ul.source-list
 
   li: +source_item('download', './cv.html', 'Download/View')
 
-div.segment-inner
+div
   //- include:md ../cv.md
   //- include ../cv_body.jade
 
   h3 Recap
 
-  ul.facts-list
+  ul.uw-facts-list
     mixin recap_item(text)
       - var prefix  = '<span class=\'accent\'>';
       - var postfix = '</span>';
@@ -33,7 +33,7 @@ div.segment-inner
 
   h3 Expertise
 
-  ul.tag-list
+  ul.uw-tag-list
 
     mixin expertise_item(href, text)
       a(href=href,title=text)!= text
@@ -76,7 +76,7 @@ div.segment-inner
 
   h3 Experience
 
-  dl#experience.marker-list
+  dl.uw-marker-list
 
     mixin experience_item(company_name, company_href, title, project_name, project_href, start_date, end_date, months)
       if company_href
@@ -85,24 +85,24 @@ div.segment-inner
         dt= company_name
 
       dd
-        span.xp-title= title
+        span.uw-xp-title= title
         = ' '
         if project_href
-          span.xp-project: a(href=project_href,title=project_name)= project_name
+          span.uw-xp-project: a(href=project_href,title=project_name)= project_name
         else if project_name
-          span.xp-project= project_name
+          span.uw-xp-project= project_name
 
         = ' '
 
-        span.xp-date
-          span.xp-start= start_date
+        span.uw-xp-date
+          span.uw-xp-start= start_date
           | —
-          span.xp-end= end_date
+          span.uw-xp-end= end_date
 
         = ' '
 
         | (
-        span.xp-month #{months}&nbsp;months
+        span.uw-xp-month #{months}&nbsp;months
         | )
 
     +experience_item('Animatron', 'http://animatron.com', 'JavaScript Developer',
@@ -132,7 +132,7 @@ div.segment-inner
 
   h3 Alternate versions
 
-  ul.icon-list
+  ul.uw-icon-list
 
     mixin cv_item(icon_id, href, text)
       - var img_src = './resources/icons/' + icon_id + '.svg';

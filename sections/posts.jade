@@ -1,6 +1,6 @@
 - var blog_root = 'http://shamansir.github.io/blog';
 
-ul.source-list
+ul.uw-source-list
 
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
@@ -10,11 +10,11 @@ ul.source-list
   li: +source_item('rss_en', blog_root + '/feed.xml', 'RSS EN')
   li: +source_item('rss_ru', blog_root + '/ru/feed.xml', 'RSS RU')
 
-ul.segment-inner
+ul
 
   h3 Main Topics
 
-  ul.tag-list
+  ul.uw-tag-list
     mixin tag_item(tag, text)
       - var href = blog_root + '/tags/' + tag + '/';
       li: a(href=href,title=text)!= text
@@ -37,7 +37,7 @@ ul.segment-inner
 
   h3 In English
 
-  dl.marker-list
+  dl.uw-marker-list
 
     //- PegJS parser techniques
     //- Animatron player presentation
@@ -54,7 +54,7 @@ ul.segment-inner
 
   h3 In Russian
 
-  dl.marker-list
+  dl.uw-marker-list
 
     +links_item('16 Feb \'13', 'ru', 'mastering-functional-javascript-slides', 'Слайды «Постигаем функциональный Javascript»', [ 'javascript', 'functional', 'slides' ])
     +links_item('22 Feb \'13', 'ru', 'the-way-of-the-asynchronous-samurai', 'Путь асинхронного самурая', [ 'javascript', 'functional' ])
