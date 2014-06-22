@@ -51,7 +51,7 @@ footer
 
 // COLUMNS
 
-// THREE-COLUMNS
+// THREE-COLUMNS, content in the middle
 
 // main
 //   width: $large
@@ -74,26 +74,101 @@ footer
 //   left: $large + $xsmall
 //   top: $small
 
-// TWO-COLUMNS
+// THREE-COLUMNS, content on the right side
+
+// main
+//   width: $large
+//   position: absolute
+//   left: $xsmall + $small
+//   top: 0
+
+// nav
+//   width: $xsmall
+//   border-right: 1px solid #00f
+//   position: fixed
+//   left: $small
+//   top: $xsmall
+//   text-align: right
+//   vertical-align: middle
+//   height: 100%
+
+// header
+//   width: $small
+//   border-right: 1px solid #0f0
+//   position: fixed
+//   left: 0
+//   top: $small
+//   text-align: right
+//   height: 100%
+
+// TWO-COLUMNS, content on the right side
+
+// main
+//   width: $large
+//   position: absolute
+//   left: $med
+//   top: 0
+
+// header, nav
+//   width: $med
+//   border-right: 1px solid #00f
+//   position: fixed
+//   left: 0
+//   text-align: right
+
+// nav
+//   top: 0
+//   max-height: $small
+
+// header
+//   bottom: 0
+//   max-height: $large
+
+// TWO-COLUMNS, content on the right side, nav floating on the top
+
+$nav-height: 2em
 
 main
   width: $large
   position: absolute
-  left: 0
+  left: $med
+  top: $nav-height
+
+header
+  width: $med
+  border-right: 1px solid #00f
+  position: fixed
   top: 0
   text-align: right
 
-header, nav
-  width: $med
-  border-left: 1px solid #00f
+nav
   position: fixed
-  left: $large
+  width: $large
+  top: 0
+  left: $med
+  max-height: $nav-height
+  overflow: hidden
+  z-index: 10
+
+// STYLING
+
+main
+  margin: 0 20px
+  padding: 20px
+  //overflow-y: scroll
+  border-left: 2px solid #f00
 
 header
-  top: 0
-  max-height: $large
+  padding: $xsmall 20px 20px 0
+  height: 100%
 
 nav
-  top: $large
-  max-height: $small
+  background-color: #fff
 
+section:before
+  content: ''
+  display: block
+  position: relative
+  width: 0
+  height: $nav-height
+  margin-top: -$nav-height

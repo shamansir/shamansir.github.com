@@ -10,7 +10,7 @@ html(lang='en')
     link(href=css_src, rel='stylesheet')
     link(rel='shortcut icon', href=favicon_src, type='image/gif')
 
-  body.uw-theme-a
+  body.theme-a
 
     // NAVIGATION
     nav
@@ -20,8 +20,7 @@ html(lang='en')
           a(id!=id+'-href', href!='#'+id)= label
 
         li.active
-            +nav_item('about',    'About')
-        li: +nav_item('contacts', 'Contacts')
+            +nav_item('contacts', 'Contacts')
         li: +nav_item('posts',    'Posts')
         li: +nav_item('links',    'Links')
         //- li: +nav_item('vcard',    'VCard')
@@ -37,7 +36,6 @@ html(lang='en')
 
     // SECTION: ABOUT
     header#about
-      h1 About
 
       include sections/about
 
