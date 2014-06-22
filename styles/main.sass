@@ -18,6 +18,8 @@ $icon-list-font: $serif // Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-
 //$lists-font: 'Avenir Next', 'Avenir', sans-serif
 $footer-font: $serif
 
+// FONTS
+
 html *
   margin: 0
   font-family: $text-font
@@ -38,3 +40,60 @@ ul.icon-list
   li a, li a *
     font-family: $icon-list-font
     //font-weight: lighter
+
+body
+  height: 100%
+
+footer
+  position: fixed
+  left: $gld2
+  bottom: $gld2
+
+// COLUMNS
+
+// THREE-COLUMNS
+
+// main
+//   width: $large
+//   position: absolute
+//   left: $xsmall
+//   top: 0
+
+// nav
+//   width: $xsmall
+//   border-right: 1px solid #00f
+//   position: fixed
+//   left: 0
+//   top: $med
+//   text-align: right
+
+// header
+//   width: $small
+//   border-left: 1px solid #0f0
+//   position: fixed
+//   left: $large + $xsmall
+//   top: $small
+
+// TWO-COLUMNS
+
+main
+  width: $large
+  position: absolute
+  left: 0
+  top: 0
+  text-align: right
+
+header, nav
+  width: $med
+  border-left: 1px solid #00f
+  position: fixed
+  left: $large
+
+header
+  top: 0
+  max-height: $large
+
+nav
+  top: $large
+  max-height: $small
+

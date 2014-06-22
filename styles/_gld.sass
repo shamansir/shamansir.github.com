@@ -1,5 +1,5 @@
 // based on http://gld.chadlindemann.com/
-// https://github.com/etchedprints/Responsive-Design-with-Golden-Ratio
+// http://github.com/etchedprints/Responsive-Design-with-Golden-Ratio
 
 $gld: 1.618
 $base: 100%
@@ -17,6 +17,11 @@ $gld1:  $gld3 - $gld2
 
 $full: $base
 
+// .full ---------------------------------------------------------
+// .large ----------------------------- | .med -------------------
+// .xsmall | .large ----------------------------- | .small -------
+// .xsmall | .xlarge ----------------------------------- | .xsmall
+
 $large:  $gld10
 $xlarge: $base - ($gld7 + $gld7)
 $med:    $gld9
@@ -31,3 +36,17 @@ $h5: $gld2 * (100 / 2)
 $h6: $gld1 * (100 / 2)
 
 $lineHeight: $base * $gld
+
+// .large, .xlarge, .med, ..., header, footer
+//   padding: $gld2 $gld4
+//
+// body, *
+//  -webkit-box-sizing: boder-box
+//  -moz-box-sizing: boder-box
+//  box-sizing: border-box
+
+// $baseColor:          gray;
+// $baseColorLighter:   lighten($baseColor, $gld9);
+// $baseColorLight:     lighten($baseColor, $gld7);
+// $baseColorDark:      darken($baseColor, $gld7);
+// $baseColorDarker:    darken($baseColor, $gld9);
