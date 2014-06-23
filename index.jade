@@ -10,45 +10,8 @@ html(lang='en')
     link(href=css_src, rel='stylesheet')
     link(rel='shortcut icon', href=favicon_src, type='image/gif')
 
-    script(type='text/javascript').
-      function setup_nav() {
-
-        var prev_section;
-
-        function activate_section(section) {
-          return function(e) {
-            if (!section) return;
-            if (prev_section) {
-              if (prev_section.classList) {
-                prev_section.classList.remove('active');
-              } else {
-                prev_section.className = '';
-              }
-            }
-            if (section.classList) {
-              section.classList.add('active');
-            } else {
-              section.className = 'active';
-            }
-            prev_section = section;
-          }
-        }
-
-        var nav_links = document.getElementsByClassName('nav-link');
-        for (var i = 0,
-             links_count = nav_links.length,
-             link, section, section_id;
-             i < links_count; i++) {
-          link = nav_links[i];
-          // it should be 1 or more symbols before '-href'
-          if (!link.id || (link.id.indexOf('-href') < 1)) continue;
-          section = (section_id = link.id.substr(0, link.id.length - 5),
-                     document.getElementById(section_id));
-          if (!section) continue;
-          link.addEventListener('click', activate_section(section), false);
-        }
-
-      }
+    include head
+    include scripts
 
   body.theme-a
 

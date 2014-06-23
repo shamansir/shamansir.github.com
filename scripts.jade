@@ -1,0 +1,62 @@
+script(type='text/javascript').
+  function setup_nav() {
+
+    var prev_section;
+
+    var nav_links = document.getElementsByClassName('nav-link'),
+        sections = {}, section_ids = [];
+    for (var i = 0,
+         links_count = nav_links.length,
+         link, section, section_id;
+         i < links_count; i++) {
+      link = nav_links[i];
+      // it should be 1 or more symbols before '-href'
+      if (!link.id || (link.id.indexOf('-href') < 1)) continue;
+      // section_id is used only in this line
+      section = (section_id = link.id.substr(0, link.id.length - 5),
+                 document.getElementById(section_id));
+      if (!section) continue;
+      section_ids.push(section.id);
+      sections[section.id] = section;
+      link.addEventListener('click', activate_section(section), false);
+    }
+
+    if (section_ids.length) { // then some sections were found
+      // first section is set to be active by default, so browsers without
+      // JS enable will see at least something :)
+      prev_section = sections[section_ids[0]];
+      var url_hash;
+      if (url_hash = ((window.location && window.location.hash)
+                      ? window.location.hash.substr(1) : '')) {
+        if (url_hash !== section_ids[0]) {
+          // if there's a hash in the URL and it's not the id of first section,
+          // then first section should be cleared of 'active' class before
+          // activating another section, prev_section assignment above assures us
+          // that it will be done
+          activate_section(sections[url_hash])(); // execute immediately
+        }
+      }
+    }
+
+    function activate_section(section) {
+      return function(/*evt*/) {
+        if (!section) return;
+        if (prev_section) {
+          // if this section is already selected, exit
+          if (prev_section.id == section.id) return;
+          if (prev_section.classList) {
+            prev_section.classList.remove('active');
+          } else {
+            prev_section.className = '';
+          }
+        }
+        if (section.classList) {
+          section.classList.add('active');
+        } else {
+          section.className = 'active';
+        }
+        prev_section = section;
+      }
+    }
+
+  }
