@@ -46,8 +46,8 @@ body
 
 footer
   position: fixed
-  left: $gld2
-  bottom: $gld2
+  left: 0.5em
+  bottom: 0.5em
 
 // COLUMNS
 
@@ -152,10 +152,12 @@ nav
 
 // STYLING
 
+body, main
+  overflow: hidden
+
 main
   margin: 0 20px
   padding: 20px
-  //overflow-y: scroll
   border-left: 2px solid #f00
 
 header
@@ -165,10 +167,9 @@ header
 nav
   background-color: #fff
 
-section:before
-  content: ''
-  display: block
-  position: relative
-  width: 0
-  height: $nav-height
-  margin-top: -$nav-height
+// section
+  // visibility: hidden
+
+section.active
+  background-color: #ccc
+  // visibility: visible
