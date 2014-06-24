@@ -167,13 +167,18 @@ header
 nav
   background-color: #fff
 
-section
-  //visibility: hidden
-  display: none
+body.has-js
 
-section.active
-  background-color: #ccc
-  //visibility: visible
-  display: block
+  section
+    //visibility: hidden
+    //display: none
+    opacity: 0
+
+  section.active
+    background-color: #ccc
+    //visibility: visible
+    display: block
+    opacity: 1
+    transition: opacity .3s
 
 // TODO: before loading, set image sizes so they will not jump

@@ -1,6 +1,17 @@
 script(type='text/javascript').
   function setup_nav() {
 
+    //var use_class_lists = !!document.body.classList;
+    if (document.body.classList) {
+      document.body.classList.remove('no-js');
+      document.body.classList.add('has-js');
+    } else {
+      var classes = document.body.className;
+      if (classes) {
+        document.body.className = classes.replace(/\s*no-js\s*/g, '') + ' has-js';
+      }
+    }
+
     var prev_section;
 
     var nav_links = document.getElementsByClassName('nav-link'),
