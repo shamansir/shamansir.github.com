@@ -2,6 +2,8 @@ script(type='text/javascript').
   function setup_nav() {
 
     //var use_class_lists = !!document.body.classList;
+
+    // inform CSS that JS is here!
     if (document.body.classList) {
       document.body.classList.remove('no-js');
       document.body.classList.add('has-js');
@@ -12,48 +14,51 @@ script(type='text/javascript').
       }
     }
 
+    var hashchange_supported = 'onhashchange' in window;
+
     var prev_section;
 
-    var nav_links = document.getElementsByClassName('nav-link'),
+    // collect all the sections and their ids
+    var section_elms = document.getElementsByTagName('section'),
         sections = {}, section_ids = [];
+
     for (var i = 0,
-         links_count = nav_links.length,
-         link, section, section_id;
-         i < links_count; i++) {
-      link = nav_links[i];
-      // it should be 1 or more symbols before '-href'
-      if (!link.id || (link.id.indexOf('-href') < 1)) continue;
-      // section_id is used only in this line
-      section = (section_id = link.id.substr(0, link.id.length - 5),
-                 document.getElementById(section_id));
-      if (!section) continue;
+         elms_count = section_elms.length,
+         link, section;
+         i < elms_count; i++) {
+      section = section_elms[i];
+      if (!section || !section.id) continue;
       section_ids.push(section.id);
       sections[section.id] = section;
-      link.addEventListener('click', activate_section(section), false);
+      // we fallback to onclick if hashchange event is not supported,
+      // it works almost the same, excluding some nice CSS transitions
+      // in special cases
+      if (!hashchange_supported) {
+        link = document.getElementById(section.id + '-href');
+        link.addEventListener('click', activate_section(section), false);
+      }
     }
 
-    if (section_ids.length) { // then some sections were found
-      // first section is set to be active by default, so browsers without
-      // JS enable will see at least something :)
-      prev_section = sections[section_ids[0]];
-      var url_hash;
-      if (url_hash = ((window.location && window.location.hash)
-                      ? window.location.hash.substr(1) : '')) {
-        if (url_hash !== section_ids[0]) {
-          // if there's a hash in the URL and it's not the id of first section,
-          // then first section should be cleared of 'active' class before
-          // activating another section, prev_section assignment above assures us
-          // that it will be done
-          activate_section(sections[url_hash])(); // execute immediately
-        }
-      }
+    check_url_hash();
+    if (hashchange_supported) {
+      window.addEventListener('hashchange', check_url_hash, false);
+    }
+
+    function check_url_hash() {
+      if (!section_ids.length) return; // no sections were found
+      // activate either first section or the one provided in URL
+      var to_select = (window.location && window.location.hash)
+                      ? window.location.hash.substr(1)
+                      : section_ids[0];
+      if (!to_select) return;
+      activate_section(sections[to_select])(); // execute immediately
     }
 
     function activate_section(section) {
       return function(/*evt*/) {
         if (!section) return;
         if (prev_section) {
-          // if this section is already selected, exit
+          // if this section is already activated, exit
           if (prev_section.id == section.id) return;
           if (prev_section.classList) {
             prev_section.classList.remove('active');
