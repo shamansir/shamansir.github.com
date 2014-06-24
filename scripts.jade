@@ -51,6 +51,7 @@ script(type='text/javascript').
                       ? window.location.hash.substr(1)
                       : section_ids[0];
       if (!to_select) return;
+      if (!sections.hasOwnProperty(to_select)) to_select = section_ids[0];
       activate_section(sections[to_select])(); // execute immediately
     }
 

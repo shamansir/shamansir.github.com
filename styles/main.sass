@@ -49,136 +49,128 @@ footer
   left: 0.5em
   bottom: 0.5em
 
+// COLOR DIFFERENTIATION (TODO REMOVE LATER)
+
+main
+  background-color: #f00
+  border-left: 2px solid #f00
+
+header
+  border-right: 1px solid #00f
+  background-color: #0f0
+
+nav
+  background-color: rgba(0,255,255,.5)
+
+section.active
+  background-color: #ccc
+
 // COLUMNS
-
-// THREE-COLUMNS, content in the middle
-
-// main
-//   width: $large
-//   position: absolute
-//   left: $xsmall
-//   top: 0
-
-// nav
-//   width: $xsmall
-//   border-right: 1px solid #00f
-//   position: fixed
-//   left: 0
-//   top: $med
-//   text-align: right
-
-// header
-//   width: $small
-//   border-left: 1px solid #0f0
-//   position: fixed
-//   left: $large + $xsmall
-//   top: $small
-
-// THREE-COLUMNS, content on the right side
-
-// main
-//   width: $large
-//   position: absolute
-//   left: $xsmall + $small
-//   top: 0
-
-// nav
-//   width: $xsmall
-//   border-right: 1px solid #00f
-//   position: fixed
-//   left: $small
-//   top: $xsmall
-//   text-align: right
-//   vertical-align: middle
-//   height: 100%
-
-// header
-//   width: $small
-//   border-right: 1px solid #0f0
-//   position: fixed
-//   left: 0
-//   top: $small
-//   text-align: right
-//   height: 100%
-
-// TWO-COLUMNS, content on the right side
-
-// main
-//   width: $large
-//   position: absolute
-//   left: $med
-//   top: 0
-
-// header, nav
-//   width: $med
-//   border-right: 1px solid #00f
-//   position: fixed
-//   left: 0
-//   text-align: right
-
-// nav
-//   top: 0
-//   max-height: $small
-
-// header
-//   bottom: 0
-//   max-height: $large
-
-// TWO-COLUMNS, content on the right side, nav floating on the top
 
 $nav-height: 2em
 
-main
-  width: $large
-  position: absolute
-  left: $med
-  top: $nav-height
+header, nav, main
+  margin: 0
+  padding: 0
+  position: fixed
+  overflow: hidden
 
 header
   width: $med
-  border-right: 1px solid #00f
-  position: fixed
-  top: 0
   text-align: right
 
 nav
-  position: fixed
   width: $large
   top: 0
   left: $med
   max-height: $nav-height
-  overflow: hidden
-  z-index: 10
+
+main
+  width: $large
+  position: fixed
+  left: $med
 
 // STYLING
 
-body, main
-  overflow: hidden
-
-main
-  margin: 0 20px
-  padding: 20px
-  border-left: 2px solid #f00
+$center-margin: 0.7em
+$top-margin: 3em
+$bottom-margin: 3em
+$side-margin: 3em
 
 header
-  padding: $xsmall 20px 20px 0
-  height: 100%
+  //padding: $xsmall 20px 20px 0
 
-nav
-  background-color: #fff
+  div
+    padding: $top-margin $center-margin $bottom-margin $side-margin
 
-body.has-js
+section
+
+  div
+    padding: 0 $side-margin 0 $center-margin
+
+body.no-js
+
+  header
+    top: 0
+
+  main
+    top: $nav-height
+    overflow-y: scroll
+    height: $full
 
   section
-    //visibility: hidden
-    //display: none
-    opacity: 0
+    padding-top: 1em
 
-  section.active
-    background-color: #ccc
-    //visibility: visible
-    display: block
-    opacity: 1
+    h2
+      margin-left: $center-margin
+
+    div
+      margin-top: 0
+      //padding-top: $top-margin
+      //padding-bottom: $bottom-margin
+
+body.has-js
+  $top-position: $xsmall
+  //$main-height: ($full - $top-position)
+  $main-height: $large
+
+  overflow: hidden
+
+  header
+    top: $top-position
+
+  nav
+    top: $top-position
+    margin-top: -$nav-height
+
+  main
+    top: $top-position
+    height: $main-height
+    //min-height: ($full - $top-position)
+
+  section
+    // changing "display" breaks transitions
+    visibility: hidden
+    opacity: 0
     transition: opacity 3s
+    position: fixed
+    top: $top-position
+    height: $main-height
+    //max-height: $main-height
+
+    h2
+      display: none
+
+    div
+      background-color: #ff0
+      height: $full
+      //height: ($main-height - ($vert-margin + $vert-margin))
+      overflow: hidden
+
+    &.active
+      visibility: visible
+      opacity: 1
+      transition: opacity 3s
 
 // TODO: before loading, set image sizes so they will not jump
+
