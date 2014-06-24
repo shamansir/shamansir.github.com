@@ -65,6 +65,10 @@ nav
 section.active
   background-color: #ccc
 
+body.loading
+  &:before
+    background-color: #00f
+
 // COLUMNS
 
 $nav-height: 2em
@@ -100,18 +104,27 @@ $side-margin: 3em
 header
   //padding: $xsmall 20px 20px 0
 
-  div
-    padding: $top-margin $center-margin $bottom-margin $side-margin
+header > div
+  padding: $top-margin $center-margin $bottom-margin $side-margin
 
-section
+section > div
+  padding: 0 $side-margin 0 $center-margin
 
-  div
-    padding: 0 $side-margin 0 $center-margin
+nav ul
+  list-style: none
+  margin: 0
+
+  & > li
+    float: left
+    display: inline
 
 body.no-js
 
   header
     top: 0
+
+    div
+      padding-top: 1em
 
   main
     top: $nav-height
@@ -129,10 +142,24 @@ body.no-js
       //padding-top: $top-margin
       //padding-bottom: $bottom-margin
 
+body.loading
+
+  header, nav, main
+    display: none
+
+  &:before
+    content: 'Loading...'
+    font-size: 2em
+    position: fixed
+    top: 0
+    //bottom: 0
+    right: 0
+
 body.has-js
   $top-position: $xsmall
   //$main-height: ($full - $top-position)
   $main-height: $large
+  $transition-duration: 3s
 
   overflow: hidden
 
@@ -152,10 +179,11 @@ body.has-js
     // changing "display" breaks transitions
     visibility: hidden
     opacity: 0
-    transition: opacity 3s
     position: fixed
     top: $top-position
     height: $main-height
+    left: $full
+    @include transition(opacity $transition-duration ease, left $transition-duration ease, visibility $transition-duration ease)
     //max-height: $main-height
 
     h2
@@ -169,8 +197,9 @@ body.has-js
 
     &.active
       visibility: visible
+      left: $med
       opacity: 1
-      transition: opacity 3s
+      @include transition(opacity $transition-duration ease, left $transition-duration ease, visibility $transition-duration ease)
 
 // TODO: before loading, set image sizes so they will not jump
 

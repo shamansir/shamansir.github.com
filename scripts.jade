@@ -5,12 +5,16 @@ script(type='text/javascript').
 
     // inform CSS that JS is here!
     if (document.body.classList) {
+      document.body.classList.remove('loading');
       document.body.classList.remove('no-js');
       document.body.classList.add('has-js');
     } else {
       var classes = document.body.className;
       if (classes) {
-        document.body.className = classes.replace(/\s*no-js\s*/g, '') + ' has-js';
+        // FIXME: check if space was left as first symbol
+        document.body.className = classes.replace(/\s*no-js/g, '')
+                                         .replace(/\s*loading/g, '')
+                                         .replace(/(^\s*)|(\s*$)/g, '') + ' has-js';
       }
     }
 
@@ -76,4 +80,8 @@ script(type='text/javascript').
       }
     }
 
+  }
+
+  window.onload = function() {
+    setTimeout(setup_nav, 1000);
   }

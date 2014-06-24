@@ -1,18 +1,19 @@
 doctype html
 
 - var css_src = './styles/main.css';
-- var favicon_src = './favicon.gif';
+- var favicon_src = './favicon.png';
 
 html(lang='en')
 
   head
     meta(charset='utf-8')
     link(href=css_src, rel='stylesheet')
-    link(rel='shortcut icon', href=favicon_src, type='image/gif')
+    link(rel='shortcut icon', href=favicon_src, type='image/png')
 
     include head
     include scripts
 
+  // .no-js class will be removed by js, if it's there
   body.no-js.theme-a
 
     // NAVIGATION
@@ -104,4 +105,8 @@ html(lang='en')
       p Designed by shaman.sir &copy; 2014
 
     script(type='text/javascript').
-      setup_nav();
+      if (document.body.classList) {
+        document.body.classList.add('loading');
+      } else {
+        document.body.className += ' loading';
+      }
