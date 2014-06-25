@@ -71,7 +71,7 @@ body.loading
 
 // COLUMNS
 
-$nav-height: 2em
+$nav-height: 1.5em
 
 header, nav, main
   margin: 0
@@ -87,7 +87,7 @@ nav
   width: $large
   top: 0
   left: $med
-  max-height: $nav-height
+  height: $nav-height
 
 main
   width: $large
@@ -113,10 +113,35 @@ section > div
 nav ul
   list-style: none
   margin: 0
+  padding: 0
+  display: block
 
-  & > li
+  li
+    position: relative
     float: left
-    display: inline
+
+    // & > a, & > label
+    //   display: block
+
+    & > ul
+      position: fixed
+      //position: absolute
+      display: inline
+      //left: 0
+      //top: -1em
+      margin-top: -($nav-height * 1.7)
+
+      li
+        display: inline
+
+  // & > li > ul
+  //   display: block
+  //   position: relative
+  //   top: -2em
+
+  // & > li, & > li > ul > li
+  //   float: left
+  //   display: inline
 
 body.no-js
 

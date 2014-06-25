@@ -1,0 +1,31 @@
+ul
+
+  mixin nav_item(id, label, subitems)
+    if !subitems
+      a(id!=id+'-href',href!='#'+id,class='nav-link')= label
+    else
+      - var sub_ids = [];
+      each sub_id in subitems
+        - sub_ids.push(sub_id);
+      - sub_ids = sub_ids.join(',');
+      label(for!=id+'-sub')
+        a(id!=id+'-href',href!='#'+id,class='nav-link',data-subsections!=sub_ids)= label
+      ul(id!=id+'-sub')
+        each sub_id, sub_label in subitems
+          li: a(id!=id+'-'+sub_id+'-href',href!='#'+id+'-'+sub_id,class='nav-sub-link')= sub_label
+
+  li.active
+      +nav_item('contacts', 'Contacts')
+  li: +nav_item('posts',    'Posts',
+                { 'poo': 'pee', 'boo': 'bee' })
+  li: +nav_item('links',    'Links')
+  //- li: +nav_item('vcard',    'VCard')
+  li: +nav_item('cv',       'CV')
+  li: +nav_item('sounds',       'Sounds')
+  //- li: +nav_item('story',    'Story')
+  li: +nav_item('social',   'Social')
+
+  //- latest-songs, files
+  //- geek code, data (stuff like age,occupation,location),
+  //- non-dev stuff, self-created projects,
+  //- participated project, latest-posts,

@@ -10,33 +10,15 @@ html(lang='en')
     link(href=css_src, rel='stylesheet')
     link(rel='shortcut icon', href=favicon_src, type='image/png')
 
-    include head
-    include scripts
+    include sections/head
+    include sections/script-begin
 
   // .no-js class will be removed by js, if it's there
   body.no-js.theme-a
 
     // NAVIGATION
     nav
-      ul
-
-        mixin nav_item(id, label)
-          a(id!=id+'-href',href!='#'+id,class='nav-link')= label
-
-        li.active
-            +nav_item('contacts', 'Contacts')
-        li: +nav_item('posts',    'Posts')
-        li: +nav_item('links',    'Links')
-        //- li: +nav_item('vcard',    'VCard')
-        li: +nav_item('cv',       'CV')
-        li: +nav_item('sounds',       'Sounds')
-        //- li: +nav_item('story',    'Story')
-        li: +nav_item('social',   'Social')
-
-        //- latest-songs, files
-        //- geek code, data (stuff like age,occupation,location),
-        //- non-dev stuff, self-created projects,
-        //- participated project, latest-posts,
+      include sections/nav
 
     // SECTION: ABOUT
     header#about
@@ -104,9 +86,4 @@ html(lang='en')
     footer
       p Designed by shaman.sir &copy; 2014
 
-    script(type='text/javascript').
-      if (document.body.classList) {
-        document.body.classList.add('loading');
-      } else {
-        document.body.className += ' loading';
-      }
+    include sections/script-end
