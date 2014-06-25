@@ -17,11 +17,15 @@ ul
   li.active
       +nav_item('contacts', 'Contacts')
   li: +nav_item('posts',    'Posts',
-                { 'poo': 'pee', 'boo': 'bee' })
+                { 'topics': 'Topics', 'english': 'English', 'russian': 'Russian' })
   li: +nav_item('links',    'Links')
   //- li: +nav_item('vcard',    'VCard')
   li: +nav_item('cv',       'CV')
-  li: +nav_item('sounds',       'Sounds')
+  li: +nav_item('sounds',       'Sounds',
+                { 'shock': 'sh0ck 2003',
+                  'nanodisc': 'nanodisc 2005',
+                  'back': 'Back EP 2013',
+                  'back-b-sides': 'Back EP B-Sides 2013' })
   //- li: +nav_item('story',    'Story')
   li: +nav_item('social',   'Social')
 

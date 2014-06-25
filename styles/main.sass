@@ -51,23 +51,26 @@ footer
 
 // COLOR DIFFERENTIATION (TODO REMOVE LATER)
 
-main
-  background-color: #f00
-  border-left: 2px solid #f00
+// main
+//   background-color: #f00
+//   border-left: 2px solid #f00
 
-header
-  border-right: 1px solid #00f
-  background-color: #0f0
+// header
+//   border-right: 1px solid #00f
+//   background-color: #0f0
 
-nav
-  background-color: rgba(0,255,255,.5)
+// nav
+//   background-color: rgba(0,255,255,.5)
 
-section.active
-  background-color: #ccc
+// section.active
+//   background-color: #ccc
 
-body.loading
-  &:before
-    background-color: #00f
+// body.loading
+//   &:before
+//     background-color: #00f
+
+// section > div
+//   background-color: #ff0
 
 // COLUMNS
 
@@ -96,13 +99,24 @@ main
 
 // STYLING
 
-$center-margin: 0.7em
+$center-margin: 0.8em
 $top-margin: 3em
 $bottom-margin: 3em
 $side-margin: 3em
 
 header
   //padding: $xsmall 20px 20px 0
+  border-right: 1px solid
+
+  & > div > img
+    position: relative
+    right: -18px
+    top: 2px
+
+  & > div:after
+    content: '※'
+    position: relative
+    top: 0.3em
 
 header > div
   padding: $top-margin $center-margin $bottom-margin $side-margin
@@ -147,6 +161,9 @@ section ul > li > a > img
   //   float: left
   //   display: inline
 
+footer
+  font-size: 0.6em
+
 body.no-js
 
   header
@@ -163,10 +180,10 @@ body.no-js
   section
     padding-top: 1em
 
-    h2
+    & > h2
       margin-left: $center-margin
 
-    div
+    & > div
       margin-top: 0
       //padding-top: $top-margin
       //padding-bottom: $bottom-margin
@@ -183,12 +200,14 @@ body.loading
     top: 0
     //bottom: 0
     right: 0
+    padding-top: 0.3em
+    padding-right: 0.5em
 
 body.has-js
   $top-position: $xsmall
   //$main-height: ($full - $top-position)
   $base-height: $large
-  $transition-duration: 3s
+  $transition-duration: .3s
 
   overflow: hidden
 
@@ -197,7 +216,7 @@ body.has-js
     top: $top-position
     height: $base-height
 
-    div
+    & > div
       display: table-cell
       vertical-align: middle
 
@@ -222,13 +241,12 @@ body.has-js
     @include transition(opacity $transition-duration ease, left $transition-duration ease, visibility $transition-duration ease)
     //max-height: $base-height
 
-    h2
+    & > h2
       display: none
 
-    div
+    & > div
       display: table-cell
       vertical-align: middle
-      background-color: #ff0
       height: $full
       //height: ($base-height - ($vert-margin + $vert-margin))
       overflow: hidden
