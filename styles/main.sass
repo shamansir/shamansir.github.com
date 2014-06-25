@@ -134,6 +134,10 @@ nav ul
       li
         display: inline
 
+section ul > li > a > img
+  width: 32px
+  height: 32px
+
   // & > li > ul
   //   display: block
   //   position: relative
@@ -183,13 +187,19 @@ body.loading
 body.has-js
   $top-position: $xsmall
   //$main-height: ($full - $top-position)
-  $main-height: $large
+  $base-height: $large
   $transition-duration: 3s
 
   overflow: hidden
 
   header
+    display: table
     top: $top-position
+    height: $base-height
+
+    div
+      display: table-cell
+      vertical-align: middle
 
   nav
     top: $top-position
@@ -197,27 +207,30 @@ body.has-js
 
   main
     top: $top-position
-    height: $main-height
+    height: $base-height
     //min-height: ($full - $top-position)
 
   section
     // changing "display" breaks transitions
+    display: table
     visibility: hidden
     opacity: 0
     position: fixed
     top: $top-position
-    height: $main-height
+    height: $base-height
     left: $full
     @include transition(opacity $transition-duration ease, left $transition-duration ease, visibility $transition-duration ease)
-    //max-height: $main-height
+    //max-height: $base-height
 
     h2
       display: none
 
     div
+      display: table-cell
+      vertical-align: middle
       background-color: #ff0
       height: $full
-      //height: ($main-height - ($vert-margin + $vert-margin))
+      //height: ($base-height - ($vert-margin + $vert-margin))
       overflow: hidden
 
     &.active
