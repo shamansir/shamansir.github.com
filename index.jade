@@ -1,6 +1,6 @@
 doctype html
 
-- var css_src = './styles/main.css';
+- var css_src = './styles/main_.css';
 - var favicon_src = './favicon.png';
 
 html(lang='en')
@@ -10,21 +10,25 @@ html(lang='en')
     link(href=css_src, rel='stylesheet')
     link(rel='shortcut icon', href=favicon_src, type='image/png')
 
-    include sections/head
-    include sections/script-begin
+    include document/head
+    include document/inline-style
+    include document/inline-script-begin
 
-  // .no-js class will be removed by js, if it's there
+  // .no-js class will be removed and replaced with .has-js
+  // by JS itself, if it will appear to be actually there
   body.no-js.theme-a
-
-    // NAVIGATION
-    nav
-      include sections/nav
 
     // SECTION: ABOUT
     header#about
 
       div
         include sections/about
+
+    // NAVIGATION
+    nav
+      h2 Contents
+
+      include sections/nav
 
     // MAIN
     main
@@ -37,11 +41,11 @@ html(lang='en')
           include sections/contacts
 
       // SECTION: POSTS
-      section#posts
-        h2 Posts
+      section#articles
+        h2 Articles
 
         div
-          include sections/posts
+          include sections/articles
 
       // SECTION: LINKS
       section#links
@@ -58,12 +62,12 @@ html(lang='en')
 
       // SECTION: CV
       section#cv
-        h2 CV
+        h2 Curriculum Vitae
 
         div
           include sections/cv
 
-      // SECTION: CV
+      // SECTION: SOUNDS
       section#sounds
         h2 Sounds
 
@@ -86,4 +90,4 @@ html(lang='en')
     footer
       p Designed by shaman.sir &copy; 2014
 
-    include sections/script-end
+    include document/inline-script-end

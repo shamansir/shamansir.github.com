@@ -52,6 +52,8 @@ script(type='text/javascript').
       window.addEventListener('hashchange', check_url_hash, false);
     }
 
+    // ================================================================================
+
     function check_url_hash() {
       if (!section_ids.length) return; // no sections were found
       // activate either first section or the one provided in URL

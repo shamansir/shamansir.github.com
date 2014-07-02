@@ -3,9 +3,10 @@ ul.source-list
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
     a(href=href,title=text,target=target)
-      img(src=img_src)
+      img.svg-icon(src=img_src)
+      span!= text
 
-  li: +source_item('download', './cv.html', 'Download/View')
+  li: +source_item('download', './cv.html', 'CV: View | Download | Print')
 
 div
   //- include:md ../cv.md
@@ -137,7 +138,7 @@ div
     mixin cv_item(icon_id, href, text)
       - var img_src = './resources/icons/' + icon_id + '.svg';
       a(href=href,title=text)
-        img(src=img_src)
+        img.svg-icon(src=img_src)
         span!= text
 
     li: +cv_item('stackoverflow', 'https://careers.stackoverflow.com/shamansir', '@ Careers.StackOverflow')

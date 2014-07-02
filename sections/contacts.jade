@@ -3,37 +3,42 @@ ul.source-list
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
     a(href=href,title=text)
-      img(src=img_src)
+      img.svg-icon(src=img_src)
+      span!= text
 
-  li: +source_item('vcard', './shamansir.vcf', 'VCard')
+  li: +source_item('vcard', './shamansir.vcf', 'VCard as VCF file')
   //- TODO: Open in lightbox
   //- TODO: a link to VCard file?
-  li: +source_item('qrcode', './shamansir_vcard.png', 'QR-Code')
+  li: +source_item('qrcode', './shamansir_vcard.png', 'QR-Code to scan')
 
 ul.icon-list
 
   - var none = null;
   //- TODO: remove none-links
 
-  mixin contact_item(icon_id, href, text)
+  mixin contact_item(icon_id, href, text, label)
     - var prefix  = '<span class=\'accent\'>';
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
     - var img_src = './resources/icons/' + icon_id + '.svg';
     a(href=href,title=text)
-      img(src=img_src)
+      img.svg-icon(src=img_src)
       span!= link_html
+    if label
+      span!= label
 
-  li: +contact_item('mail-2', 'mailto://shaman.sir@gmail.com', '[shaman.sir]@gmail.com')
-  li: +contact_item('skype', 'skype:shaman.sir?info', 'skype://[shaman.sir]')
-  li: +contact_item('phone', 'tel:+4914684181188', '(+49) 146 84-18-11-88')
-  //- li: +contact_item('phone', none, '(+49) 146 84-18-11-88')
-  //- li: +contact_item('mail-2', 'mailto://shaman.sir.de@gmail.com', '[shaman.sir.de]@gmail.com')
-  li: +contact_item('chat', none, '[shaman.sir.de]@gmail.com')
-  li: +contact_item('twitter', 'http://twitter.com/shaman_sir', 'twitter.com/[shaman_sir]')
-  li: a(href=none,title='Home Address')
-      img(src='./resources/icons/location.svg')
+  li: +contact_item('mail-2', 'mailto://shaman.sir@gmail.com', '[shaman.sir]@gmail.com','E-mail')
+  li: +contact_item('skype', 'skype:shaman.sir?info', 'skype://[shaman.sir]','Skype')
+  li: +contact_item('phone', 'tel:+4914684181188', '(+49) 146 84-18-11-88', 'Phone')
+  //- li: +contact_item('phone', none, '(+49) 146 84-18-11-88', 'Alt.Phone')
+  //- li: +contact_item('mail-2', 'mailto://shaman.sir.de@gmail.com', '[shaman.sir.de]@gmail.com', 'Alt.E-mail')
+  li: +contact_item('chat', none, '[shaman.sir.de]@gmail.com', 'iMessage')
+  li: +contact_item('twitter', 'http://twitter.com/shaman_sir', 'twitter.com/[shaman_sir]','Twitter')
+  li
+    a(href=none,title='Home Address')
+      img.svg-icon(src='./resources/icons/location.svg')
       p.address
         | Simeonistraße 6, 4-OG
         | 80637 München
         | Deutchland
+    span Address

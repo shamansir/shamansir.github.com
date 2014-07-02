@@ -9,15 +9,15 @@ ul
         - sub_ids.push(sub_id);
       - sub_ids = sub_ids.join(',');
       label(for!=id+'-sub')
-        a(id!=id+'-href',href!='#'+id,class='nav-link',data-subsections!=sub_ids)= label
+        a(id!=id+'-href',href!='#'+id,class='nav-link',data-subsections!=sub_ids,title=label)= label
       ul(id!=id+'-sub')
-        each sub_id, sub_label in subitems
-          li: a(id!=id+'-'+sub_id+'-href',href!='#'+id+'-'+sub_id,class='nav-sub-link')= sub_label
+        each sub_label, sub_id in subitems
+          li: a(id!=id+'-'+sub_id+'-href',href!='#'+id+'-'+sub_id,class='nav-sub-link',title!=label+': '+sub_label)= sub_label
 
   li.active
       +nav_item('contacts', 'Contacts')
-  li: +nav_item('posts',    'Posts',
-                { 'topics': 'Topics', 'english': 'English', 'russian': 'Russian' })
+  li: +nav_item('articles',    'Articles',
+                { 'english': 'In English', 'russian': 'In Russian' })
   li: +nav_item('links',    'Links')
   //- li: +nav_item('vcard',    'VCard')
   li: +nav_item('cv',       'CV')
@@ -27,7 +27,7 @@ ul
                   'back': 'Back EP 2013',
                   'back-b-sides': 'Back EP B-Sides 2013' })
   //- li: +nav_item('story',    'Story')
-  li: +nav_item('social',   'Social')
+  li: +nav_item('social',   'Social Networks')
 
   //- latest-songs, files
   //- geek code, data (stuff like age,occupation,location),

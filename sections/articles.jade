@@ -5,10 +5,11 @@ ul.source-list
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
     a(href=href,title=text)
-      img(src=img_src)
+      img.svg-icon(src=img_src)
+      span!= text
 
-  li: +source_item('rss_en', blog_root + '/feed.xml', 'RSS EN')
-  li: +source_item('rss_ru', blog_root + '/ru/feed.xml', 'RSS RU')
+  li: +source_item('rss_en', blog_root + '/feed.xml', 'Subscribe for English posts (RSS)')
+  li: +source_item('rss_ru', blog_root + '/ru/feed.xml', 'Subscribe for Russian posts (RSS)')
 
 ul
 
@@ -50,7 +51,7 @@ ul
     +links_item('09 Jan \'10', 'en', '10-useful-solutions-for-android-developer', '10 Useful Solutions for Android Developer', [ 'java', 'android', 'tricks' ])
     //- link to ARCHIVES below
     dt —
-    dd: a(href=blog_root,title='No Word About Onion') More...
+    dd: a(href=blog_root,title='No Word About Onion') More articles...
 
   h3 In Russian
 
@@ -64,4 +65,4 @@ ul
     //- link to ARCHIVES below
     //- russian archives dates are messed up! see gwt+mvp4g, постигаем фунциональный
     dt —
-    dd: a(href=blog_root+'/ru',title='Ни слова о луке') Ещё...
+    dd: a(href=blog_root+'/ru',title='Ни слова о луке') Другие посты...
