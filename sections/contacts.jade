@@ -16,29 +16,29 @@ ul.icon-list
   - var none = null;
   //- TODO: remove none-links
 
-  mixin contact_item(icon_id, href, text, label)
+  mixin contact_item(icon_id, href, text, label, text_class)
     - var prefix  = '<span class=\'accent\'>';
     - var postfix = '</span>';
     - var link_html = text.replace('[', prefix).replace(']', postfix);
     - var img_src = './resources/icons/' + icon_id + '.svg';
     a(href=href,title=text)
       img.svg-icon(src=img_src)
-      span!= link_html
-    if label
-      span!= label
+      span(class=text_class)!= link_html
+    span!= label
 
-  li: +contact_item('mail-2', 'mailto://shaman.sir@gmail.com', '[shaman.sir]@gmail.com','E-mail')
-  li: +contact_item('skype', 'skype:shaman.sir?info', 'skype://[shaman.sir]','Skype')
-  li: +contact_item('phone', 'tel:+4914684181188', '(+49) 146 84-18-11-88', 'Phone')
+  li: +contact_item('mail-2', 'mailto://shaman.sir@gmail.com', '[shaman.sir]@gmail.com', 'Email', 'u-email')
+  li: +contact_item('skype', 'skype:shaman.sir?info', 'skype://[shaman.sir]', 'Skype')
+  li: +contact_item('phone', 'tel:+4914684181188', '(+49) 146 84-18-11-88', 'Phone', 'p-tel')
   //- li: +contact_item('phone', none, '(+49) 146 84-18-11-88', 'Alt.Phone')
   //- li: +contact_item('mail-2', 'mailto://shaman.sir.de@gmail.com', '[shaman.sir.de]@gmail.com', 'Alt.E-mail')
   li: +contact_item('chat', none, '[shaman.sir.de]@gmail.com', 'iMessage')
-  li: +contact_item('twitter', 'http://twitter.com/shaman_sir', 'twitter.com/[shaman_sir]','Twitter')
+  li: +contact_item('twitter', 'http://twitter.com/shaman_sir', 'twitter.com/[shaman_sir]', 'Twitter')
   li
     a(href=none,title='Home Address')
       img.svg-icon(src='./resources/icons/location.svg')
-      p.address
-        | Simeonistraße 6, 4-OG
-        | 80637 München
-        | Deutchland
+      p.p-adr.h-adr.address
+        span.p-street-address Simeonistraße&nbsp;6,&nbsp;4OG.-
+        span.p-postal-code 80637
+        span.p-locality München
+        span.p-country-name Deutschland
     span Address

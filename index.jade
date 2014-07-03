@@ -1,14 +1,12 @@
 doctype html
 
 - var css_src = './styles/main_.css';
-- var favicon_src = './favicon.png';
 
 html(lang='en')
 
   head
     meta(charset='utf-8')
     link(href=css_src, rel='stylesheet')
-    link(rel='shortcut icon', href=favicon_src, type='image/png')
 
     include document/head
     include document/inline-style
@@ -16,9 +14,9 @@ html(lang='en')
 
   // .no-js class will be removed and replaced with .has-js
   // by JS itself, if it will appear to be actually there
-  body.no-js.theme-a
+  body.h-card.no-js.theme-a
 
-    // SECTION: ABOUT
+    // HEADER
     header#about
 
       div

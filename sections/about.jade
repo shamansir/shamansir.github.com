@@ -1,13 +1,13 @@
-h1
-  span Ulric
+h1.p-name
+  span.p-given-name Ulric
   | &nbsp;
-  span Wilfred
+  span.p-family-name Wilfred
 p
   | a.k.a.&nbsp;
-  em shaman.sir
-img(width=150, height=150, src='./resources/tsso.svg')
+  em.p-nickname shaman.sir
+img.u-logo(width=150, height=150, src='./resources/tsso.svg')
 p Version&nbsp;
-  a(href='./history.html',title='Version gallery'): em 10
+  a(href='./history.html', title='Version gallery'): em 10
   | .
 p Updated&nbsp;@&nbsp;
   em 05&nbsp;April 2014, Saturday
@@ -15,4 +15,16 @@ p Updated&nbsp;@&nbsp;
 p Geek-minded <em>JavaScript</em>/<em>Java</em>&nbsp;developer,
   | in love with&nbsp;<em>CG</em>.
 p Located&nbsp;in&nbsp;
-  em Munich,&nbsp;Germany.
+  em.p-locality Munich
+  | ,&nbsp;
+  span.p-country-name Germany
+  | .
+p Current Position:
+  = ' '
+  span.p-job-title JS&nbsp;Player Developer
+  | at&nbsp;
+  a.p-org(href='http://animatron.com') Animatron
+p Homepage:
+  = ' '
+  a.u-url(href='http://shamansir.github.io') you are here
+
