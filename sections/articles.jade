@@ -4,7 +4,7 @@ ul.source-list
 
   mixin source_item(icon_id, href, text)
     - var img_src = './resources/icons/' + icon_id + '.svg';
-    a(href=href,title=text)
+    a(href=href,title=text,rel='attachment')
       img.svg-icon(src=img_src)
       span!= text
 
