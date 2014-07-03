@@ -1,38 +1,28 @@
 // for a case when we'll have a chance to look very ugly because CSS file was lost
 style(type='text/css').
 
-  img.svg-icon {
-    width: 30px;
-    height: 30px;
-    padding-right: 6px;
-  }
+  img.svg-icon { width: 30px; height: 30px;
+                 margin-right: 6px; }
 
-  img.album-cover {
-    width: 130px;
-    height: 130px;
-  }
+  img.album-cover { width: 130px; height: 130px;
+                    border: 1px solid #000;
+                    margin-right: 6px; }
 
-  header h1 {
-    margin-bottom: 0.2em;
-  }
+  header h1 { margin-bottom: 0.2em; }
 
-  header p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
+  header p { margin-top: 0.5em;
+             margin-bottom: 0.5em; }
 
-  h2 {
-    margin-top: 1.5em;
-    border-top: 1px solid #000;
-  }
+  h2 { margin-top: 1.5em;
+       border-top: 1px solid #000; }
 
-  ul.source-list, ul.tag-list, ul.icon-list {
-    list-style-type: none;
-  }
+  ul.source-list, ul.tag-list, ul.icon-list { list-style-type: none; }
 
   ul.source-list img.svg-icon, ul.tag-list img.svg-icon, ul.icon-list img.svg-icon {
     position: relative;
     top: 9px;
   }
+
+  ul.icon-list > li > span { margin-left: .3em; }
 
   footer { margin-top: 2em; }
