@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <title>Coloring test</title>
+    <style type="text/css">
+<!--
+
+/* POSITIONING */
+
+/* Body */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #004;
+}
+
+body #left-holder, body #right-holder {
+	width: 10%;
+	height: 100%;
+	float: left;
+}
+
+body #left-holder {
+  background: url(./images/page-left-border.png) top right repeat-y #003;
+}
+
+body #right-holder {
+  background: url(./images/page-right-border.png) top left repeat-y #003;
+}
+
+body .sheet {
+  float: left;
+	width: 80%;
+	background: url(./images/sheet-background.png) bottom left repeat-y #ffffe5;
+	/* here will go the left page background */	
+}
+
+/* Page */
+
+.sheet #page {
+	background: url(./images/sub-menu-background.png) bottom right repeat-y;
+}
+
+#page #page-header {
+	height: 75px;
+	background-color: #fff;	
+	border: 1px solid #000;
+}
+
+/* #page #page-control */
+
+#page #footer {
+  clear: both;
+	height: 50px;
+  background-color: #fff;
+	border: 1px solid #000;
+}
+
+/* Page control */
+
+#page-control #pages-area {
+  float: left;
+	width: 15%;
+}
+
+#pages-area ul#nav-bar {
+  margin: 0;
+	padding: 0;	
+	height: 250px;	
+	background-color: #fff;
+	border: 1px solid #000;
+	border-top-width: 0;
+}
+
+#pages-area #page-info {
+	background-color: #0ff;
+}
+
+/* Basis */
+
+#page-control #basis {
+  float: left;
+	width: 70%;
+	background-color: #000;
+}
+
+#basis ul#tab-bar {
+  margin: 0;
+	padding: 0;	
+	height: 50px;
+	background-color: #eee;
+	border: solid #000;
+	border-width: 1px 0;
+}
+
+/* content */
+
+#basis #content {
+	background-color: #ffffe5;
+	margin: 0 -1px;
+	border-color: #333 #000;
+	border-style: dotted solid;
+	border-width: 0 1px 1px 1px;
+}
+
+/* Sections */
+
+#page-control #page-sections-area {
+  float: left;
+	width: 14%; /* a little space at right and, we will not break IE inner box */
+	background-color: #000;
+}
+
+#page-sections-area #sub-nav-holder {
+  background-color: #004;
+	height: 50px;
+}
+
+#page-sections-area ul#sub-nav-menu {
+  margin: 0;
+	padding: 0;
+	height: 250px;
+	background-color: #ffffd5;
+	border: 1px solid #000;	
+}
+
+#page-sections-area #adware-zone {
+  background-color: #c03;
+	color: #fff;
+	border: 1px solid #000;
+	border-top-width: 0;
+}
+
+/* Elements */
+
+#page-info a#page-tab {
+	float: left;
+	width: 25px;
+	height: 200px;
+	background-color: #ccc;	
+	border: 1px solid #000;
+	border-top-width: 0;	
+}
+
+#page-info #description-block {
+	border: solid #000;
+	border-width: 0px 1px 3px 0px;
+	background: #ffffd5; 
+	overflow: hidden;	
+}
+
+/* STYLING */
+
+-->
+    </style>
+  </head>
+  <body>
+
+   <div id="left-holder"></div>
+	   <div class="sheet">
+		   <div id="page">
+          <div id="page-header">Page title</div>
+          <div id="page-control">
+            <div id="pages-area">
+              <ul id="nav-bar">Main nav</ul>
+              <div id="page-info">
+									 <a href="#" id="page-tab">Page Tab</a>
+									 <div id="description-block">Long description</div>
+						  </div> <!-- page-info -->
+            </div> <!-- pages-area -->
+            <div id="basis">
+              <ul id="tab-bar">Tabs area</ul>
+              <div id="content">Main content</div>
+            </div> <!-- basis -->
+            <div id="page-sections-area">
+							<div id="sub-nav-holder">Holder</div>
+              <ul id="sub-nav-menu">Subnav</ul>
+              <div id="adware-zone">Adware</div>
+            </div> <!-- page-sections-area -->
+          </div> <!-- page-control -->
+          <div id="footer">Page footer</div>
+					</div> <!-- page -->
+        </div> <!-- sheet -->
+      <div id="right-holder"><!-- Empty --></div>
+  </body>
+</html>
+

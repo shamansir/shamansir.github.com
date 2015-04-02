@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:menus="http://www.shaman-sir.by.ru/XSD/Menus"
+		   xmlns:generic="http://www.shaman-sir.by.ru/XSD/Generic"  
+		   targetNamespace="http://www.shaman-sir.by.ru/XSD/Menus" 
+		   elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.shaman-sir.by.ru/XSD/Generic" schemaLocation="./generic.xsd"/>
+	<xs:element name="tab-menu">
+		<xs:annotation>
+			<xs:documentation>Page-dependendent tab menu</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="page-location" type="generic:locationType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+  <xs:element name="tab-menu-source">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies tab menu source, which must consist of tab-menu element
+        and also to be conformant with the Menus scheme
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="src" type="xs:anyURI" use="required"/>
+      <xs:attribute name="activate" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>  
+</xs:schema>

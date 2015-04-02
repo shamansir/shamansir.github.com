@@ -1,0 +1,227 @@
+/* SECONDARY ELEMENTS STYLING & POSITIONING */
+
+/* Page header */
+
+#page #page-header h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 17px;
+	padding-left: 9px;
+	height: 75px !important;
+	height: 57px; 
+}
+
+#page-header select#style-selector {
+  position: absolute;
+	right: 22%;
+	top: 5px;
+	font-size: 10px;
+	border: 1px dotted #ccc;
+}
+
+/* Page description */
+
+#page-info #description-block dl dt {
+	font-weight: bold;
+	margin: 0px 0 4px 5px !important;
+	margin: 2px 0 4px 5px;	
+	text-align: justify;
+}
+
+#page-info #description-block dl dt:first-child {
+	margin-top: -16px !important;
+	margin-top: 2px;	
+}
+
+#page-info #description-block dl dd
+{
+  display: block;
+	width: auto;
+	line-height: 1em;
+	letter-spacing: 0.02em;
+	margin-left: 5px;
+	text-align: justify;
+	overflow: hidden;
+}
+
+#page-info #description-block dl dt,
+#page-info #description-block dl dd,
+#page-info #description-block dl dd p 
+{
+	font-size: 10px;
+}
+
+/* Tab bar */
+
+#basis ul#tab-bar {
+  display: block;
+  list-style: none;	
+	overflow: hidden;
+	border: solid #000;
+	border-width: 3px 0 1px 0;
+	list-style-image: none;
+	padding-left: 5px;	
+}
+
+#basis ul#tab-bar li {
+  display: inline;
+	position: relative;
+	top: 28px;
+	margin-right: 7px;
+}
+
+#basis ul#tab-bar li a 
+{
+	border-top: 3px solid #333;
+}
+
+#basis ul#tab-bar li a#active 
+{
+	border-top: 3px solid #666;	
+}
+
+/* Navigation bar */
+
+#pages-area ul#nav-bar {
+  list-style: none;
+  font-size: 12px;
+	font-weight: bold;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	/* text-transform: uppercase; */
+	background-color: #ffe;
+	border: 1px solid #000;
+	border-top-width: 0px;	
+	padding-top: 50px !important;
+	padding-top: 36px; /* IE adds 14px space between lines here, if there are line-breaks 
+	       after <li> items on the page, but my XHTML must to be clear for reading,
+				 so I've made all this mess here around... */
+	padding-bottom: 10px !important;
+	padding-bottom: 0px;		
+}
+
+#pages-area ul#nav-bar li {
+  display: block !important;
+	display: inline;
+	margin-left: 25px;
+  /* IE adds non-specified margins to items, when there are
+	   line breaks between them */
+}
+
+#pages-area ul#nav-bar li:first-child {
+  border-top: 1px solid #000;
+}
+
+#pages-area ul#nav-bar li a {
+  display: block;
+  text-decoration: none;
+	color: #666;
+	border: solid #000;
+	border-width: 0 0 1px 5px !important;
+	border-width: 1px 0 0 0;	
+	padding: 5px 10px;
+	background-color: #ffd;		
+}
+
+#pages-area ul#nav-bar li a:hover {
+  text-decoration: none;
+	/* background-color: #ffb; */
+	color: #000;
+}
+
+/* Sub-navigation */
+
+#page-sections-area ul#sub-nav-menu {
+	list-style: none;
+	padding-bottom: 10px;	
+}
+
+#page-sections-area ul#sub-nav-menu li {
+  display: block;
+  margin-right: 15px;
+	padding: 0;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: italic;
+	font-family: Arial, Helvetica, Tahoma, "Times New Roman", serif;
+	text-transform: capitalize;
+	border: dotted #ccc;
+	border-width: 0 1px 1px 0;
+	background-color: #ffe;
+}
+
+#page-sections-area ul#sub-nav-menu li a {
+  display: block;
+  text-decoration: none;
+	border: none;
+	padding: 4px 10px;	
+  color: #666;
+}
+
+#page-sections-area ul#sub-nav-menu li a:hover {
+  color: #fff;
+  /* text-decoration: overline; */
+	padding-right: 20px;
+}
+
+/* Adware zone */
+
+#page-sections-area #adware-zone {
+  font-size: 10px;
+	color: #fff;
+	padding-top: 15px;	
+}
+
+#page-sections-area #adware-zone img {
+  display: block;
+	padding: 5px 3px 5px 10px;	
+}
+
+/* Footer */
+
+#page #footer {
+  /* display: table !important; */
+	display: block; /* IE can't manage blocks as table parts */
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+	border: 1px solid #000;
+	overflow: hidden;
+	font-size: 10px;
+	/* text-align: center; */
+	vertical-align: top;
+	width: 100%;
+}
+
+#footer #logo-block {
+	border: 1px solid #ddd;
+	border-width: 0 1px 5px 1px;
+	background-color: #fff;	
+  float: left;
+}
+
+#footer #logo-block div  {
+  /* display: table-cell !important; */
+	display: block; /* IE can't manage blocks as table parts */
+	float: left;
+	padding-left: 5px; 
+	border-right: 1px dotted #ccc;
+}
+
+#footer #copyrights-logo a img {
+  display: inline;
+	float: left;
+  padding-top: 5px;
+  padding-left: 100px;	
+}
+
+#footer #main-copyright {
+  font-size: 11px;
+	float: right;
+	color: #666;
+	margin-top: 20px;
+	margin-right: 10px;
+	font-weight: bold;
+	line-height: 20px;
+  text-align: right;  
+}

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  /*
+    This XML Schema is written and constructed by shaman.sir (cc) and may be used anywhere for any good purpose 
+    (by saying "good" I mean "money-independent and people-safe only"), please just don't forget to write my
+    name somewhere around (let it be "shaman.sir", ok). If we will not steal, but we will give, the peace will
+    come in our land... may be
+    
+    shaman.sir@gmail.com
+  */
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:pages="http://www.shaman-sir.by.ru/XSD/Pages" 
+           xmlns:menus="http://www.shaman-sir.by.ru/XSD/Menus" 
+           xmlns:generic="http://www.shaman-sir.by.ru/XSD/Generic" 
+           xmlns:localization="http://www.shaman-sir.by.ru/XSD/Localization" 
+           targetNamespace="http://www.shaman-sir.by.ru/XSD/Pages" 
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:import namespace="http://www.shaman-sir.by.ru/XSD/Generic" schemaLocation="./generic.xsd" />
+  <xs:import namespace="http://www.shaman-sir.by.ru/XSD/Menus" schemaLocation="./nav-menu.xsd" />
+  <xs:import namespace="http://www.shaman-sir.by.ru/XSD/Menus" schemaLocation="./tab-menu.xsd" />
+  <xs:import namespace="http://www.shaman-sir.by.ru/XSD/Menus" schemaLocation="./position-list.xsd" />
+  <xs:import namespace="http://www.shaman-sir.by.ru/XSD/Localization" schemaLocation="./localization.xsd" />
+	<xs:complexType name="itemsType">
+		<xs:annotation>
+			<xs:documentation>items (texts, articles, files to download descriptions, other stuff) to appear on the page</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="articles" type="pages:articlesType"/>
+			<xs:element name="files" type="pages:fileType"/>
+			<xs:element name="news" type="pages:newsType"/>
+			<xs:element name="page-code" type="pages:pageCodeType"/>
+      <xs:element name="text-blocks" type="pages:textsType"/>      
+		</xs:choice>
+    <xs:attribute name="type" type="generic:singleItemType" use="required"/>    
+	</xs:complexType>
+	<xs:complexType name="articlesType">
+		<xs:annotation>
+			<xs:documentation>some articles</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="article" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="title" type="xs:string"/>
+						<xs:element name="author" type="generic:authorType"/>
+						<xs:element name="date" type="generic:simpleDateTimeFormat" minOccurs="0"/>
+						<xs:element name="content" type="generic:xhtmlText"/>
+					</xs:sequence>
+					<xs:attribute name="id" type="generic:IDType" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+  <xs:complexType name="fileType">
+    <xs:annotation>
+      <xs:documentation>some file descrition, screenshot and so on</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="file" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="href" type="xs:anyURI"/>
+            <xs:element name="fileURI" type="xs:anyURI"/>
+            <xs:element name="screenshotURI" type="xs:anyURI"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="description" type="generic:xhtmlText"/>
+          </xs:sequence>
+          <xs:attribute name="id" type="generic:IDType" use="optional"/>
+          <xs:attribute name="type" type="generic:singleFileType" use="optional"/>          
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newsType">
+    <xs:annotation>
+      <xs:documentation>news to appear on the page</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="entry" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="author" type="generic:authorType" minOccurs="0" />
+            <xs:element name="post-date" type="generic:simpleDateTimeFormat" />
+            <xs:element name="content" type="generic:xhtmlText"/>
+          </xs:sequence>
+          <xs:attribute name="id" type="generic:IDType" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>  
+  <xs:complexType name="pageCodeType">
+    <xs:annotation>
+      <xs:documentation>page code blocks</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code-block" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="title" type="xs:string" minOccurs="0"/>
+            <xs:element name="content"/>
+          </xs:sequence>
+          <xs:attribute name="id" type="generic:IDType" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>  
+	<xs:complexType name="textsType">
+		<xs:annotation>
+			<xs:documentation>some prose or poems</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="text-block" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="title" type="xs:string"/>
+            <xs:choice minOccurs="0">
+              <xs:element name="start-date" type="generic:simpleDateFormat" minOccurs="0"/>
+              <xs:element name="start-expanded-date" type="generic:expandedDate"/>
+            </xs:choice>            
+            <xs:choice minOccurs="0">
+              <xs:element name="finish-date" type="generic:simpleDateFormat"/>
+              <xs:element name="finish-expanded-date" type="generic:expandedDate"/>
+            </xs:choice>            
+						<xs:element name="author" type="generic:authorType" minOccurs="0"/>
+            <xs:element name="place" type="xs:string" minOccurs="0"/>
+						<xs:element name="content" type="generic:xhtmlText"/>
+					</xs:sequence>
+					<xs:attribute name="type" type="generic:textBlockType" use="optional" default="prose"/>
+					<xs:attribute name="id" type="generic:IDType" use="optional"/>    
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+    </xs:complexType>
+	<xs:element name="page">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+        <!-- <xs:element name="page-mode" minOccurs="0">
+          <xs:complexType>
+            <xs:attribute name="value" type="generic:pageModeType"/>
+          </xs:complexType>
+        </xs:element> -->
+				<xs:element name="title"/>
+				<xs:element name="sub-title"/>
+				<xs:element name="additional-data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="author" type="generic:authorType" minOccurs="0" maxOccurs="5"/>
+							<xs:element name="creation-date" type="generic:simpleDateTimeFormat" minOccurs="0"/>
+							<xs:element name="definition" minOccurs="0" type="generic:xhtmlText"/>
+							<xs:element name="description" minOccurs="0" type="generic:xhtmlText"/>
+              <xs:element name="keywords" minOccurs="0" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+        <xs:choice>
+          <xs:element ref="localization:localization-source"/>
+          <xs:element ref="localization:localization"/>
+          <xs:element ref="localization:localization-default"/>          
+        </xs:choice>
+        <xs:choice>
+          <xs:element ref="menus:nav-menu-source"/>
+				  <xs:element ref="menus:nav-menu"/>
+        </xs:choice>
+        <xs:choice minOccurs="0">
+          <xs:element ref="menus:tab-menu-source"/>
+          <xs:element ref="menus:tab-menu"/>
+        </xs:choice>        
+				<xs:element ref="menus:position-list" minOccurs="0"/>
+        <xs:element name="content">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="block" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="items" type="pages:itemsType" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                  <xs:attribute name="title" type="xs:string" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+			</xs:sequence>
+      <xs:attribute name="mode" type="generic:pageModeType" use="optional" default="xml-based"/>
+      <xs:attribute name="lang" type="generic:pageLanguageType" use="optional" default="en"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

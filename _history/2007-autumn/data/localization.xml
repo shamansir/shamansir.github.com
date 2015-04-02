@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<l:localization xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"        
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Localization ./xsd/localization.xsd">
+  <l:language id="en">
+    <l:string id="l:definition-label">Site definition, which is usually background image</l:string>
+    <l:string id="l:site-introduction">welcome to shaman.sir homesite :: please feel yourself safe</l:string>
+    <l:string id="l:skip-nav-caption">Skip navigation blocks and proceed to content</l:string>
+    <l:string id="l:skip-nav-link">Skip to content</l:string>
+    <l:string id="l:proceed-sub-nav-caption">Proceed to sub-navigation, if required</l:string>
+    <l:string id="l:proceed-sub-nav-link">Proceed to sub-navigation</l:string>
+    <l:string id="l:current-page-caption">Current page</l:string>
+    <l:string id="l:current-page-link-prefix">You are @</l:string>
+    <l:string id="l:proceed-to-top-caption">Proceed to the top</l:string>
+    <l:string id="l:proceed-to-top-link">Proceed to the top</l:string>
+  </l:language>
+  <l:language id="ru">
+    <l:string id="l:definition-label">Описание сайта, по умолчанию представляющее собой фоновое изображение</l:string>
+    <l:string id="l:site-introduction">добро пожаловать на домашнюю страницу shaman.sir :: пожалуйста чувствуйте себя комфортно</l:string>
+    <l:string id="l:skip-nav-caption">Пропустить навигацию и перейти к содержимому</l:string>
+    <l:string id="l:skip-nav-link">Перейти к содержимому</l:string>
+    <l:string id="l:proceed-sub-nav-caption">Если необходимо, перейти к навигации по разделам</l:string>
+    <l:string id="l:proceed-sub-nav-link">Перейти к навигации по разделам</l:string>
+    <l:string id="l:current-page-caption">Текущая страница</l:string>
+    <l:string id="l:current-page-link-prefix">Вы находитесь на странице</l:string>
+    <l:string id="l:proceed-to-top-caption">Перейти к началу</l:string>
+    <l:string id="l:proceed-to-top-link">Перейти к началу</l:string>
+  </l:language>  
+</l:localization>

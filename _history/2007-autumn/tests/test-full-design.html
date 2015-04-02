@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+			<title>Test Page</title>
+			
+			<meta content="text/html" http-equiv="Content-Type" charset="utf-8"/>
+			<!-- <link rel="stylesheet" type="text/css" href="main.css" /> -->
+    <style type="text/css">
+<!--
+
+/* Elements to show only in non-css browsers */
+.alternative, span#proceed-to-top, div#skip-nav-link {
+  display: none; 
+}
+
+/* POSITIONING */
+
+/* Body */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #003;
+}
+
+body #left-holder, body #right-holder {
+	width: 10%;
+	height: 100%;
+	float: left;
+}
+
+body #left-holder {
+  /* background: url(./images/page-left-border.png) top right repeat-y #003; */
+}
+
+body #right-holder {
+  /* background: url(./images/page-right-border.png) top left repeat-y #003; */
+}
+
+body .sheet {
+  float: left;
+	width: 80%;
+	background: url(./images/sheet-background-inset.png) bottom left repeat-y #ffffe5;
+}
+
+/* Page */
+
+.sheet #page {
+	background: url(./images/sub-menu-background-inset.png) bottom right repeat-y;
+}
+
+#page #page-header {
+	height: 75px;
+	background-color: #fff;	
+	border: 1px solid #000;
+}
+
+/* #page #page-control */
+
+#page #footer {
+  clear: both;
+	height: 50px;
+  background-color: #fff;
+	border: 1px solid #000;
+}
+
+/* Page control */
+
+#page-control #pages-area {
+  float: left;
+	width: 15%;
+}
+
+#pages-area ul#nav-bar {
+  margin: 0;
+	padding: 0;	
+	height: 250px;	
+	background-color: #fff;
+	border: 1px solid #000;
+	border-top-width: 0;
+}
+
+#pages-area #page-info {
+
+}
+
+/* Basis */
+
+#page-control #basis {
+  float: left;
+	width: 70%;
+	background-color: #000;
+}
+
+#basis ul#tab-bar {
+  margin: 0;
+	padding: 0;	
+	height: 50px;
+	background-color: #eee;
+	border: solid #000;
+	border-width: 1px 0;
+}
+
+/* content */
+
+#basis #content {
+	background-color: #ffffe5;
+	margin: 0 -1px;
+	border-color: #333 #000;
+	border-style: dotted solid;
+	border-width: 0 1px 1px 1px;
+}
+
+/* Sections */
+
+#page-control #page-sections-area {
+  float: left;
+	width: 14%; /* a little space at right and, we will not break IE inner box */
+	background-color: #000;
+
+}
+
+#page-sections-area #sub-nav-holder {
+  background: url(./images/sub-menu-holder-inset.png) bottom right repeat-y #000;
+	height: 50px;
+}
+
+#page-sections-area ul#sub-nav-menu {
+  margin: 0;
+	padding: 0;
+	height: 250px;
+	background-color: #ffffd5;
+	border: 1px solid #000;	
+}
+
+#page-sections-area #adware-zone {
+  background-color: #c03;
+	color: #fff;
+	border: 1px solid #000;
+	border-top-width: 0;
+}
+
+/* Elements */
+
+#page-info a#page-tab {
+	float: left;
+	width: 24px;
+	height: 200px;
+	background-color: #ccc;	
+	border: 1px solid #000;
+	border-top-width: 0;	
+}
+
+#page-info #description-block {
+  display: block;
+  position: relative !important;
+	position: absolute; /* IE needs absolute to place it correctly */
+	border: solid #000;
+	border-width: 0px 1px 3px 0px;
+	background: #ffffd5;
+	overflow: hidden;	
+}
+
+/* STYLING */
+
+-->
+    </style>			
+</head>
+
+<body>
+
+			<div id="left-holder">&nbsp;</div>
+			
+			<div class="sheet">
+			
+			<div id="page">
+			
+			<!-- Head of the page -->
+			<div id="page-header">
+						<img class="alternative" src="" alt="Alternative banner of the site" />
+							
+						<p class="alternative"><dfn title="Site definition, which is usually background image">
+								 Site definition
+						</dfn></p>	
+							
+						<h1>Here is page title</h1>
+						
+					 <select id="font-size-selector" tabindex="4">
+					 				 <option label="Blah">small font</option>
+					 				 <option label="Blah">medium font</option>
+									 <option label="Blah">large font</option>									 
+					 </select>						
+			</div> <!-- #page-header -->	
+			
+			<div id="page-control">
+			
+			<div id="pages-area">
+			
+			<!-- Link to allow users of non-css and text browsers (and may be later in graphic also) to skip navigation -->
+			<div id="skip-nav-link">
+					 <span class="link-with-key">
+					 		<a href="#content" title="Skip navigation blocks and proceed to content" accesskey="1" tabindex="1">
+					 		Skip to content</a> [1]
+					 </span>
+			</div>
+			
+			<!-- Main navigation bar -->
+ 		  <ul id="nav-bar"> <!-- menu tag is not recommneded by W3C -->
+					 <li><a href="#">main menu item one</a></li>
+					 <li><a href="#">main menu item two</a></li>
+					 <li><a href="#">main menu item three</a></li>
+					 <li><a href="#">main menu item four</a></li>
+					 <li><a href="#">main menu item five</a></li>
+			 		 <li><a href="#">main menu item six</a></li>							 							 							 							 
+			 </ul> <!-- #nav-bar -->	
+			
+			<!-- Link to allow users of non-css and text browsers to proceed to sub-navigation -->			
+		 <span class="alternative">
+					<a href="#sub-nav-menu" title="Proceed to sub-navigation, if required" accesskey="2" tabindex="2">
+		 			Proceed to sub-navigation</a> [2]
+		 </span>
+		 
+		 <div id="page-info">
+			
+			<!-- The image of the current page tab -->			
+			<!-- (A little trick from Todd Farner to hide an image from non-css browsers) -->
+			<a href="#" id="page-tab" alt="Current page" accesskey="3"/><span class="alternative">(You are @ Home)</span></a>
+
+			<!-- Page description block -->			
+			<div id="description-block">
+					 <dl>										
+					   <dt>This page</dt>
+						 <dd>Here is this page description. It is expanded, so it's, for real, will be a block of text. I think I'll take
+						 the text from previous version and then I'll insert it here. Let's add some more sentences, but not so much,
+						 because the width of the block will be a small number of pixels.</dd>
+					 </dl>
+			</div> <!-- #description-block -->
+			
+			</div> <!-- #page-info -->	
+			
+			</div> <!-- #pages-area -->
+			
+			<div id="basis">
+			
+			<!-- Block with tabs for navigating between different sections -->
+		  <ul id="tab-bar"> <!-- menu tag is not recommneded by W3C -->
+			 		 <li><a href="#">tab one</a></li>
+			 		 <li><a href="#">tab two</a></li>
+			 		 <li><a href="#">tab three</a></li>
+			 		 <li><a href="#">tab four</a></li>
+			 		 <li><a href="#">tab five</a></li>
+			 		 <li><a href="#">tab six</a></li>							 							 							 							 
+			</ul>	<!-- #tab-bar -->					 
+			
+			<!-- The main content of the page -->
+			<div id="content">
+					 <h2>SubTitle of the page</h2>
+					 
+					 <dfn>Some description of the page</dfn>
+					 
+					 <hr />					 
+					 
+					 <h3>First block</h3>					 
+			
+					 <h4>First text block title</h4>
+					 <p>Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+					 all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+					 I haven't found Lorem Ipsum generator in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+					 test how the paragraphs will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+					 I like the stuff like this, and I'm also aiming in development applications like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+					 amount of text will be enough, so let's finish at this point...</p>
+					 <p>Also, paragraph with some small amount of text here.</p>
+					 <p>And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+					 in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+					 don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...</p>
+					 
+					 <hr />
+					 
+					 <h3>Blocks, other than the first</h3>
+					 
+					 <blockquote cite="Someone's URL">
+					 						 <p>Some blocked quote of someone</p>
+					 						 <cite>Someone's name</cite>
+					 </blockquote>
+					 
+					 <h4>Second text block title</h4>
+					 <p>Also, paragraph with some small amount of text here.</p>
+					 <p>Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+					 all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+					 I haven't found Lorem Ipsum generator in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+					 test how the paragraphs will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+					 I like the stuff like this, and I'm also aiming in development applications like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+					 amount of text will be enough, so let's finish at this point...</p>
+					 <p>And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+					 in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+					 don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...</p>
+					 
+					 <h4>Third text block title</h4>
+					 <p>Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+					 all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+					 I haven't found Lorem Ipsum generator in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+					 test how the paragraphs will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+					 I like the stuff like this, and I'm also aiming in development applications like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+					 amount of text will be enough, so let's finish at this point...</p>
+					 <p>Also, paragraph with some small amount of text here.</p>					 
+					 
+					 <h4>Fourth text block title</h4>
+					 <p>Also, paragraph with some small amount of text here.</p>
+					 <h5>Some sub-heading</h5>
+					 <p>And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+					 in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+					 don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...</p>					 					 					 
+			</div>
+			
+			<!-- Link to allow users of non-css and text browsers (and may be later in graphic also) to proceed to the top -->
+		  <span class="link-with-key" id="proceed-to-top">
+			 		<a href="#content" title="Proceed to the top" accesskey="4" tabindex="3">
+					 		Proceed to the top</a> [4]
+ 	    </span>
+			
+			</div> <!-- #basis -->
+			
+			<div id="page-sections-area">
+			
+			<div id="sub-nav-holder"><!-- Holder --></div>			
+			
+			<!-- Sub navigation - navigation by sub-sections -->
+ 		  <ul id="sub-nav-menu"> <!-- menu tag is not recommneded by W3C -->
+					 <li><a href="#">sub menu item one</a></li>
+			 		 <li><a href="#">sub menu item two</a></li>
+			 		 <li><a href="#">sub menu item three</a></li>
+			 		 <li><a href="#">sub menu item four</a></li>
+			 		 <li><a href="#">sub menu item five</a></li>
+			 		 <li><a href="#">sub menu item six</a></li>							 							 							 							 
+ 		  </ul>
+			
+			<!-- Advertisment zone, to place banners here -->
+			<div id="adware-zone">
+					 <img src="" alt="Some banner" />
+					 <img src="" alt="Some banner" />
+					 <img src="" alt="Some banner" />
+					 <img src="" alt="RSS" />
+					 <img src="" alt="CSS validated" />
+					 <img src="" alt="XHML validated" />					 		
+			</div> <!-- #adware-zone -->
+			
+			</div> <!-- #page-sections-area -->
+			
+			</div> <!-- #page-control -->
+			
+			<!-- And, the footer at last -->
+			<div id="footer">
+					 <div id="supported-browsers">
+					 			<img src="" alt="Firefox" />
+					 			<img src="" alt="Opera" />
+					 			<img src="" alt="IE" />			 					 
+					 </div> <!-- #supported-browsers -->
+					 
+					 <div id="webstandards">
+					 			<img src="" alt="WebStandards" />
+					 </div>					 
+					 
+					 <div id="made-with">
+					 			<img src="" alt="HTML-Kit image" />
+					 			<img src="" alt="Web developer FireFox plugin" />
+					 			<img src="" alt="Adobe Photoshop" />								
+					 </div> <!-- #made-with -->			
+					 					 
+					 <div id="copyrights-logo">
+					 			<img src="" alt="Creative commons" />
+			 					<dfn>
+										 Explanation of copyrights
+								</dfn> 
+					 </div>	<!-- #copyrights-logo -->				 
+					
+					 <span id="main-copyright">
+					 			&copy; Blah blah blah
+					 </span>
+			</div> <!-- #footer -->
+			
+			</div> <!-- #page -->
+			
+			</div> <!-- .sheet -->
+			
+			<div id="right-holder">&nbsp;</div>			
+			
+</body>
+</html>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  /*
+    This XML Schema is written and constructed by shaman.sir (cc) and may be used anywhere for any good purpose 
+    (by saying "good" I mean "money-independent and people-safe only"), please just don't forget to write my
+    name somewhere around (let it be "shaman.sir", ok). If we will not steal, but we will give, the peace will
+    come in our land... may be
+    
+    shaman.sir@gmail.com
+  */
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:generic="http://www.shaman-sir.by.ru/XSD/Generic" 
+           targetNamespace="http://www.shaman-sir.by.ru/XSD/Generic" 
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <!-- simpleDateFormat -->
+	<xs:simpleType name="simpleDateFormat">
+		<xs:annotation>
+			<xs:documentation>simple date in format ([mm/[dd/]]yyyy|mm/dd[/yyyy])</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="4" />
+			<xs:maxLength value="10" />
+			<xs:pattern value="((((((0\d)|1(1|2))|\?{2})/)?((([0-2]\d)|(3(0|1)))|\?{2})/)?((\d{4})|\?{4}))|((((0\d)|1(1|2))|\?{2})/((([0-2]\d)|(3(0|1)))|\?{2})(/((\d{4})|\?{4}))?)" />
+		</xs:restriction>
+	</xs:simpleType>
+  <!-- simpleDateTimeFormat -->	
+	<xs:simpleType name="simpleDateTimeFormat">
+		<xs:annotation>
+			<xs:documentation>simple date-time in format mm/dd[/yyyy] hh:mm[.ss]</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="11" />
+			<xs:maxLength value="19" />
+			<xs:pattern value="((0\d)|1(1|2))/(([0-2]\d)|(3(0|1)))(/\d{4})?\s(((0|1)\d)|(2[0-4])):[0-5]\d(\.[0-5]\d)?" />
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- IDType -->
+	<xs:simpleType name="IDType">
+		<xs:annotation>
+			<xs:documentation>any xhtml id</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="[A-Za-z][\w-]*"/>
+		</xs:restriction>
+	</xs:simpleType>	
+  <!-- URIAnchorType -->
+	<xs:simpleType name="URIAnchorType">
+		<xs:annotation>
+			<xs:documentation>an anchor to some id - in format "#&lt;valid-name&gt;"</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:anyURI">
+			<xs:minLength value="1"/>
+			<xs:whiteSpace value="collapse"/>
+			<xs:pattern value="#[A-Za-z][\w-]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+  <!-- xhtmlText -->
+	<xs:complexType name="xhtmlText" mixed="true">
+		<xs:sequence>
+    		<xs:any namespace="http://www.w3.org/1999/xhtml" 
+		  		    processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+	  	</xs:sequence>
+	</xs:complexType>
+  <!-- pageModeType -->	
+	<xs:simpleType name="pageModeType">
+		<xs:annotation>
+			<xs:documentation>type of the item on the page</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="xml-based"/>
+			<xs:enumeration value="no-css"/>
+			<xs:enumeration value="for-ppc"/>
+			<xs:enumeration value="printable"/>
+			<xs:enumeration value="big-fonts"/>
+			<xs:enumeration value="no-xml"/>
+      <xs:enumeration value="opera-version"/>
+		</xs:restriction>
+	</xs:simpleType>		
+  <!-- singleItemType -->
+	<xs:simpleType name="singleItemType">
+		<xs:annotation>
+			<xs:documentation>type of the item on the page</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="article"/>
+      <xs:enumeration value="file"/>
+      <xs:enumeration value="news-entry"/>
+      <xs:enumeration value="page-code"/>
+      <xs:enumeration value="text-block"/>      
+		</xs:restriction>
+	</xs:simpleType>
+  <!-- singleFileType -->	
+	<xs:simpleType name="singleFileType">
+		<xs:annotation>
+			<xs:documentation>type of the file</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="application"/>
+			<xs:enumeration value="image"/>
+		</xs:restriction>
+	</xs:simpleType>
+  <!-- textBlockType -->
+	<xs:simpleType name="textBlockType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="prose"/>
+			<xs:enumeration value="poetry"/>
+		</xs:restriction>
+	</xs:simpleType>
+  <!-- authorType -->	
+	<xs:complexType name="authorType">
+		<xs:annotation>
+			<xs:documentation>author information</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="preserve"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="last-name" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:whiteSpace value="preserve"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nickname">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+  <!-- locationType -->
+	<xs:complexType name="locationType">
+		<xs:annotation>
+			<xs:documentation>the location</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="href" type="xs:anyURI"/>
+		</xs:sequence>
+    <xs:attribute name="active" type="xs:boolean" default="false" use="optional"/>
+    <xs:attribute name="location-id" type="xs:string" use="optional"/>
+	</xs:complexType>
+  <!-- pageLanguageType -->
+  <xs:simpleType name="pageLanguageType">
+    <xs:annotation>
+      <xs:documentation>language of the item on the page</xs:documentation>
+      <xs:appinfo>supported page languages</xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:language">
+      <xs:enumeration value="en"/>
+      <xs:enumeration value="ru"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- expandedDateType -->
+  <xs:complexType name="expandedDate">
+    <xs:annotation>
+      <xs:documentation>text-specified date</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:sequence>
+        <xs:element name="day-of-month">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+              <xs:maxInclusive value="31"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="day-of-week" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Sun"/>
+              <xs:enumeration value="Mon"/>
+              <xs:enumeration value="Tue"/>
+              <xs:enumeration value="Wed"/>
+              <xs:enumeration value="Thu"/>
+              <xs:enumeration value="Fri"/>
+              <xs:enumeration value="Sat"/>
+              <xs:enumeration value="Sunday"/>
+              <xs:enumeration value="Monday"/>
+              <xs:enumeration value="Tuesday"/>
+              <xs:enumeration value="Wednesday"/>
+              <xs:enumeration value="Thurdsay"/>
+              <xs:enumeration value="Friday"/>
+              <xs:enumeration value="Saturday"/>
+              <xs:enumeration value="Пн"/>
+              <xs:enumeration value="Вт"/>
+              <xs:enumeration value="Ср"/>
+              <xs:enumeration value="Чт"/>
+              <xs:enumeration value="Пт"/>
+              <xs:enumeration value="Сб"/>
+              <xs:enumeration value="Вс"/>
+              <xs:enumeration value="Понедельник"/>
+              <xs:enumeration value="Вторник"/>
+              <xs:enumeration value="Среда"/>
+              <xs:enumeration value="Четверг"/>
+              <xs:enumeration value="Пятница"/>
+              <xs:enumeration value="Суббота"/>
+              <xs:enumeration value="Воскресенье"/>              
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:choice>
+          <xs:element name="month-name">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Jan"/>
+                <xs:enumeration value="Feb"/>
+                <xs:enumeration value="Mar"/>
+                <xs:enumeration value="Apr"/>
+                <xs:enumeration value="May"/>
+                <xs:enumeration value="Jun"/>
+                <xs:enumeration value="Jul"/>
+                <xs:enumeration value="Aug"/>
+                <xs:enumeration value="Sep"/>
+                <xs:enumeration value="Oct"/>
+                <xs:enumeration value="Nov"/>
+                <xs:enumeration value="Dec"/>
+                <xs:enumeration value="January"/>
+                <xs:enumeration value="February"/>
+                <xs:enumeration value="March"/>
+                <xs:enumeration value="April"/>
+                <xs:enumeration value="June"/>
+                <xs:enumeration value="July"/>
+                <xs:enumeration value="August"/>
+                <xs:enumeration value="Septempber"/>
+                <xs:enumeration value="October"/>
+                <xs:enumeration value="November"/>
+                <xs:enumeration value="December"/>
+                <xs:enumeration value="unidentified"/>
+                <xs:enumeration value="Янв"/>
+                <xs:enumeration value="Фев"/>
+                <xs:enumeration value="Мар"/>
+                <xs:enumeration value="Апр"/>
+                <xs:enumeration value="Май"/>
+                <xs:enumeration value="Июн"/>
+                <xs:enumeration value="Июл"/>
+                <xs:enumeration value="Авг"/>
+                <xs:enumeration value="Сен"/>
+                <xs:enumeration value="Окт"/>
+                <xs:enumeration value="Ноя"/>
+                <xs:enumeration value="Дек"/>
+                <xs:enumeration value="Январь"/>
+                <xs:enumeration value="Февраль"/>
+                <xs:enumeration value="Март"/>
+                <xs:enumeration value="Апрель"/>
+                <xs:enumeration value="Июнь"/>
+                <xs:enumeration value="Июль"/>
+                <xs:enumeration value="Август"/>
+                <xs:enumeration value="Сентябрь"/>
+                <xs:enumeration value="Октябрь"/>
+                <xs:enumeration value="Ноябрь"/>
+                <xs:enumeration value="Декабрь"/>
+                <xs:enumeration value="неизвестен"/>                
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="month">
+            <xs:simpleType>
+              <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="12"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:choice>
+        </xs:sequence>
+        <xs:element name="season">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Winter"/>
+              <xs:enumeration value="Spring"/>
+              <xs:enumeration value="Summer"/>
+              <xs:enumeration value="Autumn"/>
+              <xs:enumeration value="unidentified"/>              
+            </xs:restriction>
+          </xs:simpleType>          
+        </xs:element>
+      </xs:choice>
+      <xs:element name="year">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:totalDigits value="4"/>
+          </xs:restriction>
+        </xs:simpleType>        
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

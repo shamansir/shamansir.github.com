@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+    <head>
+        
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+        <meta name="copyright" content="Creative Commons (cc) shaman.sir, 2009"/>
+        <meta name="description" content="Calculate your true music compatibility with friends"/>
+        <meta name="keywords" content="music last.fm compatibility"/>
+        
+        <script type="text/javascript" src="./lastfm_call.js"> </script>
+        <script type="text/javascript" src="./calculation.js"> </script>
+
+        <link rel="shortcut icon" href="./favicon.png" type="image/png" />        
+        <link rel="stylesheet" href="./style.css" type="text/css" />
+                
+        <title>True Last.FM Compatibility Calculator</title>
+        
+    </head>
+    <body>
+        <h1><a href="#">True Last.FM Compatibility Calculator</a></h1>
+        <noscript>
+            <p>This site requires JavaScript to be turned on. If JavaScript
+            is turned off, this site will not function properly.</p> 
+        </noscript>
+        <form id="calculation-options">
+            <ol id="steps-to-perform">
+                <li>
+                    <label for="first-username">Enter your last.fm username:</label>
+                    <input type="text" id="first-username" title="Your username" value="%username%" />            
+                    <!-- <input type="button" id="username-entered" title="Done" value="&rarr;" disabled="disabled" /> -->
+                </li>
+                <li id="friends-selection">
+		            <label for="friends-list">Select your friend(s):</label>
+		            <select id="friends-list" multiple="multiple" title="Friends list" disabled="disabled" size="10">
+		                <option id="all-friends" value="all">Compare with all friends</option>
+		                <option id="friends-status">[enter username]</option>
+		            </select>
+		            <label for="second-username">or enter another username manually:</label>            
+		            <input type="text" id="second-username" title="Someone's username" value="%s-username%" disabled="disabled" />
+		        </li>
+		        <li>
+                    <input type="checkbox" id="take-mismatches">Take mismatches in consideration</input>
+                </li>
+                <li>
+                    <input type="button" id="calculate" title="Calculate" value="Calculate!" onclick="" disabled="disabled" />
+                </li>
+            </ol>
+            <div id="instructions">
+                <blockquote><p>Calculates the last.fm users compatibility using not just the matched artists, but the number of songs they've listened.</p></blockquote>            
+                <h3>Instructions</h3>
+	            <ol>
+	                <li>Enter the <em>first user name</em> in the first field. That will be the
+	                   user “at the left hand” in the comparison.</li>
+	                <li>Select “Compare with all friends” to make all your (or any user, entered in the first field) friends to be “at the right hand” in the comparison, one by one 
+	                (this process may take a really long time). Or just click the “get friends list” line to load friends list and then <em>select concrete friends</em> to compare with.
+	                If you want to compare with someone that is not in this friends list, just enter <em>the second user name</em> instead.</li>
+	                <li>If <em>this checkbox</em> is checked, it means that all of the mismatched artists between two users will be added to (subtracted from, to be truth) the final compatibility value and, may be, this will be the “more true” compatibility value.</li>
+	                <li><em>Press this button</em> when you have entered both usernames or single username and some friends selected. The calculation process will be shown below. If you've selected
+	                more than 4 friends or even all friends, please be ready to wait and to receive an evil e-mail from last.fm administrators. You may cancel the calculation process at any time
+	                by clicking “Cancel calculation” — it will finish all of the already started micro-transactions and then stop. Also, this button is useful when the repeated errors
+	                are received from the last.fm server.</li>
+	            </ol>
+            </div>
+        </form>
+        <div id="user-progress">
+            <h3>Loading progress</h3>
+            <form>
+                <ul id="loading-progress">
+			        <li><label for="friends-load-progress">Friends loading progress:</label><span id="friends-load-progress">&hellip;</span></li>
+			        <li><label for="user-page-progress">Artists loading progress:</label><span id="user-page-progress">&hellip;</span></li>
+		        </ul>
+		        <p>
+		           <input type="button" id="cancel-calculation" title="Cancel calculation" value="Cancel calculation"  onclick="" disabled="disabled" />
+		        </p>
+            </form>
+        </div>
+        <div id="comparison-results"></div>
+        <!-- 
+        <div class="friend-comparison" id="shamansir-bouclee-cmp">
+            <h2><span class="first-username">shamansir</span> &mdash; <span class="second-username">bouclee</span>:&nbsp;<span class="sum-percentage-incomplete">25%<span class="sum-percentage-by-songs">(<span class="songs-matched-sum">250</span>/<span class="songs-overall-sum">1024</span>)</span></span></h2>
+            <dl class="artists-list expanded">
+                <dt>Bjork:</dt>
+                <dd>
+                    <ul class="matched-artist">
+                        <li class="left-percentage"><span class="percentage">10% (124)</span></li>
+                        <li class="right-percentage"><span class="percentage">15% (360)</span></li>
+                    </ul>
+                </dd>
+                <dt>Depeche Mode:</dt>
+                <dd>
+                    <ul class="unmatched-artist">
+                        <li class="right-percentage"><span class="percentage">25% (360)</span></li>
+                    </ul>
+                </dd>                                
+            </dl>
+        </div>
+         --> 
+        <script type="text/javascript">
+            cc.initView();
+        </script>
+        <div id="copyright">developed by <a href="shamansir.madfire.net">shaman.sir</a>, &copy; 2009</div>
+    </body>
+</html>    

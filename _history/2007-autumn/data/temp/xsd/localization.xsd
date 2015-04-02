@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 rel. 3 sp2 (http://www.altova.com) by Anthony Kotenko (EmDev LLC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+           targetNamespace="http://www.shaman-sir.by.ru/XSD/Localization"
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:import namespace="http://www.shaman-sir.by.ru/XSD/Generic" schemaLocation="./generic.xsd"/>
+	<xs:element name="localization">
+		<xs:annotation>
+			<xs:documentation>localization languages</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="language" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+              <xs:element name="string" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="g:pageLanguageType" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+      <xs:attribute name="select" type="g:pageLanguageType" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="localization-source">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies localization source, which must consist of localization element
+        and also to be conformant with the Localization scheme
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="src" type="xs:anyURI" use="required"/>
+      <xs:attribute name="select" type="g:pageLanguageType" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,175 @@
+/* Basic backgrounds */
+
+body .sheet {
+	background: url(../images/sheet-background-inset.png) bottom left repeat-y #e5e5e5;
+}
+
+.sheet #page {
+	background: url(../images/sub-menu-background-inset.png) bottom right repeat-y;
+}
+
+#page #page-header {
+	background: url(../images/banner.png) top right no-repeat #fff;
+}
+
+#page #page-header h1 {
+  background: url(../images/banner-bg-left.png) top left no-repeat;
+}
+
+body #left-holder {
+  /* background: url(../images/page-left-border.png) top right repeat-y #003; */
+  background-color: #003;
+}
+
+body #right-holder {
+  /* background: url(../images/page-right-border.png) top left repeat-y #003; */
+  background-color: #003;
+}
+
+#basis #content {
+  background: url(../images/content-bg.png) top right no-repeat #ffffe5;
+}
+
+#page-sections-area #sub-nav-holder {
+  /* background: url(../images/sub-menu-holder-inset.png) bottom right repeat-y #000; */
+  background: url(../images/sub-menu-holder.png) bottom left no-repeat #003;	
+}
+
+#page-info a#page-tab {
+	background: url(../images/page-tab.png) bottom left no-repeat #ccc;
+}
+
+#basis ul#tab-bar {
+  background: url(../images/tab-bar-bg.png) bottom right no-repeat #eee;
+}
+
+#pages-area ul#nav-bar {
+  background: url(../images/nav-bar-bg.png) top left no-repeat #ffe;
+}
+
+#basis ul#tab-bar li a {
+  background: url(../images/tab-bg.png) top left no-repeat #ffb;
+} 
+
+#basis ul#tab-bar li a:hover {
+  background: url(../images/tab-bg-hover.png) top left no-repeat #ffb;
+}
+
+#page-sections-area ul#sub-nav-menu {
+  background: url(../images/sub-nav-bg.png) bottom right no-repeat #ffd;
+}
+
+#pages-area ul#nav-bar li a:hover {
+	background: url(../images/main-nav-item-hover.png) center right no-repeat #ffb;
+}
+
+#page-sections-area ul#sub-nav-menu li a:hover {
+	background: url(../images/collapsed-right.gif) center right no-repeat #000;
+}
+
+#page #footer {
+  background: url(../images/footer.png) bottom right no-repeat #ffc;
+}
+
+span.cc {
+  background: url(../images/cc.gif) left center no-repeat;
+}
+
+#page-sections-area #adware-zone {
+  background: url(../images/adware-bg.png) right top no-repeat #c03;
+}
+
+/* Logo-links */
+
+a#firefox-logo, a#opera-logo, a#ie-logo, a#ws-logo, a#html-kit-logo,
+a#ff-web-dev-logo, a#photoshop-logo, a#xml-spy-logo, a#xchng-xml-logo {
+  cursor: pointer;
+  display: block;
+	float: left;
+	padding: 2px;
+  height: 32px;
+	width: 32px;
+}
+
+a#firefox-logo {
+  background: url(../images/logos/ff-bw-logo.png) left center no-repeat;
+}
+
+a:hover#firefox-logo {
+  background: url(../images/logos/ff-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#opera-logo {
+	margin-top: 1px;
+  background: url(../images/logos/opera-bw-logo.png) left center no-repeat;
+}
+
+a:hover#opera-logo {
+  background: url(../images/logos/opera-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#ie-logo {
+	margin-top: -1px;	
+  background: url(../images/logos/ie-bw-logo.png) left center no-repeat;
+}
+
+a:hover#ie-logo {
+  background: url(../images/logos/ie-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#ws-logo {
+  background: url(../images/logos/ws-bw-logo.png) left center no-repeat;
+}
+
+a:hover#ws-logo {
+  background: url(../images/logos/ws-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#html-kit-logo {
+  background: url(../images/logos/html-kit-bw-logo.png) left center no-repeat;
+}
+
+a:hover#html-kit-logo {
+  background: url(../images/logos/html-kit-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#ff-web-dev-logo {
+  background: url(../images/logos/ff-web-dev-bw-logo.png) left center no-repeat;
+}
+
+a:hover#ff-web-dev-logo {
+  background: url(../images/logos/ff-web-dev-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#photoshop-logo {
+  background: url(../images/logos/photoshop-bw-logo.png) left center no-repeat;
+}
+
+a:hover#photoshop-logo {
+  background: url(../images/logos/photoshop-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#xml-spy-logo {
+  background: url(../images/logos/xml-spy-bw-logo.png) left center no-repeat;
+}
+
+a:hover#xml-spy-logo {
+  background: url(../images/logos/xml-spy-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#xchng-xml-logo {
+	background: url(../images/logos/xchng-xml-bw-logo.png) left center no-repeat;
+}
+
+a:hover#xchng-xml-logo {
+  background: url(../images/logos/xchng-xml-logo.png) left center no-repeat;
+	border: none;
+}

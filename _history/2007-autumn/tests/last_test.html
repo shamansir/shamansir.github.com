@@ -1,0 +1,1098 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+
+<head>
+			<title>Test Page</title>
+			
+			<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+			<!-- <link rel="stylesheet" type="text/css" href="main.css" /> -->
+    <style type="text/css">
+<!--
+
+/* STRUCTURE POSITIONING */
+
+/* Body */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body #left-holder, body #right-holder {
+	width: 10%;
+	height: 100%;
+	float: left;
+}
+
+body .sheet {
+  float: left;
+	width: 80%;
+}
+
+/* Page */
+
+#page #page-header {
+	height: 75px;
+}
+
+/* #page #page-control */
+
+#page #footer {
+  clear: both;
+	height: 50px;
+}
+
+/* Page control */
+
+#page-control #pages-area {
+  float: left;
+	width: 15%;
+}
+
+#pages-area ul#nav-bar {
+  margin: 0;
+	padding: 0;	
+}
+
+/* #pages-area #page-info */
+
+/* Basis */
+
+#page-control #basis {
+  float: left;
+	width: 70%;
+}
+
+#basis ul#tab-bar {
+  margin: 0;
+	padding: 0;	
+	height: 47px;
+}
+
+/* content */
+
+#basis #content {
+	margin: 0 -1px !important;
+	margin: 0;
+}
+
+/* Sections */
+
+#page-control #page-sections-area {
+  float: left;
+	width: 14%; /* a little space at right and, we will not break IE inner box */
+}
+
+#page-sections-area #sub-nav-holder {
+	height: 50px;
+}
+
+#page-sections-area ul#sub-nav-menu {
+  margin: 0;
+	padding: 0;
+}
+
+/* Elements */
+
+#page-info a#page-tab {
+	float: left;
+	width: 25px !important;
+	width: 20%;
+	height: 200px;
+}
+
+#page-info #description-block {
+  display: block;
+  position: relative !important;
+	position: absolute; /* IE needs absolute to place it correctly */
+  width: auto !important;
+  width: 78%;	/* ..and percentable width setting (to make the page-info block to wrap just page-tab) */
+	margin-left: 0 !important;
+	margin-left: -3px;
+	margin-right: 0 !important;
+	margin-right: -3px;	
+	padding-right: 4px;
+	max-height: 250px;
+	overflow: hidden;	
+}
+
+/* BASIC STUFF STYLING */
+
+/* Elements to show only in non-css browsers */
+.alternative, span#proceed-to-top, div#skip-nav-link {
+  display: none; 
+}
+
+/* Tags */
+
+body {
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 24px;
+	letter-spacing: 0.1em;
+}
+
+h2 {
+  font-size: 20px;
+	letter-spacing: 0.02em;
+	word-spacing: 0.2em;
+	padding-bottom: 5px;
+	text-decoration: underline;
+	background: url(./images/sun.gif) center left no-repeat;
+	margin-left: -5px;
+	padding-left: 20px;
+	color: #666;		
+}
+
+h3 {
+  font-family: "Times New Roman", Garamond, Georgia, Verdana, serif;
+  font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	margin-left: -5px;
+	padding-left: 20px;
+	/* border-right: 5px solid #000; */
+	background: url(./images/expanded.gif) center left no-repeat;
+	border-top: 1px solid #000;
+	/* text-decoration: overline; */
+	color: #666;	
+}
+
+p + h3 {
+	margin-top: 30px;
+}
+
+h4 {
+  font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.03em;
+	margin-bottom: 15px;		
+}
+
+p + h4 {
+	margin-top: 40px;
+}
+	
+h5 {
+  font-size: 11px;
+	font-weight: bold;
+	font-style: normal;
+	letter-spacing: 0.03em;
+	word-spacing: 0.2em;	
+}
+
+h6 {
+  font-size: 11px;
+	font-weight: normal;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	word-spacing: 0.2em;
+	padding: 0;
+	margin-bottom: 5px;
+}
+
+p + h6 {
+  margin-top: 20px;
+}
+
+p, blockquote cite, dfn {
+  font-size: 11px;
+	text-align: justify;
+}
+
+dfn {
+  font-style: italic;
+}
+
+blockquote {
+  display: block;
+	margin: 0 15px 30px 15px;
+	padding: 0 5px;
+	width: 240px;
+	/* text-align: right; */
+	border: 1px dashed #aaa;
+  letter-spacing: 0.02em;
+	color: #666;
+	background-color: #ffd;
+	overflow: hidden;
+}
+
+blockquote .cite {
+  font-size: 10px;
+  font-style: italic;
+  text-align: right;
+}
+
+hr {
+	height: 0;
+  border-top: 1px dotted #000;
+}
+
+a {
+  color: #999;
+	text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+  border-bottom: 1px dotted #666;
+}
+
+a:visited {
+	text-decoration: underline;
+}
+
+a:active {
+  color: #000;
+}
+
+a img {
+  border: none;
+	text-decoration: none;
+}
+
+body {
+	background-color: #003;
+}
+
+pre, code {
+  font-family: "Courier New", monospace;
+	font-size: 12px;
+	background-color: #f5f5f5;	  
+}
+
+pre {
+  color: #333;
+	padding: 5px;
+	border: 2px dashed #999; 
+}
+
+code {
+  color: #333;
+	border: 1px #000;
+	border-style: dotted none;
+}
+
+span.cc {
+  padding-left: 18px;
+	padding-bottom: 1px;
+	font-size: 12px;
+}
+
+/* Blocks */
+
+#page #page-header {
+	border: 1px solid #000;
+} 
+
+#page #footer {
+	border: 1px solid #000;	
+}
+
+#page #page-header h1 {
+  font-size: 24px;
+  color: #666;
+	letter-spacing: 0.25em;
+	text-transform: none;	
+}
+
+#page #page-header h1:before {
+  content: "/ ";
+}
+
+#basis #content {
+  font-family: Georgia, Garamond, "Times New Roman", serif;
+	padding: 20px;
+	border-color: #333 #000;
+	border-style: solid dotted;
+	border-width: 0 1px 1px 1px;	
+}
+
+#basis #content a:visited {
+  /* color: #ccc; */
+	background-color: #ffd;
+}
+
+#page-control #basis {
+	background-color: #000;
+}
+
+#basis ul#tab-bar {
+	border: 0;
+}
+
+#page-control #page-sections-area {
+	background-color: #000;
+}
+
+#page-sections-area ul#sub-nav-menu {
+	background-color: #ffffd5;
+	border: 1px solid #000;	
+}
+
+#page-sections-area #adware-zone {
+  background-color: #c03;
+	border: 1px solid #000;
+	border-top-width: 0;
+}
+
+#page-info #description-block {
+	border: solid #000;
+	border-width: 0px 1px 3px 1px;
+	background: #ffffd5;
+}
+
+#basis ul#tab-bar li a {
+	text-transform: uppercase;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	padding: 2px 10px;
+	border: 1px solid #000;
+	color: #999;
+}
+
+#basis ul#tab-bar li a:hover {
+	color: #000;
+}
+
+#basis ul#tab-bar li a:visited {
+  text-decoration: none;
+}
+
+#basis ul#tab-bar li a#active {
+  color: #fff;
+	background: none #000;
+}
+
+#basis ul#tab-bar li a#active:hover {
+  color: #bbb;
+  text-decoration: overline;	
+}
+
+#page-info a#page-tab {
+  border: 0;
+}
+
+/* Basic backgrounds */
+
+body .sheet {
+	background: url(./images/sheet-background-inset.png) bottom left repeat-y #ffffe5;
+}
+
+.sheet #page {
+	background: url(./images/sub-menu-background-inset.png) bottom right repeat-y;
+}
+
+#page #page-header {
+	background: url(./images/banner.png) top right no-repeat #fff;
+}
+
+#page #page-header h1 {
+  background: url(./images/banner-bg-left.png) top left no-repeat;
+}
+
+body #left-holder {
+  /* background: url(./images/page-left-border.png) top right repeat-y #003; */
+}
+
+body #right-holder {
+  /* background: url(./images/page-right-border.png) top left repeat-y #003; */
+}
+
+#basis #content {
+  background: url(./images/content-bg.png) top right no-repeat #ffffe5;
+}
+
+#page-sections-area #sub-nav-holder {
+  /* background: url(./images/sub-menu-holder-inset.png) bottom right repeat-y #000; */
+  background: url(./images/sub-menu-holder.png) bottom left no-repeat #003;	
+}
+
+#page-info a#page-tab {
+	background: url(./images/page-tab.png) bottom left no-repeat #ccc;
+}
+
+#basis ul#tab-bar {
+  background: url(./images/tab-bar-bg.png) bottom right no-repeat #eee;
+}
+
+#pages-area ul#nav-bar {
+  background: url(./images/nav-bar-bg.png) top left no-repeat #ffe;
+}
+
+#basis ul#tab-bar li a {
+  background: url(./images/tab-bg.png) top left no-repeat #ffb;
+} 
+
+#basis ul#tab-bar li a:hover {
+  background: url(./images/tab-bg-hover.png) top left no-repeat #ffb;
+}
+
+#page-sections-area ul#sub-nav-menu {
+  background: url(./images/sub-nav-bg.png) bottom right no-repeat #ffd;
+}
+
+#pages-area ul#nav-bar li a:hover {
+	background: url(./images/main-nav-item-hover.png) center right no-repeat #ffb;
+}
+
+#page-sections-area ul#sub-nav-menu li a:hover {
+	background: url(./images/collapsed-right.gif) center right no-repeat #000;
+}
+
+#page #footer {
+  background: url(./images/footer.png) bottom right no-repeat #ffc;
+}
+
+span.cc {
+  background: url(./images/cc.gif) left center no-repeat;
+}
+
+#page-sections-area #adware-zone {
+  background: url(./images/adware-bg.png) right top no-repeat #c03;
+}
+
+/* Logo-links */
+
+a#firefox-logo, a#opera-logo, a#ie-logo, a#ws-logo, a#html-kit-logo,
+a#ff-web-dev-logo, a#photoshop-logo, a#xml-spy-logo, a#xchng-xml-logo {
+  cursor: pointer;
+  display: block;
+	float: left;
+	padding: 2px;
+  height: 32px;
+	width: 32px;
+}
+
+a#firefox-logo {
+  background: url(./images/logos/ff-bw-logo.png) left center no-repeat;
+}
+
+a:hover#firefox-logo {
+  background: url(./images/logos/ff-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#opera-logo {
+	margin-top: 1px;
+  background: url(./images/logos/opera-bw-logo.png) left center no-repeat;
+}
+
+a:hover#opera-logo {
+  background: url(./images/logos/opera-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#ie-logo {
+	margin-top: -1px;	
+  background: url(./images/logos/ie-bw-logo.png) left center no-repeat;
+}
+
+a:hover#ie-logo {
+  background: url(./images/logos/ie-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#ws-logo {
+  background: url(./images/logos/ws-bw-logo.png) left center no-repeat;
+}
+
+a:hover#ws-logo {
+  background: url(./images/logos/ws-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#html-kit-logo {
+  background: url(./images/logos/html-kit-bw-logo.png) left center no-repeat;
+}
+
+a:hover#html-kit-logo {
+  background: url(./images/logos/html-kit-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#ff-web-dev-logo {
+  background: url(./images/logos/ff-web-dev-bw-logo.png) left center no-repeat;
+}
+
+a:hover#ff-web-dev-logo {
+  background: url(./images/logos/ff-web-dev-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#photoshop-logo {
+  background: url(./images/logos/photoshop-bw-logo.png) left center no-repeat;
+}
+
+a:hover#photoshop-logo {
+  background: url(./images/logos/photoshop-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#xml-spy-logo {
+  background: url(./images/logos/xml-spy-bw-logo.png) left center no-repeat;
+}
+
+a:hover#xml-spy-logo {
+  background: url(./images/logos/xml-spy-logo.png) left center no-repeat;
+	border: none;
+}
+
+a#xchng-xml-logo {
+	background: url(./images/logos/xchng-xml-bw-logo.png) left center no-repeat;
+}
+
+a:hover#xchng-xml-logo {
+  background: url(./images/logos/xchng-xml-logo.png) left center no-repeat;
+	border: none;
+}
+
+/* SECONDARY ELEMENTS STYLING & POSITIONING */
+
+/* Page header */
+
+#page #page-header h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 17px;
+	padding-left: 9px;
+	height: 75px !important;
+	height: 57px; 
+}
+
+#page-header select#font-size-selector {
+  position: absolute;
+	right: 22%;
+	top: 5px;
+	font-size: 10px;
+	border: 1px dotted #ccc;
+}
+
+/* Page description */
+
+#page-info #description-block dl dt {
+  font-size: 10px;
+	font-weight: bold;
+	margin: 0px 0 4px 5px !important;
+	margin: 2px 0 4px 5px;	
+	text-align: justify;
+}
+
+#page-info #description-block dl dt:first-child {
+	margin-top: -16px !important;
+	margin-top: 2px;	
+}
+
+#page-info #description-block dl dd {
+  display: block;
+	width: auto;
+  font-size: 10px;
+	line-height: 1em;
+	letter-spacing: 0.02em;
+	margin-left: 5px;
+	text-align: justify;
+	overflow: hidden;
+}
+
+/* Tab bar */
+
+#basis ul#tab-bar {
+  display: block;
+  list-style: none;	
+	overflow: hidden;
+	border: solid #000;
+	border-width: 3px 0 1px 0;
+	list-style-image: none;
+	padding-left: 5px;	
+}
+
+#basis ul#tab-bar li {
+  display: inline;
+	position: relative;
+	top: 28px;
+}
+
+/* Navigation bar */
+
+#pages-area ul#nav-bar {
+  list-style: none;
+  font-size: 12px;
+	font-weight: bold;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	/* text-transform: uppercase; */
+	background-color: #ffe;
+	border: 1px solid #000;
+	border-top-width: 0px;	
+	padding-top: 50px !important;
+	padding-top: 36px; /* IE adds 14px space between lines here, if there are line-breaks 
+	       after <li> items on the page, but my XHTML must to be clear for reading,
+				 so I've made all this mess here around... */
+	padding-bottom: 10px !important;
+	padding-bottom: 0px;		
+}
+
+#pages-area ul#nav-bar li {
+  display: block !important;
+	display: inline;
+	margin-left: 25px;
+  /* IE adds non-specified margins to items, when there are
+	   line breaks between them */
+}
+
+#pages-area ul#nav-bar li:first-child {
+  border-top: 1px solid #000;
+}
+
+#pages-area ul#nav-bar li a {
+  display: block;
+  text-decoration: none;
+	color: #666;
+	border: solid #000;
+	border-width: 0 0 1px 5px !important;
+	border-width: 1px 0 0 0;	
+	padding: 5px 10px;
+	background-color: #ffd;		
+}
+
+#pages-area ul#nav-bar li a:hover {
+  text-decoration: none;
+	/* background-color: #ffb; */
+	color: #000;
+}
+
+/* Sub-navigation */
+
+#page-sections-area ul#sub-nav-menu {
+	list-style: none;
+	padding-bottom: 10px;	
+}
+
+#page-sections-area ul#sub-nav-menu li {
+  display: block;
+  margin-right: 15px;
+	padding: 0;
+	font-size: 10px;
+	font-weight: bold;
+	font-style: italic;
+	font-family: Arial, Helvetica, Tahoma, "Times New Roman", serif;
+	text-transform: capitalize;
+	border: dotted #ccc;
+	border-width: 0 1px 1px 0;
+	background-color: #ffe;
+}
+
+#page-sections-area ul#sub-nav-menu li a {
+  display: block;
+  text-decoration: none;
+	border: none;
+	padding: 4px 10px;	
+  color: #666;
+}
+
+#page-sections-area ul#sub-nav-menu li a:hover {
+  color: #fff;
+  /* text-decoration: overline; */
+	padding-right: 20px;
+}
+
+/* Adware zone */
+
+#page-sections-area #adware-zone {
+  font-size: 10px;
+	color: #fff;
+	padding-top: 15px;	
+}
+
+#page-sections-area #adware-zone img {
+  display: block;
+	padding: 5px 3px 5px 10px;	
+}
+
+/* Footer */
+
+#page #footer {
+  /* display: table !important; */
+	display: block; /* IE can't manage blocks as table parts */
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+	border: 1px solid #000;
+	overflow: hidden;
+	font-size: 10px;
+	/* text-align: center; */
+	vertical-align: top;
+	width: 100%;
+}
+
+#footer #logo-block {
+	border: 1px solid #ddd;
+	border-width: 0 1px 5px 1px;
+	background-color: #fff;	
+  float: left;
+}
+
+#footer #logo-block div  {
+  /* display: table-cell !important; */
+	display: block; /* IE can't manage blocks as table parts */
+	float: left;
+	padding-left: 5px; 
+	border-right: 1px dotted #ccc;
+}
+
+#footer #copyrights-logo a img {
+  display: inline;
+	float: left;
+  padding-top: 5px;
+  padding-left: 100px;	
+}
+
+#footer #main-copyright {
+  font-size: 11px;
+	float: right;
+	color: #666;
+	margin-top: 20px;
+	margin-right: 10px;
+	font-weight: bold;
+	line-height: 20px;
+  text-align: right;  
+}
+
+-->
+    </style>			
+</head>
+
+<body>
+
+			<div id="left-holder">&nbsp;</div>
+			
+			<div class="sheet">
+			
+			<div id="page">
+			
+			<!-- Head of the page -->
+			<div id="page-header">
+						<img class="alternative" src="" alt="Alternative banner of the site" />
+							
+						<p class="alternative"><dfn title="Site definition, which is usually background image">
+								 Site definition
+						</dfn></p>	
+							
+						<h1>Here is page title</h1>
+						
+					 <!--
+					 <select id="font-size-selector" tabindex="4">
+					 				 <option label="Blah">small font</option>
+					 				 <option label="Blah">medium font</option>
+									 <option label="Blah">large font</option>									 
+					 </select>
+					 -->						
+			</div> <!-- #page-header -->	
+			
+			<div id="page-control">
+			
+			<div id="pages-area">
+			
+			<!-- Link to allow users of non-css and text browsers (and may be later in graphic also) to skip navigation -->
+			<div id="skip-nav-link">
+					 <span class="link-with-key">
+					 		<a href="#content" title="Skip navigation blocks and proceed to content" accesskey="1" tabindex="1">
+					 		Skip to content</a> [1]
+					 </span>
+			</div>
+			
+			<!-- Main navigation bar -->
+ 		  <ul id="nav-bar"> <!-- menu tag is not recommneded by W3C -->
+					 <li><a href="#">item one</a></li>
+					 <li><a href="#">item two</a></li>
+					 <li><a href="#">item three</a></li>
+					 <li><a href="#">item four</a></li>
+					 <li><a href="#">item five</a></li>
+			 		 <li><a href="#">item six</a></li>							 							 							 							 
+			 </ul> <!-- #nav-bar -->	
+			
+			<!-- Link to allow users of non-css and text browsers to proceed to sub-navigation -->			
+		 <span class="alternative">
+					<a href="#sub-nav-menu" title="Proceed to sub-navigation, if required" accesskey="2" tabindex="2">
+		 			Proceed to sub-navigation</a> [2]
+		 </span>
+		 
+		 <div id="page-info">
+			
+			<!-- The image of the current page tab -->			
+			<!-- (A little trick from Todd Farner to hide an image from non-css browsers) -->
+			<a href="#" id="page-tab" title="Current page" accesskey="3"><span class="alternative">(You are @ Home)</span></a>
+
+			<!-- Page description block -->			
+  			<div id="description-block">
+					 <dl>										
+					   <dt>This page</dt>
+						 <dd>Here is this page description. It is expanded, so it's, for real, will be a block of text. I think I'll take
+						 the text from previous version and then I'll insert it here. Let's add some more sentences, but not so much,
+						 because the width of the block will be a small number of pixels.</dd>
+						 <dt>W3C WCAG 1.0 &amp Section 508</dt>
+						 <dd>If <em>you</em> are not satisfied - please just e-mail the webmaster: <a href="mailto:shaman.sir@gmail.com">shaman.sir@gmail.com</a>.</dd>
+					 </dl>
+			</div> <!-- #description-block -->
+			
+			</div> <!-- #page-info -->	
+			
+			</div> <!-- #pages-area -->
+			
+			<div id="basis">
+			
+			<!-- Block with tabs for navigating between different sections -->
+		  <ul id="tab-bar"> <!-- menu tag is not recommneded by W3C -->
+			 		 <li><a href="#">tab one</a></li>
+			 		 <li><a href="#" id="active">tab two</a></li>
+			 		 <li><a href="#">tab three</a></li>
+			 		 <li><a href="#">tab four</a></li>
+			 		 <li><a href="#">tab five</a></li>
+			 		 <li><a href="#">tab six</a></li>							 							 							 							 
+			</ul>	<!-- #tab-bar -->					 
+			
+			<!-- The main content of the page -->
+			<div id="content">
+		
+					 <h2>SubTitle of the page</h2>
+					 
+					 <dfn>Some description of the page</dfn>
+					 
+					 <h3>First block</h3>					 
+			
+					 <h4>First text block title</h4>
+					 <p>Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+					 all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+					 I haven't found <a href="#">Lorem Ipsum generator</a> in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+					 test how the paragraphs will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+					 I like the <a href="#">stuff</a> like this, and I'm also aiming in development applications like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+					 amount of text will be enough, so let's finish at this point...</p>
+					 <p>Also, paragraph with some small amount of text here.</p>
+					 <!-- <pre>Some preformatted text</pre> -->
+					 <p>And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+					 in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+					 don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...</p>
+					 
+					 <h3>Blocks, other than the first</h3>
+					 
+					 <blockquote cite="http://www.w3.org">
+					 						 <p>Some blocked quote of someone</p>
+										<div class="cite">Someone's name</div>
+					 </blockquote>
+					 
+					 <h4>Second text block title</h4>
+					 <p>Also, paragraph with some small amount of text here.</p>
+					 <p>Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+					 all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+					 I haven't found Lorem Ipsum generator in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+					 test how the <a href="#">paragraphs</a> will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+					 I like the stuff like this, and I'm also aiming in <a href="#">development applications</a> like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+					 amount of text will be enough, so let's finish at this point...</p>
+					 <p>And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+					 in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+					 don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...</p>
+					 
+					 <hr />					 
+					 
+					 <h4>Third text block title</h4>
+					 <p>Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+					 all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+					 I haven't found Lorem Ipsum generator in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+					 test how the paragraphs will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+					 I like the stuff like this, and I'm also aiming in development applications like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+					 amount of text will be enough, so let's finish at this point...</p>					 
+					 <p>Also, paragraph with some <a href="#">small amount</a> of text here.</p>
+					 
+					 <hr />					 					 
+					 
+					 <h4>Fourth text block title</h4>
+					 <p>Also, paragraph with some small amount of text here.</p>
+					 <h5>Some sub-heading</h5>
+					 <p>And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+					 in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+					 don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...</p>
+					 <code>Some code</code>
+					 <h6>And a little section now</h6>
+					 <p>Hell-O! :)</p>					 					 					 
+			</div>
+			
+			<!-- Link to allow users of non-css and text browsers (and may be later in graphic also) to proceed to the top -->
+		  <span class="link-with-key" id="proceed-to-top">
+			 		<a href="#content" title="Proceed to the top" accesskey="4" tabindex="3">
+					 		Proceed to the top</a> [4]
+ 	    </span>
+			
+			</div> <!-- #basis -->
+			
+			<div id="page-sections-area">
+			
+			<div id="sub-nav-holder"><!-- Holder --></div>			
+			
+			<!-- Sub navigation - navigation by sub-sections -->
+ 		  <ul id="sub-nav-menu"> <!-- menu tag is not recommneded by W3C -->
+					 <li><a href="#">menu item one</a></li>
+			 		 <li><a href="#">menu item two</a></li>
+			 		 <li><a href="#">menu item three</a></li>
+			 		 <li><a href="#">menu item four</a></li>
+			 		 <li><a href="#">menu item five</a></li>
+			 		 <li><a href="#">menu item six</a></li>							 							 							 							 
+ 		  </ul>
+			
+			<!-- Advertisment zone, to place banners here -->
+			<div id="adware-zone">
+					<!-- <span class="alternative">Stub banner</span>
+					 <a href="#" title="Stub banner"><img src="./images/logos/stub-logo.png" alt="Some banner" /></a>
+					  <span class="alternative">Stub banner</span>
+					 <a href="#" title="Stub banner"><img src="./images/logos/stub-logo.png" alt="Some banner" /></a> -->
+					 
+					 <!--
+					 <span class="alternative">RSS 2.0 Source</span>
+					 <a href="#" title="RSS Feed"><img src="./images/logos/rss2.gif" alt="RSS 2.0 Source" /></a>
+					 -->
+					 
+					 <!--
+					 <span class="alternative">XML/XSLT Based Source</span>
+					 <a href="#" title="XML/XSLT Based"><img src="./images/logos/xml.gif" alt="XML/XSLT Based" /></a>
+					 -->					 
+					 
+					 <span class="alternative">XHTML 1.0 Strict W3C Validated</span>
+					 <a href="http://validator.w3.org/check?uri=referer" title="Valid XHTML 1.0 Strict!">
+					 		  <img src="./images/logos/w3c-xhtml10.png" alt="Valid XHTML 1.0 Strict!" />
+					 </a>
+					 
+           <span class="alternative">CSS 2.1 W3C Validated</span>
+					 <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS!">
+  				 		<img src="./images/logos/w3c-css21.gif" 
+       						 alt="Valid CSS!" />
+					 </a>
+					 
+           <span class="alternative">WCAG 1.0 Double-A - Priorities L1 &amp; L2 Satisfied.</span>
+					 <a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="WCAG 1.0 Double-A - Priorities L1 & L2 Satisfied">
+  				 		<img src="./images/logos/w3c-wai-aa-wx.gif" 
+       						 alt="WCAG 1.0 Double-A - Priorities L1 & L2 Satisfied: WebXact Approved!" />
+					 </a>
+					 
+           <span class="alternative">WCAG 1.0 Triple-A - Priorities L1-3 Satisfied</span>
+					 <a href="http://webxact.watchfire.com" title="WCAG 1.0 Triple-A - Priorities L1-3 Satisfied">
+  				 		<img src="./images/logos/w3c-wai-aaa-wx.gif" 
+       						 alt="WCAG 1.0 Triple-A - Priorities L1-3 Satisfied: WebXact, Cynthia & Hermish Approved!" />
+							<!-- webxact.watchfire.com -->
+							<!-- www.cynthiasays.com -->
+							<!-- www.contentquality.com -->
+							<!-- http://www.hermish.com -->
+							<!-- Lynx -->
+					 </a>
+					 
+           <span class="alternative">Section 508 Satisfied</span>
+					 <a href="http://webxact.watchfire.com" title="Section 508 Satisfied">
+  				 		<img src="./images/logos/button_508-wx.gif" 
+       						 alt="Section 508 Satisfied: WebXact, Cynthia & Hermish Approved!" />
+							<!-- webxact.watchfire.com -->
+							<!-- www.cynthiasays.com -->
+							<!-- www.contentquality.com -->
+							<!-- http://www.hermish.com -->
+							<!-- Lynx -->
+					 </a>
+					 
+					<span class="alternative">Using W3Counter</span>
+					<!-- IE says something bad here, I need to place here my own icon -->
+					<!-- Begin W3Counter Tracking Code -->
+					<!-- <script type="text/javascript" src="http://www.w3counter.com/tracker.js"></script>
+							<script type="text/javascript">
+							w3counter(2812);
+					</script>
+					<noscript>
+					<div><a href="http://www.w3counter.com/stats/2812"><img src="http://www.w3counter.com/tracker.php?id=2812"	style="border: 0" alt="W3Counter Web Stats" /></a></div>
+						</noscript>  -->
+					<!-- End W3Counter Tracking Code-->					 
+
+           <span class="alternative">Get Firefox.</span>
+					 <a href="http://www.mozilla.org/products/firefox" title="Get Firefox!">
+  				 		<img src="./images/logos/get-firefox.png" 
+       						 alt="Get Firefox" />
+							<!-- http://www.spreadfirefox.com/?q=affiliates&id=0&t=82 -->
+					 </a>
+					 
+           <span class="alternative">...or, at least, Opera :).</span>
+					 <a href="http://www.opera.com" title="...or, at least, Opera :)">
+  				 		<img src="./images/logos/get-opera.gif" 
+       						 alt="...or, at least, Opera :)" />
+					 </a>
+					 
+					 <span class="alternative">Creative Commons protected</span>
+           <a href="http://creativecommons.org/licenses/by-sa/2.5/" title="Creative Commons: Attribution and Share Alike 2.5">
+									<img src="./images/logos/ccLogo.gif" alt="Creative Commons: Attribution and Share Alike 2.5" />
+					 </a>					 					 					 
+					 
+					 
+			</div> <!-- #adware-zone -->
+			
+			</div> <!-- #page-sections-area -->
+			
+			</div> <!-- #page-control -->
+			
+			<!-- And, the footer at last -->
+			<div id="footer">
+			
+			     <div id="logo-block">
+			
+					 <div id="supported-browsers">
+					      <span class="alternative">Supported browsers:</span>
+					      <a id="firefox-logo" href="http://www.mozilla.com/products/firefox/" title="Firefox 1.5+ Supported">
+								     <span class="alternative">Firefox 1.5+ Supported</span></a>
+					 			<a id="opera-logo" href="http://www.opera.com/" title="Opera 9+ Supported">
+								     <span class="alternative">Opera 9+ Supported</span></a>
+					 			<a id="ie-logo" href="http://www.microsoft.com" title="IE 6+ Supported">
+								     <span class="alternative">IE 6+ Supported</span></a>										 										 
+					 </div> <!-- #supported-browsers -->
+					 
+					 <div id="webstandards">
+					      <span class="alternative">Used technologies from:</span>	
+								<a id="ws-logo" href="http://www.webstandards.org" title="Used Web Standards">
+								     <span class="alternative">WebStandards.org</span></a>				 
+					 </div>					 
+					 
+					 <div id="made-with">
+					      <span class="alternative">Used software:</span>					 
+					 			<a id="html-kit-logo" href="http://www.chami.com/html-kit/" title="Used HTML-Kit">
+								     <span class="alternative">HTML-Kit 5.1</span></a>
+					 			<a id="ff-web-dev-logo" href="http://www.chrispederick.com/work/webdeveloper/" title="Used Web developer FireFox plugin">
+								     <span class="alternative">Web developer FireFox plugin 1.0.2</span></a>	
+								<a id="photoshop-logo" href="http://www.adobe.com" title="Used Adobe Photoshop">
+								     <span class="alternative">Adobe Photoshop CS</span></a>
+								<a id="xml-spy-logo" href="http://www.altova.com" title="Using XMLSpy Home for XSD Construction">
+								     <span class="alternative">Altova XMLSpy</span></a>
+								<a id="xchng-xml-logo" href="http://www.exchangerxml.com" title="Using Exchanger XML Editor Lite for XML/XSLT Editing">
+								     <span class="alternative">Cladonia Exchanger XML Editor</span></a>										 										 										 									 
+					 </div> <!-- #made-with -->
+					 
+					 </div> <!-- #logo-block -->			
+					 					 
+					 <div id="copyrights-logo">
+					 			<a href="http://creativecommons.org/licenses/by-sa/2.5/">
+								     <img src="./images/logos/cc-sr-2.png" alt="Creative Commons: Attribution and Share Alike 2.5" />
+								</a> 
+					 </div>	<!-- #copyrights-logo -->				 
+           
+					 <span id="main-copyright" class="cc">
+					 			shaman.sir, 2006
+					 </span>
+			</div> <!-- #footer -->
+			
+			</div> <!-- #page -->
+			
+			</div> <!-- .sheet -->
+			
+			<div id="right-holder">&nbsp;</div>			
+			
+</body>
+</html>

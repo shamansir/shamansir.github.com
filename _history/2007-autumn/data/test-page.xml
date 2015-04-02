@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./xslt/page.xsl"?>
+<p:page xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:p="http://www.shaman-sir.by.ru/XSD/Pages" 
+        xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Pages ./xsd/page.xsd">
+  <!-- Page Information -->
+  <p:title>home page</p:title>
+  <p:sub-title>Home Page</p:sub-title>
+  <p:additional-data>
+    <p:definition xmlns="http://www.w3.org/1999/xhtml">
+      The <a href="#">starting page</a> of <strong>shaman.sir homesite</strong> - this will introduce the content of the site and the main last news.
+    </p:definition>
+    <p:description>the starting page of shaman.sir homesite with all functioning it means</p:description>
+  </p:additional-data>
+  <l:localization-source src="./localization.xml" select="en"/>
+  <!--
+  <l:localization-default as="en"/>
+  -->
+  <!-- Navigation Menu -->
+  <!--
+  <m:nav-menu-source src="./nav-menu.xml" activate="home"/>
+  -->
+  <m:nav-menu>
+    <m:page-location active="true" location-id="home">
+      <g:name>home</g:name>
+      <g:href>./home-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="about">
+      <g:name>about</g:name>
+      <g:href>./about-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="articles">
+      <g:name>articles</g:name>
+      <g:href>./articles-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="art">
+      <g:name>art</g:name>
+      <g:href>./art-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="files">
+      <g:name>files</g:name>
+      <g:href>./files-page.xml</g:href>
+    </m:page-location>
+  </m:nav-menu>
+  <!-- Tabs Menu -->
+  <!--
+  <m:tab-menu-source src="./ru-home-tab-menu.xml" activate="home-link"/>
+  -->
+  <m:tab-menu>
+    <m:page-location active="true" location-id="home-link">
+      <g:name>Home</g:name>
+      <g:href>./home-page.xml</g:href>
+    </m:page-location>
+    <m:page-location>
+      <g:name>About</g:name>
+      <g:href>./about-page.xml</g:href>
+    </m:page-location>
+    <m:page-location>
+      <g:name>Articles</g:name>
+      <g:href>./articles-page.xml</g:href>
+    </m:page-location>
+    <m:page-location>
+      <g:name>Art</g:name>
+      <g:href>./art-page.xml</g:href>
+    </m:page-location>
+    <m:page-location>
+      <g:name>Files</g:name>
+      <g:href>./files-page.xml</g:href>
+    </m:page-location>
+  </m:tab-menu>
+  <!-- Position list -->
+  <m:position-list>
+    <m:position>
+      <m:name>About page description</m:name>
+      <m:anchor>#about-page</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>Articles page description</m:name>
+      <m:anchor>#articles-page</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>Art page description</m:name>
+      <m:anchor>#art-page</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>Files page description</m:name>
+      <m:anchor>#files-page</m:anchor>
+    </m:position>    
+  </m:position-list>
+  <!-- Page content -->
+  <p:content>
+  <!-- Articles -->
+  <p:block title="Articles">
+    <p:items type="article">
+      <p:articles xmlns="http://www.w3.org/1999/xhtml">
+        <p:article id="some-article">
+          <p:title>Ones upon a time...</p:title>
+          <p:author>
+            <g:nickname>Someone</g:nickname>
+          </p:author>
+          <p:date>09/24/2006 23:22</p:date>
+          <p:content>
+            <p>Ones upon a time there was an <a href="#some-article">article</a>.</p>
+          </p:content>
+        </p:article>
+        <p:article>
+          <p:title>Twice upon a time...</p:title>
+          <p:author>
+            <g:name>Tony</g:name>
+            <g:last-name>Kotenko</g:last-name>
+            <g:nickname>shaman.sir</g:nickname>
+          </p:author>
+          <p:date>09/24/2006 23:22</p:date>          
+          <p:content>
+            <p>Twice upon a time there was a previous <a href="#some-article">article</a>.</p>
+            <p>And here is some code:</p>
+            <code>Some code</code>
+            <p>Looks good, isn't it?</p>
+          </p:content>
+        </p:article>
+        <p:article>
+          <p:title>Triple upon a time...</p:title>
+          <p:author>
+            <g:nickname>Anauthorized</g:nickname>
+          </p:author>          
+          <p:content>
+            <p>
+              Triple upon a time there was no articles.
+            </p>
+            <p>And here is some code:</p>
+            <code>Some code</code>
+            <p>Looks good, isn't it?</p>
+          </p:content>
+        </p:article>
+      </p:articles>
+    </p:items>
+  </p:block>
+  <!-- News -->
+  <p:block title="News">
+    <p:items type="news-entry">
+      <p:news xmlns="http://www.w3.org/1999/xhtml">
+        <p:entry>
+          <p:title>That happened!</p:title>
+          <p:author>
+            <g:nickname>shaman.sir</g:nickname>
+          </p:author>
+          <p:post-date>09/25/2006 00:52</p:post-date>
+          <p:content>
+            <p>Seems it processing all the stuff <em>correctly!</em>.</p>
+            <p>I'm happy now - that's <strong>really good</strong>!</p>
+          </p:content>
+        </p:entry>
+        <p:entry>
+          <p:title>That happened again!</p:title>
+          <p:post-date>09/25/2006 01:46</p:post-date>
+          <p:content>
+            <p>
+              This entry has <em>no</em> author
+            </p>
+          </p:content>
+        </p:entry>        
+      </p:news>
+    </p:items>
+  </p:block>
+  <!-- Page code -->
+  <p:block title="First block">
+    <p:items type="page-code">
+      <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+        <p:code-block>
+          <p:title>First text block title</p:title>
+          <p:content>
+            <p>
+                Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+                all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+                I haven't found <a href="#">Lorem Ipsum generator</a> in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+                test how the paragraphs will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+                I like the <a href="#">stuff</a> like this, and I'm also aiming in development applications like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+                amount of text will be enough, so let's finish at this point...
+              </p>
+              <p>Also, paragraph with some small amount of text here.</p>
+              <!-- <pre>Some preformatted text</pre> -->
+              <p>
+                And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+                in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+                don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...
+              </p>
+          </p:content>
+        </p:code-block>
+      </p:page-code>
+    </p:items>
+  </p:block>
+  <!-- Page code -->
+  <p:block title="Blocks, other than the first">
+    <p:items type="page-code">
+      <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+        <p:code-block>
+          <p:content>
+            <blockquote cite="http://www.w3.org">
+              <p>Some blocked quote of someone</p>
+              <div class="cite">Someone's name</div>
+            </blockquote>
+          </p:content>
+        </p:code-block>
+        <p:code-block>
+          <p:title>Second text block title</p:title>
+          <p:content>
+            <p>Also, paragraph with some small amount of text here.</p>
+              <p>
+                Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+                all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+                I haven't found Lorem Ipsum generator in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+                test how the <a href="#">paragraphs</a> will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+                I like the stuff like this, and I'm also aiming in <a href="#">development applications</a> like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+                amount of text will be enough, so let's finish at this point...
+              </p>
+              <p>
+                And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+                in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+                don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...
+              </p>
+          </p:content>
+        </p:code-block>        
+        <p:code-block>
+          <p:title>Third text block title</p:title>
+          <p:content>
+              <p>
+                Here is some text specified to test my styles - I hope it will be ok if I'll do it without tables but
+                all this stuff looks so table-like... But I'll try it with div's, I promise. And if I'm lucky, me will be happy.
+                I haven't found Lorem Ipsum generator in <abbr title="HyperText Markup Language">HTML</abbr>-Kit, so I'm typing this meaningless text with just the aim to
+                test how the paragraphs will work here. <abbr title="HyperText Markup Language">HTML</abbr>-Kit seems to be the good one application, mosterous and free.
+                I like the stuff like this, and I'm also aiming in development applications like this. So <abbr lang="en" title="All Correct">ok</abbr>, it seems to me that this
+                amount of text will be enough, so let's finish at this point...
+              </p>
+              <p>
+                Also, paragraph with some <a href="#">small amount</a> of text here.
+              </p>
+          </p:content>
+        </p:code-block>        
+        <p:code-block>
+          <p:title>Fourth text block title</p:title>
+          <p:content>
+              <p>Also, paragraph with some small amount of text here.</p>
+              <h5>Some sub-heading</h5>
+              <p>
+                And, a paragraph with a less amount of text then in first, but some more then in second, but the order applied only here,
+                in later test paragraphs I'll mix it up and there will be some portions more I think... <q>Oh, my thoughts, my thoughts...</q> And, hey,
+                don't forget to replace stuff like triple dots with a valid <abbr title="HyperText Markup Language">HTML</abbr> entities...
+              </p>
+              <code>Some code</code>
+              <h6>And a little section now</h6>
+              <p>Hell-O! :)</p>
+          </p:content>
+        </p:code-block>        
+      </p:page-code>
+    </p:items>
+  </p:block>
+    <!-- Page code -->
+    <p:block title="Pages descriptions">
+      <p:items type="page-code">
+        <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+          <p:code-block id="about-page">
+            <p:title>About page description</p:title>
+            <p:content>
+              <p>
+                Here is some description of about page, with <strong>some</strong> <em>usage</em> of <abbr title="eXtended HyperText Mark-up Language">XHTML</abbr> tags
+              </p>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="articles-page">
+            <p:title>Articles page description</p:title>
+            <p:content>
+              <p>
+                Here is some description of articles page, with <strong>some</strong> <em>usage</em> of <abbr title="eXtended HyperText Mark-up Language">XHTML</abbr> tags
+              </p>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="art-page">
+            <p:title>Art page description</p:title>
+            <p:content>
+              <p>
+                Here is some description of art page, with <strong>some</strong> <em>usage</em> of <abbr title="eXtended HyperText Mark-up Language">XHTML</abbr> tags
+              </p>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="files-page">
+            <p:title>Files page description</p:title>
+            <p:content>
+              <p>
+                Here is some description of files page, with <strong>some</strong> <em>usage</em> of <abbr title="eXtended HyperText Mark-up Language">XHTML</abbr> tags
+              </p>
+            </p:content>
+          </p:code-block>
+        </p:page-code>
+      </p:items>
+    </p:block>
+    <!-- Files -->
+    <p:block title="Files">
+      <p:items type="file">
+        <p:files xmlns="http://www.w3.org/1999/xhtml">
+          <p:file type="image">
+            <p:href>../images/logos/ff-logo.png</p:href>
+            <p:fileURI>../images/logos/ff-logo.png</p:fileURI>
+            <p:screenshotURI>../images/logos/ff-bw-logo.png</p:screenshotURI>
+            <p:name>Firefox image</p:name>
+            <p:description>
+              <p>This is the description of <em>Firefox image</em>, it describes it concretely,
+              every parameter explained in details, like size, type, color pallete and so on.
+              You must want to download this file because it is <strong>really cool</strong> one.
+              Don't trust any bunnies. They're scary.
+            </p>
+            </p:description>
+          </p:file>
+        </p:files>
+      </p:items>
+    </p:block>
+    <!-- Texts (prose/poetry) -->
+    <p:block title="Texts">
+      <p:items type="text-block">
+        <p:text-blocks xmlns="http://www.w3.org/1999/xhtml">
+          <p:text-block type="prose">
+            <p:title>Some prose block</p:title>
+            <p:start-date>05/1996</p:start-date>
+            <p:finish-date>06/1996</p:finish-date>            
+            <p:author>
+              <g:nickname>shaman.sir</g:nickname>
+            </p:author>
+            <p:content>
+              <p>Lorem ipsum dolor sit amet consectetuer sapien Suspendisse id justo molestie. Adipiscing augue iaculis Morbi interdum Sed quis enim Fusce dui faucibus. Lorem gravida wisi Duis quam elit Quisque scelerisque elit cursus neque. Sed sed cursus metus tempor In Maecenas Nunc ut In Phasellus. Lorem Curabitur Aenean nulla senectus ac id id.</p>
+              <p>Nisl pharetra libero quis Mauris Suspendisse massa Aenean quam lacus pretium. Quis neque magna ante id Vestibulum Quisque ac Donec semper interdum. Urna ante libero magnis id pede et laoreet ligula consequat Praesent. A ut hac malesuada lacus ultrices felis Pellentesque habitant venenatis Aliquam. Enim et orci nisl tincidunt vitae vel augue libero eros id. Urna Fusce.</p>
+              <p>Quam orci accumsan et Mauris Curabitur tellus orci ut eget orci. Condimentum ipsum sapien at at Donec magna penatibus consequat enim eget. Cum aliquet vitae nibh elit elit orci justo at ac sapien. Ligula ac gravida ligula velit et semper In tempus Vestibulum nibh. Semper ante id fringilla pretium nec lacus sem natoque Vestibulum sem. Massa nibh sed sociis at urna auctor quis Vivamus lacinia dui. Felis turpis.</p>
+              <p>Sit nonummy enim Vestibulum Donec pretium Sed risus tincidunt Nulla Sed. Dictumst id wisi Vestibulum Vestibulum id Donec id ut Maecenas Nulla. Tellus cursus Curabitur consectetuer justo accumsan tristique nunc suscipit sit netus. Nec eu a id dolor Integer eget ligula enim Nulla semper. Habitasse leo nulla tincidunt magnis augue nulla platea dolor ut turpis. </p>
+            </p:content>
+          </p:text-block>
+          <p:text-block type="poetry">
+            <p:title>My Lorem is Ipsumed at Dolor</p:title>
+            <p:place>Derevnya Vishnevka</p:place>
+            <p:content>
+              <p>
+                 Lorem ipsum dolor sit amet<br/>
+                  Consectetuer mauris eget ridiculus ipsum<br/>
+              Auctor ligula facilisis a et<br/>
+                      Et platea malesuada dui at<br/>
+                        Vestibulum egestas laoreet id dui<br/>
+              Condimentum congue eros Sed vel<br/>
+                            Aliquam sit feugiat velit sit<br/>
+                              Convallis ut Nulla sed ut<br/>
+                                Tincidunt sed auctor Duis Duis<br/>
+                                  Cursus eros Nam parturient justo<br/>
+              Vitae Vivamus augue Nunc justo<br/>
+                                      Malesuada odio Sed Ut enim<br/>
+              Odio Vestibulum Curabitur magna orci<br/>
+              Praesent nibh non elit Nulla<br/>
+              </p>
+            </p:content>
+          </p:text-block>
+          <p:text-block type="prose">
+            <p:title>Some dated prose block</p:title>
+            <p:finish-expanded-date>
+              <g:day-of-month>21</g:day-of-month>
+              <g:day-of-week>Thu</g:day-of-week>
+              <g:month-name>Mar</g:month-name>
+              <g:year>2004</g:year>
+            </p:finish-expanded-date>
+            <p:author>
+              <g:name>Anthony</g:name>
+              <g:last-name>Kotenko</g:last-name>
+              <g:nickname>shaman.sir</g:nickname>
+            </p:author>
+            <p:content>
+              <p>Lorem ipsum dolor sit amet consectetuer sapien Suspendisse id justo molestie. Adipiscing augue iaculis Morbi interdum Sed quis enim Fusce dui faucibus. Lorem gravida wisi Duis quam elit Quisque scelerisque elit cursus neque. Sed sed cursus metus tempor In Maecenas Nunc ut In Phasellus. Lorem Curabitur Aenean nulla senectus ac id id.</p>
+              <p>Nisl pharetra libero quis Mauris Suspendisse massa Aenean quam lacus pretium. Quis neque magna ante id Vestibulum Quisque ac Donec semper interdum. Urna ante libero magnis id pede et laoreet ligula consequat Praesent. A ut hac malesuada lacus ultrices felis Pellentesque habitant venenatis Aliquam. Enim et orci nisl tincidunt vitae vel augue libero eros id. Urna Fusce.</p>
+              <p>Quam orci accumsan et Mauris Curabitur tellus orci ut eget orci. Condimentum ipsum sapien at at Donec magna penatibus consequat enim eget. Cum aliquet vitae nibh elit elit orci justo at ac sapien. Ligula ac gravida ligula velit et semper In tempus Vestibulum nibh. Semper ante id fringilla pretium nec lacus sem natoque Vestibulum sem. Massa nibh sed sociis at urna auctor quis Vivamus lacinia dui. Felis turpis.</p>
+              <p>Sit nonummy enim Vestibulum Donec pretium Sed risus tincidunt Nulla Sed. Dictumst id wisi Vestibulum Vestibulum id Donec id ut Maecenas Nulla. Tellus cursus Curabitur consectetuer justo accumsan tristique nunc suscipit sit netus. Nec eu a id dolor Integer eget ligula enim Nulla semper. Habitasse leo nulla tincidunt magnis augue nulla platea dolor ut turpis. </p>
+            </p:content>
+          </p:text-block>          
+        </p:text-blocks>
+      </p:items>
+    </p:block>
+  </p:content>  
+</p:page>

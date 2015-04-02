@@ -1,0 +1,139 @@
+/* STRUCTURE POSITIONING */
+
+/*
+
+Page structure:
+
+html>body 
+	#left-holder
+	.sheet
+		#page
+			#page-header
+				#style-selector
+			#page-control
+				#pages-area
+					ul#nav-bar
+					#page-info
+						#description-block
+				#basis
+					ul#tab-bar
+					#content
+				#page-sections-area
+					#sub-nav-holder
+					ul#sub-nav-menu
+					#adware-zone
+			#footer
+				#logo-block
+				#copyrights-logo
+				span#main-copyright
+	#right-holder
+
+*/
+
+/* Body */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body #left-holder, body #right-holder {
+	width: 10%;
+	height: 100%;
+	float: left;
+	color: #003; /* to hide text on the background */
+}
+
+body .sheet {
+  float: left;
+	width: 80%;
+}
+
+/* Page */
+
+#page #page-header {
+	height: 75px;
+}
+
+/* #page #page-control */
+
+#page #footer {
+  clear: both;
+	height: 50px;
+}
+
+/* Page control */
+
+#page-control #pages-area {
+  float: left;
+	width: 15%;
+}
+
+#pages-area ul#nav-bar {
+  margin: 0;
+	padding: 0;	
+}
+
+/* #pages-area #page-info */
+
+/* Basis */
+
+#page-control #basis {
+  float: left;
+	width: 70%;
+}
+
+#basis ul#tab-bar {
+  margin: 0;
+	padding: 0;	
+	height: 47px;
+}
+
+/* content */
+
+#basis #content {
+	margin: 0 -1px !important;
+	margin: 0;
+	min-height: 746px !important; /* Need to make it applied /only/ in Firefox, not in Opera */
+	min-height: 0px;
+}
+
+/* Sections */
+
+#page-control #page-sections-area {
+  float: left;
+	width: 14%; /* a little space at right and, we will not break IE inner box */
+}
+
+#page-sections-area #sub-nav-holder {
+	height: 50px;
+}
+
+#page-sections-area ul#sub-nav-menu {
+  margin: 0;
+	padding: 0;
+}
+
+/* Elements */
+
+#page-info a#page-tab {
+	float: left;
+	width: 25px !important;
+	width: 20%;
+	height: 200px;
+}
+
+#page-info #description-block {
+  display: block;
+  position: relative !important;
+	position: absolute; /* IE needs absolute to place it correctly */
+  width: auto !important;
+  width: 78%;	/* ..and percentable width setting (to make the page-info block to wrap just page-tab) */
+	margin-left: 0 !important;
+	margin-left: -3px;
+	margin-right: 0 !important;
+	margin-right: -3px;	
+	padding-right: 4px;
+	max-height: 250px;
+	overflow: hidden;	
+}

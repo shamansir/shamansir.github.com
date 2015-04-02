@@ -1,0 +1,489 @@
+/* Content styling */
+
+/* main styling */
+
+#content p, 
+#content ul,
+#content ol,
+#content dl,
+#content dfn,
+#content table
+{
+	font-size: 11px;
+}
+
+#content .magnified 
+{
+	font-size: 13px;
+}
+
+#content p 
+{
+	word-spacing: 0.15em;	
+}
+
+/* lists */
+
+#content ul li 
+{
+	text-align: justify;
+}
+
+#content div.page-code ul li 
+{
+	padding-bottom: 5px;
+}
+
+#content ul li.definition dfn 
+{
+	display: block;
+	padding-left: 15px;
+	width: 70%;
+	text-align: justify;
+}
+
+#content ul li.definition .dfn-title
+{
+	padding-bottom: 5px;
+	border: 0;
+	text-decoration: none;	
+} 
+
+#content ul li.definition acronym.dfn-title,
+#content ul li.definition span.dfn-title
+{
+	text-decoration: overline;
+}
+
+#content ul li.definition a, 
+#content ul li.definition a:link,
+#content ul li.definition a:visited,
+#content ul li.definition a:hover,
+#content ul li.definition a:active
+{
+	text-decoration: none;
+}
+
+#content ul li.definition a.unimplemented 
+{
+	color: #ddd;
+}
+
+#content ul li.definition a.unimplemented:before 
+{
+	content: "/ Unimplemented: ";	
+}
+
+#content ul li.definition a.unimplemented:after
+{
+	content: " /";	
+}
+
+#content ol.contents 
+{
+	list-style-type: decimal-leading-zero;
+}
+
+#content ul.aims 
+{
+	list-style-type: square;
+}
+
+#content ul.aims li.finished 
+{
+	color: #ccc;
+}
+
+/* tables */
+
+#content div.page-code table 
+{
+	width: 60%;
+	margin: 10px 15px;
+	border-collapse: collapse;
+}
+
+#content div.page-code table th,
+#content div.page-code table td
+{
+	padding: 2px 15px 2px 3px;	
+}
+
+#content div.page-code table tbody td 
+{
+	padding-left: 15px;
+	border-right: 1px dotted #999;
+	border-left: 1px dotted #999;
+}
+
+#content div.page-code table thead tr th,
+#content div.page-code table tfoot tr th
+{
+	color: #fff;
+	background-color: #aaa;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;	
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+#content div.page-code table thead tr th
+{
+	border: 1px solid #999;	
+	border-bottom: 0;	
+}
+
+#content div.page-code table tfoot tr th
+{
+	border: 1px solid #999;	
+	border-top: 0;
+}
+
+#content div.page-code table tbody tr:first-child
+{
+	padding-top: 5px;
+	border-top: 1px dotted #999;
+}
+
+#content div.page-code table tbody tr:last-child
+{
+	padding-bottom: 5px;	
+	border-bottom: 1px dotted #999;
+}
+
+#content div.page-code table tbody tr:first-child td
+{
+	padding-top: 5px;
+}
+
+#content div.page-code table tbody tr:last-child td
+{
+	padding-bottom: 5px;	
+}
+
+#content div.page-code table tbody tr.odd
+{
+	background-color: #ededed;
+}
+
+#content div.page-code table tbody tr.even
+{
+	background-color: #dedede;
+}
+
+#content div.page-code table a
+{
+	color: #666;
+}
+
+/* #content div.page-code table tbody tr td a:visited 
+{
+	background-color: #eee;
+} */
+
+#content div.page-code table tbody tr td a:active,
+#content div.page-code table tbody tr td a:hover
+{
+	background-color: #ccc;
+}
+
+/* #content div.page-code table.information-wide a 
+{
+	padding-right: 5px;	
+} */
+
+#content div.page-code table.information 
+{
+	width: 60%; /* 35% */
+}
+
+#content div.page-code table.information-wide
+{
+	width: 90%;
+}
+
+#content div.page-code table.information tbody td, 
+#content div.page-code table.information-wide tbody td
+{
+	padding: 3px 5px 3px 15px;
+}
+
+#content div.page-code table.information tbody tr td:first-child,
+#content div.page-code table.information-wide tbody tr td:first-child
+{
+	font-weight: bold;
+	font-style: italic;
+	border-right: 0;
+	border-left: 1px dotted #999;
+}
+
+#content div.page-code table.information tbody tr td:last-child,
+#content div.page-code table.information-wide tbody tr td:last-child
+{
+	border-left: 0;
+	border-right: 1px dotted #999;	
+}
+
+#content div.page-code table.information tbody tr td:first-child:after,
+#content div.page-code table.information-wide tbody tr td:first-child:after
+{
+	content: ":";
+}
+
+#content div.page-code table.information-wide tbody tr td:last-child 
+{
+	text-align: justify;
+}
+
+/* author & date */
+
+span.author-name, 
+span.author-last-name, 
+span.author-nickname,
+span.place {
+	color: #999;
+	font-size: 11px;
+}
+
+span.date 
+{
+	color: #999;
+}
+
+span.date:before 
+{
+	content: "(";
+}
+
+span.date:after 
+{
+	content: ")";
+}
+
+/* span.author-nickname:before, span.author-nickname:after 
+{
+	content: "\'";
+} */
+
+span.author-nickname:before 
+{
+	content: open-quote;
+}
+
+span.author-nickname:after 
+{
+	content: close-quote;
+}
+
+/* images */
+
+#content img 
+{
+	background-color: #ffc;
+	padding: 5px 5px 10px 5px;
+	margin: 5px;
+	border: 1px dotted #ccc;	
+}
+
+#content img.inline
+{
+	background-color: inherit;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	vertical-align: middle;
+}
+
+/* article */
+
+#content div.article 
+{
+	background-color: #ffd;
+	padding: 0px 10px 5px 10px;
+	margin-bottom: 10px;
+	border: 1px dashed #aaa;
+}
+
+#content div.article h4
+{
+	margin-top: 5px;
+	margin-bottom: 0;
+	color: #666;
+	border-bottom: 1px solid #aaa;
+}
+
+#content div.article dfn 
+{
+	display: block;
+	word-spacing: 0.3em;
+	margin-top: 2px;
+	margin-bottom: 15px;
+}
+
+/* news-entries */
+
+#content div.news-entry 
+{
+	margin-bottom: 15px;
+	padding: 0;
+	border: 1px dashed #999;
+	background-color: #ffffe9;
+}
+
+#content div.news-entry h4 
+{
+	margin: 0;
+	padding: 2px 5px;
+	background-color: #ffd;
+	border-bottom: 1px dotted #ccc;
+}
+
+#content div.news-entry p
+{
+	padding: 2px 5px 0 10px;
+}
+
+#content div.news-entry dfn 
+{
+	display: block;
+	background-color: #ffc;
+	text-align: right;
+	padding: 2px 5px;
+}
+
+#content div.news-entry dfn span 
+{
+	color: #666;
+}
+
+#content div.news-entry dfn span:first-child:before 
+{
+	content: "> ";
+}
+
+/* files */
+
+#content div.file 
+{
+	border: 1px dotted #ccc;
+	padding: 0;
+}
+
+#content div.file h4 
+{
+	display: block;
+	margin: 0;
+	padding: 2px 5px 5px 5px;
+	background-color: #ccc;
+}
+
+#basis #content div.file h4 a.file-title-link,
+#basis #content div.file h4 a.file-title-link:active,
+#basis #content div.file h4 a.file-title-link:visited
+{
+	display: block;
+	color: #000;
+	background-color: #ccc;
+	border: none;
+	padding-bottom: 5px;
+	text-decoration: none;
+}
+
+#basis #content div.file h4 a.file-title-link:hover 
+{
+	display: block;
+	background-color: #d0d0d0;
+	color: #666;	
+}
+
+#content div.file img.file-screenshot 
+{
+	background-color: #ffc;
+	padding: 5px 5px 10px 5px;
+	margin: 20px 5px 0 15px;
+	border: 1px dotted #ccc;
+}
+
+#content div.file dl 
+{
+	padding-left: 15px;
+}
+
+#content div.file dl dt 
+{
+	margin-bottom: 10px;
+}
+
+#content div.file dl dd 
+{
+	margin-right: 20px;
+	word-spacing: 0.2em;
+}
+
+#content div.file dl dd a.file-link 
+{
+	font-size: 12px;
+	word-spacing: normal;	
+}
+
+#content div.file dl dd a.file-link:before 
+{
+	content: "[";
+}
+
+#content div.file dl dd a.file-link:after 
+{
+	content: "]"
+} 
+
+/* text-block */
+
+#content div.text-block div 
+{
+	padding-bottom: 35px;
+}
+
+#content div.text-block div.poem 
+{
+	padding-left: 65px;
+}
+
+#content div.text-block div.prose
+{
+	padding-left: 10px;
+}
+
+#content div.text-block div.poem p 
+{	
+	white-space: pre;
+	padding: 0;
+	margin: 0;
+	margin-bottom: -15px;
+}
+
+#content div.text-block div.poem p em
+{	
+	padding-left: 27px;
+}
+
+#content div.text-block div.poem dfn.poem-dfn 
+{
+	display: block;
+	width: 70%;
+	color: #999;
+	border: 1px dotted #999;
+	text-align: justify;
+	padding: 5px 15px;
+	margin-top: 25px;
+}
+
+#content div.text-block div.poem table 
+{
+	margin-top: 10px;
+}
+
+#content div.text-block div.poem table td
+{
+	padding: 0 5px;
+}

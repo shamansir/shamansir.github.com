@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./projects.xsl"?>
+<projects xmlns="http://ulric-wilfred.name" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://ulric-wilfred.name ./projects.xsd">          
+    <group shortname="personal">
+        <name>Personal</name>
+	    <project type="book" status="finished" lang="ru" mime-type="application/pdf" license="GPL" year-finished="2005">
+	        <!-- rights verification required -->
+	        <name>The Japanese Language Reference</name>
+	        <url>http://torrents.ru/forum/viewtopic.php?t=681498</url>
+	        <used-technologies>different free japanese-language-related software</used-technologies>
+	        <brief>A big reference for japanese language with as much hieroglyphical examples as possible, and using there as few syllable-based alphabet symbols as possible, and including much of historical, cultural and technical data.</brief>
+	    </project>
+        <project type="web-site" dynamic="static" status="finished">
+            <name>Saloni Ceramics site</name>
+            <!-- <logo>./foo.jpg</logo> -->
+            <url>http://saloni-ceramics.ru/</url>
+            <company-ordered>
+                <name>Saloni Ceramics</name>
+            </company-ordered>        
+            <used-technologies>Javascript</used-technologies>
+            <brief>A business-card-site</brief>
+        </project>
+        <project type="design" status="finished" year-finished="2005" license="Creative Commons">
+            <name>taur laonti</name>
+            <used-technologies>hands, paper</used-technologies>
+            <brief>An alphabet, strange and beautiful, representing the writing system of some very different nation or creature type</brief>
+            <!-- 
+            <related-files>
+                <file url="http://blah.com" title="Blah" />
+                <file url="http://foo.com" title="Foo Foo" mime-type="image" />
+                <file url="http://bar.net" title="Bar" />
+            </related-files>
+             -->
+        </project>        	    
+        <project type="web-application/game" dynamic="dynamic" status="finished" year-finished="2008">
+            <name>Black Jack</name>
+            <url>http://blackjack.crzcrz.net</url>
+            <source-url>http://code.google.com/p/lepro-blackjack</source-url>
+            <used-technologies>PHP, Javascript, JSON</used-technologies>
+            <brief>A BlackJack-like game for some mythical site with own rules, where one person represents a card himself.</brief>
+        </project>
+        <project type="web-site" dynamic="dynamic" status="finished" year-finished="2008">
+            <name>Metrosorium</name>
+            <url>http://letro.crzcrz.net</url>
+            <used-technologies>Javascript, JSON</used-technologies>
+            <brief>A dynamic web-site to show the metro-stations where users of the site live. Also it shows statistics and have some filters to choose the type of the data to show.</brief>
+        </project>
+        <project type="book" dynamic="dynamic" status="in-progress" lang="ru" mime-type="text/html" license="GNU Free Documentation License">
+            <name>Учебник Python 3.1, русская версия</name>
+            <url>http://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_Python_3.1</url>
+            <used-technologies>Wiki</used-technologies>
+            <brief>Python 3.1 tutorial in Russian</brief>
+        </project>
+        <project type="book" dynamic="dynamic" status="in-progress" lang="ru" mime-type="text/html" license="GNU Free Documentation License">
+            <name>Документация Python, русская версия</name>
+            <url>http://ru.wikibooks.org/wiki/Python</url>
+            <used-technologies>Wiki</used-technologies>
+            <brief>Python Documentation in Russian</brief>
+        </project>                      
+        <project type="application/game" status="in-progress" license="GPL" mime-type="application">
+            <name>jR-or-unnamed-Game</name>
+            <alternative-name>JReeson</alternative-name>
+            <url>http://jr-o-un-g.wikidot.com</url>
+            <source-url>https://launchpad.net/jr-o-un-g</source-url>
+            <used-technologies>Python, WxWidgets, OpenGL</used-technologies>
+            <brief>No brief still, due to secret information ;).</brief>
+        </project>        
+        <!--                
+	    <project type="video" status="postponed" frequency="series" duration="long">
+	        <name>K&amp;P</name>
+	        <used-technologies>Blender, Genius Tablet</used-technologies>
+	        <brief>A series of music videos for the selected songs, with similarly-drawn characters...</brief>
+	    </project>
+	    <project type="web-application" status="postponed" license="GPL">
+	        <name>JuiSe</name>
+	        <used-technologies>JavaScript, XHTML, DOM</used-technologies>
+	        <brief>"Visual Builder for your site" - layout-and-components-based builder for... web pages. A page constructor which easily allows to create different layouts, drag, drop and resize blocks and components and customize them freely through property editors - in your browser, on-line.</brief>
+	    </project>
+	    <project type="plug-in" status="cancelled" license="GPL">
+	        <name>ShamPy</name>
+	        <used-technologies>Eclipse, Jython</used-technologies>
+	        <brief>A Python language plugin for Eclipse, based on RDT. "Sham" is for "Shamrock", symbol of a plugin</brief>
+	    </project>
+	    <project type="application" status="cancelled" license="GPL">
+	        <name>JieroPPC</name>
+	        <used-technologies>Superwaba</used-technologies>
+	        <brief>A free traning program for drawing japanese hieroglyphs with a stick for Pocket PCs with good recognition and showing mistakes part-by-part</brief>
+	    </project>
+	     -->        
+    </group>
+    <group shortname="cooperative">
+        <name>Cooperative</name>
+        <project type="web-application" status="finished" cooperative="false">
+            <name>myPictureTown</name>
+            <url>http://www.mypicturetown.com</url>
+            <company-ordered>
+                <name>Nikon</name>
+                <website-url>http://nikon.com</website-url>
+            </company-ordered>            
+            <company-developed>
+                <name>Piclinq</name>
+                <website-url>http://piclinq.com</website-url>
+            </company-developed>                        
+            <used-technologies>JavaScript, J2EE, Apache Wicket</used-technologies>                        
+            <brief>A Photo-sharing site for owners of Nikon Wi-Fi Cameras and for simple users</brief>
+        </project>
+        <project type="web-application" status="finished">
+            <name>Unlock Austin</name>
+            <url>http://www.unlockaustin.com</url>            
+            <company-ordered>
+                <name>Ryan Pitylak</name>
+                <website-url>http://www.ryanpitylak.com/</website-url>
+            </company-ordered>  
+            <company-developed>
+                <name>EmDev LLC</name>
+                <website-url>www.emdev.ru/</website-url>
+            </company-developed>
+            <company-developed>
+                <name>Lucid Crew</name>
+                <website-url>http://www.lucidcrew.com/</website-url>
+            </company-developed>                        
+            <used-technologies>JavaScript, J2EE, JSF, Hibernate</used-technologies>                        
+            <brief>A Photo-sharing site for owners of Nikon Wi-Fi Cameras and for simple users</brief>
+        </project>
+        <project type="application-component" status="finished" dynamic="dynamic" cooperative="true" taken-part-percent="100">
+            <name>TreeMap-based Dynamic Market Viewing Component</name>            
+            <company-developed>
+                <name>EmDev LLC</name>
+                <website-url>www.emdev.ru/</website-url>
+            </company-developed>
+            <used-technologies>Borland Delphi, VCL</used-technologies>            
+            <brief>A VCL component, based on Tree Map Algorythm, dynamically showing the current market state</brief>                  
+        </project>
+        <project type="application" status="finished">
+            <name>Graphs Correlating software</name>
+            <company-ordered>
+                <name>VNIIOkeanGeologiya</name>
+                <website-url>http://www.vniio.ru</website-url>
+            </company-ordered>
+            <used-technologies>Borland Delphi</used-technologies>
+            <brief>A small application, that takes a dots file in standartized form and
+            corellates all the dots as the output</brief>
+        </project>        
+    </group>
+</projects>

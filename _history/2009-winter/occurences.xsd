@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+<xs:schema xmlns="http://ulric-wilfred.name" elementFormDefault="qualified" targetNamespace="http://ulric-wilfred.name" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="occurences" type="OccurenceListType" />
+  <xs:complexType name="OccurenceInfoType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="OccurenceListType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="occurence" type="OccurenceInfoType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="group" type="OccurenceGroupType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OccurenceGroupType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element maxOccurs="unbounded" name="occurence" type="OccurenceInfoType" />
+    </xs:sequence>
+    <xs:attribute name="shortname" type="xs:string" use="optional" />
+  </xs:complexType>
+</xs:schema>

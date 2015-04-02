@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./xslt/page.xsl"?>
+<p:page xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:p="http://www.shaman-sir.by.ru/XSD/Pages" 
+        xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Pages ./xsd/page.xsd">
+  <p:title>index page / навигация</p:title>
+  <p:sub-title>Index. Навигация</p:sub-title>
+  <p:additional-data>
+    <p:definition xmlns="http://www.w3.org/1999/xhtml">
+      <p>The <a href="#">index page</a> of <strong>shaman.sir homesite</strong> &#8212; this will allow to select the mode and will describe the future milestones.</p>
+      <p>
+        <a href="#">Навигационная страница</a> <strong>сайта shaman.sir</strong>. На ней вы можете выбрать режим отображения страниц и здесь же будут описаны планы на ближайшее будущее.
+      </p>
+    </p:definition>
+    <p:description>the index page of shaman.sir homesite as contents and introduction</p:description>
+  </p:additional-data>
+  <l:localization-default as="en"/>
+  <m:nav-menu>
+    <m:page-location>
+      <g:name>russian</g:name>
+      <g:href>#russian</g:href>
+    </m:page-location>
+    <m:page-location>
+      <g:name>english</g:name>
+      <g:href>#english</g:href>
+    </m:page-location>
+  </m:nav-menu>
+  <m:position-list>
+    <m:position>
+      <m:name>&gt; русский</m:name>
+      <m:anchor>#russian</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>режимы</m:name>
+      <m:anchor>#ru-modes</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>технология</m:name>
+      <m:anchor>#ru-technology</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>цели</m:name>
+      <m:anchor>#ru-future-plans</m:anchor>
+    </m:position>    
+    <m:position>
+      <m:name>&gt; english</m:name>
+      <m:anchor>#english</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>modes</m:name>
+      <m:anchor>#modes</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>technology</m:name>
+      <m:anchor>#technology</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>future plans</m:name>
+      <m:anchor>#future-plans</m:anchor>
+    </m:position>
+  </m:position-list>
+  <p:content>
+    <p:block title="Навигация">
+      <p:items type="article">
+        <p:articles>
+          <p:article id="russian" xmlns="http://www.w3.org/1999/xhtml">
+            <p:title>Режимы</p:title>
+            <p:author>
+              <g:nickname>shaman.sir</g:nickname>
+            </p:author>
+            <p:content>
+              <p>
+                Параграфом ниже вы можете ознакомиться с информацией, разъясняющей почему все-таки &#8212; режимы. Здесь же вы можете
+                выбрать реализованный режим сайта (или добавить ссылку на него в закладки):
+              </p>
+              <ul>
+                <li class="definition">
+                  <a href="./ru-home-page.xml" title="Версия по умолчанию, основанная на XML">Версия, основанная на XML</a>
+                  <dfn>Версия сайта по умолчанию, построенная на файлах XML. Поддерживается браузерами Firefox (выше версии 1.5) и Interner Explorer 6.0+</dfn>
+                </li>
+                <li class="definition">
+                  <a href="../opera/ru-home-page.xml" class="unimplemented" title="Версия, предназначенная для браузера Opera">XML-версия, ориентированная на браузер Opera</a>
+                  <dfn>
+                    Версия сайта, постороенная на файлах XML и спроектированная для браузера Opera версии 9.0+. <a href="#opera-ru" title="Описание причин, по которым для Opera существует отдельная версия">Ниже</a> описано, почему для браузера сделана отдельная версия.
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <a href="../xhtml/ru-home-page.html" class="unimplemented" title="Версия, основанная на XHTML">Версия, основанная на XHTML</a>
+                  <dfn>
+                    Некоторые браузеры (но их не так уж много) все еще не поддерживают технологии XML и/или XSLT. Эта версия предназначена для них.
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <a href="../no-css/ru-home-page.xml" class="unimplemented" title="Версия без стилей, основанная на XML">Версия без CSS стилей, основанная на XML</a>
+                  <dfn>
+                    Версия, к которой не были применены CSS-стили &#8212; для более удобного прочтения на мобильных телефонах, коммуникаторах, Palm-ах или карманных комппьютерах. Или для тех, кто экономит траффик.
+                  </dfn>
+                </li>
+              </ul>
+              <p>(Также некоторые стили будут доступны через выпадающее меню вверху каждой страницы)</p>
+            </p:content>
+          </p:article>
+        </p:articles>
+      </p:items>
+      <p:items type="page-code">
+        <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+          <p:code-block id="ru-modes">
+            <p:title>Почему режимы?</p:title>
+            <p:content>
+              <p>Так почему же все-таки режимы?</p>
+              <p>
+                Повсюду вокруг вы можете наблюдать кнопки и изображения, сообщающие, что этот сайт сделан с
+                использованием всех технологий, которые позволяют использовать
+                <em>одну</em> <em>единственную</em> гибкую версию с подержкой любого браузера и/или любого устройства. Но все же я использую режимы, которые по сути
+                являются все теми же различными версиями. Каковы мои оправдания?
+              </p>
+              <p>
+                Я отвечу &#8212; <q>Браузеры &#8212; все еще. Впрочем, не такая глобальная проблема, как раньше.</q>. За исключением одного факта, <a href="#opera-ru">описанного ниже</a>, в подавляющем большинстве случаев вы можете использовать версию сайта по умолчанию.
+              </p>
+              <p>
+                Некоторые браузеры для карманных компьютеров не позволяют отключить CSS-стили, так что мне пришлось предоставить дополнительную версию сайта. Некоторое время спустя, если мой ресурс станет популярным, я планирую
+                обеспечить динамическое отключение стилей, используя JavaScript или что-нибудь в этом роде. Некоторые браузеры до сих пор не поддерживают технологии <acronym lang="en" title="eXtensible Markup Language">XML</acronym>/<acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>,
+                так что и в этом случае мне нужна дополнительная версия для них. Другие версии &#8212; такие как печатная и версия с увеличенными шрифтами &#8212; будут позже заменены на динамически генерируемые. Навигационная страница же предлагается по той причине, что мой провайдер не позволяет быть стартовыми страницам, не основанным на <acronym lang="en" title="HyperText Markup Language">HTML</acronym>.
+              </p>
+              <p id="opera-ru">
+                Худшая вещь, с которой я столкнулся, состоит в том, что браузер <a href="http://www.opera.com">Opera</a>, даже при своей версии 9.0, не поддерживает функцию <em>document()</em> для <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>.
+                Это означает, что я не могу включать одни <acronym lang="en" title="eXtensible Markup Language">XML</acronym>-файлы в другие &#8212; метод, который я использую повсюду &#8212; например, для того чтобы измененять навигацию в одном лишь месте.
+                Я надеюсь, что в скорейшее время найду решение и избавлюсь от этой проблемы, а также дополнительной версии &#8212; так что сайт будет снова работать во всех последних версиях браузеров.
+              </p>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="ru-technology">
+            <p:title>Технология</p:title>
+            <p:content>
+              <p>Сайт использует некоторое количество технологий, в большей или меньшей степени:</p>
+              <ul>
+                <li class="definition">
+                  <acronym lang="en" title="eXtensible Markup Language" class="dfn-title">XML</acronym>
+                  <dfn>
+                    Технология, разработанная для хранения данных в удобном и простом формате. Наряду с <acronym lang="en" title="XML Schema Definition">XSD</acronym> обеспечивает мне наилучший способ хранения содержимого документов.
+                    <em>
+                      (<a href="http://www.w3.org/TR/xml11" title="Спецификация XML">спецификация</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <acronym lang="en" title="XML Schema Definition" class="dfn-title">XSD</acronym>
+                  <dfn>
+                    Способ определить строгую структуру для документов <acronym lang="en" title="eXtensible Markup Language">XML</acronym>,
+                    которые будут созданы в будущем. Очень удобно описать кому-либо (или самому себе), какую структуру пользователю необходимо использовать, чтобы
+                    документ отобразился или был разобран корректно.
+                    <em>
+                      (<a href="http://www.w3.org/TR/xmlschema-1/" title="Спецификация XSD">спецификация</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <acronym lang="en" title="eXtensible Stylesheet Language Transformations" class="dfn-title">XSLT</acronym>
+                  <dfn>
+                    В моем случае, это способ описать, каким образом структура должна быть применена к любым данным страницы из
+                    <acronym lang="en" title="eXtensible Markup Language">XML</acronym>-файла, который следует схеме <acronym lang="en" title="XML Schema Definition">XSD</acronym>,
+                    и получить в результате файл <acronym lang="en" title="eXtensible HyperText Markup Language">XHTML</acronym>
+                    (или браузер сделает это самостоятельно).
+                    <em>
+                      (<a href="http://www.w3.org/TR/xslt" title="Спецификация XSLT">спецификация</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <acronym lang="en" title="eXtensible HyperText Markup Language" class="dfn-title">XHTML</acronym>
+                  <dfn>
+                    Наследник технологии <acronym lang="en" title="HyperText Markup Language">HTML</acronym>, слитый с
+                    <acronym lang="en" title="eXtensible Markup Language">XML</acronym> &#8212; лучший способ
+                    определить структуру документа. <em>
+                      (<a href="http://www.w3.org/TR/xhtml2" title="Спецификация XHTML">спецификация</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <acronym lang="en" title="Cascading Style Sheets" class="dfn-title">CSS</acronym>
+                  <dfn>
+                    Лучший способ полностью определить стиль страниц, не затрагивая структуру, как и подразумевалось разработчиками.
+                    <em>
+                      (<a href="http://www.w3.org/TR/CSS21" title="Спецификация CSS">спецификация</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <span class="dfn-title">JavaScript</span>
+                  <dfn>
+                    Используется для динамического изменения содержимого страниц. Так, например, страницы могут представлять любой желаемый интерфейс пользователя.
+                  </dfn>
+                </li>
+              </ul>
+              <p>Представляю вам описание работы всего описанного, как механизма:</p>
+              <p>
+                Чтобы быть кратким. У меня имеются данные страницы в одном XML файле, который следует схеме XSD &#8212; схеме <em>одной страницы домашнего сайта shaman.sir</em>. Также у меня есть спецификации для навигации в других XML-файлах (со своими собственными схемами XSD), так что,
+                если они необходимы, я включаю и их. Также я планирую использовать XML файл для локализаций. Затем, к результрующему XML-файлу применяется XSLT, если первый верно следует XSD, применяя структуру-для-всех-страниц к данным из XML и конвертируя ее в результирующий файл XTML,
+                который вы наблюдаете в браузере. Параллельно, файл XLT применяет различные CSS-стили, в зависимости от ситуации &#8212; в них описан полностью стиль результирующей структуры XHTML. Сгенерированный JavaScript контролирует поведение определенных элементов на сайте.
+                Как результат: у меня есть отдельно данные, структура (одна для всех), стиль (один для всех) и поведение (одно для всего), и только в момент отображения браузер собирает всю эту кучу в ту страницу, которую вы видите.
+              </p>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="ru-future-plans">
+            <p:title>Цели</p:title>
+            <p:content>
+              <p>Также хочу описать здесь планы на будущее. Здесь представлены вещи, которые я намерен реализовать в ближайшем будущем:</p>
+              <ul class="aims">
+                <li class="finished">Создать страницу навигации для перемещения на главную страницу, в зависимости от ситуации, для перечисления закладок, пока не реализовано другого.</li>
+                <li>Заполнить содержимое сайта. В порядке: Главная страница, Проекты, Творчество, Об авторе...</li>
+                <li>
+                  Избавиться от отдельной версии для <a href="http://www.opera.com">Opera</a> &#8212; решить проблему с <code>document()</code>.
+                </li>
+                <li>
+                  По завершению обработки <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>, результирующий файл часто содержит включение ненужных пространств имен &#8212; в тэгах, которые получены путем выбора оси <code>node()</code>.
+                </li>
+                <li>
+                  Заставить различные версии сайта генерироваться динамически, засчет JavaScript или чего-нибудь наподобие. Добавить выпадающий список на шаблон. Добиться того, чтобы отключение CSS делалось максимально удобно, легко и доступно.
+                </li>
+                <li>
+                  Стиль сайта нуждается во многих, но аккуратных, улучшениях. Возможно даже в полной переработке стиля. Логотипы внизу страницу могут использовать одно изображение для обоих состояний, заместо двух отдельных. Некоторые блоки отображаются некорректно в различных браузерах. Меню позиций не настолько симпатичное, насколько могло бы быть.
+                  Много хитростей может быть использовано, чтобы дизайн выглядел завершенным: градиенты, тени, закругленные или косые углы, большее (или сбалансированное) количество элементов, основанных на изображениях. К некоторым элементам трудно получить доступ на небольших расширениях. Также я намерен добавить немного динамики в сайт: сворачиваемые
+                  разделы, динамическое изменение стиле, как было описано, и так далее.
+                </li>
+                <li>
+                  Добавить поддержку включения RSS-новостей, отображаемые как новости, сгенерированные через <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym> и также доступные по отдельной ссылке в качестве единого файла.
+                </li>
+                <li>
+                  Добавить поддержку основных языков, хранящуюся в специальном файле <acronym lang="en" title="eXtensible Markup Language">XML</acronym> и также, возможно, с возможностью динамического изменения. Для различных языков я все также планирую использовать разные <acronym lang="en" title="eXtensible Markup Language">XML</acronym>-файлы.
+                </li>
+                <li>
+                  В текущей версии <acronym lang="en" title="XML Schema Definition">XSD</acronym> <acronym lang="en" title="identificator">id</acronym> есть только у вложенных блоков (конкретной статьи, новости и т.п.) &#8212; из-за этого неудобно организовывать меню позиций. Определенно добавить <acronym lang="en" title="identificator">id</acronym> и к группе блоков.
+                </li>
+                <li>
+                  Для оформления текстов нужны дополнительные изменения в <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym> и <acronym lang="en" title="Cascading Style Sheets">CSS</acronym> &#8212; нужна поддержка тега &lt;dfn&gt; &#8212; различная для стихов и прозы, нужна поддержка ячейки &lt;td&gt; с сильно сдвинутым влево контентом.
+                </li>
+                <li>
+                  В любом случае, переделать дизайн на более симпатичный &#8212; дизайн предыдущей версии сайта был намного более перевариваемым. Тем более теперь это действительно легко.
+                </li>                
+              </ul>
+            </p:content>
+          </p:code-block>
+        </p:page-code>
+      </p:items>
+    </p:block>
+    <p:block title="Navigation">
+      <p:items type="article">
+        <p:articles>
+          <p:article id="english" xmlns="http://www.w3.org/1999/xhtml">
+            <p:title>The Modes</p:title>
+            <p:author>
+              <g:nickname>shaman.sir</g:nickname>
+            </p:author>
+            <p:content>
+              <p>A paragraph below you can read the information about why &#8212; the modes. And here you can navigate to the 
+                 implemented modes of the site (or add them as your bookmarks): </p>
+              <ul>                
+                <li class="definition">
+                  <a href="./home-page.xml" class="unimplemented" title="Default, XML-Based version">XML-Based version</a>
+                  <dfn>The default version of the site, based on XML files. Supported by Firefox, greater than 1.5 and Internet Explorer 6.0+</dfn>
+                </li>
+                <li class="definition">
+                  <a href="../opera/home-page.xml" class="unimplemented" title="Version, designed for the Opera browser">Opera-oriented XML-Based version</a>
+                  <dfn>The version of the site for Opera 9+ browser, based on XML files. <a href="#opera-en" title="Description of the reasons, why different version of Opera">Below</a> is the description why it is different.</dfn>
+                </li>
+                <li class="definition">
+                  <a href="../xhtml/home-page.html" class="unimplemented" title="XHTML-Based version">XHTML-Based version</a>
+                  <dfn>
+                    Some browsers (but not a lot) do not support XML and/or XSLT technologies still. So here is the version for them.
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <a href="../no-css/home-page.xml" class="unimplemented" title="XML-Based version with no styles">XML-Based version, with no CSS Styles</a>
+                  <dfn>
+                    Version with no CSS styles applied &#8212; for the best and easy reading on Mobile Phones, Communicators, Palms or Pocket PCs, or with no spending much of traffic. 
+                  </dfn>
+                </li>
+              </ul>
+              <p>(Some styles are also will be appliable using the selection box on the top of each page)</p>
+            </p:content>
+          </p:article>
+        </p:articles>
+      </p:items>
+      <p:items type="page-code">
+        <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+          <p:code-block id="modes">
+            <p:title>Why Modes?</p:title>
+            <p:content>
+              <p>So, why are the modes?</p>
+              <p>Everywhere around you see the buttons and images saying that this site is done using all of the technologies to provide <em>one</em> <em>single</em>
+              flexible version to support any browser and any device reading. But again, I'm using the modes, which in the fact are the different versions. What are my
+              excuses?
+            </p>
+              <p>
+                I'll say &#8212; <q>The browsers, still, but not so globally a problem, than before</q>. Excluding one fact, <a href="#opera-en">described below</a>, in the very most cases you may use the default version of the site.
+              </p>
+              <p>
+                Some Pocket PC browsers do not allow switching CSS styles off, so it was required for me to provide another version of site. Some time later, if my resource will become popular, I plan to make it
+              dynamically changed using JavaScript ore something like that. Some browsers still do not support <acronym lang="en" title="eXtensible Markup Language">XML</acronym>/<acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>
+              technologies, so I also need a version for this. Another versions &#8212; like printable and version with larger fonts &#8212; will later be changed to be dynamically generated. Index page is also done because of my provider &#8212; he don't allows pages that are not <acronym lang="en" title="HyperText Markup Language">HTML</acronym> to be the starting pages.
+              </p>
+              <p id="opera-en">The worst thing for me is that <a href="http://www.opera.com">Opera</a> browser, even in its 9.0 version, do not supports <em>document()</em> function for <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>.
+              This means that I can not include one <acronym lang="en" title="eXtensible Markup Language">XML</acronym> files in anothers &#8212; the method I'm using everywhere &#8212; to change navigation menu in only the one place, for example.
+              I hope that I'll find a solution as soon as possible, so I'll get rid of this problem and additional version &#8212; so the site again will be workable in all of the latest browsers.
+            </p>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="technology">
+            <p:title>Technology</p:title>
+            <p:content>
+              <p>The site uses the number of technologies, each to a greater or lesser extent:</p>
+              <ul>
+                <li class="definition">
+                  <acronym lang="en" title="eXtensible Markup Language" class="dfn-title">XML</acronym>
+                  <dfn>
+                    The technology, implemented to specify any data in the usable and simple format. Align with <acronym lang="en" title="XML Schema Definition">XSD</acronym> provides the best way for me to store the content of the documents.<em>
+                      (<a href="http://www.w3.org/TR/xml11" title="XML specification">specification</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <acronym lang="en" title="XML Schema Definition" class="dfn-title">XSD</acronym>
+                  <dfn>
+                    The way to specify the strict structure for the future <acronym lang="en" title="eXtensible Markup Language">XML</acronym> documents. It is very useful to describe someone (or for myself) what the structure user needs to use to make it displayed or pased correctly.<em>
+                      (<a href="http://www.w3.org/TR/xmlschema-1/" title="XSD specification">specification</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <acronym lang="en" title="eXtensible Stylesheet Language Transformations" class="dfn-title">XSLT</acronym>
+                  <dfn>
+                    In my case, it is the way to describe how the structure must to be applied to the any page data from the <acronym lang="en" title="eXtensible Markup Language">XML</acronym> file, which follows to the <acronym lang="en" title="XML Schema Definition">XSD</acronym> schema, and to get the <acronym lang="en" title="eXtensible HyperText Markup Language">XHTML</acronym> file as a result (or the browser will make it itself).
+                    <em>
+                      (<a href="http://www.w3.org/TR/xslt" title="XSLT specification">specification</a>)
+                    </em>
+                  </dfn>
+                </li>                
+                <li class="definition">
+                  <acronym lang="en" title="eXtensible HyperText Markup Language" class="dfn-title">XHTML</acronym>
+                  <dfn>
+                    The successor of <acronym lang="en" title="HyperText Markup Language">HTML</acronym> technology, diluted with <acronym lang="en" title="eXtensible Markup Language">XML</acronym> &#8212; the best way to represent a structure of document. <em>(<a href="http://www.w3.org/TR/xhtml2" title="XHTML specification">specification</a>)</em>
+                </dfn>
+                </li>
+                <li class="definition">
+                  <acronym lang="en" title="Cascading Style Sheets" class="dfn-title">CSS</acronym>
+                  <dfn>
+                    The best way to specify the whole pages style, with no touching to the structure, as it was intended for.
+                    <em>
+                      (<a href="http://www.w3.org/TR/CSS21" title="CSS specification">specification</a>)
+                    </em>
+                  </dfn>
+                </li>
+                <li class="definition">
+                  <span class="dfn-title">JavaScript</span>
+                  <dfn>
+                    Is used to dynamically modify the pages content. So, for example, the pages may represent the any GUI you want. 
+                  </dfn>
+                </li>
+              </ul>
+              <p>Here is the description how everyting acts using the whole sight:</p>
+              <p>To be short. I have a page data in the single XML file, which follows to the XSD &#8212; <em>single shaman.sir homesite page</em> shema. Also I have the navigation specifications in the another XML files (with their own XSD schemas), so I include them also, if they are
+                required. I plan to use a separate XML file for localizations, too. Then, the XSLT is apllied to the resulting XML file, if it properly follows the XSD, applying the stucture-for-all-of-the-pages to the XML data, and converting it into the resulting XHTML file,
+                that you see in the browser. Parallelly, XSLT file applies the different CSS styles, depending on situation &#8212; they specify all of the style for the resulting XHTML structure. The generated JavaScript controls the specific elements behaviour on the site.
+                As the result, I have the separated data, structure (one-for-all), style (one-for-all) and behaviour (one-for-all), and only in a run-time the browser collects all this stuff into one single page you see.</p>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="future-plans">
+            <p:title>Milestones</p:title>
+            <p:content>
+              <p>Also I want to describe the future plans here. Here are the things I want to do in the near future:</p>
+              <ul class="aims">
+                <li class="finished">Create index page to navigate home, depending on the situation, to specify bookmarks links, while different is not implemented.</li>
+                <li>Fill in the content. In order: Home page, Projects, Art, About...</li>
+                <li>Get rid of the separate <a href="http://www.opera.com">Opera</a> version &#8212; resolve problem with <code>document()</code>.</li>
+                <li>
+                  After the processing of <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>, the result file often contains an inclusion of uneeded namespaces, in the tags, that are taken with <code>node()</code> axis.
+                </li>
+                <li>Make different versions of the site to be generated dynamically, using JavaScript or something like that. Add selection box to the template. Make switching off CSS to be the easiest accessible way.</li>
+                <li>
+                  The style needs much of, but accurate, upgrades. Possibly even total refactoring. Logos at the bottom may use the single image instead of two different. Some blocks are shown not so correctly in the different browsers. Sub-navigation menu style is not so beautiful as it may be. Much of things may be added to make design more complete:
+                  gradients, shadows, rounded or slope corners, more (or balanced) image elements. Some elements are not so easily accessible using small resolutions. Also I want to add dynamic behaviour to the site &#8212; something like expandable sections of the page, dynamic style changing, as mentioned, and so on.
+                </li>
+                <li>Support simple RSS news inclusion, show as news when generated as <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>, and also accessible from separate link as a single file.</li>
+                <li>Support basic translations to be stored in one <acronym lang="en" title="eXtensible Markup Language">XML</acronym> file and also possibly to allow dynamic changing. For different languages I plan to use different <acronym lang="en" title="eXtensible Markup Language">XML</acronym> files still.</li>
+                <li>
+                  In the current version of <acronym lang="en" title="XML Schema Definition">XSD</acronym> only the low-level blocks have the <acronym lang="en" title="identificator">id</acronym> (concrete article, news-entry etc.) &#8212; the result is in the incorrect menu positions organization. Surely I need to add the <acronym lang="en" title="identificator">id</acronym> to the blocks group.
+                </li>
+                <li>
+                  For the texts design I need additional changes in <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym> and <acronym lang="en" title="Cascading Style Sheets">CSS</acronym> &#8212; - we need the support of &lt;dfn&gt; tag, different for poems and prose, also I need the &lt;td&gt; cell with much shifted content support.
+                </li>
+                <li>
+                  Anyway, change the design to be more simpatique &#8212; the previous design version of the site was much more complicable. And now it is much easier, besides.
+                </li>
+              </ul>
+            </p:content>
+          </p:code-block>
+        </p:page-code>
+      </p:items>
+    </p:block>
+  </p:content>
+</p:page>

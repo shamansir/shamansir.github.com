@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./xslt/page.xsl"?>
+<p:page xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:p="http://www.shaman-sir.by.ru/XSD/Pages" 
+        xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Pages ./xsd/page.xsd">
+  <p:title>творчество: визуальное</p:title>
+  <p:sub-title>Творчество: Визуальное</p:sub-title>
+  <p:additional-data>
+    <p:definition xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="#">Творчество</a> <a href="./ru-about-page.xml" title="Об авторе">некоего shaman.sir</a> поделено на избранную прозу, 
+        избранную поэзию и избраннное визуальное творчество. Избранная поэзия представлена на отдельной
+        странице. Пути к визуальному творчеству и его описание расположены на данной странице. 
+        Каждое же прозаическое произведение, в свою очередь, также представлено на отдельной странице &#8212; дабы 
+        не сильно напрягать сетевые каналы.
+      </p>
+    </p:definition>
+    <p:description>the index page of shaman.sir homesite as contents and introduction</p:description>    
+  </p:additional-data>
+  <l:localization-default as="ru"/>
+  <m:nav-menu-source src="./ru-nav-menu.xml"/>
+  <m:tab-menu-source src="./ru-art-tab-menu.xml" activate="visual-link"/>
+  <m:position-list>
+    <m:position>
+      <m:name>&gt; Визуальное</m:name>
+      <m:anchor>#visual-contents</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>Drawing01</m:name>
+      <m:anchor>#drawing01</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>Anim01</m:name>
+      <m:anchor>#anim01</m:anchor>
+    </m:position>
+  </m:position-list>
+  <p:content>
+    <p:block title="Визуальное: Содержание">
+      <p:items type="page-code">
+        <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+          <p:code-block id="visual-contents">
+            <p:content>
+              <p>Рисунки:</p>
+              <ol class="contents">
+                <li>
+                  <a href="#drawing01">Drawing01</a>
+                </li>
+              </ol>
+              <p>Анимация:</p>
+              <ol class="contents">
+                <li>
+                  <a href="#anim01">Anim01</a>
+                </li>
+              </ol>              
+            </p:content>
+          </p:code-block>
+        </p:page-code>
+      </p:items>
+    </p:block>
+    <p:block title="Рисунки">
+      <p:items type="file">
+        <p:files xmlns="http://www.w3.org/1999/xhtml">
+          <p:file id="drawing01" type="image">
+            <p:href></p:href>
+            <p:fileURI></p:fileURI>
+            <p:screenshotURI></p:screenshotURI>
+            <p:name>Картина 01 некоего shaman.sir</p:name>
+            <p:description>Картина 01 некоего shaman.sir</p:description>
+          </p:file>          
+        </p:files>
+      </p:items>
+    </p:block>
+    <p:block title="Анимация">
+      <p:items type="file">
+        <p:files xmlns="http://www.w3.org/1999/xhtml">
+          <p:file id="anim01" type="image">
+            <p:href></p:href>
+            <p:fileURI></p:fileURI>
+            <p:screenshotURI></p:screenshotURI>
+            <p:name>Анимация 01 некоего shaman.sir</p:name>
+            <p:description>Анимация 01 некоего shaman.sir</p:description>
+          </p:file>
+        </p:files>
+      </p:items>
+    </p:block>
+  </p:content>
+</p:page>

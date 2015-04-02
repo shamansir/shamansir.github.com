@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects xmlns="http://ulric-wilfred.name" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ulric-wilfred.name ./projects.xsd">
+    <project type="application" sub-type="game" status="in-progress" license="GPL">
+        <name>jR-or-unnamed-Game</name>
+        <alternative-name>JReeson</alternative-name>
+        <used-technologies>Python, WxWidgets, OpenGL</used-technologies>
+        <brief>Shooter-or-RPG-like bloody game, possibly b/w and in 2D, based on very intelligent AI (which creates a self-living and really-similar-to-the-life world (predators and herbivores) and puts player there) and with several bright new ideas (like using all the five sences data for creatures), inspired by Terrarium project from Microsoft</brief>
+        <!-- <related-files>
+			  	<file title="" url="" />
+		</related-files> -->
+    </project>
+    <project type="design" status="finished">
+        <name>taur laonti</name>
+        <used-technologies>hands, paper</used-technologies>
+        <brief>An alphabet, strange and beautiful, representing the writing system of some very different nation or creature type</brief>
+    </project>
+    <project type="book" status="finished" lang="ru" mime-type="application/pdf" license="GPL">
+        <!-- rights verification required -->
+        <name>The Japanese Language Reference</name>
+        <url>http://torrents.ru/forum/viewtopic.php?t=681498</url>
+        <used-technologies>different free japanese-language-related software</used-technologies>
+        <brief>A big reference for japanese language with as much hieroglyphical examples as possible, and using there as few syllable-based alphabet symbols as possible, and including much of historical, cultural and technical data.</brief>
+    </project>
+    <project type="web-site" sub-type="dynamic" status="finished">
+        <name>Metrosorium</name>
+        <url>http://letro.crzcrz.net</url>
+        <used-technologies>Javascript, JSON</used-technologies>
+        <brief>A dynamic web-site to show the metro-stations where users of the site live. Also it shows statistics and have some filters to choose the type of the data to show.</brief>
+    </project>
+    <project type="book" status="finished" lang="ru" mime-type="text/html" license="GNU Free Documentation License">
+        <name>Python 2.5 Tutorial Russian Version</name>
+        <url>http://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B5%D0%B1%D0%BD%D0%B8%D0%BA_Python_2.5</url>
+        <used-technologies>Wiki</used-technologies>
+        <brief>Python 2.5 tutorial in Russian</brief>
+    </project>
+    <project type="video" status="postponed" frequency="series" duration="long">
+        <name>K&amp;P</name>
+        <used-technologies>Blender, Genius Tablet</used-technologies>
+        <brief>A series of music videos for the selected songs, with similarly-drawn characters...</brief>
+    </project>
+    <project type="web-application" status="postponed" license="GPL">
+        <name>JuiSe</name>
+        <used-technologies>JavaScript, XHTML, DOM</used-technologies>
+        <brief>"Visual Builder for your site" - layout-and-components-based builder for... web pages. A page constructor which easily allows to create different layouts, drag, drop and resize blocks and components and customize them freely through property editors - in your browser, on-line.</brief>
+    </project>
+    <project type="plug-in" status="cancelled" license="GPL">
+        <name>ShamPy</name>
+        <used-technologies>Eclipse, Jython</used-technologies>
+        <brief>A Python language plugin for Eclipse, based on RDT. "Sham" is for "Shamrock", symbol of a plugin</brief>
+    </project>
+    <project type="application" status="cancelled" license="GPL">
+        <name>JieroPPC</name>
+        <used-technologies>Superwaba</used-technologies>
+        <brief>A free traning program for drawing japanese hieroglyphs with a stick for Pocket PCs with good recognition and showing mistakes part-by-part</brief>
+    </project>
+</projects>

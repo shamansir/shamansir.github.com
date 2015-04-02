@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:menus="http://www.shaman-sir.by.ru/XSD/Menus" 
+		   xmlns:generic="http://www.shaman-sir.by.ru/XSD/Generic"
+		   targetNamespace="http://www.shaman-sir.by.ru/XSD/Menus" 
+		   elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.shaman-sir.by.ru/XSD/Generic" schemaLocation="./generic.xsd"/>
+	<xs:element name="position-list">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>	
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="position" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="anchor" type="generic:URIAnchorType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

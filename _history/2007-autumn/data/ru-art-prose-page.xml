@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./xslt/page.xsl"?>
+<p:page xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:p="http://www.shaman-sir.by.ru/XSD/Pages" 
+        xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Pages ./xsd/page.xsd">
+  <p:title>творчество: проза</p:title>
+  <p:sub-title>Творчество: Проза</p:sub-title>
+  <p:additional-data>
+    <p:definition xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="#">Творчество</a> <a href="./ru-about-page.xml" title="Об авторе">некоего shaman.sir</a> поделено на избранную прозу,
+        избранную поэзию и избраннное визуальное творчество. Избранная поэзия представлена на отдельной
+        странице. Пути к визуальному творчеству и его описание расположены на отдельной странице.
+        Список прозы находится на данной странице. Каждое же прозаическое произведение, в свою очередь,
+        также представлено на отдельной странице &#8212; дабы не сильно напрягать сетевые каналы.
+      </p>
+    </p:definition>
+    <p:description>the index page of shaman.sir homesite as contents and introduction</p:description>    
+  </p:additional-data>
+  <l:localization-default as="ru"/>
+  <m:nav-menu-source src="./ru-nav-menu.xml"/>
+  <m:tab-menu-source src="./ru-art-tab-menu.xml" activate="prose-link"/>
+  <m:position-list>
+    <m:position>      
+      <m:name>&gt; Проза</m:name>
+      <m:anchor>#prose-contents</m:anchor>      
+    </m:position>
+    <m:position>
+      <m:name>Prose01</m:name>
+      <m:anchor>#prose01</m:anchor>
+    </m:position>
+  </m:position-list>
+  <p:content>
+    <p:block title="Проза: Содержание">
+      <p:items type="page-code">
+        <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+          <p:code-block id="prose-contents">
+            <p:content>
+              <ol class="contents">
+                <li>
+                  <a href="#prose01">Prose01</a>
+                </li>
+              </ol>
+            </p:content>
+          </p:code-block>
+        </p:page-code>
+      </p:items>
+    </p:block>
+    <p:block title="Проза">
+      <p:items type="text-block">
+        <p:text-blocks xmlns="http://www.w3.org/1999/xhtml">
+          <p:text-block type="prose" id="prose01">
+            <p:title>Проза 01</p:title>
+            <p:finish-date>??/06/1996</p:finish-date>
+            <p:author>
+              <g:nickname>shaman.sir</g:nickname>
+            </p:author>
+            <p:content>
+              <p>...</p>
+            </p:content>
+          </p:text-block>
+        </p:text-blocks>
+      </p:items>
+    </p:block>
+  </p:content>
+</p:page>

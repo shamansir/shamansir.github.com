@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resume xmlns="http://ns.hr-xml.org/2007-04-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ns.hr-xml.org/2007-04-15 Resume.xsd">
+<StructuredXMLResume>
+    <ContactInfo>
+        <PersonName>
+            <GivenName>Ulric</GivenName>
+            <PreferredGivenName>John</PreferredGivenName>
+            <FamilyName>Wilfred</FamilyName>
+        </PersonName>
+        <ContactMethod>
+            <InternetEmailAddress>ulric.wilfred@yahoo.com</InternetEmailAddress>
+            <InternetWebAddress>http://shamansir.madfire.net</InternetWebAddress>
+        </ContactMethod>
+    </ContactInfo>
+    <Objective>
+	   Just a creative, sometimes fanatic developer, working currently in the place where he still likes to work. 
+	   I like to get new knowledge and use it, and also I like to create and to make a finished product...
+	</Objective>
+	<EmploymentHistory>
+        <EmployerOrg employerOrgType="soleEmployer">
+            <EmployerOrgName>Piclinq Rus / Fotonation Inc.</EmployerOrgName>
+            <PositionHistory positionType="directHire" currentEmployer="true">				
+                <Title>Web UI Developer</Title>
+                <OrgName>
+                    <OrganizationName>Russian Division [UI Team]</OrganizationName>
+                </OrgName>
+                <OrgInfo>
+                    <WebSite>http://piclinq.com</WebSite>
+                </OrgInfo>
+				<OrgIndustry primaryIndicator="true">
+					<IndustryDescription>Information Technology and Services industry</IndustryDescription>
+				</OrgIndustry>
+                <Description>
+                   	Creating and extending functionality for Nikon myPictureTown [http://www.mypicturetown.com] project.
+					Taking a JavaScript part and implementing much of a really hot stuff for.
+					(Java &amp; JavaScript: Development with Apache Wicket + JavaScript components and scripts)
+		        </Description>
+                <StartDate>
+                    <YearMonth>2007-05</YearMonth>
+                </StartDate>
+            </PositionHistory>
+        </EmployerOrg>
+        <EmployerOrg employerOrgType="soleEmployer">
+            <EmployerOrgName>Fabrika Koda LTD</EmployerOrgName>
+            <PositionHistory positionType="directHire">
+                <Title>PHP Web Developer</Title>
+				<OrgName>
+					<OrganizationName>Development Team</OrganizationName>
+				</OrgName>
+                <Description>
+                    Participation in PHP5 CMS project development (Smarty/Creole)
+        			Test-Driven Development is used in development;
+        			Installing &amp; configuring the SVN/Trac server for developers usage;
+        			Several small PHP5+AJAX projects;
+                </Description>
+                <StartDate>
+                    <YearMonth>2006-11</YearMonth>
+                </StartDate>
+                <EndDate>
+                    <YearMonth>2007-05</YearMonth>
+                </EndDate>
+            </PositionHistory>
+        </EmployerOrg>
+        <EmployerOrg employerOrgType="soleEmployer">
+            <EmployerOrgName>EmDev</EmployerOrgName>
+            <PositionHistory positionType="directHire">
+                <Title>Software/Web Developer</Title>
+				<OrgName>
+					<OrganizationName>Java Development Team</OrganizationName>
+				</OrgName>				
+                <Description>
+       				Participation in J2EE projects development: Social Network (Spring/Hibernate) [http://unlockaustin.com] and internal BPM-Oriented Project;
+        			Extreme Programming (TDD, Pair Programming) used in development;
+        			Graphical BPM Component (Object Pascal/VCL) development for Dynamic Data Visualisation;
+					Several Python tasks for internal projects;
+        			Alt Linux was used as work-station;
+                </Description>
+                <StartDate>
+                    <YearMonth>2005-03</YearMonth>
+                </StartDate>
+                <EndDate>
+                    <YearMonth>2006-09</YearMonth>
+                </EndDate>
+            </PositionHistory>
+        </EmployerOrg>
+        <EmployerOrg employerOrgType="soleEmployer">
+            <EmployerOrgName>VNIIOkeanGeologiya</EmployerOrgName>
+            <PositionHistory positionType="directHire">
+                <Title>Developer, Animation Creator, Engineer</Title>	
+                <OrgName>
+                    <OrganizationName>Laboratory of Multi-level Geo-Physical Monitoring</OrganizationName>
+                </OrgName>
+                <OrgInfo>
+                    <WebSite>http://www.vniio.ru/naychp.htm</WebSite>
+                </OrgInfo>
+				<OrgIndustry primaryIndicator="true">
+					<IndustryDescription>Research industry</IndustryDescription>
+				</OrgIndustry>				
+                <Description>
+                    Scientific Delphi Applications; Flash Animation for World-Level Conferences;
+                </Description>
+                <StartDate>
+                    <YearMonth>2004-06</YearMonth>
+                </StartDate>
+                <EndDate>
+                    <YearMonth>2005-03</YearMonth>
+                </EndDate>
+            </PositionHistory>
+        </EmployerOrg>		
+    </EmploymentHistory>
+    <EducationHistory>
+        <SchoolOrInstitution schoolType="university">
+            <School>
+                <SchoolName>Saint-Petersburg Electrotechnical University 'LETI'</SchoolName>
+            </School>
+            <OrganizationUnit organizationType="department">
+                Electrical Engineering And Computer Science, Electronics, Physics
+            </OrganizationUnit>
+            <Major>Radio Electronics</Major>
+            <DatesOfAttendance>
+                <StartDate>
+                    <YearMonth>2007-09</YearMonth>
+                </StartDate>
+            </DatesOfAttendance>
+        </SchoolOrInstitution>
+    	<SchoolOrInstitution schoolType="secondary">
+            <School>
+                <SchoolName>Saint-Petersburg State University of Information Technoloies, Mechanics and Optics</SchoolName>
+            </School>
+            <OrganizationUnit organizationType="department">
+                Secondary Education Faculty
+    	    </OrganizationUnit>
+            <Major>Computer Engineering</Major>
+            <DatesOfAttendance>
+                <StartDate>
+                    <YearMonth>2002-09</YearMonth>
+                </StartDate>
+                <EndDate>
+                    <YearMonth>2004-05</YearMonth>
+                </EndDate>
+            </DatesOfAttendance>
+        </SchoolOrInstitution>
+    </EducationHistory>
+    <Qualifications>
+        <Competency name="Programming Languages">
+            <Competency name="Java"/>
+            <Competency name="Python"/>
+            <Competency name="C++/Visual C++"/>
+            <Competency name="PHP"/>
+            <Competency name="JavaScript(+AJAX)/DOM"/>	
+            <Competency name="XML/XSD (SAX and DOM API)"/>
+            <Competency name="XSLT"/>			
+			<Competency name="Object Pascal (Delphi)"/>			
+        </Competency>
+        <Competency name="Databases">
+            <Competency name="PostgreSQL"/>		
+            <Competency name="MySQL"/>
+            <Competency name="Firebird"/>
+        </Competency>				
+        <Competency name="Other skills">
+			<Competency name="Design Patterns knowledge"/>
+			<Competency name="Extreme Programming experience"/>
+			<Competency name="UML models construction and usage experience"/>
+			<Competency name="feeling really free with UNIX systems"/>
+			<Competency name="building interfaces with wxWidgets or Tcl/Tk"/>
+            <Competency name="Apache web-server installation and manual configuration"/>
+			<Competency name="Web Standards knowledge"/>
+            <Competency name="internationalization with Unicode"/>
+            <Competency name="performance analysis and optimization"/>
+			<Competency name="by the way, I even know how to program shaders if it is really required :)"/>
+            <Competency name="technical writing"/>
+        </Competency>
+    </Qualifications>
+</StructuredXMLResume>
+</Resume>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m:tab-menu xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+            xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Menus ./xsd/tab-menu.xsd">
+    <m:page-location location-id="home-link">
+      <g:name>хоум</g:name>
+      <g:href>./ru-home-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="about-link">
+      <g:name>автор</g:name>
+      <g:href>./ru-about-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="articles-link">
+      <g:name>статьи</g:name>
+      <g:href>./ru-articles-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="art-link">
+      <g:name>арт</g:name>
+      <g:href>./ru-art-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="files-link">
+      <g:name>файлы</g:name>
+      <g:href>./ru-files-page.xml</g:href>
+    </m:page-location>
+</m:tab-menu>

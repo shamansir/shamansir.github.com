@@ -1,0 +1,2701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+    <name>shaman-sir places.kml</name>
+    <Style id="sn_blu-diamond">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_purple-stars">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars7</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars6</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_grn-circle">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_grn-circle">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-pushpin">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-pushpin0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-pushpin0</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_ltblu-stars">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars5</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars2</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_purple-stars0">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_grn-circle">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_grn-circle3</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_grn-circle3</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ltblu-stars">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars0">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars10</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars6</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_purple-stars1">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_grn-circle0">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars0">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars1</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars3</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_grn-circle0">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars1">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars4</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ltblu-stars0">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ylw-square">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-square">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-square1</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-square</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_purple-stars2">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_purple-stars3">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_purple-stars4">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars1">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars6</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars10</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_purple-stars2">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars6</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars11</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ylw-square">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_grn-circle0">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_grn-circle4</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_grn-circle1</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_purple-stars3">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars2</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars0</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_grn-circle1">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-square0">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-square3</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-square0</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_purple-stars5">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-square1">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-square2</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-square2</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ylw-square0">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars4">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars3</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars1</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ylw-square0">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_wht-blank">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars0">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_purple-stars6">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars1">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars5">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars7</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_blu-diamond0">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars0">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars2">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars2</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars4</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ltblu-stars1">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars2">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_grn-blank">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-blank-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_grn-circle1">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_grn-circle0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_grn-circle2</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ltblu-stars1">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars6">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars12</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars8</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ylw-square1">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars2">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars2">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars3">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-square2">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-square</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-square1</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_purple-stars7">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars5</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars12</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ltblu-stars3">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_blu-diamond">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_blu-diamond1</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_blu-diamond</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ltblu-stars3">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_blu-diamond">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars4">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_grn-circle2">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_grn-circle3">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars4">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars5">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars3">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars3</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars9</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_grn-circle2">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_grn-circle</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_grn-circle0</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_purple-stars7">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars4">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars8</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars5</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ylw-pushpin">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff00ffff</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars5">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars9</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ylw-pushpin">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff00ffff</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars8">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars9</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars2</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ltblu-stars6">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_grn-blank">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_grn-blank</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_grn-blank</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_blu-diamond1">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_wht-blank">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_wht-blank</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_wht-blank</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ylw-square1">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars5">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars4">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars9">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars4</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars9</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_ltblu-stars6">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars11</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_purple-stars8">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars5">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars7">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_grn-blank">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-blank-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars7">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars8</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_purple-stars9">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars6">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-square3">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-square4</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-square3</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_purple-stars10">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars10</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_grn-circle1">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_blu-diamond0">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_blu-diamond</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_blu-diamond1</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ylw-square2">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_blu-diamond0">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ylw-pushpin0">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff7f0000</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <Style id="sn_purple-stars7">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ylw-pushpin1">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff7f5555</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <StyleMap id="msn_grn-circle3">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_grn-circle2</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_grn-circle4</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_ylw-pushpin0">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-pushpin1</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-pushpin2</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ylw-pushpin0">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff7f0000</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <Style id="sh_ylw-square2">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ylw-square3">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars8">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars9">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars10">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_purple-stars10">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars8">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars11</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars7</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_blu-diamond1">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars6">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-pushpin1">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-pushpin</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-pushpin</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_purple-stars8">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ylw-pushpin1">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff7fff00</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <Style id="sn_grn-circle4">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars9">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars7">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_purple-stars11">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-square4">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-square0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-square4</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_grn-circle2">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars9">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars1</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars1</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_wht-blank">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars8">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_purple-stars12">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ylw-pushpin2">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ylw-pushpin2</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ylw-pushpin1</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ylw-pushpin2">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff7f5555</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <Style id="sh_grn-circle3">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ylw-pushpin2">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+            </Icon>
+            <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <LineStyle>
+            <color>ff7fff00</color>
+            <width>3</width>
+        </LineStyle>
+    </Style>
+    <Style id="sn_purple-stars10">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars9">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ylw-square3">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_blu-diamond1">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_blu-diamond0</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_blu-diamond0</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_purple-stars11">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars10">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_ltblu-stars11">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_grn-circle4">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_grn-circle1</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_grn-circle</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_ltblu-stars10">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars7</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars3</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_ylw-square4">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sh_ltblu-stars11">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_purple-stars11">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars11</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars10</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sn_ylw-square4">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/ylw-square-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Style id="sn_purple-stars12">
+        <IconStyle>
+            <scale>1.1</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/purple-stars-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <StyleMap id="msn_ltblu-stars11">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_ltblu-stars4</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_ltblu-stars0</styleUrl>
+        </Pair>
+    </StyleMap>
+    <StyleMap id="msn_purple-stars12">
+        <Pair>
+            <key>normal</key>
+            <styleUrl>#sn_purple-stars8</styleUrl>
+        </Pair>
+        <Pair>
+            <key>highlight</key>
+            <styleUrl>#sh_purple-stars5</styleUrl>
+        </Pair>
+    </StyleMap>
+    <Style id="sh_grn-circle4">
+        <IconStyle>
+            <scale>1.3</scale>
+            <Icon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+            </Icon>
+            <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+        </IconStyle>
+        <ListStyle>
+            <ItemIcon>
+                <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href>
+            </ItemIcon>
+        </ListStyle>
+    </Style>
+    <Folder>
+        <name>shaman-sir places</name>
+        <visibility>0</visibility>
+        <open>1</open>
+        <description>Places where I&apos;ve been for long</description>
+        <Folder>
+            <name>learn</name>
+            <visibility>0</visibility>
+            <Placemark>
+                <name>(.) School #61, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>1991-1994</description>
+                <LookAt>
+                    <longitude>30.35425421413585</longitude>
+                    <latitude>60.04468646854485</latitude>
+                    <altitude>0</altitude>
+                    <range>444.2137873540756</range>
+                    <tilt>0</tilt>
+                    <heading>2.751346762176224</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_grn-circle3</styleUrl>
+                <Point>
+                    <coordinates>30.35453488323783,60.04453679293433,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) School #70 (Low Classes), Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>1994</description>
+                <LookAt>
+                    <longitude>30.31405029024167</longitude>
+                    <latitude>59.97014635484236</latitude>
+                    <altitude>0</altitude>
+                    <range>273.9156927203547</range>
+                    <tilt>1.832291092384728</tilt>
+                    <heading>3.340644037394349</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_grn-circle2</styleUrl>
+                <Point>
+                    <coordinates>30.3135534116944,59.970756198631,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) School #70, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>1995-2000</description>
+                <LookAt>
+                    <longitude>30.31410426855534</longitude>
+                    <latitude>59.9693646948493</latitude>
+                    <altitude>0</altitude>
+                    <range>200.7576606945675</range>
+                    <tilt>0</tilt>
+                    <heading>2.716573209947656</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_grn-circle</styleUrl>
+                <Point>
+                    <coordinates>30.31347853308769,59.9695357116075,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) School #46, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2000-2002</description>
+                <LookAt>
+                    <longitude>30.30636495645532</longitude>
+                    <latitude>59.96786679542254</latitude>
+                    <altitude>0</altitude>
+                    <range>501.5746593546306</range>
+                    <tilt>3.587262680072065</tilt>
+                    <heading>2.709845652781532</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_grn-circle4</styleUrl>
+                <Point>
+                    <coordinates>30.30713874207446,59.96800105069339,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Priborostroitel&apos;ny Tekhnikum, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2002-2004
+(2203)</description>
+                <LookAt>
+                    <longitude>30.29518918075705</longitude>
+                    <latitude>59.97330821519885</latitude>
+                    <altitude>0</altitude>
+                    <range>433.1483155985917</range>
+                    <tilt>0</tilt>
+                    <heading>2.700196820327457</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_grn-circle1</styleUrl>
+                <Point>
+                    <coordinates>30.29527489779292,59.97299128208209,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) LETI, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2007 - ?
+(7822)</description>
+                <LookAt>
+                    <longitude>30.32383432651096</longitude>
+                    <latitude>59.97249069761463</latitude>
+                    <altitude>0</altitude>
+                    <range>277.4168058379923</range>
+                    <tilt>0</tilt>
+                    <heading>2.724997009382687</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_grn-circle0</styleUrl>
+                <Point>
+                    <coordinates>30.32438239520754,59.97282870166526,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Acadclasses Building, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>Haven&apos;t learnt here</description>
+                <LookAt>
+                    <longitude>30.30315605699203</longitude>
+                    <latitude>59.9229358707363</latitude>
+                    <altitude>0</altitude>
+                    <range>953.1455720699878</range>
+                    <tilt>0</tilt>
+                    <heading>-2.809563630200247</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_grn-blank</styleUrl>
+                <Point>
+                    <coordinates>30.30207819645887,59.92346149106857,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Learning Path</name>
+                <visibility>0</visibility>
+                <styleUrl>#msn_ylw-pushpin2</styleUrl>
+                <LineString>
+                    <tessellate>1</tessellate>
+                    <coordinates>
+30.35453890284646,60.04453391077094,0 30.31354966484111,59.97075215248725,0 30.31347255976186,59.96952596419789,0 30.3071358533186,59.96798024404445,0 30.29527237891226,59.97299220158372,0 30.32437935810052,59.97282594137291,0 </coordinates>
+                </LineString>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name>work</name>
+            <visibility>0</visibility>
+            <Placemark>
+                <name>(~) Sofa&apos;s Construction, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2004</description>
+                <LookAt>
+                    <longitude>30.37522645081501</longitude>
+                    <latitude>60.06013006089244</latitude>
+                    <altitude>0</altitude>
+                    <range>900.4711123528938</range>
+                    <tilt>0</tilt>
+                    <heading>2.769518224200052</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ylw-square1</styleUrl>
+                <Point>
+                    <coordinates>30.37514394852873,60.06047468587686,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) VNIIOkeanGeologiya (cabinet), Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2004-2005
+
+Nab r. Moyki, 120</description>
+                <LookAt>
+                    <longitude>30.28371092252819</longitude>
+                    <latitude>59.9284448784847</latitude>
+                    <altitude>0</altitude>
+                    <range>151.3444022695135</range>
+                    <tilt>0</tilt>
+                    <heading>2.690261465121183</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ylw-square2</styleUrl>
+                <Point>
+                    <coordinates>30.28453064383625,59.92802852591986,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) EmDev Office 1, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2005-2006
+
+Zhdanovskaya, 7</description>
+                <LookAt>
+                    <longitude>30.2883478015622</longitude>
+                    <latitude>59.95357708551249</latitude>
+                    <altitude>0</altitude>
+                    <range>118.6492907667301</range>
+                    <tilt>0</tilt>
+                    <heading>-60.01999017503388</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ylw-square4</styleUrl>
+                <Point>
+                    <coordinates>30.28834471883409,59.95350689063149,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) EmDev Office 2, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>Haven&apos;t work here
+
+Remeslennaya, 9</description>
+                <LookAt>
+                    <longitude>30.26883600287465</longitude>
+                    <latitude>59.95867690965863</latitude>
+                    <altitude>0</altitude>
+                    <range>140.0501606640445</range>
+                    <tilt>0</tilt>
+                    <heading>-60.03688025908909</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_wht-blank</styleUrl>
+                <Point>
+                    <coordinates>30.26851392580889,59.95886564729517,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Fabrika Koda Office, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2006-2007
+
+Bumazhnaya ul., 18</description>
+                <LookAt>
+                    <longitude>30.26711193423093</longitude>
+                    <latitude>59.90587387436567</latitude>
+                    <altitude>0</altitude>
+                    <range>184.7098723869127</range>
+                    <tilt>9.244084547664894</tilt>
+                    <heading>0.7209055358567847</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ylw-square0</styleUrl>
+                <Point>
+                    <coordinates>30.26681590535102,59.90579178951858,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(~) Fotonation Office 1, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2007
+
+Smolyachkova St., 3</description>
+                <LookAt>
+                    <longitude>30.33900376988103</longitude>
+                    <latitude>59.97000083738595</latitude>
+                    <altitude>0</altitude>
+                    <range>124.5383572976204</range>
+                    <tilt>0</tilt>
+                    <heading>-59.97613984361173</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ylw-square3</styleUrl>
+                <Point>
+                    <coordinates>30.33882754151,59.970067106397,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Fotonation/Piclinq Office 2, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2007 - ?
+
+Smolyachkova St., 3. office 405</description>
+                <LookAt>
+                    <longitude>30.33823157266734</longitude>
+                    <latitude>59.96998841294614</latitude>
+                    <altitude>0</altitude>
+                    <range>195.0739254354503</range>
+                    <tilt>0</tilt>
+                    <heading>-59.97680838163873</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ylw-square</styleUrl>
+                <Point>
+                    <coordinates>30.33851274326462,59.97018234770101,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Working Path</name>
+                <visibility>0</visibility>
+                <styleUrl>#msn_ylw-pushpin1</styleUrl>
+                <LineString>
+                    <tessellate>1</tessellate>
+                    <coordinates>
+30.37514445427817,60.06047575307191,0 30.28453047988825,59.92802055639872,0 30.2883342996676,59.95350735968509,0 30.26681631915666,59.9057919014863,0 30.33884295448317,59.97005390935317,0 30.33852169976615,59.9701714220264,0 </coordinates>
+                </LineString>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name>home</name>
+            <visibility>0</visibility>
+            <Placemark>
+                <name>(.) Grandma&apos;s (Mom) House, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>198?-1994</description>
+                <LookAt>
+                    <longitude>30.3551772320308</longitude>
+                    <latitude>60.04638170256116</latitude>
+                    <altitude>0</altitude>
+                    <range>440.6464674369206</range>
+                    <tilt>0</tilt>
+                    <heading>2.752146483809135</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_blu-diamond0</styleUrl>
+                <Point>
+                    <coordinates>30.35569412434927,60.04646271486735,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Parents&apos; House, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>1994-2008
+
+Pr. Popova, 33</description>
+                <LookAt>
+                    <longitude>30.30296851845542</longitude>
+                    <latitude>59.97171826485395</latitude>
+                    <altitude>0</altitude>
+                    <range>309.3887670005061</range>
+                    <tilt>0</tilt>
+                    <heading>2.706931990449045</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_blu-diamond1</styleUrl>
+                <Point>
+                    <coordinates>30.30249383579528,59.97157513355305,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Rent Room, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <description>2008-?
+
+Ispytateley, 8</description>
+                <LookAt>
+                    <longitude>30.2900097400143</longitude>
+                    <latitude>60.00341451760362</latitude>
+                    <altitude>0</altitude>
+                    <range>222.1674060778213</range>
+                    <tilt>0</tilt>
+                    <heading>2.695684766993455</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_blu-diamond</styleUrl>
+                <Point>
+                    <coordinates>30.28975365703123,60.00341289011265,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Living Path</name>
+                <visibility>0</visibility>
+                <styleUrl>#msn_ylw-pushpin</styleUrl>
+                <LineString>
+                    <tessellate>1</tessellate>
+                    <coordinates>
+30.35570360087939,60.04646562834397,0 30.30249798353713,59.97156937263492,0 30.28974481900375,60.00341621595512,0 </coordinates>
+                </LineString>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name>tourism</name>
+            <visibility>0</visibility>
+            <Placemark>
+                <name>(?) Athens, Greece</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>23.71651454500244</longitude>
+                    <latitude>37.97948323843124</latitude>
+                    <altitude>0</altitude>
+                    <range>789.6432155128955</range>
+                    <tilt>17.79270893906046</tilt>
+                    <heading>-14.66908767449644</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars0</styleUrl>
+                <Point>
+                    <coordinates>23.7166980059241,37.979127150136,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Chalkidiki, Greece</name>
+                <visibility>0</visibility>
+                <description>Frantour Hotel</description>
+                <LookAt>
+                    <longitude>23.63201187177328</longitude>
+                    <latitude>40.26404637848855</latitude>
+                    <altitude>0</altitude>
+                    <range>185969.2779057714</range>
+                    <tilt>0.05745161991381705</tilt>
+                    <heading>-9.499246675417966</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars4</styleUrl>
+                <Point>
+                    <coordinates>23.76932092781296,40.12295900240187,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Lappenranta, Finland</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>28.18617747322679</longitude>
+                    <latitude>61.05834005537785</latitude>
+                    <altitude>0</altitude>
+                    <range>40.83546850581226</range>
+                    <tilt>0</tilt>
+                    <heading>-0.0006808296229643004</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars8</styleUrl>
+                <Point>
+                    <coordinates>28.18621463602882,61.0583232844267,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Helsinki, Finland</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>24.93839811941001</longitude>
+                    <latitude>60.16987763229035</latitude>
+                    <altitude>0</altitude>
+                    <range>8.402501400178272</range>
+                    <tilt>0</tilt>
+                    <heading>-0.005233522144422171</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars11</styleUrl>
+                <Point>
+                    <coordinates>24.93840774050462,60.16987892286476,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Stockholm, Sweden</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>18.06446419987844</longitude>
+                    <latitude>59.33272276898261</latitude>
+                    <altitude>0</altitude>
+                    <range>13.28695335457962</range>
+                    <tilt>0</tilt>
+                    <heading>-0.01163849636436018</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars6</styleUrl>
+                <Point>
+                    <coordinates>18.06445502388081,59.33272586584635,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Beijing, China</name>
+                <visibility>0</visibility>
+                <description>Geological Conference</description>
+                <LookAt>
+                    <longitude>116.3979470004564</longitude>
+                    <latitude>39.90817299971603</latitude>
+                    <altitude>0</altitude>
+                    <range>4315.209631211067</range>
+                    <tilt>0</tilt>
+                    <heading>2.927986834208499e-010</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars1</styleUrl>
+                <Point>
+                    <coordinates>116.3914728114685,39.90461318690041,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Chongqing, China</name>
+                <visibility>0</visibility>
+                <description>Geological Conference</description>
+                <LookAt>
+                    <longitude>106.5798484749735</longitude>
+                    <latitude>29.56348289618492</latitude>
+                    <altitude>0</altitude>
+                    <range>2427.965449685742</range>
+                    <tilt>0</tilt>
+                    <heading>0.01550171417149842</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars5</styleUrl>
+                <Point>
+                    <coordinates>106.5811596586993,29.56510261500825,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Xiao Nang Hai, Xuchang, China</name>
+                <visibility>0</visibility>
+                <description>Mountain, somewhere in that zone
+Earthquake&apos;s Predictions</description>
+                <LookAt>
+                    <longitude>113.8148600474713</longitude>
+                    <latitude>34.02017671998914</latitude>
+                    <altitude>0</altitude>
+                    <range>4352.955675393063</range>
+                    <tilt>0</tilt>
+                    <heading>-0.009725583948166673</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars9</styleUrl>
+                <Point>
+                    <coordinates>113.8054977303886,34.02247488724764,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Moscow, Russia</name>
+                <visibility>0</visibility>
+                <description>Hotel &quot;Rossija&quot;, Rossiyskaya Akademiya Nauk
+Geological Conference</description>
+                <LookAt>
+                    <longitude>37.62858122252695</longitude>
+                    <latitude>55.75141856227559</latitude>
+                    <altitude>0</altitude>
+                    <range>711.673565243893</range>
+                    <tilt>0</tilt>
+                    <heading>0.008640496548213476</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars10</styleUrl>
+                <Point>
+                    <coordinates>37.62690180160872,55.75179466562574,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Simpheropol, Ukraine</name>
+                <visibility>0</visibility>
+                <description>Geological Expedition</description>
+                <LookAt>
+                    <longitude>34.09931350969509</longitude>
+                    <latitude>44.96323145236912</latitude>
+                    <altitude>0</altitude>
+                    <range>1979.319594072771</range>
+                    <tilt>0</tilt>
+                    <heading>-0.6047539002524162</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars12</styleUrl>
+                <Point>
+                    <coordinates>34.10384952312377,44.96159585643352,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(~) Privetnoye, Ukraine</name>
+                <visibility>0</visibility>
+                <description>Geological Expedition</description>
+                <LookAt>
+                    <longitude>34.70137952945952</longitude>
+                    <latitude>44.80259431148834</latitude>
+                    <altitude>0</altitude>
+                    <range>1567.128904570428</range>
+                    <tilt>0</tilt>
+                    <heading>-0.1796338146223948</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars3</styleUrl>
+                <Point>
+                    <coordinates>34.69833276378263,44.80190210055008,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(~) Arkhangelsk, Russia</name>
+                <visibility>0</visibility>
+                <description>Geological Conference</description>
+                <LookAt>
+                    <longitude>40.51691997333046</longitude>
+                    <latitude>64.53704927697608</latitude>
+                    <altitude>0</altitude>
+                    <range>1241.37954145485</range>
+                    <tilt>0</tilt>
+                    <heading>162.5050124277815</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars7</styleUrl>
+                <Point>
+                    <coordinates>40.51896324692444,64.53434668406648,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Djerba, Tunisie</name>
+                <visibility>0</visibility>
+                <description>Honeymoon
+Isis Hotel</description>
+                <LookAt>
+                    <longitude>10.99077431489879</longitude>
+                    <latitude>33.84335677133709</latitude>
+                    <altitude>0</altitude>
+                    <range>169.4105072023273</range>
+                    <tilt>0</tilt>
+                    <heading>-0.01553426392296723</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars2</styleUrl>
+                <Point>
+                    <coordinates>10.9901097721875,33.84304248942475,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(~) Tozeur, Tunisie</name>
+                <visibility>0</visibility>
+                <description>Honeymoon
+Sahara Tour</description>
+                <LookAt>
+                    <longitude>8.128931324379508</longitude>
+                    <latitude>33.92119144640336</latitude>
+                    <altitude>0</altitude>
+                    <range>1390.967654378667</range>
+                    <tilt>0.008144129947027585</tilt>
+                    <heading>-1.93045873725287</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_purple-stars</styleUrl>
+                <Point>
+                    <coordinates>8.129704631860989,33.92158784574949,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Touring Path</name>
+                <visibility>0</visibility>
+                <styleUrl>#msn_ylw-pushpin0</styleUrl>
+                <LineString>
+                    <tessellate>1</tessellate>
+                    <coordinates>
+23.71664998231478,37.97952885909601,0 23.76952300802169,40.12157968511903,0 28.1574840685911,61.09377202404324,0 25.08307777311562,60.05761289434485,0 18.19179779444983,59.33976795423937,0 116.3906532007233,39.96778374295359,0 106.5774139285829,29.49605239190156,0 113.6281268209646,33.80091834457662,0 37.60374523282887,55.66035499560718,0 34.09925123999938,44.97574239814415,0 34.68752694722116,44.80790698833079,0 40.33075384682962,64.42179398833345,0 10.95904220274382,33.81035196491743,0 8.210455435237918,33.85806932220972,0 </coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark>
+                <name>Touring, Guesting Path</name>
+                <visibility>0</visibility>
+                <styleUrl>#msn_ylw-pushpin0</styleUrl>
+                <LineString>
+                    <tessellate>1</tessellate>
+                    <coordinates>
+71.42798964492576,38.87244215622945,0 49.40146956445111,53.5179617717695,0 29.27899274920854,60.45606577315047,0 29.88278152330156,60.16242708020261,0 23.7166980059241,37.979127150136,0 23.76932092781296,40.12295900240187,0 29.9068570571716,60.16980738392901,0 30.60372305478884,60.84873322748783,0 28.18621463602882,61.0583232844267,0 24.93840774050462,60.16987892286476,0 18.06445502388081,59.33272586584635,0 116.3914728114685,39.90461318690041,0 106.5811596586993,29.56510261500825,0 113.8054977303886,34.02247488724764,0 37.62690180160872,55.75179466562574,0 34.10384952312377,44.96159585643352,0 34.69833276378263,44.80190210055008,0 40.51896324692444,64.53434668406648,0 44.49640793514871,48.69559081774438,0 44.42488975803653,48.61823549021434,0 44.42962792048124,48.61733379109539,0 30.30853061342413,59.9880988132383,0 30.38760570178569,59.97475255299382,0 30.34025519892407,59.90906904342042,0 30.2329585610801,59.95331894352992,0 10.9901097721875,33.84304248942475,0 8.129704631860989,33.92158784574949,0 </coordinates>
+                </LineString>
+            </Placemark>            
+        </Folder>
+        <Folder>
+            <name>guest</name>
+            <visibility>0</visibility>
+            <Placemark>
+                <name>(?) Grandma&apos;s (Dad) House 1, Hodzhent, Tajikistan</name>
+                <visibility>0</visibility>
+                <description>Somewhere in Tajikistan, Hodzhent
+(every summer 198?-199?)</description>
+                <LookAt>
+                    <longitude>71.72555612977817</longitude>
+                    <latitude>38.90581411869182</latitude>
+                    <altitude>0</altitude>
+                    <range>52146.32228235671</range>
+                    <tilt>0</tilt>
+                    <heading>0.2810652150365369</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars4</styleUrl>
+                <Point>
+                    <coordinates>71.42798964492576,38.87244215622945,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Grandma&apos;s (Dad) House 2, Tolyatti, Russia</name>
+                <visibility>0</visibility>
+                <description>Somewhere in Tolyatti
+(every summer 199?-199?)</description>
+                <LookAt>
+                    <longitude>49.40062715461815</longitude>
+                    <latitude>53.51829303079383</latitude>
+                    <altitude>0</altitude>
+                    <range>521.7806192707718</range>
+                    <tilt>0</tilt>
+                    <heading>-0.007189537611916166</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars10</styleUrl>
+                <Point>
+                    <coordinates>49.40146956445111,53.5179617717695,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Pioneer Camp, Leningradskaya Oblast, Russia</name>
+                <visibility>0</visibility>
+                <description>Somewhere in Roschino?</description>
+                <LookAt>
+                    <longitude>29.50705778791122</longitude>
+                    <latitude>60.20913201041904</latitude>
+                    <altitude>0</altitude>
+                    <range>122353.7396593913</range>
+                    <tilt>0</tilt>
+                    <heading>-42.49961149866831</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars5</styleUrl>
+                <Point>
+                    <coordinates>29.27899274920854,60.45606577315047,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) Zerkalny Camp, Leningradskaya Oblast, Russia</name>
+                <visibility>0</visibility>
+                <description>Somewhere near Zerkal&apos;noye Ozero and Gulf of Finland</description>
+                <LookAt>
+                    <longitude>29.88278152330156</longitude>
+                    <latitude>60.16242708020261</latitude>
+                    <altitude>0</altitude>
+                    <range>6668.56994343857</range>
+                    <tilt>0</tilt>
+                    <heading>-42.17351814395463</heading>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars0</styleUrl>
+                <Point>
+                    <coordinates>29.88278152330156,60.16242708020261,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(?) One More Pioneer Camp, Leningradskaya Oblast, Russia</name>
+                <visibility>0</visibility>
+                <description>Somewhere here</description>
+                <LookAt>
+                    <longitude>29.9068570571716</longitude>
+                    <latitude>60.16980738392901</latitude>
+                    <altitude>0</altitude>
+                    <range>6650.831646144751</range>
+                    <tilt>0</tilt>
+                    <heading>-42.15263182863804</heading>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars9</styleUrl>
+                <Point>
+                    <coordinates>29.9068570571716,60.16980738392901,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(~) Konevetz, Monastery, Leningradskaya Oblast, Russia</name>
+                <visibility>0</visibility>
+                <description>3 summers, 1996-1999</description>
+                <LookAt>
+                    <longitude>30.61250392626981</longitude>
+                    <latitude>60.85234626568623</latitude>
+                    <altitude>0</altitude>
+                    <range>3990.480227456557</range>
+                    <tilt>0</tilt>
+                    <heading>-0.612288818032077</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars</styleUrl>
+                <Point>
+                    <coordinates>30.60372305478884,60.84873322748783,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Yuzhnaya Hotel, Volgograd, Russia</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>44.49764991512228</longitude>
+                    <latitude>48.69466781820308</latitude>
+                    <altitude>0</altitude>
+                    <range>1498.155047785838</range>
+                    <tilt>0</tilt>
+                    <heading>-0.005252898446136042</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars1</styleUrl>
+                <Point>
+                    <coordinates>44.49640793514871,48.69559081774438,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Karina&apos;s House, Volgograd, Russia</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>44.42742117479543</longitude>
+                    <latitude>48.6182200670322</latitude>
+                    <altitude>0</altitude>
+                    <range>454.8288707652888</range>
+                    <tilt>0</tilt>
+                    <heading>0.003363916916608165</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars7</styleUrl>
+                <Point>
+                    <coordinates>44.42488975803653,48.61823549021434,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Guest House, Volgograd, Russia</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>44.42784446071423</longitude>
+                    <latitude>48.6179040979674</latitude>
+                    <altitude>0</altitude>
+                    <range>455.9604723958356</range>
+                    <tilt>0</tilt>
+                    <heading>0.003681517732041636</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars2</styleUrl>
+                <Point>
+                    <coordinates>44.42962792048124,48.61733379109539,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Yuzhnaya hotel, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>30.34055697204448</longitude>
+                    <latitude>59.90934804470298</latitude>
+                    <altitude>0</altitude>
+                    <range>297.5271087196683</range>
+                    <tilt>0</tilt>
+                    <heading>-41.75031444783206</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars8</styleUrl>
+                <Point>
+                    <coordinates>30.34025519892407,59.90906904342042,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Vyborgskaya Hotel, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>30.30906861741119</longitude>
+                    <latitude>59.98801964857479</latitude>
+                    <altitude>0</altitude>
+                    <range>411.6095743948906</range>
+                    <tilt>0</tilt>
+                    <heading>-41.64541925946412</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars11</styleUrl>
+                <Point>
+                    <coordinates>30.30853061342413,59.9880988132383,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Polyustrovo Hotel, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>30.38782944833901</longitude>
+                    <latitude>59.97500106118413</latitude>
+                    <altitude>0</altitude>
+                    <range>469.720633076325</range>
+                    <tilt>0</tilt>
+                    <heading>-4.707381637347393</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars3</styleUrl>
+                <Point>
+                    <coordinates>30.38760570178569,59.97475255299382,0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>(.) Luko Hotel, Saint-Petersburg, Russia</name>
+                <visibility>0</visibility>
+                <LookAt>
+                    <longitude>30.2336862809688</longitude>
+                    <latitude>59.95259083592173</latitude>
+                    <altitude>0</altitude>
+                    <range>886.9843817403684</range>
+                    <tilt>0</tilt>
+                    <heading>-4.840810621012136</heading>
+                    <altitudeMode>relativeToGround</altitudeMode>
+                </LookAt>
+                <styleUrl>#msn_ltblu-stars6</styleUrl>
+                <Point>
+                    <coordinates>30.2329585610801,59.95331894352992,0</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Folder>
+</Document>
+</kml>

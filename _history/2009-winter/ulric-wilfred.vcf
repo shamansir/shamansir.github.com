@@ -1,0 +1,19 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Wilfred;Ulric
+X-SKYPE-USERNAME:shaman.sir
+FN:Ulric Wilfred
+NICKNAME:shaman.sir
+ORG:indIvid Pro.
+TITLE:Master and Servant
+ROLE:Executor
+ADR;HOME:;;;Saint-Petersburg;;;Russia
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:Saint-Petersburg=0D=0ARussia
+URL;HOME:http://shamansir.madfire.net
+URL;WORK:http://shamansir.wordpress.com
+URL;WORK:http://shaman-sir.wikidot.com
+BDAY:19840304
+EMAIL;PREF;INTERNET:shaman.sir@gmail.com
+EMAIL;INTERNET:ulric.wilfred@yahoo.com
+REV:20080511T075645Z
+END:VCARD

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m:tab-menu xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+            xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Menus ./xsd/tab-menu.xsd">
+    <m:page-location location-id="poems-link">
+      <g:name>поэзия</g:name>
+      <g:href>./ru-art-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="prose-link">
+      <g:name>проза</g:name>
+      <g:href>./ru-art-prose-page.xml</g:href>
+    </m:page-location>
+    <m:page-location location-id="visual-link">
+      <g:name>визуальное</g:name>
+      <g:href>./ru-art-visual-page.xml</g:href>
+    </m:page-location>
+</m:tab-menu>

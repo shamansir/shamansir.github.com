@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./xslt/page.xsl"?>
+<p:page xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:p="http://www.shaman-sir.by.ru/XSD/Pages" 
+        xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Pages ./xsd/page.xsd">
+  <p:title>статьи</p:title>
+  <p:sub-title>Статьи</p:sub-title>
+  <p:additional-data>
+    <p:definition xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        Страница <a href="#">со статьями</a> должна состоять из жизненных и программистких статей автора. Должна...
+      </p>
+    </p:definition>
+    <p:description>the index page of shaman.sir homesite as contents and introduction</p:description>    
+  </p:additional-data>
+  <l:localization-default as="ru"/>
+  <m:nav-menu-source src="./ru-nav-menu.xml"/>
+  <m:tab-menu-source src="./ru-articles-tab-menu.xml" activate="articles-link"/>
+  <m:position-list>
+    <m:position>
+      <m:name>вводная</m:name>
+      <m:anchor>#intro</m:anchor>
+    </m:position>
+  </m:position-list>
+  <p:content>
+    <p:block title="Вводная">
+      <p:items type="page-code">
+        <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+          <p:code-block id="intro">
+            <p:title>Nothings are Here, Temporary...</p:title>
+            <p:content>
+              <p>
+                Автор сайта пока не написал ни одной полезной статьи. Прошу проявить терпение &#8212; и возможно,
+                хотя бы одна когда-нибудь появится...
+              </p>
+            </p:content>
+          </p:code-block>
+        </p:page-code>
+      </p:items>
+    </p:block>
+  </p:content>
+</p:page>

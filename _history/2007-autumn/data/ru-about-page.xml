@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./xslt/page.xsl"?>
+<p:page xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:p="http://www.shaman-sir.by.ru/XSD/Pages" 
+        xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Pages ./xsd/page.xsd">
+  <p:title>об авторе</p:title>
+  <p:sub-title>Об авторе</p:sub-title>
+  <p:additional-data>
+    <p:definition xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        Страница <a href="#">об авторе</a> описывает кто я такой, что мне нравится по жизни, что я здесь делаю, где засветился и вообще. Ничего исключительного, думаю, я из себя не представляю и светился где если только по мелочам,
+        но свою индивидуальность ценю и вам советую :)).
+      </p>
+    </p:definition>
+    <p:description>the index page of shaman.sir homesite as contents and introduction</p:description>    
+  </p:additional-data>
+  <l:localization-default as="ru"/>
+  <m:nav-menu-source src="./ru-nav-menu.xml"/>
+  <m:tab-menu-source src="./ru-about-tab-menu.xml" activate="about-link"/>
+  <m:position-list>
+    <m:position>
+      <m:name>краткая информация</m:name>
+      <m:anchor>#short-info</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>способы связи</m:name>
+      <m:anchor>#connection</m:anchor>
+    </m:position>    
+    <m:position>
+      <m:name>места появления</m:name>
+      <m:anchor>#places</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>пристрастия</m:name>
+      <m:anchor>#loving-things</m:anchor>
+    </m:position>
+    <m:position>
+      <m:name>умения</m:name>
+      <m:anchor>#can-do</m:anchor>
+    </m:position>
+  </m:position-list>
+  <p:content>
+    <p:block title="Сводка">
+      <p:items type="page-code">
+        <p:page-code xmlns="http://www.w3.org/1999/xhtml">
+          <p:code-block id="short-info">
+            <p:title>Краткая информация</p:title>
+            <p:content>
+              <table class="information">
+                <thead>
+                  <tr>
+                    <th>Поле</th>
+                    <th>Значение</th>                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td>Фамилия</td>
+                    <td>Котенко</td>
+                  </tr>                  
+                  <tr class="odd">
+                    <td>Имя</td>
+                    <td>Антон</td>                    
+                  </tr>
+                  <tr class="odd">
+                    <td>Отчество</td>
+                    <td>Александрович</td>
+                  </tr>
+                  <tr class="even">
+                    <td>Псевдоним(ы)</td>
+                    <td>shaman.sir, shamanStillSir, tungusso</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Дата рождения</td>
+                    <td>4 марта 1984</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Знак зодиака</td>
+                    <td>рыбы (Pisces,<img alt="Pisces" src="../images/content/pisces.gif" class="inline" />)</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Год</td>
+                    <td>Крыса (<acronym lang="jp" title="Nezu" class="magnified">鼠</acronym>)</td>
+                  </tr>                  
+                  <tr class="even">
+                    <td>Пол</td>
+                    <td>мужской</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Волосяной покров</td>
+                    <td>кучерявый или коротко-стриженый брюнет</td>
+                  </tr>
+                  <tr class="even">
+                    <td>Цвет глаз</td>
+                    <td>зеленый, изредка серый</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Рост</td>
+                    <td>1м 75см</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Вес</td>
+                    <td>57кг</td>
+                  </tr>
+                  <tr class="even">
+                    <td>Убеждения</td>
+                    <td>агностик, идеалист</td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Владение языками</td>
+                    <td>русский (родной), английский</td>
+                  </tr>                  
+                </tbody>
+              </table>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="connection">
+            <p:title>Способы связи</p:title>
+            <p:content>
+              <table class="information">
+                <thead>
+                  <tr>
+                    <th>Поле</th>
+                    <th>Значение</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td>
+						<img src="../images/content/icq.gif" alt="ICQ" class="inline" /> ICQ
+                    </td>
+                    <td>
+<!-- Begin Online Status Indicator code -->
+<!-- http://www.onlinestatus.org/ -->
+<a href="http://osi.hshh.org:8088/message/icq/5255496">
+<img src="http://osi.hshh.org:8088/icq/5255496"
+align="absmiddle" class="inline" alt="ICQ Online Status Indicator"
+onerror="this.onerror=null;this.src='../images/content/icqunknown.gif';" /></a>
+<!-- End Online Status Indicator code -->
+5255496</td>
+                  </tr>
+                  <tr class="even">
+                    <td><img src="../images/content/jabber.gif" alt="Jabber" class="inline" /> Jabber</td>
+                    <td>
+<!-- Begin Online Status Indicator code -->
+<!-- http://www.onlinestatus.org/ -->
+<a href="xmpp:tungusso@livejournal.com">
+<img src="http://www.the-server.net:8000/jabber/tungusso@livejournal.com"
+align="absmiddle" class="inline" alt="Jabber Online Status Indicator"
+onerror="this.onerror=null;this.src='../images/content/jabberunknown.gif';" /></a>
+<!-- End Online Status Indicator code -->                    
+                    tungusso@livejournal.com</td>
+                  </tr>
+                  <tr class="odd">
+                    <td><img src="../images/content/googletalk.gif" alt="Google Talk" class="inline" /> Google Talk</td>
+                    <td>anthony.kotenko@gmail.com,<br/>
+                        shaman.sir@gmail.com</td>
+                  </tr>                  
+                  <tr class="even">
+                    <td><img src="../images/content/irc.gif" alt="IRC" class="inline" /> IRC</td>
+                    <td>
+<!-- Begin Online Status Indicator code -->
+<!-- http://www.onlinestatus.org/ -->
+<a href="http://www.onlinestatus.org/">
+<img src="http://osi.hshh.org:8088/irc/shaman-sir"
+align="absmiddle" class="inline" alt="IRC Online Status Indicator"
+onerror="this.onerror=null;this.src='../images/content/ircunknown.gif';" /></a>
+<!-- End Online Status Indicator code -->
+                    shaman-sir, просто_шаман</td>
+                  </tr>
+                  <tr class="odd">
+                    <td><img src="../images/content/mail.gif" alt="E-Mail" class="inline" /> E-Mail</td>
+                    <td>
+                      <a href="mailto:anthony.kotenko@gmail.com">anthony.kotenko@gmail.com</a>,<br/>
+                      <a href="mailto:shaman.sir@gmail.com">shaman.sir@gmail.com</a>,<br/>
+                      <a href="mailto:tungusso@softhome.net">tungusso@softhome.net</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="places">
+            <p:title>Места появления</p:title>
+            <p:content>
+              <table class="information">
+                <thead>
+                  <tr>
+                    <th>Поле</th>
+                    <th>Значение</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td>Livejournal</td>
+                    <td><span style="white-space: nowrap;"><a href="http://tungusso.livejournal.com/profile"><img src="../images/content/userinfo.gif" alt="[info]" style="vertical-align: bottom; border: 0;" class="inline"/></a><a href="http://tungusso.livejournal.com/"><b>tungusso</b></a></span>, 
+                    <span style="white-space: nowrap;"><a href="http://shaman-sir.livejournal.com/profile"><img src="../images/content/userinfo.gif" alt="[info]" style="vertical-align: bottom; border: 0;" class="inline"/></a><a href="http://shaman-sir.livejournal.com/"><b>shaman-sir</b></a></span></td>
+                  </tr>
+                  <tr class="even">
+                    <td>Moikrug</td>
+                    <td><a href="http://shaman-sir.moikrug.ru/?from=userlink"><img style="width: 16px; height: 16px; border:0; vertical-align: middle; margin-right: 3px;" src="../images/content/moikrug.gif" alt="MoiKrug - Котенко Антон" title="MoiKrug - Котенко Антон" class="inline" /></a><a href="http://shaman-sir.moikrug.ru/?from=userlink" title="MoiKrug - Котенко Антон">Котенко Антон</a></td>
+                  </tr>     
+                  <tr class="odd">
+                    <td>Blogspot</td>
+                    <td><a href="http://tungusso.blogspot.com/"><img style="width: 16px; height: 16px; border:0; vertical-align: middle; margin-right: 3px;" src="../images/content/blogger.gif" alt="Tungusso @ Blogspot" title="Tungusso @ Blogspot" class="inline" /></a><a href="http://tungusso.blogspot.com/" title="Tungusso @ Blogspot">Tungusso @ Blogspot</a></td>
+                  </tr>    
+                  <tr class="even">
+                    <td>Vox</td>
+                    <td><a href="http://shaman-sir.vox.com/"><img style="width: 15px; height: 16px; border:0; vertical-align: middle; margin-right: 3px;" src="../images/content/vox.gif" alt="shaman-sir @ Vox" title="shaman-sir @ Vox" class="inline" /></a><a href="http://shaman-sir.vox.com/" title="shaman-sir @ Vox">shaman-sir @ Vox</a></td>
+                  </tr>                                                
+                  <tr class="odd">
+                    <td>AG.ru</td>
+                    <td><a href="http://forums.ag.ru/?action=viewprofile&amp;username=shamanStillSir"><img style="width: 16px; height: 16px; border:0; vertical-align: middle; margin-right: 3px;" src="../images/content/ag.gif" alt="shamanStillSir @ AG" title="shamanStillSir @ AG" class="inline" /></a><a href="http://forums.ag.ru/?action=viewprofile&amp;username=shamanStillSir" title="shamanStillSir @ AG">shamanStillSir @ AG</a></td>
+                  </tr>                   
+                  <tr class="even">
+                    <td>RU.Wikibooks</td>
+                    <td><a href="http://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Shaman.sir"><img style="width: 16px; height: 16px; border:0; vertical-align: middle; margin-right: 3px;" src="../images/content/wikibooks.gif" alt="Shaman.sir @ Wikibooks" title="Shaman.sir @ Wikibooks" class="inline" /></a><a href="http://ru.wikibooks.org/wiki/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Shaman.sir" title="Shaman.sir @ Wikibooks">Shaman.sir @ Wikibooks</a></td>
+                  </tr>   
+                  <tr class="odd">
+                    <td>RSDN</td>
+                    <td><a href="http://rsdn.ru/Users/Profile.aspx?uid=52519"><img style="width: 16px; height: 16px; border: 0; vertical-align: middle; margin-right: 3px;" src="../images/content/rsdn.gif" alt="sir_shaman @ RSDN" title="sir_shaman @ RSDN" class="inline" /></a><a href="http://rsdn.ru/Users/Profile.aspx?uid=52519" title="sir_shaman @ RSDN">sir_shaman @ RSDN</a></td>
+                  </tr>                                                               
+				</tbody>				
+				</table>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="loving-things">
+            <p:title>Пристратия</p:title>
+            <p:content>
+              <table class="information-wide">
+                <thead>
+                  <tr>
+                    <th>Поле</th>
+                    <th>Значение</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd">
+                    <td>Музыкальные стили</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Break_beat">break beat</a>/<a href="http://en.wikipedia.org/wiki/Big_beat">big beat</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Trip_Hop">trip hop</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Lounge_music">lounge</a>, 
+                      вообще <a href="http://en.wikipedia.org/wiki/Electronic_music">electronic</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Funk">funk</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Rock_music">rock</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Drum_and_bass">drum'n'bass</a>...</td>
+                  </tr>
+                  <tr class="even">
+                    <td>Музыкальные группы/исполнители</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Depeche_Mode">Depeche Mode</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Faithless">Faithless</a>,
+                      <a href="http://en.wikipedia.org/wiki/Massive_Attack">Massive Attack</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Moloko">Moloko</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Morcheeba">Morcheeba</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Lamb_%28band%29">Lamb</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Queen_%28band%29">Queen</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Pink_Floyd">Pink Floyd</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Nick_Cave">Nick Cave</a>, 
+                      <a href="http://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%83%D1%82%D0%B8%D0%BB%D1%83%D1%81_%D0%9F%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D0%B8%D1%83%D1%81">Наутилус Помпилиус</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Gus_Gus">Gus Gus</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Nine_Inch_Nails">Nine Inch Nails</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Juno_Reactor">Juno Reactor</a>, 
+                      <a href="http://en.wikipedia.org/wiki/The_Chemical_Brothers">The Chemical Brothers</a>, 
+                      <a href="http://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BB%D1%8C%D1%84%D0%B8%D0%BD_%28%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%29">Дельфин</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Beastie_Boys">Beastie Boys</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Apollo_440">Apollo 440</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Madonna_%28entertainer%29">Madonna</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Tricky">Tricky</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Air_%28band%29">Air</a>, 
+                      <a href="http://en.wikipedia.org/wiki/R%C3%B6yksopp">R&#246;yksopp</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Blondie_%28band%29">Blondie</a>, 
+                      <a href="http://en.wikipedia.org/wiki/U2">U2</a>, 
+                      <a href="http://ru.wikipedia.org/wiki/5%27Nizza">5'Nizza</a>, 
+                      <a href="http://en.wikipedia.org/wiki/A-Ha">A-ha</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Bj%C3%B6rk">Bj&#246;rk</a>, 
+                      <a href="http://en.wikipedia.org/wiki/De_Phazz">De Phazz</a>, 
+                      <a href="http://en.wikipedia.org/wiki/The_Prodigy">The Prodigy</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Sonique_%28artist%29">Sonique</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Tori_Amos">Tori Amos</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Fatboy_Slim">Fatboy Slim</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Timo_Maas">Timo Maas</a>, 
+                      <a href="http://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D0%BD%D0%BE_%28%D1%80%D0%BE%D0%BA-%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0%29">Кино</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Rammstein">Rammstein</a>...
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Писатели</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Haruki_Murakami">Haruki Murakami</a> (<acronym lang="jp" title="Murakami Haruki" class="magnified">村上春樹</acronym>), 
+                      <a href="http://en.wikipedia.org/wiki/William_Gibson_%28novelist%29">William Ford Gibson</a>, 
+                      <a href="http://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D1%83%D0%B3%D0%B0%D1%86%D0%BA%D0%B8%D0%B5">Аркадий и Борис Стругацкие</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Robert_Sheckley">Robert Sheckley</a>, 
+                      <a href="http://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80_%D0%9F%D0%B5%D0%BB%D0%B5%D0%B2%D0%B8%D0%BD">Виктор Пелевин</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Philip_Dick">Philip Kindred Dick</a>...
+                    </td>
+                  </tr>
+                  <tr class="even">
+                    <td>Режиссеры</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/David_Fincher">David Fincher</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Alejandro_Gonzalez_Innaritu">Alejandro Gonz&#225;lez I&#241;&#225;rritu</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Steven_Spielberg">Steven Spielberg</a>, 
+                      <a href="http://en.wikipedia.org/wiki/David_Lynch">David Kaith Lynch</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Mel_Gibson">Mel Gibson</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Luc_Besson">Luc Besson</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Tim_Burton">Tim Burton</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Quentin_Tarantino">Quentin Tarantino</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Tony_Scott">Tony Scott</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Jonathan_Glazer">Jonathan Glazer</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Michel_Gondry">Michel Gondry</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Ben_Stiller">Ben Stiller</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Spike_Jonze">Spike Jonze</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Coen_Brothers">Joel &amp; Ethan Coen</a>...
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Фильмы</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Pitch_Black_%28film%29">Pitch Black</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Se7en">Se7en</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Fight_Club_%28film%29">Fight Club</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Game_%28film%29">The Game</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Meet_Joe_Black">Meet Joe Black</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind">Eternal Sunshine of the Spotless Mind</a>; 
+                      <a href="http://en.wikipedia.org/wiki/21_Grams">21 Grams</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Amores_perros">Amores Perros</a>; 
+                      <a href="http://en.wikipedia.org/wiki/City_of_God_%28film%29">Cidade de Deus</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Eyes_Wide_Shut">Eyes Wide Shut</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Romance_%26_Cigarettes">Romance &amp; Cigarettes</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Snatch_%28film%29">Snatch</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Fucking_%C3%85m%C3%A5l">Fucking &#197;m&#229;l</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Closer_%28film%29">Closer</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Serenity_%28film%29">Serenity</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Mulholland_Dr.">Mulholland Drive</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Unleashed_%28film%29">Danny the Dog</a>; 
+                      <a href="http://en.wikipedia.org/wiki/%2Abatteries_not_included">*batteries not included</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Illusionist">The Illusionist</a>; 
+                      <a href="http://en.wikipedia.org/wiki/American_History_X">American History X</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Departed">The Departed</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Once_Upon_a_Time_in_America">Once Upon A Time in America</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Chronicles_of_Riddick">The Chronicles of Riddick</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Collateral_%28film%29">Collateral</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Munich_%28film%29">Munich</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Femme_Fatale_%28movie%29">Femme Fatale</a>; 
+                      <a href="http://www.imdb.com/title/tt0216800/">Harry, un ami qui vous veut du bien</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Dogma_%28film%29">Dogma</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Blow_%28film%29">Blow</a>; 
+                      <a href="http://en.wikipedia.org/wiki/A_Clockwork_Orange_%28film%29">A Clockwork Orange</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Dangerous_Liaisons">Dangerous Liaisons</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Havana_%28film%29">Havana</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Traffic_%282000_film%29">Traffic</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Vanilla_Sky">Vanilla Sky</a>; 
+                      <a href="http://en.wikipedia.org/wiki/A_Life_Less_Ordinary">A Life Less Ordinary</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Schindler%27s_List">Shindler's List</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Casino_Royale_%282006_film%29">Casino Royale</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Inside_Man">Inside Man</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Black_Dahlia_%28movie%29">The Black Dahlia</a>, 
+                      <a href="http://en.wikipedia.org/wiki/25th_Hour">25th Hour</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Mad_Max">Mad Max</a>; 
+                      <a href="http://en.wikipedia.org/wiki/L%C3%A9on_%28film%29">L&#233;on</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Bourne_Identity_%28film%29">The Bourne Identity</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Ronin_%28film%29">Ronin</a>; 
+                      <a href="http://en.wikipedia.org/Le_Jaguar">Le Jaguar</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Subway_%28film%29">Subway</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Pulp_Fiction_%28film%29">Pulp Fiction</a>; 
+                      <a href="http://en.wikipedia.org/wiki/American_Beauty_%281999_movie%29">American Beauty</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Philadelphia_%28film%29">Philadelphia</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Man_on_Fire_%282004_film%29">Man on Fire</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Dobermann_%28film%29">Dobermann</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Brotherhood_of_the_Wolf">Le Pacte des loups</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Frida">Frida</a>; 
+                      <a href="http://www.imdb.com/title/tt0114086/">Beyond the Clouds (Al di l&#224; delle nuvole)</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Braveheart">Braveheart</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Intolerable_Cruelty">Intolerable Cruelty</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Edward_Scissorhands">Edward Scissorhands</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Love_Actually">Love Actually</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Rain_Man">Rain Man</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Scent_of_a_Woman">Scent of a Woman</a>
+                      ...
+                    </td>
+                  </tr>
+                  <tr class="even">
+                    <td>Мультипликация</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Wallace_and_Gromit">Wallace &amp; Gromit</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Spirited_Away">Spirited Away</a> (<acronym lang="jp" title="Sen to Chihiro no Kamikakushi" class="magnified">千と千尋の神隠し</acronym>); 
+                      <a href="http://en.wikipedia.org/wiki/The_Simpsons">The Simpsons</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Futurama">Futurama</a>; 
+                      <a href="http://en.wikipedia.org/wiki/South_Park">South Park</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Cowboy_Bebop:_The_Movie">Cowboy Bebop: Knockin' On Heaven's Door</a> (<acronym lang="jp" title="Kaubōi Bibappu Tengoku no Tobira" class="magnified">カウボーイビバップ 天国の扉</acronym>); 
+                      <a href="http://en.wikipedia.org/wiki/Ghost_in_the_Shell_%28film%29">Ghost in the Shell</a> (<acronym lang="jp" title="Kōkaku Kidōtai" class="magnified">攻殻機動隊</acronym>); 
+                      <a href="http://en.wikipedia.org/wiki/The_Animatrix">The Animatrix</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Chronicles_of_Riddick:_Dark_Fury">The Chronicles of Riddick: Dark Fury</a>; 
+                      <a href="http://ru.wikipedia.org/wiki/%D0%81%D0%B6%D0%B8%D0%BA_%D0%B2_%D1%82%D1%83%D0%BC%D0%B0%D0%BD%D0%B5_%28%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%29">Ёжик в тумане</a>; 
+                      <a href="http://www.lugarus.com/comments/8543/">Жил-был пёс</a>
+                      ...
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Сериалы</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Twin_Peaks">Twin Peaks</a>, 
+                      <a href="http://en.wikipedia.org/wiki/ER_%28TV_series%29">ER</a>, 
+                      <a href="http://en.wikipedia.org/wiki/The_Sopranos">The Sopranos</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Friends">Friends</a>
+                    </td>
+                  </tr>                  
+                  <tr class="even">
+                    <td>Актеры/Актрисы</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Charlize_Theron">Сharlize Theron</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Nicole_Kidman">Nicole Kidman</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Edward_Norton">Edward Norton</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Tom_Hanks">Tom Hanks</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Brad_Pitt">Brad Pitt</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Billy_Bob_Thornton">Billie Bob Thornton</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Denzel_Washington">Denzel Washington</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Robert_De_Niro">Robert De Niro</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Salma_Hayek">Salma Hayek</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Al_Pacino">Al Pachino</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Monica_Bellucci">Monica Belucci</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Morgan_Freeman">Morgan Freeman</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Jack_Nicholson">Jack Nicholson</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Dustin_Hoffman">Dustin Hoffman</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Anthony_Hopkins">Anthony Hopkins</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Jean_Reno">Jean Reno</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Christopher_Walken">Christopher Walken</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Gary_Oldman">Gary Oldman</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Lucy_Liu">Lucy Liu</a> (<acronym lang="cn" title="Liú Yùlíng" class="magnified">劉玉玲</acronym>), 
+                      <a href="http://en.wikipedia.org/wiki/Johnny_Depp">Johnny Depp</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Christian_Slater">Christian Slater</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Benicio_del_Toro">Benicio del Toro</a>, 
+                      <a href="http://en.wikipedia.org/wiki/James_Gandolfini">James Gandolfini</a>...
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Известные женщины</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Charlize_Theron">Сharlize Theron</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Keira_Knightley">Keira Knightley</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Monica_Bellucci">Monica Belucci</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Catherine_Zeta-Jones">Catherine Zeta-Jones</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Eva_Green">&#200;va Green</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Kate_Beckinsale">Kate Bakinsale</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Sophie_Marceau">Sophie Marseau</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Salma_Hayek">Salma Hayek</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Gwen_Stefani">Gwen Stefani</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Natalie_Portman">Natalie Portman</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Kirsten_Dunst">Kirsten Dunst</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Holly_Vallance">Holly Vallance</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Winona_Ryder">Winona Rider</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Jennifer_Lopez">Jennifer Lopez</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Katie_Holmes">Katie Holmes</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Drew_Barrymore">Drew Barrymore</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Radha_Mitchell">Radha Mitchell</a>, 
+                      <a href="http://en.wikipedia.org/wiki/Josie_Maran">Josie Maran</a>...
+                    </td>
+                  </tr>
+                  <tr class="even">
+                    <td>Фотографы</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Anton_Corbijn">Anton Corbijn</a>
+                    </td>
+                  </tr>
+                  <tr class="odd">
+                    <td>Художники</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Salvador_Dal%C3%AD">Salvador Dal&#237;</a>
+                    </td>
+                  </tr>
+                  <tr class="even">
+                    <td>Игры</td>
+                    <td>
+                      <a href="http://en.wikipedia.org/wiki/Psychonauts">Psychonauts</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Fable:_The_Lost_Chapters">Fable: Lost Chapters</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Chronicles_of_Riddick:_Escape_from_Butcher_Bay">The Chronicles of Riddick: Escape from Butcher Bay</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Fahrenheit_%28video_game%29">Fahrenheit (aka Indigo Prophecy)</a>; 
+                      <a href="http://en.wikipedia.org/wiki/The_Neverhood">Neverhood</a>; 
+                      <a href="http://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D0%BD%D0%B0%D1%8F_%D1%82%D1%80%D1%83%D0%B1%D0%B0">Полная труба</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Stupid_Invaders">Stupid Invaders</a>; 
+                      <a href="http://en.wikipedia.org/wiki/FlatOut">Flatout</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Warhammer_40%2C000:_Dawn_of_War">Warhammer: Dawn of War</a> series; 
+                      <a href="http://en.wikipedia.org/wiki/Half-Life_series">Half-Life series</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Delta_Force_%28computer_game%29">Delta Force</a> series; 
+                      <a href="http://en.wikipedia.org/wiki/Duke_Nukem_3D">Duke Nukem 3D</a>/<a href="http://en.wikipedia.org/wiki/Shadow_Warrior">Shadow Warrior</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Need_for_Speed:_Most_Wanted">Need For Speed: Most Wanted</a>; 
+                      <a href="http://en.wikipedia.org/wiki/Fallout_Tactics:_Brotherhood_of_Steel">Fallout Tactics: Brotherhood of Steel</a>;
+                      ...
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </p:content>
+          </p:code-block>
+          <p:code-block id="can-do">
+            <p:title>Умения</p:title>
+            <p:content>
+              <p>Временно здесь не представлено никаких умений</p>
+            </p:content>
+          </p:code-block>
+        </p:page-code>
+      </p:items>
+    </p:block>
+  </p:content>
+</p:page>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./xslt/page.xsl"?>
+<p:page xmlns:g="http://www.shaman-sir.by.ru/XSD/Generic"
+        xmlns:p="http://www.shaman-sir.by.ru/XSD/Pages" 
+        xmlns:m="http://www.shaman-sir.by.ru/XSD/Menus"
+        xmlns:l="http://www.shaman-sir.by.ru/XSD/Localization"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.shaman-sir.by.ru/XSD/Pages ./xsd/page.xsd">
+  <p:title>заглавная страница</p:title>
+  <p:sub-title>Заглавная страница</p:sub-title>
+  <p:additional-data>
+    <p:definition xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        <a href="#">Заглавная страница</a> содержит ссылки на все остальные страницы <strong>сайта shaman.sir</strong>. 
+      </p>
+    </p:definition>
+    <p:description>the index page of shaman.sir homesite as contents and introduction</p:description>    
+  </p:additional-data>
+  <l:localization-default as="ru"/>
+  <m:nav-menu-source src="./ru-nav-menu.xml"/>
+  <m:tab-menu-source src="./ru-home-tab-menu.xml" activate="home-link"/>
+  <m:position-list>
+    <m:position>
+      <m:name>новости</m:name>
+      <m:anchor>#last-news-entry</m:anchor>
+    </m:position>    
+    <m:position>
+      <m:name>вступительное слово</m:name>
+      <m:anchor>#ru-intro</m:anchor>
+    </m:position>
+  </m:position-list>
+  <p:content>
+    <p:block title="Новости">
+      <p:items type="news-entry">
+        <p:news>
+          <p:entry id="last-news-entry">
+            <p:title>XML-версия</p:title>
+            <p:author>
+              <g:nickname>shaman.sir</g:nickname>
+            </p:author>
+            <p:post-date>12/09/2006 21:22</p:post-date>
+            <p:content xmlns="http://www.w3.org/1999/xhtml">
+              <p>
+                Вот и закончена (и выложена) базовая XML-версия сайта. <a href="#" title="Заглавная страница">Welcome</a>.
+              </p>
+            </p:content>
+          </p:entry>
+        </p:news>
+      </p:items>
+    </p:block>
+    <p:block title="Вступительное слово">
+      <p:items type="article">
+        <p:articles>
+          <p:article id="ru-intro">
+            <p:title>О том, что здесь :)</p:title>
+            <p:author>
+              <g:nickname>shaman.sir</g:nickname>
+            </p:author>
+            <p:date>12/09/2006 16:37</p:date>
+            <p:content xmlns="http://www.w3.org/1999/xhtml">
+              <p>Ну вот, вы, наконец, здесь. Ваше счастье, если вы попали по сюда по ссылке, данной мною вам <em>лично</em>. Ибо если это не
+              так, то вам пришлось преодолеть сложную навигацию, чтобы наконец попасть сюда. Чем это обусловлено можно узнать на странице 
+              <a href="index-page.xml" title="Индексная страница">индексной странице</a>, но вкратце поясню, что сложная навигация обусловлена тем, что мне хотелось
+              создать сайт, который мне было бы не лень обновлять :). То есть сделать его редактирование максимально простым, сделать изменение 
+              его стиля максимально простым, сделать коррекцию его навигации максимально простой &#8212; и вот что вышло. За основу я взял 
+              технологии <acronym lang="en" title="eXtensible Markup Language">XML</acronym>/<acronym lang="en" title="XML Schema Definition">XSD</acronym>, 
+               <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym> и, конечно, 
+               <acronym lang="en" title="Cascading Style Sheets">CSS</acronym> и <acronym lang="en" title="eXtensible HyperText Markup Language">XHTML</acronym>.
+               Теперь создать или исправить страничку легче лекого, данные (aka контент) не завязаны на структуре или дизайне и все бы было совсем замечательно,
+               если бы, <em>как всегда</em>, не браузеры. Пару <acronym lang="en" title="eXtensible Markup Language">XML</acronym> + <acronym lang="en" 
+               title="eXtensible Stylesheet Language Transformations">XSLT</acronym> поддерживают все, но вот браузер 
+                <a href="http://www.opera.com" title="Opera Homepage">Opera</a> не поддерживает включение внешних <acronym lang="en" title="eXtensible Markup Language">XML</acronym>-файлов для <acronym lang="en" title="eXtensible Stylesheet Language Transformations">XSLT</acronym>, что
+               в принуждает меня заводить для этого браузера версию, где навигационное меню повторяется в каждом файле, вместо того, чтобы храниться в одном месте
+               в единственном экземпляре для всех страниц - как и планировалось :(. <a href="http://www.microsoft.com" title="Microsoft Homepage">Internet Explorer</a>
+                в версиях для мобильных устройств не позволяет отключать <acronym lang="en" title="Cascading Style Sheets">CSS</acronym>, на что я рассчитывал, добиваясь, чтобы без 
+                <acronym lang="en" title="Cascading Style Sheets">CSS</acronym> страница была масимально удобной и читаемой, согласно <a href="http://en.wikipedia.org/wiki/Section_508" title="Section 508 Description">Section 508</a> / <a href="http://www.w3.org/WAI/WCAG1AAA-Conformance" title="WCAG 1.0 AAA Conformance Spec">WCAG 1.0 WAI AAA</a> .
+               В общем, пока все нелегко, но в большинстве случаев сойдет и эта версия &#8212; придирки мелочны, а как только браузеры поправят (это планируется) &#8212; всем будет хорошо :). <a href="./index-page.xml#ru-future-plans" title="Планы на будущее для сайта">Планы</a>, как всегда &#8212; грандиозные ;).
+            </p>
+            <p>Впрочем, от прелюдий давайте уже к делу ;).</p>
+            <p>
+              <a href="./ru-about-page.xml" title="Об авторе"><em>Об авторе</em></a>. Почитать кто я такой, что мне нравится по жизни, что я здесь делаю, где засветился и вообще &#8212; можно <a href="./ru-about-page.xml" title="Об авторе">здесь</a>. Ничего исключительного я из себя не представляю и светился если только по мелочам,
+            но свою индивидуальность ценю и вам советую :)).</p>
+              <p>
+                <a href="./ru-articles-page.xml" title="Статьи"><em>Статьи</em></a>. Ознакомиться с моими заметками о жизни можно <a href="./ru-articles-page.xml" title="Статьи">тут</a>. Потихоньку, если будет время, я собираюсь писать там программерские заметки и заметки о жизни.
+                Если же там пусто, то с моими злободневными мыслями можно ознакомиться в <a href="http://tungusso.livejournal.com" title="Tugusso LiveJournal page">моем ЖЖ</a>. С неудавшимися и наивными программерскими
+                заметками в <a href="http://shaman-sir.livejournal.com" title="Shaman-sir LiveJournal page">ЖЖ моей программерской инкарнации</a>. Да нет, я вроде не шизик, просто хотел отделить зерна от плевел %).
+                А, ещё, кажется, я собирался перезжать <a href="http://shaman-sir.vox.com" title="Shaman-sir на vox.com">на vox.com</a> и возможно к моменту вашего ознакомления с этой страницей там будет что-то дельное.
+              </p>
+              <p>
+                <a href="./ru-art-page.xml" title="Творчество"><em>Творчество</em></a>. <a href="./ru-art-page.xml" title="Статьи">Здесь</a> представлено лучшее из творчества вашего покорного слуги &#8212; стихи и проза. Это скорее слепки ощущений разных лет &#8212; некоторые 
+                по-детски наивные (не вижу в этом ничего предосудительного :) ), некоторые странные &#8212; в общем, какие есть :).
+              </p>
+              <p>
+                <a href="./ru-files-page.xml" title="Файлы"><em>Файлы</em></a>. На <a href="./ru-files-page.xml" title="Файлы">этой странице</a> я намерен выкладывать те файлы, к созданию которых я когда-либо имел отношение. Их скорее всего будет немного.
+                В основном это справочник по японскому, архивы с творчеством (то, что туда не попало или в каком-то определеннном формате), и (если откопается хоть одна завершенная) программы.
+              </p>
+            </p:content>
+          </p:article>
+        </p:articles>
+      </p:items>
+    </p:block>
+  </p:content>
+</p:page>
