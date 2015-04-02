@@ -1,1 +1,6 @@
 .DS_Store
+config.codekit
+resources/
+_prev/
+_src/
+*.sketch
