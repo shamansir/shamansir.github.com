@@ -1,14 +1,9 @@
-.DS_Store
-_prev/
-_src/
 _source/
+d3/d3.*.js
 *.css
 *@2x.svg
 *.sketch
 cv.html
 index.html
-styles/.sass-cache
-resources/src
 config.codekit
 scripts/min
-scripts/*-ck.js
