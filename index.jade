@@ -6,10 +6,9 @@ html(lang='en')
         link(href='./style.css', rel='stylesheet')
         link(rel='shortcut icon', href='./favicon.png', type='image/png')
         script(src='d3/d3.v3.min.js', type='text/javascript')
-        
+        script(src='d3/colorbrewer.js', type='text/javascript')
+        script(src='data/experience.js', type='text/javascript')        
     body
-        script(src='script/data.js', type='text/javascript')
-        script(src='script/main.js', type='text/javascript')
             
         h1 Ulric Wilfred
         
@@ -44,7 +43,7 @@ html(lang='en')
         p Let's get to business. My experience in "coding" counts to 10 years plus, though
           | officially it may be only five years or so. Here's a timeline of my occupation:
           
-        //- TODO
+        svg#experience
          
         p If you are really into details, you may check out my 
             a(href='./cv.html') CV
@@ -76,3 +75,6 @@ html(lang='en')
         
     footer
         p Designed by shaman.sir &copy; 2015
+
+    script(src='script/experience.js', type='text/javascript')
+    script(src='script/main.js', type='text/javascript')
