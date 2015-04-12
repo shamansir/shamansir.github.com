@@ -1,8 +1,8 @@
-// source: http://tributary.io/inlet/1fd86904dcc5b12776e7
-
-function experience_graph(experience) {
+function experience_graph(experience, brew) {
 
     var dataset = experience.history;
+
+    brew = brew || 'YlGn';
 
     var w = 137, // full width
         h = 35; // full height
@@ -87,7 +87,7 @@ function experience_graph(experience) {
 
     var colorScale = d3.scale.linear()
                              .domain(d3.range(0, dataset.length))
-                             .range(colorbrewer.YlGn[dataset.length]);
+                             .range(colorbrewer[brew][dataset.length]);
 
     var workplacesGroup = svg.append('g')
        .attr('class', 'workplaces');
