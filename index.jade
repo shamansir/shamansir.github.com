@@ -3,7 +3,6 @@ doctype html
 - var css_src = './styles/main.css';
 - var js_src = './scripts/main.js';
 - var favicon_src = './favicon.gif';
-- var layout_call = 'layout()';
 
 html(lang='en')
 
@@ -13,7 +12,7 @@ html(lang='en')
     link(rel='shortcut icon', href=favicon_src, type='image/gif')
     script(src=js_src, type='text/javascript')
 
-  body.spatial.theme-a
+  body.spatial.theme-default
 
     // NAVIGATION
     nav
@@ -102,23 +101,3 @@ html(lang='en')
 
     footer
       p Designed by shaman.sir &copy; 2014
-
-    //- canvas(id='cvs',width='1000',height='1000')
-
-    script(type='text/javascript')
-      != layout_call
-
-    //- script(type='text/javascript').
-      //- var canvas = document.getElementById('cvs');
-      //- var ctx = canvas.getContext('2d');
-      //- ctx.globalCompositeOperation = "multiply";
-      //- ctx.beginPath();
-      //- ctx.moveTo(0, 0);
-      //- ctx.lineTo(40, 10);
-      //- ctx.lineTo(400, 400);
-      //- ctx.lineTo(10, 40);
-      //- ctx.lineTo(0, 0);
-      //- ctx.closePath();
-      //- ctx.fillStyle = '#f00';
-      //- ctx.fill();
-
