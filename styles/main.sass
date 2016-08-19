@@ -2,15 +2,11 @@
 
 @import './_typography.sass'
 
-@import './_themes.sass'
-@import './themes/_theme-a.scss'
+=theme($name, $colors)
 
-@import './_flat.sass'
-@import './_flat-transitions.sass'
+  body.#{$name}
+    background-color: map-get($colors, background)
 
-@import './_spatial.sass'
-@import './_spatial-transitions.sass'
-
+@import './themes/_theme-default.scss'
 
 // =============================================
-

@@ -1,4 +1,4 @@
-$theme-a: (
+$theme-default: (
   background: #fcfcfc,
   base: #090909,
   secondary: #393939,
@@ -18,4 +18,4 @@ $theme-a: (
   overflow-gradient: linear-gradient(top, rgba(255,255,255,0) 85%,rgba(255,255,255,.3) 100%),
 );
 
-@include theme("theme-a", $theme-a)
+@include theme("theme-default", $theme-default)
