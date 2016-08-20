@@ -12,7 +12,7 @@ html(lang='en')
     link(rel='shortcut icon', href=favicon_src, type='image/gif')
     script(src=js_src, type='text/javascript')
 
-  body.spatial.theme-default
+  body.theme-default      
 
     // NAVIGATION
     nav
@@ -38,66 +38,45 @@ html(lang='en')
         //- non-dev stuff, self-created projects,
         //- participated project, latest-posts,
 
-    #perspective
-      #segments-root
-
-        // SECTION: ABOUT
-        header#about.segment
-          h1#about-handle.handle About
-
+    // MAIN
+    main
+      content
+          
+          // TITLE (ABOUT)
+          
           include sections/about
-
-        // MAIN
-        main
-          content
-
-            // SECTION: CONTACTS
-            section#contacts.segment
-              h2#contacts-handle.handle Contacts
-
-              include sections/contacts
-
-            // SECTION: POSTS
-            section#posts.segment
-              h2#posts-handle.handle Posts
-
-              include sections/posts
-
-            // SECTION: LINKS
-            section#links.segment
-              h2#links-handle.handle Links
-
-              include sections/links
-
-            //- // SECTION: VCARD
-            //- section#vcard.segment
-            //-  h2#vcard-handle.handle VCard
-
-            //-  include sections/vcard
-
-            // SECTION: CV
-            section#cv.segment
-              h2#cv-handle.handle CV
-
-              include sections/cv
-
-            // SECTION: CV
-            section#sounds.segment
-              h2#sounds-handle.handle Sounds
-
-              include sections/sounds
-
-            //- // SECTION: STORY
-            //- section#story.segment
-            //-   h2#story-handle.handle Story
-
-            //-   include sections/story
-
-            // SECTION: SOCIAL
-            section#social.segment
-              h2#social-handle.handle Social
-
-              include sections/social
+          
+          // CONTACTS (address and online stuff), VCARD, GEEK-CODE
+          
+          include sections/contacts
+          
+          // SOCIAL NETWORKS
+          
+          include sections/social
+          
+          // CV & WORK STORY
+          
+          include sections/work
+          
+          // GITHUB & PERSONAL PROJECTS (w/description)
+          
+          include sections/hobby
+          
+          // MUSIC
+          
+          include sections/sounds
+          
+          // LATEST BLOG POSTS
+          
+          include sections/posts
+          
+          // NO-PROGRAMMING PROJECTS
+          
+          include sections/no-code
+          
+          // SITE HISTORY              
+          
+          include sections/history
 
     footer
       p Designed by shaman.sir &copy; 2014

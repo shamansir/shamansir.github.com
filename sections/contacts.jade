@@ -37,3 +37,27 @@ ul.segment-inner.icon-list
         | Simeonistraße 6, 4-OG
         | 80637 München
         | Deutchland
+
+ul.segment-inner.icon-list
+
+  mixin links_item(icon_id, href, text)
+    - var prefix  = '<span class=\'accent\'>';
+    - var postfix = '</span>';
+    - var link_html = text.replace('[', prefix).replace(']', postfix);
+    - var img_src = './resources/icons/' + icon_id + '.svg';
+    a(href=href,title=text)
+      img(src=img_src)
+      span!= link_html
+
+  li: +links_item('blog', 'http://shamansir.github.io/blog/', 'Blog in English')
+  li: +links_item('blog', 'http://shamansir.github.io/blog/ru', 'Blog in Russian')
+  li: +links_item('vimeo', 'http://vimeo.com/album/2203517', 'Lectures @ Vimeo', 'vimeo/album/2203517')
+  li: +links_item('github', 'http://github.com/shamansir', 'github/[shamansir]')
+  li: +links_item('linkedin', 'http://www.linkedin.com/in/shamansir', 'linkedin/[shamansir]')
+  li: +links_item('speakerdeck', 'http://speakerdeck.com/shamansir', 'speakerdeck/[shamansir]')
+  li: +links_item('lanyrd', 'http://lanyrd.com/profile/shaman_sir/', 'lanyrd/[shaman_sir]')
+  li: +links_item('coderwall', 'https://coderwall.com/shamansir', 'coderwall/[shamansir]')
+  li: +links_item('stackoverflow', 'http://stackoverflow.com/users/167262', 'stackoverflow/[shaman.sir]')
+  //- li: +links_item('soundcloud', '#', 'soundcloud/[shamansir]')
+  //- li: +links_item('', '#', 'Google.code', 'googlecode/[shamansir]')
+  //- li: +links_item('', 'http://about.me/shaman.sir', 'About.me', 'about.me/[shaman.sir]')
