@@ -21,7 +21,7 @@ html(lang='en')
         mixin nav_item(id, label)
           a(href!='#'+id)= label
 
-        li: +nav_item('about', 'About')
+        //- li: +nav_item('intro', 'Intro')
         li: +nav_item('contacts', 'Contacts')
         li: +nav_item('social', 'Social')
         li: +nav_item('work', 'Work')
@@ -37,57 +37,57 @@ html(lang='en')
           
           // TITLE (ABOUT)
           
-          h1#about
+          //- h1#intro Intro
           
-          include sections/about
+          include sections/intro
           
           // CONTACTS (address and online stuff), VCARD, GEEK-CODE
           
-          h1#contacts
+          h1#contacts Contacts
           
           include sections/contacts
           
           // SOCIAL NETWORKS
           
-          h1#social
+          h2#social Social
           
           include sections/social
           
           // CV & WORK STORY
           
-          h1#work
+          h2#work Work
           
           include sections/work
           
           // GITHUB & PERSONAL PROJECTS (w/description)
           
-          h1#hobby
+          h2#hobby Hobby
           
           include sections/hobby
           
           // LATEST BLOG POSTS
           
-          h1#posts
+          h2#posts Posts
           
           include sections/posts          
           
           // MUSIC
           
-          h1#sounds
+          h2#sounds Sounds
           
           include sections/sounds
           
           // NO-PROGRAMMING PROJECTS
           
-          h1#no-code
+          h2#no-code No-Code
           
           include sections/no-code
           
           // SITE HISTORY
           
-          h1#history
+          h2#history History
           
           include sections/history
 
     footer
-      p Designed by shaman.sir &copy; 2014
+      p Designed by shaman.sir &copy; 2016
