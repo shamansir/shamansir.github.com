@@ -2,6 +2,7 @@
 _prev/
 _src/
 _source/
+sections-prev/
 *.css
 *@2x.svg
 *.sketch
