@@ -19,24 +19,17 @@ html(lang='en')
       ul
 
         mixin nav_item(id, label)
-          a.seg-href(id!=id+'-href',
-                     href!='#'+id)= label
+          a(href!='#'+id)= label
 
-        li.active
-            +nav_item('about',    'About')
+        li: +nav_item('about', 'About')
         li: +nav_item('contacts', 'Contacts')
-        li: +nav_item('posts',    'Posts')
-        li: +nav_item('links',    'Links')
-        //- li: +nav_item('vcard',    'VCard')
-        li: +nav_item('cv',       'CV')
-        li: +nav_item('sounds',       'Sounds')
-        //- li: +nav_item('story',    'Story')
-        li: +nav_item('social',   'Social')
-
-        //- latest-songs, files
-        //- geek code, data (stuff like age,occupation,location),
-        //- non-dev stuff, self-created projects,
-        //- participated project, latest-posts,
+        li: +nav_item('social', 'Social')
+        li: +nav_item('work', 'Work')
+        li: +nav_item('hobby', 'Hobby')
+        li: +nav_item('posts', 'Posts')
+        li: +nav_item('sounds', 'Sounds')
+        li: +nav_item('no-code', 'No-code')
+        li: +nav_item('history', 'History')
 
     // MAIN
     main
@@ -44,37 +37,55 @@ html(lang='en')
           
           // TITLE (ABOUT)
           
+          h1#about
+          
           include sections/about
           
           // CONTACTS (address and online stuff), VCARD, GEEK-CODE
+          
+          h1#contacts
           
           include sections/contacts
           
           // SOCIAL NETWORKS
           
+          h1#social
+          
           include sections/social
           
           // CV & WORK STORY
+          
+          h1#work
           
           include sections/work
           
           // GITHUB & PERSONAL PROJECTS (w/description)
           
+          h1#hobby
+          
           include sections/hobby
-          
-          // MUSIC
-          
-          include sections/sounds
           
           // LATEST BLOG POSTS
           
-          include sections/posts
+          h1#posts
+          
+          include sections/posts          
+          
+          // MUSIC
+          
+          h1#sounds
+          
+          include sections/sounds
           
           // NO-PROGRAMMING PROJECTS
           
+          h1#no-code
+          
           include sections/no-code
           
-          // SITE HISTORY              
+          // SITE HISTORY
+          
+          h1#history
           
           include sections/history
 
