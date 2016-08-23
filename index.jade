@@ -12,24 +12,7 @@ html(lang='en')
     link(rel='shortcut icon', href=favicon_src, type='image/gif')
     script(src=js_src, type='text/javascript')
 
-  body.theme-default      
-
-    // NAVIGATION
-    nav
-      ul
-
-        mixin nav_item(id, label)
-          a(href!='#'+id)= label
-
-        //- li: +nav_item('intro', 'Intro')
-        li: +nav_item('contacts', 'Contacts')
-        li: +nav_item('social', 'Social')
-        li: +nav_item('work', 'Work')
-        li: +nav_item('hobby', 'Hobby')
-        li: +nav_item('posts', 'Posts')
-        li: +nav_item('sounds', 'Sounds')
-        li: +nav_item('no-code', 'No-code')
-        li: +nav_item('history', 'History')
+  body.theme-default
 
     // MAIN
     main

@@ -1,0 +1,67 @@
+- var blog_root = 'http://shamansir.github.io/blog';
+
+//- ul.source-list
+//- 
+//-   mixin source_item(icon_id, href, text)
+//-     - var img_src = './resources/icons/' + icon_id + '.svg';
+//-     a(href=href,title=text)
+//-       img(src=img_src)
+//- 
+//-   li: +source_item('rss_en', blog_root + '/feed.xml', 'RSS EN')
+//-   li: +source_item('rss_ru', blog_root + '/ru/feed.xml', 'RSS RU')
+
+ul.segment-inner
+
+  h3 Main Topics
+
+  ul.tag-list
+    mixin tag_item(tag, text)
+      - var href = blog_root + '/tags/' + tag + '/';
+      li: a(href=href,title=text)!= text
+
+    +tag_item('gwt', 'GWT')
+    +tag_item('javascript', 'JavaScript')
+    +tag_item('functional', 'functionaλ')
+    +tag_item('slides', 'slides')
+    +tag_item('video', 'video')
+    +tag_item('mvp4g', 'mvp4g')
+    +tag_item('cg', 'CG')
+    +tag_item('fluxus', '(fluxus)')
+    +tag_item('lisp', 'Lisp')
+    +tag_item('android', 'Android')
+
+  mixin links_item(date, lang, post_id, name, tags)
+    - var href = blog_root + ((lang == 'ru') ? '/ru' : '') + '/articles/' + post_id;
+    dt!= date
+    dd: a(href=href,title=name)!= name
+
+  h3 In English
+
+  dl.marker-list
+
+    //- PegJS parser techniques
+    //- Animatron player presentation
+    +links_item('16 Feb \'13', 'en', 'mastering-functional-javascript-slides', '“Mastering Functional JavaScript” Lecture Slides', [ 'javascript', 'functional', 'slides' ])
+    +links_item('04 May \'11', 'en', 'gwt-mvp4g-slides', 'GWT + mvp4g Lecture Slides', [ 'java', 'gwt', 'mvp4g', 'slides' ])
+    //- +links_item('03 Feb \'11', 'en', '3-tiny-javascript-snippets', '3 Tiny JavaScript Snippets')
+    +links_item('06 Dec \'10', 'en', 'fluxus-solar-system', 'Modelling Solar System in Fluxus', [ 'lisp', 'fluxus', 'cg', 'functional' ])
+    //- +links_item('17 Nov \'10', 'en', 'easy-as-sandwitch-blog-engine', 'Easy as Sandwich: Blog Engine in JavaScript and XML')
+    +links_item('12 Aug \'10', 'en', 'nijiato-detection-of-fingers-motion-algorithm', 'Way of the Raibow: Fingers Motion Detection Algorythm Based on Colors Differentiation', [ 'lisp', 'functional' ])
+    +links_item('09 Jan \'10', 'en', '10-useful-solutions-for-android-developer', '10 Useful Solutions for Android Developer', [ 'java', 'android', 'tricks' ])
+    //- link to ARCHIVES below
+    dt —
+    dd: a(href=blog_root,title='No Word About Onion') More...
+
+  h3 In Russian
+
+  dl.marker-list
+
+    +links_item('16 Feb \'13', 'ru', 'mastering-functional-javascript-slides', 'Слайды «Постигаем функциональный Javascript»', [ 'javascript', 'functional', 'slides' ])
+    +links_item('22 Feb \'13', 'ru', 'the-way-of-the-asynchronous-samurai', 'Путь асинхронного самурая', [ 'javascript', 'functional' ])
+    +links_item('21 May \'11', 'ru', 'javascript-garden-translation', 'JavaScript Гарден на русском', [ 'javascript', 'translation' ])
+    +links_item('04 May \'11', 'ru', 'gwt-mvp4g-slides', 'Слайды мастер-класса по GWT и mvp4g', [ 'java', 'gwt', 'mvp4g', 'slides' ])
+    +links_item('05 Jan \'10', 'ru', '10-useful-solutions-for-android-developer', '10 полезных решений для разработчика под андроид', [ 'java', 'android', 'tricks' ])
+    //- link to ARCHIVES below
+    //- russian archives dates are messed up! see gwt+mvp4g, постигаем фунциональный
+    dt —
+    dd: a(href=blog_root+'/ru',title='Ни слова о луке') Ещё...
