@@ -8,8 +8,12 @@
     background-color: map-get($colors, background)
     margin: 10px
 
+  h1, h2, h3, h4, h5, h6
+    text-transform: lowercase
+
   h2
-    margin-top: 25px
+    margin-top: 30px
+    border-top: 1px solid black
 
   a
     color: black
@@ -33,6 +37,9 @@
 
   ul > li:hover
     background-color: #eee
+
+  section.work > .section-content
+    display: flex
 
 @import './themes/_theme-default.scss'
 
