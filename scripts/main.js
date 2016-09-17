@@ -1,6 +1,8 @@
 var workData = [
     {
-        title: 'JB',
+        id: 'jetbrains',
+        title: 'JetBrains',
+        label: 'JB',
         from: 'May 2016',
         places: [ 'Munich, Germany '],
         subjects: {
@@ -10,7 +12,9 @@ var workData = [
 
     },
     {
+        id: 'animatron',
         title: 'Animatron',
+        label: 'AT',
         from: 'Jun 2011',
         to: 'Apr 2016',
         places: [ 'Odessa, Ukraine',
@@ -22,7 +26,9 @@ var workData = [
         }
     },
     {
+        id: 'ipark-ventures',
         title: 'iPark Ventures',
+        label: 'iV',
         places: [ 'Odessa, Ukraine' ],
         from: 'Apr 2010',
         to: 'May 2011',
@@ -32,7 +38,9 @@ var workData = [
         }
     },
     {
+        id: 'exectum',
         title: 'Exectum LLC',
+        label: 'EX',
         places: [ 'St. Petersburg, Russia' ],
         from: 'Sep 2009',
         to: 'Feb 2010',
@@ -43,7 +51,9 @@ var workData = [
         }
     },
     {
+        id: 'sea-project',
         title: 'Sea Project',
+        label: 'SP',
         places: [ 'St. Petersburg, Russia' ],
         from: 'Aug 2009',
         to: 'Aug 2009',
@@ -53,7 +63,9 @@ var workData = [
         }
     },
     {
+        id: 'fotonation',
         title: 'Fotonation Inc.',
+        label: 'FN',
         places: [ 'St. Petersburg, Russia' ],
         from: 'Jul 2007',
         to: 'May 2009',
@@ -63,7 +75,9 @@ var workData = [
         }
     },
     {
-        title: 'FK Ltd.',
+        id: 'fabrika-koda',
+        title: 'Fabrika Koda Ltd.',
+        label: 'FK',
         places: [ 'St. Petersburg, Russia' ],
         from: 'Nov 2006',
         to: 'Jun 2007',
@@ -73,7 +87,9 @@ var workData = [
         }
     },
     {
+        id: 'emdev',
         title: 'EmDev LLC',
+        label: 'ED',
         places: [ 'St. Petersburg, Russia' ],
         from: 'May 2005',
         to: 'Oct 2006',
@@ -87,7 +103,9 @@ var workData = [
         }
     },
     {
+        id: 'vniiokeangeologiya',
         title: 'VNIIOkeangeologiya',
+        label: 'VO',
         places: [ 'St. Petersburg, Russia', 'Crimea, Ukraine', 'Xiao Nang Hai, China' ],
         from: 'Apr 2004',
         to: 'Mar 2005',
