@@ -10,6 +10,7 @@ html(lang='en')
     meta(charset='utf-8')
     link(href=css_src, rel='stylesheet')
     link(rel='shortcut icon', href=favicon_src, type='image/gif')
+    script(src='https://d3js.org/d3.v4.min.js', type='text/javascript')
     script(src=js_src, type='text/javascript')
 
   body.theme-default
@@ -98,6 +99,9 @@ html(lang='en')
           
               div.section-content
                   include sections/history
+                  
+          script.
+              work('div.work > .right')          
 
     footer
       p Designed by shaman.sir &copy; 2016
