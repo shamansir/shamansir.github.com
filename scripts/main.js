@@ -116,28 +116,99 @@ var workData = [
 ];
 
 function work(target) {
-    var firstMonth,
-        firstYear;
+    var firstDate;
+    var lastDate = new Date();
 
-    var lastMonth,
-        lastYear;
+    var width = 400, height = 400;
+
+    var monthsInRow = 6;
+
+    var dates = {};
+
+    var colors = {};
+
+    workData.forEach(function(w) {
+        var fromDate = new Date(w.from);
+        var toDate = new Date(w.to);
+        if (!firstDate || fromDate < firstDate) firstDate = fromDate;
+        dates[w.id] = [ fromDate, toDate ];
+        colors[w.id] = 'rgb(' + Math.floor(Math.random() * 255) + ',' +
+                                Math.floor(Math.random() * 255) + ',' +
+                                Math.floor(Math.random() * 255) + ')';
+    });
+
+    var firstYear = firstDate.getYear();
+    var lastYear = lastDate.getYear();
+    var yearCount = lastYear - firstYear;
+
+    var monthScale = d3.scaleLinear().range([ 0, width ])
+                                     .domain([ 0, monthsInRow ]);
+    var yearScale = d3.scaleLinear().range([ 0, height ])
+                                    .domain([ firstYear, firstYear + (yearCount * 2) ]);
+
+    var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ]
+
+    function drawMonth(target, w, month, year) {
+        console.log(w.id, monthsNames[month], (1900 + year));
+        var group = d3.select(target);
+
+        group.append('circle')
+             .attr('data-w', w.id)
+             .attr('data-month', month).attr('data-year', 1900 + year)
+             .attr('cx', monthScale(month % monthsInRow))
+             .attr('cy', yearScale(year))
+             .attr('fill', colors[w.id])
+             .attr('r', 5);
+
+        group.append('text')
+             .attr('x', monthScale(month % monthsInRow))
+             .attr('y', yearScale(year))
+             .attr('fill', 'rgba(0,0,0,0.3)')
+             .text(monthsNames[month] + '/' + (1900 + year))
+    }
 
     d3.select(target).append('svg')
-      .attr('width', 200).attr('height', 200)
+      .attr('width', width).attr('height', height)
       .selectAll('g').data(workData).enter()
-      .append('circle')
-      .attr('fill', function(v, i) {
-          return 'rgb(' + Math.floor(Math.random() * 255) + ',255,255)';
-      })
-      .attr('r', function() {
-          return Math.random() * 50;
+      .append('g').attr('id', function(w) { return w.id; })
+      .each(function(w, index) {
+        var wDates = dates[w.id];
+        console.log(w.id, wDates[0].getMonth(), wDates[0].getYear(),
+                          wDates[1].getMonth(), wDates[1].getYear());
+
+        var startMonth = wDates[0].getMonth(), startYear = wDates[0].getYear();
+        var endMonth =   wDates[1].getMonth(), endYear   = wDates[1].getYear();
+
+        var month;
+        if (startYear == endYear) {
+            for (month = startMonth; month < endMonth; month++) {
+                drawMonth(this, w, month, startYear);
+            }
+        } else {
+            for (month = startMonth; month < 12; month++) {
+                drawMonth(this, w, month, startYear);
+            }
+            var year;
+            for (year = startYear + 1; year < endYear - 1; year++) {
+                for (month = 0; month < 12; month++) {
+                    drawMonth(this, w, month, year);
+                }
+            }
+            for (month = 0; month < endMonth; month++) {
+                drawMonth(this, w, month, endYear);
+            }
+        }
+
       });
 
-    workData.forEach(function(workItem) {
+
+    console.log(firstDate, lastDate, dates);
+
+    /* workData.forEach(function(workItem) {
         console.log(workItem);
         var startDate = new Date(workItem.from + ' GMT');
         var endDate = workItem.to ? new Date(workItem.to + ' GMT') : new Date();
         console.log(workItem.title, startDate.toUTCString(),
                                     endDate.toUTCString());
-    });
+    }); */
 }
