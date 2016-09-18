@@ -116,10 +116,12 @@ var workData = [
 ];
 
 function work(target) {
-    var firstDate;
-    var lastDate = new Date();
+    var today = new Date();
 
-    var width = 400, height = 400;
+    var firstDate;
+    var lastDate = today;
+
+    var width = 400, height = 600;
 
     var monthsInRow = 6;
 
@@ -129,7 +131,7 @@ function work(target) {
 
     workData.forEach(function(w) {
         var fromDate = new Date(w.from);
-        var toDate = new Date(w.to);
+        var toDate = w.to ? new Date(w.to) : today;
         if (!firstDate || fromDate < firstDate) firstDate = fromDate;
         dates[w.id] = [ fromDate, toDate ];
         colors[w.id] = 'rgb(' + Math.floor(Math.random() * 255) + ',' +
@@ -141,10 +143,12 @@ function work(target) {
     var lastYear = lastDate.getYear();
     var yearCount = lastYear - firstYear;
 
+    console.log(firstYear, lastYear, yearCount);
+
     var monthScale = d3.scaleLinear().range([ 0, width ])
                                      .domain([ 0, monthsInRow ]);
     var yearScale = d3.scaleLinear().range([ 0, height ])
-                                    .domain([ firstYear, firstYear + (yearCount * 2) ]);
+                                    .domain([ 0, yearCount ]);
 
     var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ]
 
@@ -156,13 +160,15 @@ function work(target) {
              .attr('data-w', w.id)
              .attr('data-month', month).attr('data-year', 1900 + year)
              .attr('cx', monthScale(month % monthsInRow))
-             .attr('cy', yearScale(year))
+             .attr('cy', yearScale((month < monthsInRow) ? (year - firstYear)
+                                                         : (year - firstYear) + 0.5))
              .attr('fill', colors[w.id])
              .attr('r', 5);
 
         group.append('text')
              .attr('x', monthScale(month % monthsInRow))
-             .attr('y', yearScale(year))
+             .attr('y', yearScale((month < monthsInRow) ? (year - firstYear)
+                                                        : (year - firstYear) + 0.5))
              .attr('fill', 'rgba(0,0,0,0.3)')
              .text(monthsNames[month] + '/' + (1900 + year))
     }
@@ -173,15 +179,16 @@ function work(target) {
       .append('g').attr('id', function(w) { return w.id; })
       .each(function(w, index) {
         var wDates = dates[w.id];
-        console.log(w.id, wDates[0].getMonth(), wDates[0].getYear(),
-                          wDates[1].getMonth(), wDates[1].getYear());
 
         var startMonth = wDates[0].getMonth(), startYear = wDates[0].getYear();
         var endMonth =   wDates[1].getMonth(), endYear   = wDates[1].getYear();
 
+        console.log(w.id, monthsNames[startMonth], 1900 + startYear, '->',
+                          monthsNames[endMonth],   1900 + endYear);
+
         var month;
         if (startYear == endYear) {
-            for (month = startMonth; month < endMonth; month++) {
+            for (month = startMonth; month <= endMonth; month++) {
                 drawMonth(this, w, month, startYear);
             }
         } else {
@@ -189,12 +196,12 @@ function work(target) {
                 drawMonth(this, w, month, startYear);
             }
             var year;
-            for (year = startYear + 1; year < endYear - 1; year++) {
+            for (year = startYear + 1; year < endYear; year++) {
                 for (month = 0; month < 12; month++) {
                     drawMonth(this, w, month, year);
                 }
             }
-            for (month = 0; month < endMonth; month++) {
+            for (month = 0; month <= endMonth; month++) {
                 drawMonth(this, w, month, endYear);
             }
         }
