@@ -109,9 +109,9 @@ var workData = [
         places: [ 'St. Petersburg, Russia', 'Crimea, Ukraine', 'Xiao Nang Hai, China' ],
         from: 'Apr 2004',
         to: 'Mar 2005',
-        subjects: [
+        subjects: {
             'delphi': 1.0
-        ]
+        }
     }
 ];
 
@@ -121,6 +121,17 @@ function work(target) {
 
     var lastMonth,
         lastYear;
+
+    d3.select(target).append('svg')
+      .attr('width', 200).attr('height', 200)
+      .selectAll('g').data(workData).enter()
+      .append('circle')
+      .attr('fill', function(v, i) {
+          return 'rgb(' + Math.floor(Math.random() * 255) + ',255,255)';
+      })
+      .attr('r', function() {
+          return Math.random() * 50;
+      });
 
     workData.forEach(function(workItem) {
         console.log(workItem);
