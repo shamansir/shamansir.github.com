@@ -145,10 +145,17 @@ function work(target) {
 
     console.log(firstYear, lastYear, yearCount);
 
-    var monthScale = d3.scaleLinear().range([ 0, width ])
+    var yearAxisWidth = 30;
+
+    var monthScale = d3.scaleLinear().range([ 0, width - yearAxisWidth ])
                                      .domain([ 0, monthsInRow ]);
     var yearScale = d3.scaleLinear().range([ 0, height ])
                                     .domain([ 0, yearCount ]);
+
+    var yearAxis = d3.axisRight().scale(yearScale)
+                     .tickFormat(function(idx) {
+                         return 1900 + firstYear + idx;
+                     });
 
     var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ]
 
@@ -173,41 +180,45 @@ function work(target) {
              .text(monthsNames[month] + '/' + (1900 + year))
     }
 
-    d3.select(target).append('svg')
-      .attr('width', width).attr('height', height)
-      .selectAll('g').data(workData).enter()
-      .append('g').attr('id', function(w) { return w.id; })
-      .each(function(w, index) {
-        var wDates = dates[w.id];
+    var svg = d3.select(target).append('svg')
+                .attr('width', width).attr('height', height);
 
-        var startMonth = wDates[0].getMonth(), startYear = wDates[0].getYear();
-        var endMonth =   wDates[1].getMonth(), endYear   = wDates[1].getYear();
+    svg.selectAll('g').data(workData).enter()
+       .append('g').attr('id', function(w) { return w.id; })
+       .each(function(w, index) {
 
-        console.log(w.id, monthsNames[startMonth], 1900 + startYear, '->',
-                          monthsNames[endMonth],   1900 + endYear);
+           var wDates = dates[w.id];
 
-        var month;
-        if (startYear == endYear) {
-            for (month = startMonth; month <= endMonth; month++) {
-                drawMonth(this, w, month, startYear);
+           var startMonth = wDates[0].getMonth(), startYear = wDates[0].getYear();
+           var endMonth =   wDates[1].getMonth(), endYear   = wDates[1].getYear();
+
+           console.log(w.id, monthsNames[startMonth], 1900 + startYear, '->',
+                             monthsNames[endMonth],   1900 + endYear);
+
+           var month;
+           if (startYear == endYear) {
+               for (month = startMonth; month <= endMonth; month++) {
+                   drawMonth(this, w, month, startYear);
+               }
+           } else {
+               for (month = startMonth; month < 12; month++) {
+                   drawMonth(this, w, month, startYear);
+               }
+               var year;
+               for (year = startYear + 1; year < endYear; year++) {
+                   for (month = 0; month < 12; month++) {
+                       drawMonth(this, w, month, year);
+                   }
+               }
+               for (month = 0; month <= endMonth; month++) {
+                   drawMonth(this, w, month, endYear);
+               }
             }
-        } else {
-            for (month = startMonth; month < 12; month++) {
-                drawMonth(this, w, month, startYear);
-            }
-            var year;
-            for (year = startYear + 1; year < endYear; year++) {
-                for (month = 0; month < 12; month++) {
-                    drawMonth(this, w, month, year);
-                }
-            }
-            for (month = 0; month <= endMonth; month++) {
-                drawMonth(this, w, month, endYear);
-            }
-        }
 
-      });
+       });
 
+    svg.append('g').call(yearAxis)
+       .attr('transform', 'translate(' + (width - yearAxisWidth) + ',0)');
 
     console.log(firstDate, lastDate, dates);
 
