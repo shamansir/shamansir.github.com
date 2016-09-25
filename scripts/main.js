@@ -121,7 +121,7 @@ function work(target) {
     var firstDate;
     var lastDate = today;
 
-    var width = 400, height = 600;
+    var width = 150, height = 400;
 
     var monthsInRow = 6;
 
@@ -150,7 +150,10 @@ function work(target) {
     var monthScale = d3.scaleLinear().range([ 0, width - yearAxisWidth ])
                                      .domain([ 0, monthsInRow ]);
     var yearScale = d3.scaleLinear().range([ 0, height ])
-                                    .domain([ 0, yearCount ]);
+                                    .domain([ 0, yearCount + 1 ]);
+
+    var xSide = 10;
+    var ySide = 10;
 
     var yearAxis = d3.axisRight().scale(yearScale)
                      .tickFormat(function(idx) {
@@ -163,6 +166,10 @@ function work(target) {
         console.log(w.id, monthsNames[month], (1900 + year));
         var group = d3.select(target);
 
+        var radius = ySide / 2;
+
+        group.attr('transform', 'translate(' + radius + ',' + radius + ')');
+
         group.append('circle')
              .attr('data-w', w.id)
              .attr('data-month', month).attr('data-year', 1900 + year)
@@ -170,14 +177,14 @@ function work(target) {
              .attr('cy', yearScale((month < monthsInRow) ? (year - firstYear)
                                                          : (year - firstYear) + 0.5))
              .attr('fill', colors[w.id])
-             .attr('r', 5);
+             .attr('r', radius);
 
-        group.append('text')
+        /* group.append('text')
              .attr('x', monthScale(month % monthsInRow))
              .attr('y', yearScale((month < monthsInRow) ? (year - firstYear)
                                                         : (year - firstYear) + 0.5))
              .attr('fill', 'rgba(0,0,0,0.3)')
-             .text(monthsNames[month] + '/' + (1900 + year))
+             .text(monthsNames[month] + '/' + (1900 + year)); */
     }
 
     var svg = d3.select(target).append('svg')
