@@ -230,9 +230,14 @@ function work(target) {
                 }
             }
 
-            /* d3.select(this).on('mouseover', function() {
-                if (correspondingItem) correspondingItem.class()
-            }); */
+            d3.select(this)
+              //.style('pointer-events', 'all')
+              .on('mouseover', function() {
+                  correspondingItem.classed('active', true);
+              })
+              .on('mouseout', function() {
+                  correspondingItem.classed('active', false);
+              });
 
        });
 
