@@ -63,8 +63,8 @@ var workData = [
         }
     },
     {
-        id: 'fotonation',
-        title: 'Fotonation Inc.',
+        id: 'piclinq',
+        title: 'Piclinq Rus / Fotonation Inc.',
         label: 'FN',
         places: [ 'St. Petersburg, Russia' ],
         from: 'Jul 2007',
@@ -87,7 +87,7 @@ var workData = [
         }
     },
     {
-        id: 'emdev',
+        id: 'emdev-llc',
         title: 'EmDev LLC',
         label: 'ED',
         places: [ 'St. Petersburg, Russia' ],
@@ -190,37 +190,49 @@ function work(target) {
     var svg = d3.select(target).append('svg')
                 .attr('width', width).attr('height', height);
 
+    var lastHoveredPlace;
+
     svg.selectAll('g').data(workData).enter()
        .append('g').attr('id', function(w) { return w.id; })
        .each(function(w, index) {
 
-           var wDates = dates[w.id];
+            var wDates = dates[w.id];
+            var wColor = colors[w.id];
 
-           var startMonth = wDates[0].getMonth(), startYear = wDates[0].getYear();
-           var endMonth =   wDates[1].getMonth(), endYear   = wDates[1].getYear();
+            var correspondingItem = d3.selectAll('#work-' + w.id);
 
-           console.log(w.id, monthsNames[startMonth], 1900 + startYear, '->',
-                             monthsNames[endMonth],   1900 + endYear);
+            correspondingItem.append('span').text('●')
+                             .style('color', wColor);
 
-           var month;
-           if (startYear == endYear) {
-               for (month = startMonth; month <= endMonth; month++) {
-                   drawMonth(this, w, month, startYear);
-               }
-           } else {
-               for (month = startMonth; month < 12; month++) {
-                   drawMonth(this, w, month, startYear);
-               }
-               var year;
-               for (year = startYear + 1; year < endYear; year++) {
-                   for (month = 0; month < 12; month++) {
-                       drawMonth(this, w, month, year);
-                   }
-               }
-               for (month = 0; month <= endMonth; month++) {
-                   drawMonth(this, w, month, endYear);
-               }
+            var startMonth = wDates[0].getMonth(), startYear = wDates[0].getYear();
+            var endMonth =   wDates[1].getMonth(), endYear   = wDates[1].getYear();
+
+            console.log(w.id, monthsNames[startMonth], 1900 + startYear, '->',
+                              monthsNames[endMonth],   1900 + endYear);
+
+            var month;
+            if (startYear == endYear) {
+                for (month = startMonth; month <= endMonth; month++) {
+                    drawMonth(this, w, month, startYear);
+                }
+            } else {
+                for (month = startMonth; month < 12; month++) {
+                    drawMonth(this, w, month, startYear);
+                }
+                var year;
+                for (year = startYear + 1; year < endYear; year++) {
+                    for (month = 0; month < 12; month++) {
+                        drawMonth(this, w, month, year);
+                    }
+                }
+                for (month = 0; month <= endMonth; month++) {
+                    drawMonth(this, w, month, endYear);
+                }
             }
+
+            /* d3.select(this).on('mouseover', function() {
+                if (correspondingItem) correspondingItem.class()
+            }); */
 
        });
 
