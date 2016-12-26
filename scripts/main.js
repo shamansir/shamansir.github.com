@@ -182,12 +182,14 @@ function work(target) {
     var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];
 
     var radius = ySide / 2;
+    var diameter = radius * 2;
 
     function monthPos(month, year, addX, addY) {
         return {
             x: monthScale(month % monthsInRow) + (addX || 0),
-            y: yearScale((month < monthsInRow) ? (year - firstYear) + (addY || 0)
-                                               : (year - firstYear) + 0.5 + (addY || 0))
+            y: yearScale((month < monthsInRow) ? (year - firstYear)
+                                               : (year - firstYear) + 0.5
+                        ) + (addY || 0)
         }
     }
 
@@ -197,7 +199,7 @@ function work(target) {
 
         var pos = monthPos(month, year);
 
-        group.append('circle')
+        group.append('circle').style('pointer-events', 'none')
              .attr('data-w', w.id)
              .attr('data-month', month).attr('data-year', 1900 + year)
              .attr('cx', pos.x).attr('cy', pos.y)
@@ -212,19 +214,52 @@ function work(target) {
              .text(monthsNames[month] + '/' + (1900 + year)); */
     }
 
+    function monthDiff(startMonth, startYear, endMonth, endYear) {
+        return endMonth - startMonth + (12 * (endYear - startYear));
+    }
+
     function drawArea(target, w, startMonth, startYear, endMonth, endYear) {
+        var correspondingItem = d3.selectAll('#work-' + w.id);
+
+        var monthsBetween = monthDiff(startMonth, startYear, endMonth, endYear);
+        var takesOneRow = (startYear == endYear) && 
+                          (((startMonth < monthsInRow) && (endMonth < monthsInRow)) ||
+                           ((startMonth >= monthsInRow) && (endMonth >= monthsInRow)));
         var points = [];
-        points.push(monthPos(startMonth, startYear));
-        points.push(monthPos((startMonth > monthsInRow)
-                ? (monthsInRow * 2) - 1
-                : monthsInRow - 1, startYear, radius));        
-        points.push(monthPos(endMonth, endYear));
+        if (takesOneRow) {
+            points.push(monthPos(startMonth, startYear, 0, 0));             
+            points.push(monthPos(endMonth, endYear, diameter, 0));
+            points.push(monthPos(endMonth, endYear, diameter, diameter));
+            points.push(monthPos(startMonth, startYear, 0, diameter));
+            points.push(monthPos(startMonth, startYear, 0, 0));
+        } else/* if (monthsBetween >= 12)*/ { 
+            points.push(monthPos(startMonth, startYear, 0, 0));
+            points.push(monthPos((startMonth > monthsInRow)
+                    ? (monthsInRow * 2) - 1
+                    : monthsInRow - 1, startYear, diameter, 0));
+            if (endMonth >= monthsInRow) {
+                points.push(monthPos(monthsInRow - 1, endYear, diameter, diameter));
+            } else {
+                points.push(monthPos((monthsInRow * 2) - 1, endYear - 1, diameter, diameter));
+            }
+            points.push(monthPos(endMonth, endYear, diameter, 0));
+            points.push(monthPos(endMonth, endYear, diameter, diameter));
+            points.push(monthPos((endMonth >= monthsInRow) ? monthsInRow : 0, endYear, 0, diameter, 0));
+            if (startMonth >= monthsInRow) {
+                points.push(monthPos(0, startYear + 1, 0, 0));
+            } else {
+                points.push(monthPos(monthsInRow, startYear, 0, 0));
+            }
+            points.push(monthPos(startMonth, startYear, 0, diameter));
+        } /* else {
+
+        } */
         /* points.push(monthPos((startMonth > monthsInRow)
                 ? (monthsInRow * 2) - 1
                 : monthsInRow - 1, startYear, radius)); */        
 
-        d3.select(target).append('path')
-          .attr('fill', 'none')
+        var path = d3.select(target).append('path')
+          .attr('fill', 'transparent')
           .attr('stroke', colors[w.id])
           .attr('stroke-width', 1)
           .attr('d', 'M ' + points[0].x + ' '
@@ -234,6 +269,15 @@ function work(target) {
                      })
                    + 'Z'   
                );
+
+        path.style('pointer-events', 'all')
+            .style('cursor', 'pointer')
+            .on('mouseover', function() {
+                correspondingItem.classed('active', true);
+            })
+            .on('mouseout', function() {
+                correspondingItem.classed('active', false);
+            });               
 
         points.forEach(function(point, idx) {
             d3.select(target).append('text').text(idx)
@@ -245,8 +289,6 @@ function work(target) {
 
     var svg = d3.select(target).append('svg')
                 .attr('width', width).attr('height', height);
-
-    var lastHoveredPlace;
 
     svg.append('g').attr('id', 'workplaces')
        .attr('transform', 'translate(0,' + radius + ')')
@@ -300,15 +342,6 @@ function work(target) {
                     drawMonth(circles, w, month, endYear);
                 }
             }
-
-            d3.select(this)
-              //.style('pointer-events', 'all')
-              .on('mouseover', function() {
-                  correspondingItem.classed('active', true);
-              })
-              .on('mouseout', function() {
-                  correspondingItem.classed('active', false);
-              });
 
        });
 
