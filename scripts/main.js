@@ -1,9 +1,25 @@
+var monthToIdx = { Jan:  0, Feb:  1, Mar:  2, Apr:  3,
+                   May:  4, Jun:  5, Jul:  6, Aug:  7,
+                   Sep:  8, Oct:  9, Nov: 10, Dec: 11 };
+
+console.log({ Jan:  0, Feb:  1, Mar:  2, Apr:  3,
+                   May:  4, Jun:  5, Jul:  6, Aug:  7,
+                   Sep:  8, Oct:  9, Nov: 10, Dec: 11 });
+
+function from(month, year) {
+    return new Date(year, monthToIdx[month], 1);
+}
+
+function to(month, year) {
+    return new Date(year, monthToIdx[month] + 1, 0);
+}
+
 var workData = [
     {
         id: 'jetbrains',
         title: 'JetBrains',
         label: 'JB',
-        from: 'May 2016',
+        from: from('May', 2016),
         places: [ 'Munich, Germany '],
         subjects: {
             'javascript': 0.8,
@@ -15,8 +31,8 @@ var workData = [
         id: 'animatron',
         title: 'Animatron',
         label: 'AT',
-        from: 'Jun 2011',
-        to: 'Apr 2016',
+        from: from('Jun', 2011),
+        to: to('Apr', 2016),
         places: [ 'Odessa, Ukraine',
                   'Munich, Germany' ],
         subjects: {
@@ -30,8 +46,8 @@ var workData = [
         title: 'iPark Ventures',
         label: 'iV',
         places: [ 'Odessa, Ukraine' ],
-        from: 'Apr 2010',
-        to: 'May 2011',
+        from: from('Apr', 2010),
+        to: to('May', 2011),
         subjects: {
             'java/gwt': 0.8,
             'javascript': 0.2
@@ -42,8 +58,8 @@ var workData = [
         title: 'Exectum LLC',
         label: 'EX',
         places: [ 'St. Petersburg, Russia' ],
-        from: 'Sep 2009',
-        to: 'Feb 2010',
+        from: from('Sep', 2009),
+        to: to('Feb', 2010),
         subjects: {
             'javascript/extjs': 0.7,
             'java/rmi': 0.15,
@@ -55,8 +71,8 @@ var workData = [
         title: 'Sea Project',
         label: 'SP',
         places: [ 'St. Petersburg, Russia' ],
-        from: 'Aug 2009',
-        to: 'Aug 2009',
+        from: from('Aug', 2009),
+        to: to('Aug', 2009),
         subjects: {
             'xml/xslt': 0.6,
             'javascript': 0.4
@@ -67,8 +83,8 @@ var workData = [
         title: 'Piclinq Rus / Fotonation Inc.',
         label: 'FN',
         places: [ 'St. Petersburg, Russia' ],
-        from: 'Jul 2007',
-        to: 'May 2009',
+        from: from('Jul', 2007),
+        to: to('May', 2009),
         subjects: {
             'java/wicket': 0.6,
             'javascript': 0.4
@@ -79,8 +95,8 @@ var workData = [
         title: 'Fabrika Koda Ltd.',
         label: 'FK',
         places: [ 'St. Petersburg, Russia' ],
-        from: 'Nov 2006',
-        to: 'Jun 2007',
+        from: from('Nov', 2006),
+        to: to('Jun', 2007),
         subjects: {
             'php': 0.6,
             'javascript': 0.4
@@ -91,8 +107,8 @@ var workData = [
         title: 'EmDev LLC',
         label: 'ED',
         places: [ 'St. Petersburg, Russia' ],
-        from: 'May 2005',
-        to: 'Oct 2006',
+        from: from('May', 2005),
+        to: to('Oct', 2006),
         subjects: {
             'java/spring': 0.5,
             'java/hibernate': 0.2,
@@ -107,8 +123,8 @@ var workData = [
         title: 'VNIIOkeangeologiya',
         label: 'VO',
         places: [ 'St. Petersburg, Russia', 'Crimea, Ukraine', 'Xiao Nang Hai, China' ],
-        from: 'Apr 2004',
-        to: 'Mar 2005',
+        from: from('Apr', 2004),
+        to: to('Mar', 2005),
         subjects: {
             'delphi': 1.0
         }
@@ -130,8 +146,8 @@ function work(target) {
     var colors = {};
 
     workData.forEach(function(w) {
-        var fromDate = new Date(w.from);
-        var toDate = w.to ? new Date(w.to) : today;
+        var fromDate = w.from;
+        var toDate = w.to || today;
         if (!firstDate || fromDate < firstDate) firstDate = fromDate;
         dates[w.id] = [ fromDate, toDate ];
         colors[w.id] = 'rgb(' + Math.floor(Math.random() * 255) + ',' +
