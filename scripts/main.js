@@ -171,8 +171,8 @@ function work(target) {
                                              height - (height * padding) ])
                                     .domain([ 0, yearCount + 1 ]);
 
-    var xSide = 5;
-    var ySide = 5;
+    var xSide = 12;
+    var ySide = 12;
 
     var xMargin = monthScale(1) - monthScale(0) - xSide;
     var yMargin = yearScale(0.5) - yearScale(0) - ySide;
@@ -217,14 +217,14 @@ function work(target) {
              .text(monthsNames[month] + '/' + (1900 + year)); */
     }
 
-    function monthDiff(startMonth, startYear, endMonth, endYear) {
+    /* function monthDiff(startMonth, startYear, endMonth, endYear) {
         return endMonth - startMonth + (12 * (endYear - startYear));
-    }
+    } */
 
     function drawArea(target, w, startMonth, startYear, endMonth, endYear) {
         var correspondingItem = d3.selectAll('#work-' + w.id);
 
-        var monthsBetween = monthDiff(startMonth, startYear, endMonth, endYear);
+        //var monthsBetween = monthDiff(startMonth, startYear, endMonth, endYear);
         var takesOneRow = (startYear == endYear) && 
                           (((startMonth < monthsInRow) && (endMonth < monthsInRow)) ||
                            ((startMonth >= monthsInRow) && (endMonth >= monthsInRow)));
@@ -258,9 +258,17 @@ function work(target) {
             /* 7 */ points.push(monthPos(startMonth, startYear, -halfXMargin, diameter + halfYMargin));
         }        
 
+        /* 
+        var strokeColor = d3.color(colors[w.id]);
+        var fillColor = strokeColor;//.brighter(1.5) */
+
+        var strokeColor = 'transparent';
+        var fillColor = colors[w.id];
+
         var path = d3.select(target).append('path')
           .attr('fill', 'transparent')
-          .attr('stroke', colors[w.id])
+          .attr('fill-opacity', 0.1)
+          .attr('stroke', strokeColor)
           .attr('stroke-width', 1)
           .attr('d', 'M ' + points[0].x + ' '
                           + points[0].y + ' '
@@ -274,17 +282,29 @@ function work(target) {
             .style('cursor', 'pointer')
             .on('mouseover', function() {
                 correspondingItem.classed('active', true);
+                path.attr('fill', fillColor);
             })
             .on('mouseout', function() {
                 correspondingItem.classed('active', false);
-            });               
+                path.attr('fill', 'transparent');
+            });
 
-        points.forEach(function(point, idx) {
+        correspondingItem
+            .style('cursor', 'pointer')
+            .on('mouseover', function() {
+                correspondingItem.classed('active', true);
+                path.attr('fill', fillColor);
+            }).on('mouseout', function() {
+                correspondingItem.classed('active', false);
+                path.attr('fill', 'transparent');
+            });;            
+
+        /* points.forEach(function(point, idx) {
             d3.select(target).append('text').text(idx)
               //.attr('alignment-baseline', 'hanging')
               .style('font-size', 8)  
               .attr('transform', 'translate(' + point.x + ',' + point.y + ')')
-        });         
+        }); */         
     }
 
     var svg = d3.select(target).append('svg')
