@@ -234,7 +234,7 @@ function work(target) {
             points.push(monthPos(startMonth, startYear, 0, 0));
         } else/* if (monthsBetween >= 12)*/ { 
             points.push(monthPos(startMonth, startYear, 0, 0));
-            points.push(monthPos((startMonth > monthsInRow)
+            points.push(monthPos((startMonth >= monthsInRow)
                     ? (monthsInRow * 2) - 1
                     : monthsInRow - 1, startYear, diameter, 0));
             if (endMonth >= monthsInRow) {
