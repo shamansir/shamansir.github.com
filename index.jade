@@ -2,6 +2,7 @@ doctype html
 
 - var css_src = './styles/main.css';
 - var js_src = './scripts/main.js';
+- var js_src = './scripts/work.js';
 - var favicon_src = './favicon.gif';
 
 html(lang='en')
@@ -102,7 +103,8 @@ html(lang='en')
                   include sections/history
                   
           script.
-              work('section.work .right')
+              work('#work-timeline');
+              workControls('#work-controls', '#work-timeline');
 
     footer
       p Designed by shaman.sir &copy; 2016
