@@ -171,8 +171,11 @@ function work(target) {
                                              height - (height * padding) ])
                                     .domain([ 0, yearCount + 1 ]);
 
-    var xSide = 10;
-    var ySide = 10;
+    var xSide = 5;
+    var ySide = 5;
+
+    var xMargin = monthScale(1) - monthScale(0) - xSide;
+    var yMargin = yearScale(0.5) - yearScale(0) - ySide;
 
     var yearAxis = d3.axisRight().scale(yearScale)
                      .tickFormat(function(idx) {
@@ -226,37 +229,34 @@ function work(target) {
                           (((startMonth < monthsInRow) && (endMonth < monthsInRow)) ||
                            ((startMonth >= monthsInRow) && (endMonth >= monthsInRow)));
         var points = [];
+        var halfXMargin = xMargin / 2;        
+        var halfYMargin = yMargin / 2;
         if (takesOneRow) {
-            points.push(monthPos(startMonth, startYear, 0, 0));             
-            points.push(monthPos(endMonth, endYear, diameter, 0));
-            points.push(monthPos(endMonth, endYear, diameter, diameter));
-            points.push(monthPos(startMonth, startYear, 0, diameter));
-            points.push(monthPos(startMonth, startYear, 0, 0));
+            /* 0 */ points.push(monthPos(startMonth, startYear, -halfXMargin, -halfYMargin));         
+            /* 1 */ points.push(monthPos(endMonth, endYear, diameter + halfXMargin, -halfYMargin));
+            /* 2 */ points.push(monthPos(endMonth, endYear, diameter + halfXMargin, diameter + halfYMargin));
+            /* 3 */ points.push(monthPos(startMonth, startYear, -halfXMargin, diameter + halfYMargin));
+            /* 4 */ points.push(monthPos(startMonth, startYear, -halfXMargin, -halfYMargin)); // 4
         } else/* if (monthsBetween >= 12)*/ { 
-            points.push(monthPos(startMonth, startYear, 0, 0));
-            points.push(monthPos((startMonth >= monthsInRow)
-                    ? (monthsInRow * 2) - 1
-                    : monthsInRow - 1, startYear, diameter, 0));
+            /* 0 */ points.push(monthPos(startMonth, startYear, -halfXMargin, -halfYMargin));
+            /* 1 */ points.push(monthPos((startMonth >= monthsInRow)
+                                         ? (monthsInRow * 2) - 1
+                                         : monthsInRow - 1, startYear, diameter + halfXMargin, -halfYMargin));
             if (endMonth >= monthsInRow) {
-                points.push(monthPos(monthsInRow - 1, endYear, diameter, diameter));
+                /* 2 */ points.push(monthPos(monthsInRow - 1, endYear, diameter + halfXMargin, diameter + halfYMargin));
             } else {
-                points.push(monthPos((monthsInRow * 2) - 1, endYear - 1, diameter, diameter));
+                /* 2 */ points.push(monthPos((monthsInRow * 2) - 1, endYear - 1, diameter + halfXMargin, diameter + halfYMargin));
             }
-            points.push(monthPos(endMonth, endYear, diameter, 0));
-            points.push(monthPos(endMonth, endYear, diameter, diameter));
-            points.push(monthPos((endMonth >= monthsInRow) ? monthsInRow : 0, endYear, 0, diameter, 0));
+            /* 3 */ points.push(monthPos(endMonth, endYear, diameter + halfXMargin, -halfYMargin));
+            /* 4 */ points.push(monthPos(endMonth, endYear, diameter + halfXMargin, diameter + halfYMargin));
+            /* 5 */ points.push(monthPos((endMonth >= monthsInRow) ? monthsInRow : 0, endYear, -halfXMargin, diameter + halfYMargin));
             if (startMonth >= monthsInRow) {
-                points.push(monthPos(0, startYear + 1, 0, 0));
+                /* 6 */ points.push(monthPos(0, startYear + 1, -halfXMargin, -halfYMargin));
             } else {
-                points.push(monthPos(monthsInRow, startYear, 0, 0));
+                /* 6 */ points.push(monthPos(monthsInRow, startYear,  -halfXMargin, -halfYMargin));
             }
-            points.push(monthPos(startMonth, startYear, 0, diameter));
-        } /* else {
-
-        } */
-        /* points.push(monthPos((startMonth > monthsInRow)
-                ? (monthsInRow * 2) - 1
-                : monthsInRow - 1, startYear, radius)); */        
+            /* 7 */ points.push(monthPos(startMonth, startYear, -halfXMargin, diameter + halfYMargin));
+        }        
 
         var path = d3.select(target).append('path')
           .attr('fill', 'transparent')
@@ -314,13 +314,14 @@ function work(target) {
 
             var area = d3.select(this)
                          .append('g').classed('area', true)
+                         .attr('transform', 'translate(0, ' + -1 * radius + ')')
                          .node();
               
             drawArea(area, w, startMonth, startYear,
                               endMonth, endYear);
 
             var circles = d3.select(this).append('g').classed('circles', true)
-                                         .attr('transform', 'translate(' + radius + ',' + radius + ')')
+                                         .attr('transform', 'translate(' + radius + ',0)')
                                          .node();
 
             var month;
