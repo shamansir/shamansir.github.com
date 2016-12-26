@@ -278,26 +278,40 @@ function work(target) {
                    + 'Z'   
                );
 
+        var topY = yearScale(startMonth < monthsInRow ? startYear - firstYear 
+                                                      : startYear - firstYear + 0.5) - halfYMargin;
+        var bottomY = yearScale(endMonth < monthsInRow ? endYear - firstYear + 0.5
+                                                       : endYear - firstYear + 1) - halfYMargin;
+
+        var gutter = d3.select(target).append('rect')
+           .attr('fill', 'transparent')
+           //.attr('fill-opacity', 0.1)
+           .attr('x', width - yearAxisWidth)
+           .attr('y', topY)
+           .attr('width', 5)
+           .attr('height', bottomY - topY);     
+
+        function highlight() {
+            correspondingItem.classed('active', true);
+            path.attr('fill', fillColor);
+            gutter.attr('fill', fillColor);
+        }      
+
+        function removeHightlight() {
+            correspondingItem.classed('active', false);
+            path.attr('fill', 'transparent');
+            gutter.attr('fill', 'transparent');
+        }
+
         path.style('pointer-events', 'all')
             .style('cursor', 'pointer')
-            .on('mouseover', function() {
-                correspondingItem.classed('active', true);
-                path.attr('fill', fillColor);
-            })
-            .on('mouseout', function() {
-                correspondingItem.classed('active', false);
-                path.attr('fill', 'transparent');
-            });
+            .on('mouseover', highlight)
+            .on('mouseout', removeHightlight);
 
         correspondingItem
             .style('cursor', 'pointer')
-            .on('mouseover', function() {
-                correspondingItem.classed('active', true);
-                path.attr('fill', fillColor);
-            }).on('mouseout', function() {
-                correspondingItem.classed('active', false);
-                path.attr('fill', 'transparent');
-            });;            
+            .on('mouseover', highlight)
+            .on('mouseout', removeHightlight);            
 
         /* points.forEach(function(point, idx) {
             d3.select(target).append('text').text(idx)
