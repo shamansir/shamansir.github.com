@@ -181,11 +181,11 @@ function work(target) {
 
     var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];
 
+    var radius = ySide / 2;
+
     function drawMonth(target, w, month, year) {
         console.log(w.id, monthsNames[month], (1900 + year));
         var group = d3.select(target);
-
-        var radius = ySide / 2;
 
         group.attr('transform', 'translate(' + radius + ',' + radius + ')');
 
@@ -211,7 +211,9 @@ function work(target) {
 
     var lastHoveredPlace;
 
-    svg.selectAll('g').data(workData).enter()
+    svg.append('g').attr('id', 'work-places')
+       .attr('transform', 'translate(0,' + radius + ')')
+       .selectAll('g').data(workData).enter()
        .append('g').attr('id', function(w) { return w.id; })
        .each(function(w, index) {
 
