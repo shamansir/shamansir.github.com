@@ -183,18 +183,24 @@ function work(target) {
 
     var radius = ySide / 2;
 
+    function monthPos(month, year) {
+        return {
+            x: monthScale(month % monthsInRow),
+            y: yearScale((month < monthsInRow) ? (year - firstYear)
+                                               : (year - firstYear) + 0.5)
+        }
+    }
+
     function drawMonth(target, w, month, year) {
         console.log(w.id, monthsNames[month], (1900 + year));
         var group = d3.select(target);
 
-        group.attr('transform', 'translate(' + radius + ',' + radius + ')');
+        var pos = monthPos(month, year);
 
         group.append('circle')
              .attr('data-w', w.id)
              .attr('data-month', month).attr('data-year', 1900 + year)
-             .attr('cx', monthScale(month % monthsInRow))
-             .attr('cy', yearScale((month < monthsInRow) ? (year - firstYear)
-                                                         : (year - firstYear) + 0.5))
+             .attr('cx', pos.x).attr('cy', pos.y)
              .attr('fill', colors[w.id])
              .attr('r', radius);
 
@@ -206,15 +212,29 @@ function work(target) {
              .text(monthsNames[month] + '/' + (1900 + year)); */
     }
 
+    function drawArea(target, w, startMonth, startYear, endMonth, endYear) {
+        var startPos = monthPos(startMonth, startYear);
+        var endPos = monthPos(endMonth, endYear);
+
+        d3.select(target).append('path')
+          .attr('stroke', 'black')
+          .attr('stroke-width', 1)
+          .attr('d', 'M ' + startPos.x + ' '
+                          + startPos.y + ' '
+                   + 'L ' + endPos.x + ' '
+                          + endPos.y);  
+    }
+
     var svg = d3.select(target).append('svg')
                 .attr('width', width).attr('height', height);
 
     var lastHoveredPlace;
 
-    svg.append('g').attr('id', 'work-places')
+    svg.append('g').attr('id', 'workplaces')
        .attr('transform', 'translate(0,' + radius + ')')
        .selectAll('g').data(workData).enter()
        .append('g').attr('id', function(w) { return w.id; })
+       .classed('workplace', true)
        .each(function(w, index) {
 
             var wDates = dates[w.id];
@@ -232,23 +252,34 @@ function work(target) {
             console.log(w.id, monthsNames[startMonth], 1900 + startYear, '->',
                               monthsNames[endMonth],   1900 + endYear);
 
+            var area = d3.select(this)
+                         .append('g').classed('area', true)
+                         .node();
+              
+            drawArea(area, w, startMonth, startYear,
+                              endMonth, endYear);
+
+            var circles = d3.select(this).append('g').classed('circles', true)
+                                         .attr('transform', 'translate(' + radius + ',' + radius + ')')
+                                         .node();
+
             var month;
             if (startYear == endYear) {
                 for (month = startMonth; month <= endMonth; month++) {
-                    drawMonth(this, w, month, startYear);
+                    drawMonth(circles, w, month, startYear);
                 }
             } else {
                 for (month = startMonth; month < 12; month++) {
-                    drawMonth(this, w, month, startYear);
+                    drawMonth(circles, w, month, startYear);
                 }
                 var year;
                 for (year = startYear + 1; year < endYear; year++) {
                     for (month = 0; month < 12; month++) {
-                        drawMonth(this, w, month, year);
+                        drawMonth(circles, w, month, year);
                     }
                 }
                 for (month = 0; month <= endMonth; month++) {
-                    drawMonth(this, w, month, endYear);
+                    drawMonth(circles, w, month, endYear);
                 }
             }
 
