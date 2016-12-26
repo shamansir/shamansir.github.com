@@ -134,6 +134,8 @@ var workData = [
 function work(target) {
     var today = new Date();
 
+    var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];    
+
     var firstDate;
     var lastDate = today;
 
@@ -178,11 +180,17 @@ function work(target) {
     var yMargin = yearScale(0.5) - yearScale(0) - ySide;
 
     var yearAxis = d3.axisRight().scale(yearScale)
+                     //.tickSize(yearAxisWidth / 2)
                      .tickFormat(function(idx) {
                          return 1900 + firstYear + idx;
                      });
 
-    var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];
+    /* var monthAxis = d3.axisRight().scale(yearScale)
+                      .ticks((lastYear - firstYear) * 12)
+                      .tickSize(yearAxisWidth / 16)
+                      .tickFormat(function(idx) {
+                           return '';
+                       }); */
 
     var radius = ySide / 2;
     var diameter = radius * 2;
@@ -278,10 +286,14 @@ function work(target) {
                    + 'Z'   
                );
 
-        var topY = yearScale(startMonth < monthsInRow ? startYear - firstYear 
+        /* 
+        var topY = yearScale(startMonth < monthsInRow ? startYear - firstYear
                                                       : startYear - firstYear + 0.5) - halfYMargin;
         var bottomY = yearScale(endMonth < monthsInRow ? endYear - firstYear + 0.5
-                                                       : endYear - firstYear + 1) - halfYMargin;
+                                                       : endYear - firstYear + 1) - halfYMargin;            */
+
+        var topY = yearScale(startYear - firstYear + (startMonth / 12));
+        var bottomY = yearScale(endYear - firstYear + ((endMonth + 1) / 12));
 
         var gutter = d3.select(target).append('rect')
            .attr('fill', 'transparent')
@@ -383,6 +395,10 @@ function work(target) {
     svg.append('g').call(yearAxis)
        .attr('transform', 'translate(' + (width - yearAxisWidth) + ',0)')
        .selectAll('text').style('alignment-baseline', 'baseline');
+
+    /* svg.append('g').call(monthAxis)
+       .attr('transform', 'translate(' + (width - yearAxisWidth) + ',0)')
+       .selectAll('text').style('alignment-baseline', 'baseline'); */       
 
     console.log(firstDate, lastDate, dates);
 
