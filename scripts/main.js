@@ -183,11 +183,11 @@ function work(target) {
 
     var radius = ySide / 2;
 
-    function monthPos(month, year) {
+    function monthPos(month, year, addX, addY) {
         return {
-            x: monthScale(month % monthsInRow),
-            y: yearScale((month < monthsInRow) ? (year - firstYear)
-                                               : (year - firstYear) + 0.5)
+            x: monthScale(month % monthsInRow) + (addX || 0),
+            y: yearScale((month < monthsInRow) ? (year - firstYear) + (addY || 0)
+                                               : (year - firstYear) + 0.5 + (addY || 0))
         }
     }
 
@@ -213,16 +213,34 @@ function work(target) {
     }
 
     function drawArea(target, w, startMonth, startYear, endMonth, endYear) {
-        var startPos = monthPos(startMonth, startYear);
-        var endPos = monthPos(endMonth, endYear);
+        var points = [];
+        points.push(monthPos(startMonth, startYear));
+        points.push(monthPos((startMonth > monthsInRow)
+                ? (monthsInRow * 2) - 1
+                : monthsInRow - 1, startYear, radius));        
+        points.push(monthPos(endMonth, endYear));
+        /* points.push(monthPos((startMonth > monthsInRow)
+                ? (monthsInRow * 2) - 1
+                : monthsInRow - 1, startYear, radius)); */        
 
         d3.select(target).append('path')
-          .attr('stroke', 'black')
+          .attr('fill', 'none')
+          .attr('stroke', colors[w.id])
           .attr('stroke-width', 1)
-          .attr('d', 'M ' + startPos.x + ' '
-                          + startPos.y + ' '
-                   + 'L ' + endPos.x + ' '
-                          + endPos.y);  
+          .attr('d', 'M ' + points[0].x + ' '
+                          + points[0].y + ' '
+                   + points.slice(1).map(function(point) {
+                       return 'L ' + point.x + ' ' + point.y; 
+                     })
+                   + 'Z'   
+               );
+
+        points.forEach(function(point, idx) {
+            d3.select(target).append('text').text(idx)
+              //.attr('alignment-baseline', 'hanging')
+              .style('font-size', 8)  
+              .attr('transform', 'translate(' + point.x + ',' + point.y + ')')
+        });         
     }
 
     var svg = d3.select(target).append('svg')
