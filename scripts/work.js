@@ -128,55 +128,21 @@ var workData = [
 ];
 
 var textMode = false;
-var rectMode = false;
 
 function workControls(target, workTarget) {
     var workTarget = d3.select(workTarget);
 
     d3.select(target)
       .append('span').text('A')
+      .style('opacity', textMode ? 1 : 0.5)
       .on('click', function() {          
           textMode = !textMode;
+          d3.select(this).style('opacity', textMode ? 1 : 0.5)
           workTarget.selectAll('circle.month')
-                    .style('visibility', (textMode || rectMode) ? 'hidden' : 'visible');
-          workTarget.selectAll('rect.month')
-                    .style('visibility', textMode ? 'hidden' : 'visible');                    
+                    .style('fill-opacity', textMode ? 0.1 : 1);
           workTarget.selectAll('text.month')
                     .style('visibility', textMode ? 'visible' : 'hidden'); 
-      });
-
-    d3.select(target)  
-      .append('span').text('4')
-      .on('click', function() {
-          workTarget.selectAll('circle.month')
-                    .attr('r', 4);
-      });
-
-    d3.select(target)  
-      .append('span').text('5')
-      .on('click', function() {
-          workTarget.selectAll('circle.month')
-                    .attr('r', 5);
-      });
-
-    d3.select(target)  
-      .append('span').text('6')
-      .on('click', function() {
-          workTarget.selectAll('circle.month')
-                    .attr('r', 6);
-      });
-
-    d3.select(target)  
-      .append('span').text('R')
-      .on('click', function() {
-          rectMode = !rectMode;
-          workTarget.selectAll('circle.month')
-                    .style('visibility', (rectMode || textMode) ? 'hidden' : 'visible');
-          workTarget.selectAll('rect.month')
-                    .style('visibility', rectMode ? 'visible' : 'hidden');
-          workTarget.selectAll('text.month')
-                    .style('visibility', rectMode ? 'hidden' : 'visible');                     
-      });      
+      });     
 } 
 
 function work(target) {
@@ -265,17 +231,7 @@ function work(target) {
             .attr('data-month', month).attr('data-year', 1900 + year)
             .attr('cx', pos.x).attr('cy', pos.y)
             .attr('fill', color)
-            .attr('r', radius);
-
-        group.append('rect').style('pointer-events', 'none')
-            .classed('month', true)
-            .style('visibility', 'hidden')
-            .attr('data-w', w.id)
-            .attr('data-month', month).attr('data-year', 1900 + year)
-            .attr('x', pos.x - radius).attr('y', pos.y - radius)
-            .attr('fill', color)
-            .attr('width', diameter)
-            .attr('height', diameter);            
+            .attr('r', radius);           
 
         group.append('text').style('pointer-events', 'none')
              .classed('month', true)
