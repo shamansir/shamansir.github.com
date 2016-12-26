@@ -137,7 +137,7 @@ function work(target) {
     var firstDate;
     var lastDate = today;
 
-    var width = 150, height = 400;
+    var width = 150, height = 500;
 
     var monthsInRow = 6;
 
@@ -161,11 +161,14 @@ function work(target) {
 
     console.log(firstYear, lastYear, yearCount);
 
-    var yearAxisWidth = 30;
+    var yearAxisWidth = 32;
+
+    var padding = 0;
 
     var monthScale = d3.scaleLinear().range([ 0, width - yearAxisWidth ])
                                      .domain([ 0, monthsInRow ]);
-    var yearScale = d3.scaleLinear().range([ 0, height ])
+    var yearScale = d3.scaleLinear().range([ 0 + (height * padding), 
+                                             height - (height * padding) ])
                                     .domain([ 0, yearCount + 1 ]);
 
     var xSide = 10;
@@ -176,7 +179,7 @@ function work(target) {
                          return 1900 + firstYear + idx;
                      });
 
-    var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ]
+    var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];
 
     function drawMonth(target, w, month, year) {
         console.log(w.id, monthsNames[month], (1900 + year));
@@ -218,6 +221,7 @@ function work(target) {
             var correspondingItem = d3.selectAll('#work-' + w.id);
 
             correspondingItem.append('span').text('●')
+                             .classed('marker', true)
                              .style('color', wColor);
 
             var startMonth = wDates[0].getMonth(), startYear = wDates[0].getYear();
@@ -258,7 +262,8 @@ function work(target) {
        });
 
     svg.append('g').call(yearAxis)
-       .attr('transform', 'translate(' + (width - yearAxisWidth) + ',0)');
+       .attr('transform', 'translate(' + (width - yearAxisWidth) + ',0)')
+       .selectAll('text').style('alignment-baseline', 'baseline');
 
     console.log(firstDate, lastDate, dates);
 
