@@ -20,91 +20,92 @@ html(lang='en')
     // MAIN
     main
       content
-          
+
           // TITLE (ABOUT)
-          
+
           section.intro
-          
+
               //- h1#intro Intro
-          
+
               div.section-content
                   include sections/intro
-          
+
           // CONTACTS (address and online stuff), VCARD, GEEK-CODE
-          
+
           section.contacts
-          
+
               h2#contacts Contacts
-          
+
               div.section-content
                   include sections/contacts
-          
+
           // SOCIAL NETWORKS
-          
+
           section.social
-          
+
               h2#social Social
-          
+
               div.section-content
                   include sections/social
-          
+
           // CV & WORK STORY
-          
+
           section.work
-          
+
               h2#work Work
-          
+
               div.section-content
                   include sections/work
-          
+
           // GITHUB & PERSONAL PROJECTS (w/description)
-          
+
           section.hobby
-          
+
               h2#hobby Hobby
-          
+
               div.section-content
                   include sections/hobby
-          
+
           // LATEST BLOG POSTS
-          
-          section.posts 
-          
+
+          section.posts
+
             h2#posts Posts
-          
+
             div.section-content
-                include sections/posts          
-          
+                include sections/posts
+
           // MUSIC
-          
+
           section.sounds
-          
+
               h2#sounds Sounds
-          
+
               div.section-content
                   include sections/sounds
-          
+
           // NON-PROGRAMMING PROJECTS
-          
+
           section.no-code
-              
+
               h2#no-code No-Code
-          
+
               div.section-content
                   include sections/no-code
-          
+
           // SITE HISTORY
-          
+
           section.history
-              
+
               h2#history History
-          
+
               div.section-content
                   include sections/history
-                  
+
           script.
               work('#work-timeline');
               workControls('#work-controls', '#work-timeline');
+              workSkills('#work-skills');
 
     footer
       p Designed by shaman.sir &copy; 2016

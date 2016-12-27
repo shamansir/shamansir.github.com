@@ -135,20 +135,20 @@ function workControls(target, workTarget) {
     d3.select(target)
       .append('span').text('A')
       .style('opacity', textMode ? 1 : 0.5)
-      .on('click', function() {          
+      .on('click', function() {
           textMode = !textMode;
           d3.select(this).style('opacity', textMode ? 1 : 0.5)
           workTarget.selectAll('circle.month')
                     .style('fill-opacity', textMode ? 0.1 : 1);
           workTarget.selectAll('text.month')
-                    .style('visibility', textMode ? 'visible' : 'hidden'); 
-      });     
-} 
+                    .style('visibility', textMode ? 'visible' : 'hidden');
+      });
+}
 
 function work(target) {
     var today = new Date();
 
-    var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];    
+    var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];
 
     var firstDate;
     var lastDate = today;
@@ -161,6 +161,7 @@ function work(target) {
 
     var colors = {};
 
+    // init colots and dates
     workData.forEach(function(w) {
         var fromDate = w.from;
         var toDate = w.to || today;
@@ -183,7 +184,7 @@ function work(target) {
 
     var monthScale = d3.scaleLinear().range([ 0, width - yearAxisWidth ])
                                      .domain([ 0, monthsInRow ]);
-    var yearScale = d3.scaleLinear().range([ 0 + (height * padding), 
+    var yearScale = d3.scaleLinear().range([ 0 + (height * padding),
                                              height - (height * padding) ])
                                     .domain([ 0, yearCount + 1 ]);
 
@@ -209,6 +210,8 @@ function work(target) {
     var radius = ySide / 2;
     var diameter = radius * 2;
 
+    // ## monthPos ##
+
     function monthPos(month, year, addX, addY) {
         return {
             x: monthScale(month % monthsInRow) + (addX || 0),
@@ -217,6 +220,8 @@ function work(target) {
                         ) + (addY || 0)
         }
     }
+
+    // ## drawMonth ##
 
     function drawMonth(target, w, month, year) {
         console.log(w.id, monthsNames[month], (1900 + year));
@@ -231,14 +236,14 @@ function work(target) {
             .attr('data-month', month).attr('data-year', 1900 + year)
             .attr('cx', pos.x).attr('cy', pos.y)
             .attr('fill', color)
-            .attr('r', radius);           
+            .attr('r', radius);
 
         group.append('text').style('pointer-events', 'none')
              .classed('month', true)
              .style('visibility', 'hidden')
              .style('font-size', '10px')
             .attr('data-w', w.id)
-            .attr('data-month', month).attr('data-year', 1900 + year)             
+            .attr('data-month', month).attr('data-year', 1900 + year)
              .attr('text-anchor', 'middle')
              .attr('alignment-baseline', 'central')
              .attr('x', monthScale(month % monthsInRow))
@@ -246,30 +251,28 @@ function work(target) {
                                                         : (year - firstYear) + 0.5))
              .attr('fill', color)
              .text(monthsNames[month]);
-    
+
     }
 
-    /* function monthDiff(startMonth, startYear, endMonth, endYear) {
-        return endMonth - startMonth + (12 * (endYear - startYear));
-    } */
+    // ## drawArea ##
 
     function drawArea(target, w, startMonth, startYear, endMonth, endYear) {
         var correspondingItem = d3.selectAll('#work-' + w.id);
 
         //var monthsBetween = monthDiff(startMonth, startYear, endMonth, endYear);
-        var takesOneRow = (startYear == endYear) && 
+        var takesOneRow = (startYear == endYear) &&
                           (((startMonth < monthsInRow) && (endMonth < monthsInRow)) ||
                            ((startMonth >= monthsInRow) && (endMonth >= monthsInRow)));
         var points = [];
-        var halfXMargin = xMargin / 2;        
+        var halfXMargin = xMargin / 2;
         var halfYMargin = yMargin / 2;
         if (takesOneRow) {
-            /* 0 */ points.push(monthPos(startMonth, startYear, -halfXMargin, -halfYMargin));         
+            /* 0 */ points.push(monthPos(startMonth, startYear, -halfXMargin, -halfYMargin));
             /* 1 */ points.push(monthPos(endMonth, endYear, diameter + halfXMargin, -halfYMargin));
             /* 2 */ points.push(monthPos(endMonth, endYear, diameter + halfXMargin, diameter + halfYMargin));
             /* 3 */ points.push(monthPos(startMonth, startYear, -halfXMargin, diameter + halfYMargin));
             /* 4 */ points.push(monthPos(startMonth, startYear, -halfXMargin, -halfYMargin)); // 4
-        } else/* if (monthsBetween >= 12)*/ { 
+        } else/* if (monthsBetween >= 12)*/ {
             /* 0 */ points.push(monthPos(startMonth, startYear, -halfXMargin, -halfYMargin));
             /* 1 */ points.push(monthPos((startMonth >= monthsInRow)
                                          ? (monthsInRow * 2) - 1
@@ -288,9 +291,9 @@ function work(target) {
                 /* 6 */ points.push(monthPos(monthsInRow, startYear,  -halfXMargin, -halfYMargin));
             }
             /* 7 */ points.push(monthPos(startMonth, startYear, -halfXMargin, diameter + halfYMargin));
-        }        
+        }
 
-        /* 
+        /*
         var strokeColor = d3.color(colors[w.id]);
         var fillColor = strokeColor;//.brighter(1.5) */
 
@@ -305,12 +308,12 @@ function work(target) {
           .attr('d', 'M ' + points[0].x + ' '
                           + points[0].y + ' '
                    + points.slice(1).map(function(point) {
-                       return 'L ' + point.x + ' ' + point.y; 
+                       return 'L ' + point.x + ' ' + point.y;
                      })
-                   + 'Z'   
+                   + 'Z'
                );
 
-        /* 
+        /*
         var topY = yearScale(startMonth < monthsInRow ? startYear - firstYear
                                                       : startYear - firstYear + 0.5) - halfYMargin;
         var bottomY = yearScale(endMonth < monthsInRow ? endYear - firstYear + 0.5
@@ -325,13 +328,13 @@ function work(target) {
            .attr('x', width - yearAxisWidth)
            .attr('y', topY)
            .attr('width', 5)
-           .attr('height', bottomY - topY);     
+           .attr('height', bottomY - topY);
 
         function highlight() {
             correspondingItem.classed('active', true);
             path.attr('fill', fillColor);
             gutter.attr('fill', fillColor);
-        }      
+        }
 
         function removeHightlight() {
             correspondingItem.classed('active', false);
@@ -347,15 +350,17 @@ function work(target) {
         correspondingItem
             .style('cursor', 'pointer')
             .on('mouseover', highlight)
-            .on('mouseout', removeHightlight);            
+            .on('mouseout', removeHightlight);
 
         /* points.forEach(function(point, idx) {
             d3.select(target).append('text').text(idx)
               //.attr('alignment-baseline', 'hanging')
-              .style('font-size', 8)  
+              .style('font-size', 8)
               .attr('transform', 'translate(' + point.x + ',' + point.y + ')')
-        }); */         
+        }); */
     }
+
+    // ## Main code ##
 
     var svg = d3.select(target).append('svg')
                 .attr('width', width).attr('height', height);
@@ -388,7 +393,7 @@ function work(target) {
                          .append('g').classed('area', true)
                          .attr('transform', 'translate(0, ' + -1 * radius + ')')
                          .node();
-              
+
             drawArea(area, w, startMonth, startYear,
                               endMonth, endYear);
 
@@ -424,7 +429,7 @@ function work(target) {
 
     /* svg.append('g').call(monthAxis)
        .attr('transform', 'translate(' + (width - yearAxisWidth) + ',0)')
-       .selectAll('text').style('alignment-baseline', 'baseline'); */       
+       .selectAll('text').style('alignment-baseline', 'baseline'); */
 
     console.log(firstDate, lastDate, dates);
 
@@ -435,4 +440,19 @@ function work(target) {
         console.log(workItem.title, startDate.toUTCString(),
                                     endDate.toUTCString());
     }); */
+}
+
+function workSkills(target) {
+
+    /* function monthDiff(startMonth, startYear, endMonth, endYear) {
+        return endMonth - startMonth + (12 * (endYear - startYear));
+    } */
+
+    var skills = [];
+
+    workData.forEach(function(w) {
+
+    });
+
+    d3.select(target);
 }
