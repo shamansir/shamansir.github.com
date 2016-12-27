@@ -444,15 +444,46 @@ function work(target) {
 
 function workSkills(target) {
 
-    /* function monthDiff(startMonth, startYear, endMonth, endYear) {
-        return endMonth - startMonth + (12 * (endYear - startYear));
-    } */
+    var today = new Date();
 
-    var skills = [];
+    function monthDiff(startMonth, startYear, endMonth, endYear) {
+        return endMonth - startMonth + (12 * (endYear - startYear)) + 1;
+    }
+
+    var skills = {};
+
+    var totalMonths = 0;
+
+    var monthsCounts = [];
 
     workData.forEach(function(w) {
+        var from = w.from;
+        var to = w.to || today;
+        var monthsCount = monthDiff(from.getMonth(), from.getFullYear(),
+                                    to.getMonth(), to.getFullYear());
+
+        monthsCounts.push(monthsCount);
+        totalMonths += monthsCount;
+        console.log(w.id, from, to, monthsCount);
+
 
     });
+
+    workData.forEach(function(w, idx) {
+        var subjectsCount = w.subjects.length;
+        w.subjects.forEach(function(subject) {
+            var pair = subject.split('/');
+            var mainSkill = pair[0];
+            var subSkill = pair[1];
+            if (!skills[mainSkill]) skills[mainSkill] = {};
+            skills[mainSkill][subSkill] = (skills[mainSkill][subSkill] || 0) +                                (monthsCounts[idx] / subjectsCount);
+        });
+    });
+
+    console.log(skills);
+
+    var skillScale = d3.scaleLinear().range([ 0, 1 ])
+                                     .domain([ 0, totalMonths ]);
 
     d3.select(target);
 }
