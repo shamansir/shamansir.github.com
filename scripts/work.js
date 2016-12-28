@@ -19,7 +19,7 @@ var workData = [
         places: [ 'Munich, Germany '],
         subjects: {
             'javascript': 0.8,
-            'javascript/react': 0.1
+            'javascript/react': 0.2
         }
 
     },
@@ -469,14 +469,19 @@ function workSkills(target) {
 
     });
 
-    workData.forEach(function(w, idx) {
-        var subjectsCount = w.subjects.length;
-        w.subjects.forEach(function(subject) {
+    workData.forEach(function(w, w_idx) {
+        var subjects = Object.keys(w.subjects);
+        var subjectsCount = subjects.length;
+        subjects.forEach(function(subject) {
             var pair = subject.split('/');
             var mainSkill = pair[0];
-            var subSkill = pair[1];
+            var subSkill = pair[1] || null;
             if (!skills[mainSkill]) skills[mainSkill] = {};
-            skills[mainSkill][subSkill] = (skills[mainSkill][subSkill] || 0) +                                (monthsCounts[idx] / subjectsCount);
+            if (!subSkill) {
+                skills[mainSkill]['_'] = (skills[mainSkill]['_'] || 0) + (w.subjects[subject] * monthsCounts[w_idx]);
+            } else {
+                skills[mainSkill][subSkill] = (skills[mainSkill][subSkill] || 0) + (w.subjects[subject] * monthsCounts[w_idx]/* / subjectsCount*/);
+            }
         });
     });
 
