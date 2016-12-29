@@ -492,5 +492,16 @@ function workSkills(target) {
     var skillScale = d3.scaleLinear().range([ 0, 1 ])
                                      .domain([ 0, totalMonths ]);
 
-    d3.select(target);
+    var svg = d3.select(target).append('svg')
+                .attr('width', 100).attr('height', 100);
+
+    svg.append('g').attr('id', 'skills')
+       .selectAll('g').data(Object.keys(skills)).enter()
+       .append('g').attr('id', function(skill) { return skill; })
+       .each(function(skill) {
+           console.log(this, skill, Object.keys(skills[skill]));
+           d3.select(this).selectAll('g')
+             .data(Object.keys(skills[skill]))
+             .append('g').attr('id', function(subSkill) { return subSkill; });
+       });
 }
