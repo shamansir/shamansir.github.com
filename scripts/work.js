@@ -472,14 +472,16 @@ function workSkills(target) {
     workData.forEach(function(w, w_idx) {
         var subjects = Object.keys(w.subjects);
         var subjectsCount = subjects.length;
+        console.log('-----');
+        console.log(w.id, monthsCounts[w_idx]);
         subjects.forEach(function(subject) {
             var pair = subject.split('/');
             var mainSkill = pair[0];
             var subSkill = pair[1] || null;
+            console.log(mainSkill, subSkill || '_', w.subjects[subject], (w.subjects[subject] * monthsCounts[w_idx]));
             if (!skills[mainSkill]) skills[mainSkill] = {};
-            if (!subSkill) {
-                skills[mainSkill]['_'] = (skills[mainSkill]['_'] || 0) + (w.subjects[subject] * monthsCounts[w_idx]);
-            } else {
+            skills[mainSkill]['_'] = (skills[mainSkill]['_'] || 0) + (w.subjects[subject] * monthsCounts[w_idx]);
+            if (subSkill) {
                 skills[mainSkill][subSkill] = (skills[mainSkill][subSkill] || 0) + (w.subjects[subject] * monthsCounts[w_idx]/* / subjectsCount*/);
             }
         });
