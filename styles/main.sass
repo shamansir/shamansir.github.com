@@ -6,7 +6,8 @@
 
   body.#{$name}
     background-color: map-get($colors, background)
-    margin: 10px 50px
+    margin: 20px 50px
+    width: 60%
 
   h1, h2, h3, h4, h5, h6
     text-transform: lowercase
@@ -29,7 +30,7 @@
 
   ul > li
     list-style-type: none
-    padding-left: 5px
+    padding: 5px 10px
 
   ul > li:before
     content: '- '
@@ -60,9 +61,9 @@
       content: '('
 
     &:after
-      content: ')'      
+      content: ')'
 
-    margin: 0 3px    
+    margin: 0 3px
 
 
 @import './themes/_theme-default.scss'
