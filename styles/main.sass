@@ -16,6 +16,12 @@
     margin-top: 30px
     //border-top: 1px solid black
 
+  h2:after
+    content: '▶'
+    font-size: 8px
+    color: #ccc
+    padding: 3px
+
   a
     color: black
     text-decoration: none
@@ -42,12 +48,15 @@
   section.work > .section-content,
   section.sounds > .section-content
     display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
 
   .work .left
-    width: 60%
+    margin: 0
 
   .work .right
-    width: 40%
+    margin-left: 20px
 
   ul.work > li.active
     background-color: #aee
