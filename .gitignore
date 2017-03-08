@@ -11,6 +11,7 @@ index.html
 styles/.sass-cache
 resources/src
 config.codekit
-scripts/min
+config.codekit3
+scripts/*.min.js
 scripts/*-ck.js
 d3/

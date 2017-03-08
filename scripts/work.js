@@ -18,7 +18,8 @@ var workData = [
         from: from('May', 2016),
         places: [ 'Munich, Germany '],
         subjects: {
-            'javascript': 0.8,
+            'javascript': 0.6,
+            'html': 0.2,
             'javascript/react': 0.2
         }
 
@@ -452,6 +453,13 @@ function workSkills(target) {
 
     var skills = {};
 
+    function addSkillData(mainSkill, subSkill, w_id, value) {
+        if (!skills[mainSkill]) skills[mainSkill] = {};
+        if (!skills[mainSkill][subSkill]) skills[mainSkill][subSkill] = { total: 0, values: [] };
+        skills[mainSkill][subSkill].total = skills[mainSkill][subSkill].total + value;
+        skills[mainSkill][subSkill].values.push({ w: w_id, value: value });
+    };
+
     var totalMonths = 0;
 
     var monthsCounts = [];
@@ -464,29 +472,25 @@ function workSkills(target) {
 
         monthsCounts.push(monthsCount);
         totalMonths += monthsCount;
-        console.log(w.id, from, to, monthsCount);
-
-
+        // console.log(w.id, from, to, monthsCount);
     });
 
     workData.forEach(function(w, w_idx) {
         var subjects = Object.keys(w.subjects);
         var subjectsCount = subjects.length;
-        console.log('-----');
-        console.log(w.id, monthsCounts[w_idx]);
+        // console.log('-----');
+        // console.log(w.id, monthsCounts[w_idx]);
         subjects.forEach(function(subject) {
             var pair = subject.split('/');
             var mainSkill = pair[0];
             var subSkill = pair[1] || null;
             console.log(mainSkill, subSkill || '_', w.subjects[subject], (w.subjects[subject] * monthsCounts[w_idx]));
-            if (!skills[mainSkill]) skills[mainSkill] = {};
-            skills[mainSkill]['_'] = (skills[mainSkill]['_'] || 0) + (w.subjects[subject] * monthsCounts[w_idx]);
-            if (subSkill) {
-                skills[mainSkill][subSkill] = (skills[mainSkill][subSkill] || 0) + (w.subjects[subject] * monthsCounts[w_idx]/* / subjectsCount*/);
-            }
+            addSkillData(mainSkill, '_', w.id, (w.subjects[subject] * monthsCounts[w_idx]));
+            if (subSkill) addSkillData(mainSkill, subSkill, w.id, (w.subjects[subject] * monthsCounts[w_idx]));
         });
     });
 
+    console.log('++++++++');
     console.log(skills);
 
     var skillScale = d3.scaleLinear().range([ 0, 1 ])
@@ -499,7 +503,7 @@ function workSkills(target) {
        .selectAll('g').data(Object.keys(skills)).enter()
        .append('g').attr('id', function(skill) { return skill; })
        .each(function(skill) {
-           console.log(this, skill, Object.keys(skills[skill]));
+           // console.log(this, skill, Object.keys(skills[skill]));
            d3.select(this).selectAll('g')
              .data(Object.keys(skills[skill]))
              .append('g').attr('id', function(subSkill) { return subSkill; });
