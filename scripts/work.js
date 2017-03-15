@@ -364,20 +364,66 @@ function workSkills(target) {
     console.log('++++++++');
     console.log(skills);
 
-    var skillScale = d3.scaleLinear().range([ 0, 1 ])
+    var skillScale = d3.scaleLinear().range([ 0, Math.PI / 2 ])
                                      .domain([ 0, totalMonths ]);
 
     var svg = d3.select(target).append('svg')
                 .attr('width', 100).attr('height', 100);
 
+    // var lastSkillValue = {};
+    // var lastSubSkillValue = {};
+
     svg.append('g').attr('id', 'skills')
        .selectAll('g').data(Object.keys(skills)).enter()
        .append('g').attr('id', function(skill) { return skill; })
+    //    .append('path').attr('d', function(skill) {
+    //        var skillTotal = skills[skill]['_'];
+    //         return arc(10, skills['_'], to);
+    //    })
        .each(function(skill) {
            var skillTotal = skills[skill]['_'];
            //d3.select(this).append('arc')
            d3.select(this).selectAll('g')
-             .data(Object.keys(skills[skill])).enter()
+             .data(Object.keys(skills[skill]).filter(function() { return skill !== '_'; })).enter()
              .append('g').attr('id', function(subSkill) { return subSkill; });
+            //  .append('path').attr('d', function(subSkill) {
+            //     return arc(20, from, to);
+            //  })
        });
 }
+
+function arc(r, from, to) {
+  return [
+    'M', r * Math.cos(to), r * Math.sin(to),
+    'A', r, r, 0,
+         ((to - from) <= Math.PI) ? 0 : 1, 0,
+         r * Math.cos(from), r * Math.sin(from)
+  ].join(' ');
+}
+
+// var sectionsScale = d3.scaleLinear()
+//                         .range([ 0, Math.PI * 2 ])
+//                         .domain([ 0, 100 ]);
+
+//   var gap = (config.gap / 180 * Math.PI);
+
+//       sectionGroup.append('path')
+//                   .style('cursor', 'pointer')
+//                   .attr('stroke', byIndex(config.colors))
+//                   .attr('stroke-width', config.thickness)
+//                   .attr('fill', 'transparent')
+//                   .attr('transform', 'rotate(-90)')
+//                   .attr('d', function(value) {
+//                     var from = sectionsScale(lastValue * 100);
+//                     var to = sectionsScale((lastValue + value) * 100);
+
+//                     lastValue += value;
+
+//                     return arc(radius, from, to - gap);
+//                   })
+//                   .on('mouseover', function(value, sectionIdx) {
+//                     highlightSection(sectionIdx);
+//                   })
+//                   .on('mouseout', function(value, sectionIdx) {
+//                     removeSectionHighlight(sectionIdx);
+//                   });
