@@ -1,13 +1,17 @@
 @import 'bourbon/bourbon'
 
-@import './_typography.sass'
+@import './_typography.sass';
 
 =theme($name, $colors)
 
   body.#{$name}
     background-color: map-get($colors, background)
-    margin: 20px 50px
-    width: 60%
+
+  main
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
 
   h1, h2, h3, h4, h5, h6
     text-transform: lowercase
@@ -45,12 +49,12 @@
   ul > li:hover
     background-color: #eee
 
-  section.work > .section-content,
-  section.sounds > .section-content
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: space-between
+  // section.work > .section-content,
+  // section.sounds > .section-content
+  //   display: flex
+  //   flex-direction: row
+  //   align-items: center
+  //   justify-content: space-between
 
   .work .left
     margin: 0
