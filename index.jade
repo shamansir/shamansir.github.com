@@ -1,8 +1,7 @@
 doctype html
 
 - var css_src = './styles/main.css';
-- var js_src = './scripts/main.js';
-- var js_src = './scripts/work.js';
+- var js_sources = ['./scripts/main.js','./scripts/work.data.js','./scripts/work.js'];
 - var favicon_src = './favicon.gif';
 
 html(lang='en')
@@ -13,7 +12,8 @@ html(lang='en')
     link(rel='shortcut icon', href=favicon_src, type='image/gif')
     //- script(src='https://d3js.org/d3.v4.min.js', type='text/javascript')
     script(src='../d3/d3.min.js', type='text/javascript')
-    script(src=js_src, type='text/javascript')
+    each js_src in js_sources
+        script(src=js_src, type='text/javascript')
 
   body.theme-default
 
@@ -23,12 +23,21 @@ html(lang='en')
 
           // TITLE (ABOUT)
 
-          section.intro
+          section.header
 
               //- h1#intro Intro
 
               div.section-content
-                  include sections/intro
+                  include sections/header
+
+          // INTRO. A QUICK STORY
+
+          section.intro
+
+            h2#intro Intro
+
+                div.section-content
+                    include sections/intro
 
           // CONTACTS (address and online stuff), VCARD, GEEK-CODE
 
