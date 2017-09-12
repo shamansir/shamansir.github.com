@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon'
 
-@import './_typography.sass';
+@import './typography'
 
 =theme($name, $colors)
 
@@ -8,9 +8,9 @@
     background-color: map-get($colors, background)
 
   main
+    align-items: center
     display: flex
     flex-direction: column
-    align-items: center
     justify-content: space-between
 
   h1, h2, h3, h4, h5, h6

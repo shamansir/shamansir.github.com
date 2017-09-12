@@ -1,108 +1,108 @@
 body
-    font-family: 'Avenir Next', Avenir, Arial, Helvetica, sans-serif
-    letter-spacing: 0
-    color: #333
-    width: 60%
-    margin: 75px 80px
-    /* font-size: 16px */
+  color: #333
+  font-family: 'Avenir Next', Avenir, Arial, Helvetica, sans-serif
+  letter-spacing: 0
+  margin: 75px 80px
+  width: 60%
+  // font-size: 16px
 
 h1
-    font-family: 'Gill Sans', 'Lucia Grande', Futura, 'Trebuchet MS', sans-serif
-    font-size: 2.8em
-    margin-bottom: 2px
+  font-family: 'Gill Sans', 'Lucia Grande', Futura, 'Trebuchet MS', sans-serif
+  font-size: 2.8em
+  margin-bottom: 2px
 
 h3
-    margin-top: 0
-    color: #666
+  color: #666
+  margin-top: 0
 
 h4
-    margin-top: 60px
+  margin-top: 60px
 
 hr
-    height: 0
-    border-width: 1px
-    border-style: solid
-    color: #aaa
+  border-style: solid
+  border-width: 1px
+  color: #aaa
+  height: 0
 
 dl dt
-    margin-top: 20px
-    margin-bottom: 5px
-    font-size: 0.9em
-    font-style: italic
-    color: #666
+  color: #666
+  font-size: 0.9em
+  font-style: italic
+  margin-bottom: 5px
+  margin-top: 20px
 
 dl#experience, dl#education
 
-    & > dt
-        font-size: 1em
-        font-style: normal
-        font-weight: bold
-        margin-top: 30px
-        color: #666
+  & > dt
+    color: #666
+    font-size: 1em
+    font-style: normal
+    font-weight: bold
+    margin-top: 30px
 
-    & > dt:after
-        content: '⇣'
-        margin: 4px
-        position: relative
-        top: 4px
-        color: #ccc
+  & > dt::after
+    color: #ccc
+    content: '⇣'
+    margin: 4px
+    position: relative
+    top: 4px
 
-    & > dd
-        padding-left: 25px
-        border-left: 2px solid #eee
+  & > dd
+    border-left: 2px solid #eee
+    padding-left: 25px
 
 dl#personal-info > dd > ul
-    padding-left: 16px
+  padding-left: 16px
 
 ul#recommendations
-    list-style-type: none
+  list-style-type: none
 
-    li
-        margin-bottom: 30px
-        border-left: 2px solid #ccc
+  li
+    border-left: 2px solid #ccc
+    margin-bottom: 30px
 
-        & > blockquote
-            margin-left: 25px
+    & > blockquote
+      margin-left: 25px
 
-        p:first-child:first-letter
-            font-size: 1.2em
+    p:first-child:first-letter
+      font-size: 1.2em
 
 #favorite-books .author
-    font-style: italic
+  font-style: italic
 
 dl#contacts
 
-    & > dt
-        margin: 0 2px
-        float: left
-        clear: left
-        text-align: right
+  & > dt
+    clear: left
+    float: left
+    margin: 0 2px
+    text-align: right
 
-    & > dt:after
-        content: ':'
+  & > dt::after
+    content: ':'
 
-    & > dd
-        margin: 2px 2px 2px 25%
+  & > dd
+    margin: 2px 2px 2px 25%
 
 #footer
+  font-size: 0.8em
+  margin-top: 14em
+  text-align: center
 
-    margin-top: 14em
-    text-align: center
-    font-size: 0.8em
+  hr
+    display: none
 
-    hr
-        display: none
+  p
+    &:last-child
+      border-top: 1px solid #aaa
+      margin-bottom: 5em
+      margin-left: 25%
+      margin-right: 25%
+      padding-top: 7px
 
-    p:last-child
-        border-top: 1px solid #aaa
-        padding-top: 7px
-        margin-bottom: 5em
-        margin-right: 25%
-        margin-left: 25%
-
-    &:after
-        content: '— ※ —'
-        color: #aaa
+  &::after
+    color: #aaa
+    content: '— ※ —'
 
 
 $width-narrower: 'screen and (max-width: 560px)'
@@ -112,63 +112,63 @@ $width-wide:     'screen and (min-width: 1110px)'
 
 @media #{$width-normal}, print
 
-    body
-        width: 80%
-        margin: 40px
-        font-size: 14px
+  body
+    font-size: 14px
+    margin: 40px
+    width: 80%
 
-    ul, dl
-        margin: 0
+  ul, dl
+    margin: 0
 
-    h4
-        clear: left
-        margin-top: 41px
-        margin-bottom: 6px
+  h4
+    clear: left
+    margin-bottom: 6px
+    margin-top: 41px
 
-    dl
-        clear: both
+  dl
+    clear: both
 
-        dt
-            margin: 0 2px
-            float: left
-            clear: left
-            overflow: hidden
+    dt
+      clear: left
+      float: left
+      margin: 0 2px
+      overflow: hidden
 
-        dd
-            margin: 2px 2px 2px 30%
+    dd
+      margin: 2px 2px 2px 30%
 
-    dl#experience > dt, dl#education > dt
-        margin-top: 10px
-        margin-bottom: 4px
+  dl#experience > dt, dl#education > dt
+    margin-bottom: 4px
+    margin-top: 10px
 
-    dl#experience > dd, dl#education > dd,
-    ul#recommendations
-        margin-left: 10px
-        padding-left: 15px
-        border-left: none
-        margin-bottom: 10px
+  dl#experience > dd, dl#education > dd,
+  ul#recommendations
+    border-left: none
+    margin-bottom: 10px
+    margin-left: 10px
+    padding-left: 15px
 
-    #skills dd
-        margin-left: 45%
+  #skills dd
+    margin-left: 45%
 
 @media #{$width-narrow}
 
-    body
-        font-size: 12px
+  body
+    font-size: 12px
 
 @media #{$width-narrower}
 
-    body
-        font-size: 10px
+  body
+    font-size: 10px
 
 @media #{$width-wide}
 
-    body
-        width: 50%
+  body
+    width: 50%
 
 @media print
 
-    body
-        width: 85%
-        margin: 20px 10px
-        font-size: 12px
+  body
+    font-size: 12px
+    margin: 20px 10px
+    width: 85%
