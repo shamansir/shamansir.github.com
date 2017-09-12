@@ -1,7 +1,11 @@
+@include font-face('Monoid', '../fonts/Monoid-Regular')
+@include font-face('Monoid-Bold', '../fonts/Monoid-Bold')
+
 //$text-font: 'Charter', 'Didot', Optima, 'Trebuchet MS', 'Lucia Grande', Futura, sans-serif
-$text-font: 'Avenir Book', 'Avenir', sans-serif
+//$text-font: 'Avenir Book', 'Avenir', sans-serif
+$text-font: 'Monoid', sans-serif
 //$heading-font: 'Didot', $text-font
-$heading-font: $text-font
+$heading-font: 'Monoid-Bold', sans-serif
 $nav-font: $heading-font
 $links-font: $text-font
 //$lists-font: 'Avenir Next', 'Avenir', sans-serif
@@ -9,12 +13,15 @@ $footer-font: $heading-font
 
 html *
   font-family: $text-font
+  font-size: 12px
+  line-height: 1.8em
   margin: 0
 
 h1,
 h2,
 h3
   font-family: $heading-font
+  font-size: 20px
 
 // a, a *
 //   font-family: $links-font
