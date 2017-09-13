@@ -2,102 +2,98 @@
 
 @import './typography'
 
-=theme($name, $colors)
 
-  body.#{$name}
-    background-color: map-get($colors, background)
-    padding: 3%
+body
+  background-color: #fcfcfc
+  padding: 3%
 
-  main
-    align-items: center
-    width: 42%
+main
+  align-items: center
+  width: 42%
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    text-transform: lowercase
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  text-transform: lowercase
 
-  h1
-    font-size: 2em
+h1
+  font-size: 2em
 
-  h2
-    margin-bottom: 15px
-    margin-top: 50px
-    //border-top: 1px solid black
+h2
+  margin-bottom: 15px
+  margin-top: 50px
+  //border-top: 1px solid black
 
-    &::after
-      color: #ccc
-      content: '▶'
-      font-size: 8px
-      padding: 3px
+  &::after
+    color: #ccc
+    content: '▶'
+    font-size: 8px
+    padding: 3px
 
-  a
-    border-bottom: 1px dashed black
-    color: black
-    text-decoration: none
+a
+  border-bottom: 1px dashed black
+  color: black
+  text-decoration: none
 
-    &:hover
-      background-color: #ccc
+  &:hover
+    background-color: #ccc
 
+ul
+  margin: 0
+  padding: 5px 20px
+
+ul > li
+  list-style-type: none
+  padding: 5px 10px
+
+  &::before
+    content: '- '
+    padding: 0 2px 0 0
+
+  &:hover
+    background-color: #eee
+
+.section-content
+  p,
   ul
-    margin: 0
-    padding: 5px 20px
+    margin-top: 15px
 
+  p,
   ul > li
-    list-style-type: none
-    padding: 5px 10px
+    line-height: 23px
 
-    &::before
-      content: '- '
-      padding: 0 2px 0 0
+.header-logo
+  transform: translate(-24px, -26px)
 
-    &:hover
-      background-color: #eee
+// section.work > .section-content,
+// section.sounds > .section-content
+//   display: flex
+//   flex-direction: row
+//   align-items: center
+//   justify-content: space-between
 
-  .section-content
-    p,
-    ul
-      margin-top: 15px
+.work .left
+  margin: 0
 
-    p,
-    ul > li
-      line-height: 23px
+.work .right
+  margin-left: 20px
 
-  .header-logo
-    transform: translate(-24px, -26px)
+ul.work > li.active
+  background-color: #aee
 
-  // section.work > .section-content,
-  // section.sounds > .section-content
-  //   display: flex
-  //   flex-direction: row
-  //   align-items: center
-  //   justify-content: space-between
+.work #workplaces > .workplace > .area
+  transition: fill 3s ease-in
 
-  .work .left
-    margin: 0
+.work .marker
+  margin: 0 3px
 
-  .work .right
-    margin-left: 20px
+  &::before
+    content: '('
 
-  ul.work > li.active
-    background-color: #aee
-
-  .work #workplaces > .workplace > .area
-    transition: fill 3s ease-in
-
-  .work .marker
-    margin: 0 3px
-
-    &::before
-      content: '('
-
-    &::after
-      content: ')'
-
-
-@import './themes/_theme-default.scss'
+  &::after
+    content: ')'
 
 // =============================================
