@@ -24,9 +24,9 @@
     font-size: 2em
 
   h2
-    margin-top: 30px
+    margin-bottom: 15px
+    margin-top: 50px
     //border-top: 1px solid black
-    padding-bottom: 15px
 
     &::after
       color: #ccc
@@ -57,10 +57,17 @@
     &:hover
       background-color: #eee
 
-  .section-content p
-    line-height: 1.3em
-    padding-bottom: 1em
+  .section-content
+    p,
+    ul
+      margin-top: 15px
 
+    p,
+    ul > li
+      line-height: 23px
+
+  .header-logo
+    transform: translate(-24px, -26px)
 
   // section.work > .section-content,
   // section.sounds > .section-content
