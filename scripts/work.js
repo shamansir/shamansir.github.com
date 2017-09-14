@@ -29,6 +29,8 @@ function work(target) {
 
     var monthsNames = [ 'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec' ];
 
+    var monthsShortNames = [ 'j', 'f', 'm', 'a', 'm', 'j', 'j', 'a', 's', 'o', 'n', 'd' ];
+
     var firstDate;
     var lastDate = today;
 
@@ -110,26 +112,40 @@ function work(target) {
         var color = colors[w.id];
 
         group.append('circle').style('pointer-events', 'none')
-            .classed('month', true)
-            .attr('data-w', w.id)
-            .attr('data-month', month).attr('data-year', 1900 + year)
-            .attr('cx', pos.x).attr('cy', pos.y)
-            .attr('fill', color)
-            .attr('r', radius);
+             .classed('month', true)
+             .attr('data-w', w.id)
+             .attr('data-month', month).attr('data-year', 1900 + year)
+             .attr('cx', pos.x).attr('cy', pos.y)
+             .attr('fill', color)
+             .attr('r', radius);
 
-        group.append('text').style('pointer-events', 'none')
+        /* group.append('text').style('pointer-events', 'none')
              .classed('month', true)
              .style('visibility', 'hidden')
              .style('font-size', '10px')
-            .attr('data-w', w.id)
-            .attr('data-month', month).attr('data-year', 1900 + year)
+             .attr('data-w', w.id)
+             .attr('data-month', month).attr('data-year', 1900 + year)
              .attr('text-anchor', 'middle')
              .attr('alignment-baseline', 'central')
              .attr('x', monthScale(month % monthsInRow))
              .attr('y', yearScale((month < monthsInRow) ? (year - firstYear)
                                                         : (year - firstYear) + 0.5))
              .attr('fill', color)
-             .text(monthsNames[month]);
+             .text(monthsNames[month]); */
+
+        group.append('text').style('pointer-events', 'none')
+             .classed('month', true)
+             .style('visibility', 'hidden')
+             .style('font-size', '10px')
+             .attr('data-w', w.id)
+             .attr('data-month', month).attr('data-year', 1900 + year)
+             .attr('text-anchor', 'middle')
+             .attr('alignment-baseline', 'central')
+             .attr('x', monthScale(month % monthsInRow))
+             .attr('y', yearScale((month < monthsInRow) ? (year - firstYear)
+                                                        : (year - firstYear) + 0.5))
+             .attr('fill', color)
+             .text(monthsShortNames[month]);
 
     }
 
