@@ -1,14 +1,22 @@
-var textMode = false;
+var textModeOptions =
+    [ 'off', 'one', 'three' ];
+
+var textModeLabels =
+    [ 'x', 'a', 'abc' ];
+
+var textMode = 0; // 'off'
 
 function workControls(target, workTarget) {
     var workTarget = d3.select(workTarget);
 
     d3.select(target)
-      .append('span').text('A')
-      .style('opacity', textMode ? 1 : 0.5)
+      .append('span').text(textModeLabels[textMode])
+      //.style('opacity', textMode ? 1 : 0.5)
       .on('click', function() {
-          textMode = !textMode;
-          d3.select(this).style('opacity', textMode ? 1 : 0.5)
+          textMode = textMode < (textModeOptions.length - 1) ? textMode + 1 : 0;
+          console.log(textMode);
+          d3.select(this).text(textModeLabels[textMode]);
+          //d3.select(this).style('opacity', textMode ? 1 : 0.5)
           workTarget.selectAll('circle.month')
                     .style('fill-opacity', textMode ? 0.1 : 1);
           workTarget.selectAll('text.month')
