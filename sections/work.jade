@@ -1,26 +1,34 @@
-div.left
+p.github
+    | My GitHub profile is&nbsp;
+    a(href="http://github.com/shamansir") shamansir
+    | .
 
-    p.github
-        | My GitHub profile is&nbsp;
-        a(href="http://github.com/shamansir") shamansir
-        | .
+p
+    :markdown
+        [The Detailed CV](./cv.html).
 
-    p
-        | Also, in the&nbsp;
-        a(href='#social') social
-        |  section, you may find several links referring to some of my work-related
-        |  information.
+p
+    | Also, in the&nbsp;
+    a(href='#social') social
+    |  section, you may find several links referring to some of my work-related
+    |  information.
 
-    // move Speakerdeck / LinkedIn / Lanyrd ... here?
+// move Speakerdeck / LinkedIn / Lanyrd ... here?
 
-    p
-        | For the moment, my basic specialities are:&#x20;
+p
+    | For the moment, my basic specialities are:&#x20;
 
-    p.experience
-        | JavaScript, Java, HTML5 Canvas, functional programming.
+p.experience
+    | JavaScript, Java, HTML5 Canvas, functional programming.
 
-    p
-        | Here is the list of the companies I've worked at:
+p
+    | Here is the list of the companies I've worked at:
+
+
+div.timeline
+    // p#work-controls Timeline
+    p#work-timeline
+    p#work-skills
 
     ul.work
         li#work-vniiokeangeologiya.russia
@@ -77,13 +85,3 @@ div.left
             span.occupation Front-End Developer
             | ,&#x20;
             span.period May 2016—current
-
-    p
-      :markdown
-        [The Detailed CV](./cv.html).
-
-div.right
-
-    p#work-controls Timeline
-    p#work-timeline
-    p#work-skills

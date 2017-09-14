@@ -75,25 +75,28 @@ ul > li
 //   align-items: center
 //   justify-content: space-between
 
-.work .left
-  margin: 0
+.timeline
+  display: flex
 
-.work .right
-  margin-left: 20px
+  ul
+    & > li.active
+      background-color: #aee
 
-ul.work > li.active
-  background-color: #aee
+    .marker
+      margin: 0 3px
 
-.work #workplaces > .workplace > .area
-  transition: fill 3s ease-in
+      &::before
+        content: '('
 
-.work .marker
-  margin: 0 3px
+      &::after
+        content: ')'
 
-  &::before
-    content: '('
+  #work-timeline
 
-  &::after
-    content: ')'
+    #workplaces > .workplace > .area
+      transition: fill 3s ease-in
+
+  #work-skills
+    // TODO
 
 // =============================================
