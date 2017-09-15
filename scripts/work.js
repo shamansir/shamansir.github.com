@@ -2,25 +2,56 @@ var textModeOptions =
     [ 'off', 'one', 'three' ];
 
 var textModeLabels =
-    [ 'x', 'a', 'abc' ];
+    [ 'x', 'a', 'thr' ];
 
 var textMode = 0; // 'off'
+
+/* var shapeModes = {
+    off: function(shape, text, label) {
+
+    },
+    one: function(shape, text, label) {
+
+    },
+    three: function(shape, text, label) {
+
+    }
+}; */
 
 function workControls(target, workTarget) {
     var workTarget = d3.select(workTarget);
 
+    var radius = 5;
+
     d3.select(target)
-      .append('span').text(textModeLabels[textMode])
+      .append('svg')
+      .append('g')//.text(textModeLabels[textMode])
       //.style('opacity', textMode ? 1 : 0.5)
+      .call(function(g) {
+        g.append('circle')
+         .attr('cx', radius).attr('cy', radius)
+         .attr('r', radius).attr('fill', 'black')
+         .style('cursor', 'pointer');
+        g.append('text').attr('fill', 'white').style('pointer-events', 'none')
+                        .attr('font-size', '10px')
+                        .attr('x',radius).attr('y', radius)
+                        .text(textModeLabels[textMode])
+                        .attr('text-anchor', 'middle')
+                        .attr('alignment-baseline', 'central');
+      })
       .on('click', function() {
           textMode = textMode < (textModeOptions.length - 1) ? textMode + 1 : 0;
-          console.log(textMode);
-          d3.select(this).text(textModeLabels[textMode]);
+          console.log(textMode, textModeLabels[textMode]);
+          d3.select(this).select('text').text(textModeLabels[textMode])
+                                        .attr('fill', textMode === 2 ? 'black' : 'white');
+          d3.select(this).select('circle').style('fill-opacity', textMode === 2 ? 0.1 : 1);
           //d3.select(this).style('opacity', textMode ? 1 : 0.5)
           workTarget.selectAll('circle.month')
-                    .style('fill-opacity', textMode ? 0.1 : 1);
+                    .style('fill-opacity', textMode === 2 ? 0.1 : 1);
           workTarget.selectAll('text.month')
-                    .style('visibility', textMode ? 'visible' : 'hidden');
+                    .style('visibility', textMode === 1 ? 'visible' : 'hidden');
+          workTarget.selectAll('text.month3')
+                    .style('visibility', textMode === 2 ? 'visible' : 'hidden');
       });
 }
 
@@ -119,8 +150,8 @@ function work(target) {
              .attr('fill', color)
              .attr('r', radius);
 
-        /* group.append('text').style('pointer-events', 'none')
-             .classed('month', true)
+        group.append('text').style('pointer-events', 'none')
+             .classed('month3', true)
              .style('visibility', 'hidden')
              .style('font-size', '10px')
              .attr('data-w', w.id)
@@ -131,7 +162,7 @@ function work(target) {
              .attr('y', yearScale((month < monthsInRow) ? (year - firstYear)
                                                         : (year - firstYear) + 0.5))
              .attr('fill', color)
-             .text(monthsNames[month]); */
+             .text(monthsNames[month]);
 
         group.append('text').style('pointer-events', 'none')
              .classed('month', true)
@@ -144,7 +175,8 @@ function work(target) {
              .attr('x', monthScale(month % monthsInRow))
              .attr('y', yearScale((month < monthsInRow) ? (year - firstYear)
                                                         : (year - firstYear) + 0.5))
-             .attr('fill', color)
+             //.attr('fill', color)
+             .attr('fill', 'white')
              .text(monthsShortNames[month]);
 
     }
