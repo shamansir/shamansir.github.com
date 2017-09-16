@@ -49,7 +49,7 @@ ul
   margin: 0
   padding: 5px 20px
 
-ul > li
+ul.dashed-list > li
   list-style-type: none
   padding: 5px 10px
 
@@ -64,10 +64,7 @@ ul.tag-list > li
   display: inline
   padding: 0
   margin: 0
-
-  &::before
-    display: none
-    content: ''
+  list-style-type: none
 
   a
     display: inline-block
@@ -126,3 +123,33 @@ ul.tag-list > li
     // TODO
 
 // =============================================
+
+.sounds-grid
+  display: flex
+
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+    &.albums
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+
+      li
+        padding: 0
+        margin: 0px 7px 7px 0px
+        width: 150px
+        height: 150px
+        overflow: hidden
+
+        img
+          position: absolute
+          z-index: 0
+
+        span
+          display: block
+          position: relative
+          color: white
+          z-index: 10
+          background-color: rgba(20,20,20,0.2)
