@@ -122,6 +122,25 @@ ul.tag-list > li
   #work-skills
     // TODO
 
+
+  .work
+    display: grid
+    padding: 0
+    margin: 0
+    min-width: 600px
+
+    li
+      display: inline
+      grid-row: auto
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+
+      span
+        display: inline-block
+
+        &.place
+          width: 70px
+
 // =============================================
 
 .sounds-grid
