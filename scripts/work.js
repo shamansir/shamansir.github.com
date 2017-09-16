@@ -106,7 +106,7 @@ function work(target) {
     var xMargin = monthScale(1) - monthScale(0) - xSide;
     var yMargin = yearScale(0.5) - yearScale(0) - ySide;
 
-    var yearAxis = d3.axisRight().scale(yearScale)
+    var yearAxis = d3.axisLeft().scale(yearScale)
                      //.tickSize(yearAxisWidth / 2)
                      .tickFormat(function(idx) {
                          return 1900 + firstYear + idx;
@@ -249,12 +249,14 @@ function work(target) {
         var topY = yearScale(startYear - firstYear + (startMonth / 12));
         var bottomY = yearScale(endYear - firstYear + ((endMonth + 1) / 12));
 
+        var gutterWidth = 5;
+
         var gutter = d3.select(target).append('rect')
            .attr('fill', 'transparent')
            //.attr('fill-opacity', 0.1)
-           .attr('x', width - yearAxisWidth)
+           .attr('x', -gutterWidth - radius)
            .attr('y', topY)
-           .attr('width', 5)
+           .attr('width', gutterWidth)
            .attr('height', bottomY - topY);
 
         function highlight() {
@@ -293,7 +295,7 @@ function work(target) {
                 .attr('width', width).attr('height', height);
 
     svg.append('g').attr('id', 'workplaces')
-       .attr('transform', 'translate(0,' + radius + ')')
+       .attr('transform', 'translate(' + (yearAxisWidth + radius) +  ',' + radius + ')')
        .selectAll('g').data(workData).enter()
        .append('g').attr('id', function(w) { return w.id; })
        .classed('workplace', true)
@@ -351,7 +353,7 @@ function work(target) {
        });
 
     svg.append('g').call(yearAxis)
-       .attr('transform', 'translate(' + (width - yearAxisWidth) + ',0)')
+       .attr('transform', 'translate(' + yearAxisWidth + ',0)')
        .selectAll('text').style('alignment-baseline', 'baseline');
 
     /* svg.append('g').call(monthAxis)
