@@ -33,6 +33,10 @@ h2
     font-size: 8px
     padding: 3px
 
+h3
+  padding-top: 20px
+  margin-bottom: 10px
+
 a
   border-bottom: 1px dashed black
   color: black
@@ -55,6 +59,28 @@ ul > li
 
   &:hover
     background-color: #eee
+
+ul.tag-list > li
+  display: inline
+  padding: 0
+  margin: 0
+
+  &::before
+    display: none
+    content: ''
+
+  a
+    display: inline-block
+    border-bottom: none
+    padding: 3px 7px
+    margin: 3px 0
+    border-radius: 5px
+    background-color: #eee
+    transition: color 200ms, background-color 200ms
+
+    &:hover
+      color: white
+      background-color: #ccc
 
 .section-content
   p,
