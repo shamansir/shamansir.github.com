@@ -70,11 +70,14 @@ function workSkills(target) {
                //d3.select(this).append('arc')
                d3.select(this).selectAll('g')
                  .data(Object.keys(skills[skill]).filter(function() { return skill !== '_'; })).enter()
-                 .append('g').attr('id', function(subSkill) { return subSkill; });
+                 .append('g').attr('id', function(subSkill) { return subSkill; })
+                 .append('text').text(function(subSkill) { return subSkill });
                 //  .append('path').attr('d', function(subSkill) {
                 //     return arc(20, from, to);
                 //  })
-           });
+           })
+           .append('text')
+           .text(function(skill) { return skill });
     }
 
     function arc(r, from, to) {
