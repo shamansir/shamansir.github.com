@@ -19,6 +19,7 @@ function workSkills(target) {
         var totalMonths = 0;
 
         var monthsCounts = [];
+        var coefficients = [];
 
         workData.forEach(function(w) {
             var from = w.from;
@@ -26,9 +27,14 @@ function workSkills(target) {
             var monthsCount = monthDiff(from.getMonth(), from.getFullYear(),
                                         to.getMonth(), to.getFullYear());
 
+            console.log(w.title, monthsCount);
             monthsCounts.push(monthsCount);
             totalMonths += monthsCount;
             // console.log(w.id, from, to, monthsCount);
+        });
+
+        workData.forEach(function(w, w_idx) {
+            coefficients.push(monthsCounts[w_idx] / totalMonths);
         });
 
         workData.forEach(function(w, w_idx) {
@@ -40,14 +46,32 @@ function workSkills(target) {
                 var pair = subject.split('/');
                 var mainSkill = pair[0];
                 var subSkill = pair[1] || null;
-                console.log(mainSkill, subSkill || '_', w.subjects[subject], (w.subjects[subject] * monthsCounts[w_idx]));
-                addSkillData(mainSkill, '_', w.id, (w.subjects[subject] * monthsCounts[w_idx]));
-                if (subSkill) addSkillData(mainSkill, subSkill, w.id, (w.subjects[subject] * monthsCounts[w_idx]));
+                console.log('>>', w.title, subject, w.subjects);
+                console.log(mainSkill, '_', w.subjects[subject], (w.subjects[subject] * coefficients[w_idx]));
+                addSkillData(mainSkill, '_', w.id, (w.subjects[subject] * coefficients[w_idx]));
+                if (subSkill) {
+                    console.log(mainSkill, subSkill, w.subjects[subject], (w.subjects[subject] * monthsCounts[w_idx]));
+                    addSkillData(mainSkill, subSkill, w.id, (w.subjects[subject] * coefficients[w_idx]));
+                }
             });
         });
 
         console.log('++++++++');
         console.log(skills);
+        var totalSkills = 0;
+        var totalSubSkills = 0;
+        Object.keys(skills).forEach(function(skill) {
+            totalSubSkills = 0;
+            console.log(skill, skills[skill]._.total);
+            totalSkills += skills[skill]._.total;
+            Object.keys(skills[skill]).forEach(function(key) {
+                if (key === '_') return;
+                console.log('  ', key, skills[skill][key].total);
+                totalSubSkills += skills[skill][key].total;
+            });
+            console.log('  total', totalSubSkills);
+        });
+        console.log('+++++++',totalSkills);
 
         var skillScale = d3.scaleLinear().range([ 0, Math.PI / 2 ])
                                          .domain([ 0, totalMonths ]);
