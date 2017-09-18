@@ -107,12 +107,12 @@ var workData = [
         from: from('May', 2005),
         to: to('Oct', 2006),
         subjects: {
-            'java/spring': 0.5,
-            'java/hibernate': 0.2,
-            'java/jsp': 0.2,
-            'javascript': 0.2,
-            'delphi': 0.2,
-            'python': 0.1
+            'java/spring': 0.24,
+            'java/hibernate': 0.14,
+            'java/jsp': 0.07,
+            'javascript': 0.31,
+            'delphi/vcl': 0.17,
+            'python': 0.07
         }
     },
     {
