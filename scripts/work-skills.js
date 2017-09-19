@@ -82,9 +82,13 @@ function workSkills(target) {
         // var lastSkillValue = {};
         // var lastSubSkillValue = {};
 
+        const EXPECTED_HEIGHT = 200;
+
         svg.append('g').attr('id', 'skills')
            .selectAll('g').data(Object.keys(skills)).enter()
            .append('g').attr('id', function(skill) { return skill; })
+           .attr('data-total', function(skill) { return skills[skill]['_'].total; })
+           .attr('data-value', function(skill) { return skills[skill]['_'].value; })
         //    .append('path').attr('d', function(skill) {
         //        var skillTotal = skills[skill]['_'];
         //         return arc(10, skills['_'], to);
@@ -95,13 +99,19 @@ function workSkills(target) {
                d3.select(this).selectAll('g')
                  .data(Object.keys(skills[skill]).filter(function() { return skill !== '_'; })).enter()
                  .append('g').attr('id', function(subSkill) { return subSkill; })
-                 .append('text').text(function(subSkill) { return subSkill });
+                 .append('text').text(function(subSkill) { return subSkill })
+                 .attr('data-total', function(skill) { return skills[skill]['_'].total; })
+                 .attr('data-value', function(skill) { return skills[skill]['_'].value; });
                 //  .append('path').attr('d', function(subSkill) {
                 //     return arc(20, from, to);
                 //  })
            })
            .append('text')
-           .text(function(skill) { return skill });
+           .text(function(skill) { return skill; })
+           .attr('transform', function(skill) {
+               var totalHeight = skills[skill]['_'].total;
+               return 'scale(0,' + totalHeight + ')';
+           });
     }
 
     function arc(r, from, to) {
