@@ -82,7 +82,10 @@ function workSkills(target) {
         // var lastSkillValue = {};
         // var lastSubSkillValue = {};
 
-        const EXPECTED_HEIGHT = 200;
+        var EXPECTED_HEIGHT = 200;
+
+        var skillsTotal = 0;// FIXME: use linearScale
+        var subSkillsTotal = 0; // FIXME: use linearScale
 
         svg.append('g').attr('id', 'skills')
            .selectAll('g').data(Object.keys(skills)).enter()
@@ -100,8 +103,12 @@ function workSkills(target) {
                  .data(Object.keys(skills[skill]).filter(function() { return skill !== '_'; })).enter()
                  .append('g').attr('id', function(subSkill) { return subSkill; })
                  .append('text').text(function(subSkill) { return subSkill })
-                 .attr('data-total', function(skill) { return skills[skill]['_'].total; })
-                 .attr('data-value', function(skill) { return skills[skill]['_'].value; });
+                 .attr('transform', function(subSkill) {
+                    //var totalHeight = skills[skill]['_'].total;
+                    //return 'scale(0,' + totalHeight + ')';
+                 })
+                 .attr('data-total', function(subSkill) { return skills[skill][subSkill].total; })
+                 .attr('data-value', function(subSkill) { return skills[skill][subSkill].value; });
                 //  .append('path').attr('d', function(subSkill) {
                 //     return arc(20, from, to);
                 //  })
@@ -109,8 +116,11 @@ function workSkills(target) {
            .append('text')
            .text(function(skill) { return skill; })
            .attr('transform', function(skill) {
-               var totalHeight = skills[skill]['_'].total;
-               return 'scale(0,' + totalHeight + ')';
+               var value = skills[skill]['_'].total;
+               var ty = (skillsTotal * EXPECTED_HEIGHT);
+               var sy = value /* * EXPECTED_HEIGHT */;
+               skillsTotal += value;
+               return 'translate(0,' + ty + ') scale(1,' + sy + ')';
            });
     }
 
