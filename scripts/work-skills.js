@@ -76,51 +76,65 @@ function workSkills(target) {
         var skillScale = d3.scaleLinear().range([ 0, Math.PI / 2 ])
                                          .domain([ 0, totalMonths ]);
 
+        var EXPECTED_WIDTH = 100;
+        var EXPECTED_HEIGHT = 200;
+        var FONT_SIZE = 20;
+
         var svg = d3.select(target).append('svg')
-                    .attr('width', 100).attr('height', 100);
+                    .attr('width', EXPECTED_WIDTH).attr('height', EXPECTED_HEIGHT);
 
         // var lastSkillValue = {};
         // var lastSubSkillValue = {};
 
-        var EXPECTED_HEIGHT = 200;
-
         var skillsTotal = 0;// FIXME: use linearScale
         var subSkillsTotal = 0; // FIXME: use linearScale
+
+        var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT - FONT_SIZE ])
+                                     .domain([ 0, 1 ]);
+        var heightScale = d3.scaleLinear().range([ 0, 1 ])
+                                          .domain([ 0, 1 ]);
 
         svg.append('g').attr('id', 'skills')
            .selectAll('g').data(Object.keys(skills)).enter()
            .append('g').attr('id', function(skill) { return skill; })
            .attr('data-total', function(skill) { return skills[skill]['_'].total; })
-           .attr('data-value', function(skill) { return skills[skill]['_'].value; })
+           .attr('transform', function(skill) {
+              var value = skills[skill]['_'].total;
+              var y = yScale(skillsTotal);
+              skillsTotal += value;
+              return 'translate(0,' + y + ')';
+            })
         //    .append('path').attr('d', function(skill) {
         //        var skillTotal = skills[skill]['_'];
         //         return arc(10, skills['_'], to);
         //    })
            .each(function(skill) {
                var skillTotal = skills[skill]['_'];
+               return;
                //d3.select(this).append('arc')
                d3.select(this).selectAll('g')
                  .data(Object.keys(skills[skill]).filter(function() { return skill !== '_'; })).enter()
                  .append('g').attr('id', function(subSkill) { return subSkill; })
+                 .attr('data-total', function(subSkill) { return skills[skill][subSkill].total; })
+                 .attr('data-value', function(subSkill) { return skills[skill][subSkill].value; })
                  .append('text').text(function(subSkill) { return subSkill })
                  .attr('transform', function(subSkill) {
                     //var totalHeight = skills[skill]['_'].total;
                     //return 'scale(0,' + totalHeight + ')';
                  })
-                 .attr('data-total', function(subSkill) { return skills[skill][subSkill].total; })
-                 .attr('data-value', function(subSkill) { return skills[skill][subSkill].value; });
                 //  .append('path').attr('d', function(subSkill) {
                 //     return arc(20, from, to);
                 //  })
            })
            .append('text')
+           .attr('x', 0).attr('y', 0).attr('fill', 'black').attr('font-size', FONT_SIZE)
+           .attr('text-anchor', 'start').attr('alignment-baseline','hanging')
            .text(function(skill) { return skill; })
            .attr('transform', function(skill) {
-               var value = skills[skill]['_'].total;
-               var ty = (skillsTotal * EXPECTED_HEIGHT);
-               var sy = value /* * EXPECTED_HEIGHT */;
-               skillsTotal += value;
-               return 'translate(0,' + ty + ') scale(1,' + sy + ')';
+                var value = skills[skill]['_'].total;
+                var sy = heightScale(value);
+                // return 'scale(1,' + sy + ')';
+                return 'scale(1,1)';
            });
     }
 
