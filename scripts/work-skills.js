@@ -91,7 +91,7 @@ function workSkills(target) {
 
         var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT - FONT_SIZE ])
                                      .domain([ 0, 1 ]);
-        var heightScale = d3.scaleLinear().range([ 0, 1 ])
+        var heightScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT ])
                                           .domain([ 0, 1 ]);
 
         svg.append('g').attr('id', 'skills')
@@ -132,9 +132,9 @@ function workSkills(target) {
            .text(function(skill) { return skill; })
            .attr('transform', function(skill) {
                 var value = skills[skill]['_'].total;
-                var sy = heightScale(value);
-                // return 'scale(1,' + sy + ')';
-                return 'scale(1,1)';
+                var sy = heightScale(value) / FONT_SIZE;
+                return 'scale(1,' + sy + ')';
+                //return 'scale(1,1)';
            });
     }
 
