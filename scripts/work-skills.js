@@ -56,8 +56,15 @@ function workSkills(target) {
             });
         });
 
+        var skillsByValue = Object.keys(skills).sort(function(skillA, skillB) {
+            var valueA = skills[skillA]._.total;
+            var valueB = skills[skillB]._.total;
+            return valueB - valueA;
+        });
+
         console.log('++++++++');
         console.log(skills);
+        console.log(skillsByValue);
         var totalSkills = 0;
         var totalSubSkills = 0;
         Object.keys(skills).forEach(function(skill) {
@@ -95,7 +102,7 @@ function workSkills(target) {
                                           .domain([ 0, 1 ]);
 
         svg.append('g').attr('id', 'skills')
-           .selectAll('g').data(Object.keys(skills)).enter()
+           .selectAll('g').data(skillsByValue).enter()
            .append('g').attr('id', function(skill) { return skill; })
            .attr('data-total', function(skill) { return skills[skill]['_'].total; })
            .attr('transform', function(skill) {
