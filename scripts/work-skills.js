@@ -62,6 +62,9 @@ function workSkills(target) {
             return valueB - valueA;
         });
 
+        var minSkill = skillsByValue[skillsByValue.length - 1];
+        var minSkillValue = skills[minSkill]['_'].total;
+
         console.log('++++++++');
         console.log(skills);
         console.log(skillsByValue);
@@ -83,9 +86,11 @@ function workSkills(target) {
         var skillScale = d3.scaleLinear().range([ 0, Math.PI / 2 ])
                                          .domain([ 0, totalMonths ]);
 
-        var EXPECTED_WIDTH = 100;
-        var EXPECTED_HEIGHT = 200;
+        var EXPECTED_WIDTH = 150;
+        var EXPECTED_HEIGHT = 500;
         var FONT_SIZE = 20;
+        var MIN_TEXT_HEIGHT = FONT_SIZE;
+        console.log('minSkillValue', minSkillValue, 'MIN_TEXT_HEIGHT', MIN_TEXT_HEIGHT);
 
         var svg = d3.select(target).append('svg')
                     .attr('width', EXPECTED_WIDTH).attr('height', EXPECTED_HEIGHT);
@@ -96,7 +101,7 @@ function workSkills(target) {
         var skillsTotal = 0;// FIXME: use linearScale
         var subSkillsTotal = 0; // FIXME: use linearScale
 
-        var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT - FONT_SIZE ])
+        var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT ])
                                      .domain([ 0, 1 ]);
         var heightScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT ])
                                           .domain([ 0, 1 ]);
@@ -134,12 +139,13 @@ function workSkills(target) {
                 //  })
            })
            .append('text')
-           .attr('x', 0).attr('y', 0).attr('fill', 'black').attr('font-size', FONT_SIZE)
+           .attr('x', 0).attr('y', 0).attr('fill', 'black').attr('font-size', FONT_SIZE * 1.3)
            .attr('text-anchor', 'start').attr('alignment-baseline','hanging')
-           .text(function(skill) { return skill; })
+           .text(function(skill) { return skill.toUpperCase(); })
            .attr('transform', function(skill) {
                 var value = skills[skill]['_'].total;
                 var sy = heightScale(value) / FONT_SIZE;
+                console.log(skill, value, heightScale(value), sy);
                 return 'scale(1,' + sy + ')';
                 //return 'scale(1,1)';
            });
