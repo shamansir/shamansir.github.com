@@ -1,5 +1,16 @@
 function workSkills(target) {
 
+        var textMeasure = d3.select(target).append('svg').style('display', 'none').append('text');
+
+        function measureWidth(text, source) {
+            return textMeasure.attr('font-size', source.attr('font-size'))
+                              .attr('transform', source.attr('transform'))
+                              .attr('text-anchor', source.attr('text-anchor'))
+                              .attr('alignment-baseline', source.attr('alignment-baseline'))
+                              .text(text)
+                              .node().getBBox().width;
+        }
+
         var today = new Date();
 
         function monthDiff(startMonth, startYear, endMonth, endYear) {
@@ -101,6 +112,8 @@ function workSkills(target) {
         var skillsTotal = 0;// FIXME: use linearScale
         var subSkillsTotal = 0; // FIXME: use linearScale
 
+        // var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT - FONT_SIZE ])
+        //                              .domain([ 0, 1 - minSkillValue ]);
         var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT ])
                                      .domain([ 0, 1 ]);
         var heightScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT ])
@@ -139,14 +152,15 @@ function workSkills(target) {
                 //  })
            })
            .append('text')
-           .attr('x', 0).attr('y', 0).attr('fill', 'black').attr('font-size', FONT_SIZE * 1.3)
+           .attr('x', 0).attr('y', 0).attr('fill', 'black').attr('font-size', FONT_SIZE)
            .attr('text-anchor', 'start').attr('alignment-baseline','hanging')
            .text(function(skill) { return skill.toUpperCase(); })
            .attr('transform', function(skill) {
                 var value = skills[skill]['_'].total;
                 var sy = heightScale(value) / FONT_SIZE;
+                var sx = 1;// measureWidth(skill.toUpperCase(), d3.select(this)) / EXPECTED_WIDTH;
                 console.log(skill, value, heightScale(value), sy);
-                return 'scale(1,' + sy + ')';
+                return 'scale(' + sx + ',' + sy + ')';
                 //return 'scale(1,1)';
            });
     }
