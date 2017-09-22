@@ -102,6 +102,7 @@ function workSkills(target) {
         var EXPECTED_HEIGHT = 500;
         var FONT_SIZE = 20;
         var MIN_TEXT_HEIGHT = FONT_SIZE;
+        var SCALE_COEFF = 1.25;
         console.log('minSkillValue', minSkillValue, 'MIN_TEXT_HEIGHT', MIN_TEXT_HEIGHT);
 
         var svg = d3.select(target).append('svg')
@@ -153,7 +154,7 @@ function workSkills(target) {
                 //  })
            })
            .append('text')
-           .attr('x', 0).attr('y', 0).attr('fill', 'black').attr('font-size', FONT_SIZE)
+           .attr('x', 0).attr('y', 0).attr('fill', 'black').attr('font-size', FONT_SIZE * SCALE_COEFF)
            .attr('text-anchor', 'start').attr('alignment-baseline','hanging')
            .text(function(skill) { return skill.toUpperCase(); })
            .attr('transform', function(skill) {
