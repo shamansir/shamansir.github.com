@@ -1,6 +1,10 @@
 function workSkills(target) {
 
-        var textMeasure = d3.select(target).append('svg').style('display', 'none').append('text');
+        var textMeasure = d3.select(target).append('svg')
+            .style('visibility', 'hidden')
+            .style('position', 'absolute')
+            .style('top', -10000).style('left', -10000)
+            .append('text');
 
         function measureWidth(text, source) {
             return textMeasure.attr('font-size', source.attr('font-size'))
@@ -98,7 +102,7 @@ function workSkills(target) {
         var skillScale = d3.scaleLinear().range([ 0, Math.PI / 2 ])
                                          .domain([ 0, totalMonths ]);
 
-        var EXPECTED_WIDTH = 150;
+        var EXPECTED_WIDTH = 200;
         var EXPECTED_HEIGHT = 500;
         var FONT_SIZE = 20;
         var MIN_TEXT_HEIGHT = FONT_SIZE;
@@ -160,7 +164,8 @@ function workSkills(target) {
            .attr('transform', function(skill) {
                 var value = skills[skill]['_'].total;
                 var sy = (heightScale(value) + MIN_TEXT_HEIGHT) / FONT_SIZE;
-                var sx = 1;// measureWidth(skill.toUpperCase(), d3.select(this)) / EXPECTED_WIDTH;
+                var sx = EXPECTED_WIDTH / measureWidth(skill.toUpperCase(), d3.select(this));
+                console.log('measureWidth', skill.toUpperCase(), this, sx);
                 console.log(skill, value, heightScale(value), sy);
                 return 'scale(' + sx + ',' + sy + ')';
                 //return 'scale(1,1)';
