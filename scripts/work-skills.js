@@ -73,6 +73,7 @@ function workSkills(target) {
             return valueB - valueA;
         });
 
+        var skillsCount = Object.keys(skills).length;
         var minSkill = skillsByValue[skillsByValue.length - 1];
         var minSkillValue = skills[minSkill]['_'].total;
 
@@ -109,23 +110,23 @@ function workSkills(target) {
         // var lastSkillValue = {};
         // var lastSubSkillValue = {};
 
-        var skillsTotal = 0;// FIXME: use linearScale
-        var subSkillsTotal = 0; // FIXME: use linearScale
+        var skillsTotal = 0;// FIXME: use scale?
+        var subSkillsTotal = 0; // FIXME: use scale?
 
         // var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT - FONT_SIZE ])
         //                              .domain([ 0, 1 - minSkillValue ]);
-        var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT ])
+        var yScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT - (skillsCount * MIN_TEXT_HEIGHT) ])
                                      .domain([ 0, 1 ]);
-        var heightScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT ])
+        var heightScale = d3.scaleLinear().range([ 0, EXPECTED_HEIGHT - (skillsCount * MIN_TEXT_HEIGHT) ])
                                           .domain([ 0, 1 ]);
 
         svg.append('g').attr('id', 'skills')
            .selectAll('g').data(skillsByValue).enter()
            .append('g').attr('id', function(skill) { return skill; })
            .attr('data-total', function(skill) { return skills[skill]['_'].total; })
-           .attr('transform', function(skill) {
+           .attr('transform', function(skill, idx) {
               var value = skills[skill]['_'].total;
-              var y = yScale(skillsTotal);
+              var y = yScale(skillsTotal) + (idx * MIN_TEXT_HEIGHT);
               skillsTotal += value;
               return 'translate(0,' + y + ')';
             })
@@ -157,7 +158,7 @@ function workSkills(target) {
            .text(function(skill) { return skill.toUpperCase(); })
            .attr('transform', function(skill) {
                 var value = skills[skill]['_'].total;
-                var sy = heightScale(value) / FONT_SIZE;
+                var sy = (heightScale(value) + MIN_TEXT_HEIGHT) / FONT_SIZE;
                 var sx = 1;// measureWidth(skill.toUpperCase(), d3.select(this)) / EXPECTED_WIDTH;
                 console.log(skill, value, heightScale(value), sy);
                 return 'scale(' + sx + ',' + sy + ')';
