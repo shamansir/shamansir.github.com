@@ -141,17 +141,17 @@ function workSkills(target) {
         //    })
            .each(function(skill) {
                var skillTotal = skills[skill]['_'];
-               return;
                //d3.select(this).append('arc')
                d3.select(this).selectAll('g')
-                 .data(Object.keys(skills[skill]).filter(function() { return skill !== '_'; })).enter()
+                 .data(Object.keys(skills[skill]).filter(function(subSkill) { return subSkill !== '_'; })).enter()
                  .append('g').attr('id', function(subSkill) { return subSkill; })
+                 .attr('transform', 'translate(' + (EXPECTED_WIDTH / 2) + ',0)')
                  .attr('data-total', function(subSkill) { return skills[skill][subSkill].total; })
                  .attr('data-value', function(subSkill) { return skills[skill][subSkill].value; })
-                 .append('text').text(function(subSkill) { return subSkill })
+                 .append('text').text(function(subSkill) { return subSkill; })
                  .attr('transform', function(subSkill) {
-                    //var totalHeight = skills[skill]['_'].total;
-                    //return 'scale(0,' + totalHeight + ')';
+                    var totalHeight = skills[skill]['_'].total;
+                    return 'scale(1,1)';
                  })
                 //  .append('path').attr('d', function(subSkill) {
                 //     return arc(20, from, to);
@@ -164,7 +164,7 @@ function workSkills(target) {
            .attr('transform', function(skill) {
                 var value = skills[skill]['_'].total;
                 var sy = (heightScale(value) + MIN_TEXT_HEIGHT) / FONT_SIZE;
-                var sx = EXPECTED_WIDTH / measureWidth(skill.toUpperCase(), d3.select(this));
+                var sx = (EXPECTED_WIDTH / 2) / measureWidth(skill.toUpperCase(), d3.select(this));
                 console.log('measureWidth', skill.toUpperCase(), this, sx);
                 console.log(skill, value, heightScale(value), sy);
                 return 'scale(' + sx + ',' + sy + ')';
