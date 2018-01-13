@@ -1,7 +1,7 @@
 doctype html
 
 - var css_src = './styles/main.css';
-- var js_sources = ['./scripts/main.js','./scripts/work.data.js','./scripts/work-timeline.js', './scripts/work-skills.js'];
+- var js_sources = [];
 - var favicon_src = './favicon.png';
 
 html(lang='en')
@@ -32,12 +32,12 @@ html(lang='en')
 
           // INTRO. A QUICK STORY
 
-          section.intro
+          section.story
 
-            h2#intro Intro
+            h2#intro Story
 
             div.section-content
-                include sections/intro
+                include sections/story
 
           // CONTACTS (address and online stuff), VCARD, GEEK-CODE
 
@@ -113,17 +113,17 @@ html(lang='en')
 
           // SITE HISTORY
 
-          section.history
+          //- section.history
 
-              h2#history History
+          //-   h2#history History
 
-              div.section-content
+          //-       div.section-content
                   include sections/history
 
-          script.
-              work('#work-timeline');
-              workControls('#work-controls', '#work-timeline');
-              workSkills('#work-skills');
+          //-   script.
+          //-       work('#work-timeline');
+          //-       workControls('#work-controls', '#work-timeline');
+          //-       workSkills('#work-skills');
 
     footer
       p Designed by shaman.sir &copy; 2017
